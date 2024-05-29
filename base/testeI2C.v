@@ -10,15 +10,15 @@
 module testeI2C (
     input CLOCK_50,
 
-    output reg HPS_I2C1_SCLK, // Verificar a frequência máxima, provavelmente usar PLL
-    inout HPS_I2C1_SDAT,
+    output HPS_I2C1_SCLK, // Verificar a frequência máxima, provavelmente usar PLL
+    inout HPS_I2C1_SDAT, 
 
     // output FPGA_I2C_SCLK, // Verificar a frequência máxima, provavelmente usar PLL
     // inout FPGA_I2C_SDAT,
  
     output HPS_LTC_GPIO,
     input [8:0] endereco,
-    inout [8:0] info,
+    inout [8:0] info, 
     input enable_write,
     output reg [9:0] LEDR, 
     input [9:0] SW  
@@ -49,9 +49,10 @@ module testeI2C (
 		.rst(reset),
 		.outclk_0(clk_200)
     );
-
+    reg AUX_HPS_I2C1_SCLK;
+    assign HPS_I2C1_SCLK = AUX_HPS_I2C1_SCLK;
     always @(clk_200) begin
-        HPS_I2C1_SCLK = ~HPS_I2C1_SCLK;
+        AUX_HPS_I2C1_SCLK = ~AUX_HPS_I2C1_SCLK;
     end
 	 
     p2s p2s_inst(
