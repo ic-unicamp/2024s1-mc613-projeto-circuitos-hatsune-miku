@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Wed May 29 18:44:13 2024
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : testeI2C
+Top-level Entity Name : testeI2C
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 39
+Total pins : 42
+Total virtual pins : 0
+Total block memory bits : 0
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1
+Total DLLs : 0

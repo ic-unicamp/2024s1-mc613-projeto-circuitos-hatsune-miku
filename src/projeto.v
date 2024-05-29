@@ -1,5 +1,5 @@
 module projeto(
-   input CLOCK_50,
+    input CLOCK_50,
 	input [3:0] KEY, 
     inout [35:0] GPIO_1,
 	output VGA_CLK,

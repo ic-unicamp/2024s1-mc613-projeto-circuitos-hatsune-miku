@@ -1,0 +1,39 @@
+module p2s ( //parallel to serial
+    input clk,
+    input reset,
+    input [15:0] data_in, //a informação para ser enviada deve estar na parte mais significativa
+    input [3:0] len, 
+    input enable,
+    output reg data_out,
+    output reg done
+);
+
+    reg [4:0] count;
+    wire [4:0] count;
+    assign count = 4'b1111 - posicao;
+
+
+    reg aux_data_out;
+
+    assign data_out = enable_envio ? aux_data_out : 1'bz; // tri-state, sempre que não estou enviando dados, ele deixa em alta impedância
+
+    always @ (posedge clk) begin
+
+        if (reset) begin
+            posicao = 4'b1111; 
+            done = 0;
+        end else begin
+            if (enable) begin
+                
+                aux_data_out = data_in[posicao];
+                posicao = posicao - 1;
+
+                if (count == len - 1) begin //tenho que enviar enquanto estou enviando o ultimo bit, para não gerar atraso
+                    done = 1;
+                end
+
+            end
+        end
+    end
+
+endmodule
