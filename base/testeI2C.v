@@ -1,19 +1,36 @@
+/*
+    possíveis problemas:
+        questão do mux
+        qual pino uso, ver a declaração do modulo
+        endereço do sensor
+		  orsem que envio os bits
+		  sinal start
+*/
+
 module testeI2C (
     input CLOCK_50,
-    output I2C_SCLK, // Verificar a frequência máxima, provavelmente usar PLL
-    inout I2C_SDAT,
+
+    output reg HPS_I2C1_SCLK, // Verificar a frequência máxima, provavelmente usar PLL
+    inout HPS_I2C1_SDAT,
+
+    // output FPGA_I2C_SCLK, // Verificar a frequência máxima, provavelmente usar PLL
+    // inout FPGA_I2C_SDAT,
+ 
+    output HPS_LTC_GPIO,
     input [8:0] endereco,
     inout [8:0] info,
     input enable_write,
-    output reg [9:0] LEDR,
-    input [9:0] SW 
+    output reg [9:0] LEDR, 
+    input [9:0] SW  
 ); 
-	wire reset;
-	assign reset = SW[0];
- 
+	 assign HPS_LTC_GPIO = 1;
+	 
+	 wire reset;
+	 assign reset = SW[0];
+	 
     reg enable_p2s; 
     wire done_p2s;
-    reg enable_s2p; 
+    reg enable_s2p;  
     wire done_s2p;
 
     reg [15:0] msg_master;
@@ -25,36 +42,42 @@ module testeI2C (
     reg enable_envio;
     reg enable_receber;
 
+    reg clk_200;
+
 	pll pll_inst(
 		.refclk(CLOCK_50),
 		.rst(reset),
-		.outclk_0(I2C_SCLK)
-		);
+		.outclk_0(clk_200)
+    );
+
+    always @(clk_200) begin
+        HPS_I2C1_SCLK = ~HPS_I2C1_SCLK;
+    end
 	 
     p2s p2s_inst(
-        .clk(I2C_SCLK),
+        .clk(HPS_I2C1_SCLK),
         .reset(reset),
         .data_in(msg_master),
         .len(len_msg_master),
         .enable(enable_p2s),
-        .data_out(I2C_SDAT),
+        .data_out(HPS_I2C1_SDAT),
         .done(done_p2s)
     );
 
-    s2p s2p_inst(
-        .clk(I2C_SCLK),
+    s2p s2p_inst( 
+        .clk(HPS_I2C1_SCLK),
         .reset(reset),
-        .data_in(I2C_SDAT),
+        .data_in(HPS_I2C1_SDAT),
         .len(len_msg_slave),
         .enable(enable_s2p),
         .data_out(msg_slave),
-        .ready(done_s2p)
+        .ready(done_s2p) 
     );
 
     reg [3:0] state;
     reg [3:0] jump; // Irei usar o mesmo estado para esperar e ele fará state = jump;
 
-    always @(posedge I2C_SCLK) begin
+    always @(posedge HPS_I2C1_SCLK) begin
         if (reset) begin
             state <= 4'b0001;
             jump <= 4'b0001;
@@ -67,7 +90,7 @@ module testeI2C (
 
                 4'b0000: begin // Aguarda o ACK
                     if (enable_receber && !done_s2p) begin 
-                        len_msg_slave <= 4;
+                        len_msg_slave <= 16;
                         enable_s2p <= 1;
                         if (msg_slave != 0) begin // ACK
                             LEDR[9] <= 1; 
@@ -95,7 +118,7 @@ module testeI2C (
                 
                 4'b0011: begin //slave address + write
                     if (enable_envio && !done_p2s) begin
-                        msg_master <= 16'hA680; // Slave Address + W (0100)
+                        msg_master <= 16'hA780; // Slave Address + W (0100) A6 A7 53
                         len_msg_master <= 9;
                         enable_p2s <= 1;
                     end else if (enable_envio && done_p2s) begin

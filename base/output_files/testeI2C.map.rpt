@@ -1,5 +1,5 @@
 Analysis & Synthesis report for testeI2C
-Wed May 29 18:44:13 2024
+Wed May 29 20:23:46 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -17,8 +17,8 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   9. State Machine - |testeI2C|jump
  10. State Machine - |testeI2C|state
  11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
  14. Parameter Settings for User Entity Instance: pll:pll_inst|pll_0002:pll_inst|altera_pll:altera_pll_i
  15. Port Connectivity Checks: "s2p:s2p_inst"
  16. Port Connectivity Checks: "p2s:p2s_inst"
@@ -51,14 +51,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May 29 18:44:13 2024       ;
+; Analysis & Synthesis Status     ; Successful - Wed May 29 20:23:46 2024       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; testeI2C                                    ;
 ; Top-level Entity Name           ; testeI2C                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 39                                          ;
-; Total pins                      ; 42                                          ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 43                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
 ; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 1                                           ;
+; Total PLLs                      ; 0                                           ;
 ; Total DLLs                      ; 0                                           ;
 +---------------------------------+---------------------------------------------+
 
@@ -167,12 +167,10 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 12          ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -190,48 +188,40 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+-----------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                         ;
-+---------------------------------------------+-----------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                 ;
-+---------------------------------------------+-----------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 23                                                                    ;
-;                                             ;                                                                       ;
-; Combinational ALUT usage for logic          ; 31                                                                    ;
-;     -- 7 input functions                    ; 0                                                                     ;
-;     -- 6 input functions                    ; 10                                                                    ;
-;     -- 5 input functions                    ; 4                                                                     ;
-;     -- 4 input functions                    ; 7                                                                     ;
-;     -- <=3 input functions                  ; 10                                                                    ;
-;                                             ;                                                                       ;
-; Dedicated logic registers                   ; 39                                                                    ;
-;                                             ;                                                                       ;
-; I/O pins                                    ; 42                                                                    ;
-;                                             ;                                                                       ;
-; Total DSP Blocks                            ; 0                                                                     ;
-;                                             ;                                                                       ;
-; Total PLLs                                  ; 1                                                                     ;
-;     -- PLLs                                 ; 1                                                                     ;
-;                                             ;                                                                       ;
-; Maximum fan-out node                        ; pll:pll_inst|pll_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 41                                                                    ;
-; Total fan-out                               ; 298                                                                   ;
-; Average fan-out                             ; 1.81                                                                  ;
-+---------------------------------------------+-----------------------------------------------------------------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 0              ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 0              ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 0              ;
+;     -- 5 input functions                    ; 0              ;
+;     -- 4 input functions                    ; 0              ;
+;     -- <=3 input functions                  ; 0              ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 43             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; info[0]~output ;
+; Maximum fan-out                             ; 1              ;
+; Total fan-out                               ; 53             ;
+; Average fan-out                             ; 0.55           ;
++---------------------------------------------+----------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                         ;
-+------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                              ; Entity Name ; Library Name ;
-+------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------+-------------+--------------+
-; |testeI2C                          ; 31 (17)             ; 39 (10)                   ; 0                 ; 0          ; 42   ; 0            ; |testeI2C                                                        ; testeI2C    ; work         ;
-;    |p2s:p2s_inst|                  ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|p2s:p2s_inst                                           ; p2s         ; work         ;
-;    |pll:pll_inst|                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|pll:pll_inst                                           ; pll         ; pll          ;
-;       |pll_0002:pll_inst|          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|pll:pll_inst|pll_0002:pll_inst                         ; pll_0002    ; pll          ;
-;          |altera_pll:altera_pll_i| ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|pll:pll_inst|pll_0002:pll_inst|altera_pll:altera_pll_i ; altera_pll  ; work         ;
-;    |s2p:s2p_inst|                  ; 6 (6)               ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|s2p:s2p_inst                                           ; s2p         ; work         ;
-+------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |testeI2C                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 43   ; 0            ; |testeI2C           ; testeI2C    ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -267,31 +257,62 @@ Encoding Type:  One-Hot
 +------------+------------+------------+------------+------------+
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; enable_s2p                             ; Stuck at VCC due to stuck port data_in ;
-; len_msg_slave[0,1]                     ; Stuck at GND due to stuck port data_in ;
-; len_msg_slave[2]                       ; Stuck at VCC due to stuck port data_in ;
-; len_msg_slave[3]                       ; Stuck at GND due to stuck port data_in ;
-; len_msg_master[3]                      ; Merged with len_msg_master[0]          ;
-; msg_master[7,9,10,13,15]               ; Merged with len_msg_master[0]          ;
-; msg_master[0..6,8,11,12]               ; Merged with len_msg_master[1]          ;
-; msg_master[14]                         ; Merged with len_msg_master[2]          ;
-; len_msg_master[1]                      ; Stuck at GND due to stuck port data_in ;
-; enable_p2s                             ; Stuck at VCC due to stuck port data_in ;
-; jump~2                                 ; Lost fanout                            ;
-; jump~3                                 ; Lost fanout                            ;
-; jump~4                                 ; Lost fanout                            ;
-; jump~5                                 ; Lost fanout                            ;
-; state~7                                ; Lost fanout                            ;
-; state~8                                ; Lost fanout                            ;
-; state~9                                ; Lost fanout                            ;
-; state~10                               ; Lost fanout                            ;
-; Total Number of Removed Registers = 32 ;                                        ;
-+----------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++----------------------------------------+---------------------------------------------+
+; Register name                          ; Reason for Removal                          ;
++----------------------------------------+---------------------------------------------+
+; enable_p2s                             ; Stuck at GND due to stuck port clock        ;
+; len_msg_master[0..3]                   ; Stuck at GND due to stuck port clock        ;
+; msg_master[0..15]                      ; Stuck at GND due to stuck port clock        ;
+; enable_s2p                             ; Stuck at GND due to stuck port clock        ;
+; len_msg_slave[0..3]                    ; Stuck at GND due to stuck port clock        ;
+; LEDR[0]~reg0                           ; Stuck at GND due to stuck port clock        ;
+; LEDR[9]~reg0                           ; Stuck at GND due to stuck port clock        ;
+; enable_receber                         ; Stuck at GND due to stuck port clock        ;
+; enable_envio                           ; Stuck at GND due to stuck port clock        ;
+; s2p:s2p_inst|ready                     ; Stuck at GND due to stuck port clock        ;
+; s2p:s2p_inst|count[0..4]               ; Stuck at GND due to stuck port clock_enable ;
+; s2p:s2p_inst|data_out[0..15]           ; Stuck at GND due to stuck port clock_enable ;
+; p2s:p2s_inst|aux_data_out~en           ; Stuck at GND due to stuck port clock        ;
+; p2s:p2s_inst|aux_data_out              ; Stuck at GND due to stuck port clock        ;
+; p2s:p2s_inst|done                      ; Stuck at GND due to stuck port clock        ;
+; p2s:p2s_inst|posicao[4]                ; Stuck at GND due to stuck port clock        ;
+; p2s:p2s_inst|posicao[0..3]             ; Stuck at VCC due to stuck port clock        ;
+; state.0010                             ; Lost fanout                                 ;
+; jump~2                                 ; Lost fanout                                 ;
+; jump~3                                 ; Lost fanout                                 ;
+; jump~4                                 ; Lost fanout                                 ;
+; jump~5                                 ; Lost fanout                                 ;
+; state~7                                ; Lost fanout                                 ;
+; state~8                                ; Lost fanout                                 ;
+; state~9                                ; Lost fanout                                 ;
+; state~10                               ; Lost fanout                                 ;
+; state.0001                             ; Stuck at GND due to stuck port clock        ;
+; state.0000                             ; Stuck at GND due to stuck port clock        ;
+; state.0011                             ; Stuck at GND due to stuck port clock        ;
+; Total Number of Removed Registers = 72 ;                                             ;
++----------------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                     ;
++------------------+-------------------------+------------------------------------------------------------------------------------+
+; Register name    ; Reason for Removal      ; Registers Removed due to This Register                                             ;
++------------------+-------------------------+------------------------------------------------------------------------------------+
+; enable_s2p       ; Stuck at GND            ; s2p:s2p_inst|count[3], s2p:s2p_inst|count[2], s2p:s2p_inst|count[1],               ;
+;                  ; due to stuck port clock ; s2p:s2p_inst|count[0], s2p:s2p_inst|data_out[15], s2p:s2p_inst|data_out[14],       ;
+;                  ;                         ; s2p:s2p_inst|data_out[13], s2p:s2p_inst|data_out[12], s2p:s2p_inst|data_out[11],   ;
+;                  ;                         ; s2p:s2p_inst|data_out[10], s2p:s2p_inst|data_out[9], s2p:s2p_inst|data_out[8],     ;
+;                  ;                         ; s2p:s2p_inst|data_out[7], s2p:s2p_inst|data_out[6], s2p:s2p_inst|data_out[5],      ;
+;                  ;                         ; s2p:s2p_inst|data_out[4], s2p:s2p_inst|data_out[3], s2p:s2p_inst|data_out[2],      ;
+;                  ;                         ; s2p:s2p_inst|data_out[1]                                                           ;
+; enable_p2s       ; Stuck at GND            ; s2p:s2p_inst|data_out[0], p2s:p2s_inst|aux_data_out~en, p2s:p2s_inst|aux_data_out, ;
+;                  ; due to stuck port clock ; p2s:p2s_inst|posicao[4], p2s:p2s_inst|posicao[3], p2s:p2s_inst|posicao[2],         ;
+;                  ;                         ; p2s:p2s_inst|posicao[1], p2s:p2s_inst|posicao[0]                                   ;
+; len_msg_slave[0] ; Stuck at GND            ; s2p:s2p_inst|count[4]                                                              ;
+;                  ; due to stuck port clock ;                                                                                    ;
++------------------+-------------------------+------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -299,25 +320,14 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 39    ;
-; Number of registers using Synchronous Clear  ; 27    ;
-; Number of registers using Synchronous Load   ; 1     ;
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 3     ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |testeI2C|p2s:p2s_inst|posicao[0] ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |testeI2C|len_msg_master[0]       ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |testeI2C|state                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -585,13 +595,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "pll:pll_inst"                                                                                              ;
-+--------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                                                  ;
-+--------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; locked ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+----------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pll:pll_inst"                                                                                                ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                  ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; outclk_0 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; locked   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -599,26 +610,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 39                          ;
-;     ENA               ; 3                           ;
-;     SCLR              ; 27                          ;
-;     SLD               ; 1                           ;
-;     plain             ; 8                           ;
 ; arriav_io_obuf        ; 10                          ;
-; arriav_lcell_comb     ; 32                          ;
-;     normal            ; 32                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 4                           ;
-;         4 data inputs ; 7                           ;
-;         5 data inputs ; 4                           ;
-;         6 data inputs ; 10                          ;
-; boundary_port         ; 42                          ;
-; generic_pll           ; 1                           ;
+; arriav_lcell_comb     ; 2                           ;
+;     normal            ; 2                           ;
+;         0 data inputs ; 2                           ;
+; boundary_port         ; 43                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.56                        ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -637,7 +636,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed May 29 18:44:03 2024
+    Info: Processing started: Wed May 29 20:23:37 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off testeI2C -c testeI2C
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -646,14 +645,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file s2p.v
 Info (12021): Found 1 design units, including 1 entities, in source file p2s.v
     Info (12023): Found entity 1: p2s File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/p2s.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testeI2C.v
-    Info (12023): Found entity 1: testeI2C File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 1
+    Info (12023): Found entity 1: testeI2C File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 10
 Info (12021): Found 1 design units, including 1 entities, in source file pll.v
     Info (12023): Found entity 1: pll File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/pll.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file pll/pll_0002.v
     Info (12023): Found entity 1: pll_0002 File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/pll/pll_0002.v Line: 2
 Info (12127): Elaborating entity "testeI2C" for the top level hierarchy
-Warning (10034): Output port "LEDR[8..1]" at testeI2C.v(8) has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 8
-Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 32
+Warning (10235): Verilog HDL Always Construct warning at testeI2C.v(54): variable "HPS_I2C1_SCLK" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 54
+Warning (10755): Verilog HDL warning at testeI2C.v(53): assignments to HPS_I2C1_SCLK create a combinational loop File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 53
+Warning (10034): Output port "LEDR[8..1]" at testeI2C.v(23) has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 23
+Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 51
 Info (12128): Elaborating entity "pll_0002" for hierarchy "pll:pll_inst|pll_0002:pll_inst" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/pll.v Line: 20
 Info (12128): Elaborating entity "altera_pll" for hierarchy "pll:pll_inst|pll_0002:pll_inst|altera_pll:altera_pll_i" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/pll/pll_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
@@ -719,36 +720,42 @@ Info (12133): Instantiated megafunction "pll:pll_inst|pll_0002:pll_inst|altera_p
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "p2s" for hierarchy "p2s:p2s_inst" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 42
+Info (12128): Elaborating entity "p2s" for hierarchy "p2s:p2s_inst" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 65
 Warning (10230): Verilog HDL assignment warning at p2s.v(26): truncated value with size 32 to match size of target (5) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/p2s.v Line: 26
-Info (12128): Elaborating entity "s2p" for hierarchy "s2p:s2p_inst" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 52
+Info (12128): Elaborating entity "s2p" for hierarchy "s2p:s2p_inst" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 75
 Warning (10230): Verilog HDL assignment warning at s2p.v(24): truncated value with size 32 to match size of target (5) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/s2p.v Line: 24
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "HPS_I2C1_SCLK" is missing source, defaulting to GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 13
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "HPS_I2C1_SCLK" is missing source, defaulting to GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 13
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following PLL node(s):
+        Warning (14320): Synthesized away node "pll:pll_inst|pll_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]" File: /opt/altera/17.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
 Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "info[0]" has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 6
-    Warning (13040): bidirectional pin "info[1]" has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 6
-    Warning (13040): bidirectional pin "info[2]" has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 6
-    Warning (13040): bidirectional pin "info[3]" has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 6
-    Warning (13040): bidirectional pin "info[4]" has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 6
-    Warning (13040): bidirectional pin "info[5]" has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 6
-    Warning (13040): bidirectional pin "info[6]" has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 6
-    Warning (13040): bidirectional pin "info[7]" has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 6
-    Warning (13040): bidirectional pin "info[8]" has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 6
-Info (13060): One or more bidirectional pins are fed by always enabled tri-state buffers
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "I2C_SDAT" is moved to its source File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 4
-Warning (13009): TRI or OPNDRN buffers permanently enabled
-    Warning (13010): Node "p2s:p2s_inst|data_out" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/p2s.v Line: 7
+    Warning (13040): bidirectional pin "info[0]" has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 21
+    Warning (13040): bidirectional pin "info[1]" has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 21
+    Warning (13040): bidirectional pin "info[2]" has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 21
+    Warning (13040): bidirectional pin "info[3]" has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 21
+    Warning (13040): bidirectional pin "info[4]" has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 21
+    Warning (13040): bidirectional pin "info[5]" has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 21
+    Warning (13040): bidirectional pin "info[6]" has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 21
+    Warning (13040): bidirectional pin "info[7]" has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 21
+    Warning (13040): bidirectional pin "info[8]" has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 21
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 8
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 8
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 8
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 8
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 8
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 8
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 8
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 8
-Info (286030): Timing-Driven Synthesis is running
-Info (17049): 8 registers lost all their fanouts during netlist optimizations.
+    Warning (13410): Pin "HPS_I2C1_SCLK" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 13
+    Warning (13410): Pin "HPS_LTC_GPIO" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 19
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 80
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 23
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 23
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 23
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 23
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 23
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 23
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 23
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 23
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 80
+Info (17049): 9 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 571 assignments for entity "DE1_SoC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[0] -entity DE1_SoC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[10] -entity DE1_SoC was ignored
@@ -1322,37 +1329,37 @@ Warning (20013): Ignored 571 assignments for entity "DE1_SoC" -- entity does not
     Warning (20014): Assignment for entity set_instance_assignment -name D5_DELAY 2 -to HPS_DDR3_CK_N -entity DE1_SoC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name D5_DELAY 2 -to HPS_DDR3_CK_P -entity DE1_SoC was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 7 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 19 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "endereco[0]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "endereco[1]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "endereco[2]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "endereco[3]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "endereco[4]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "endereco[5]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "endereco[6]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "endereco[7]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "endereco[8]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "enable_write" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 7
-    Warning (15610): No output dependent on input pin "SW[1]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 10
-    Warning (15610): No output dependent on input pin "SW[2]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 10
-    Warning (15610): No output dependent on input pin "SW[3]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 10
-    Warning (15610): No output dependent on input pin "SW[4]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 10
-    Warning (15610): No output dependent on input pin "SW[5]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 10
-    Warning (15610): No output dependent on input pin "SW[6]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 10
-    Warning (15610): No output dependent on input pin "SW[7]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 10
-    Warning (15610): No output dependent on input pin "SW[8]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 10
-    Warning (15610): No output dependent on input pin "SW[9]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 10
-Info (21057): Implemented 92 device resources after synthesis - the final resource count might be different
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 21 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK_50" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 11
+    Warning (15610): No output dependent on input pin "endereco[0]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 20
+    Warning (15610): No output dependent on input pin "endereco[1]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 20
+    Warning (15610): No output dependent on input pin "endereco[2]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 20
+    Warning (15610): No output dependent on input pin "endereco[3]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 20
+    Warning (15610): No output dependent on input pin "endereco[4]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 20
+    Warning (15610): No output dependent on input pin "endereco[5]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 20
+    Warning (15610): No output dependent on input pin "endereco[6]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 20
+    Warning (15610): No output dependent on input pin "endereco[7]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 20
+    Warning (15610): No output dependent on input pin "endereco[8]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 20
+    Warning (15610): No output dependent on input pin "enable_write" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 22
+    Warning (15610): No output dependent on input pin "SW[1]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 25
+    Warning (15610): No output dependent on input pin "SW[2]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 25
+    Warning (15610): No output dependent on input pin "SW[3]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 25
+    Warning (15610): No output dependent on input pin "SW[4]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 25
+    Warning (15610): No output dependent on input pin "SW[5]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 25
+    Warning (15610): No output dependent on input pin "SW[6]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 25
+    Warning (15610): No output dependent on input pin "SW[7]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 25
+    Warning (15610): No output dependent on input pin "SW[8]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 25
+    Warning (15610): No output dependent on input pin "SW[9]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 25
+    Warning (15610): No output dependent on input pin "SW[0]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 25
+Info (21057): Implemented 43 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 21 input pins
-    Info (21059): Implemented 11 output pins
+    Info (21059): Implemented 12 output pins
     Info (21060): Implemented 10 bidirectional pins
-    Info (21061): Implemented 49 logic cells
-    Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 618 warnings
-    Info: Peak virtual memory: 1317 megabytes
-    Info: Processing ended: Wed May 29 18:44:13 2024
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:28
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 631 warnings
+    Info: Peak virtual memory: 1198 megabytes
+    Info: Processing ended: Wed May 29 20:23:46 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:26
 
 

@@ -10,22 +10,21 @@ module s2p ( // serial to parallel
 
     reg [4:0] count;
 
-    always @(negedge  clk) begin
+    always @(negedge clk or posedge reset) begin
         if (reset) begin
-            count = 4'b0;
-            data_out = 16'h00;   
-            ready = 0;
+            count <= 4'b0;
+            data_out <= 16'h0000;   
+            ready <= 0; 
         end else begin
             if (enable) begin
-                // data_out[7:1] = data_out[6:0];
-                data_out = data_out << 1;
-                data_out[0] = data_in;
-                
-                count = count + 1;
-
                 if (count == len) begin
-                    ready = 1;
+                    ready <= 1;
+                end else begin
+                    data_out <= {data_out[14:0], data_in};
+                    count <= count + 1;
                 end 
+            end else begin
+                ready <= 1;
             end
         end
     end
