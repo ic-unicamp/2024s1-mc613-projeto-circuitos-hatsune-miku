@@ -10,7 +10,7 @@ module p2s ( // parallel to serial
 
     reg [4:0] posicao;
     reg aux_data_out;
-    
+     
     // Tri-state buffer control
     assign data_out = enable ? aux_data_out : 1'bz; // tri-state, sempre que não estou enviando dados, ele deixa em alta impedância
 
@@ -27,6 +27,7 @@ module p2s ( // parallel to serial
 
                     if (posicao == (16 - len)) begin // Verifica se está enviando o último bit
                         done <= 1;
+                        posicao <= 4'b1111; //sempre que envia preciso ajusatar o "ponteiro"
                     end else begin
                         done <= 0;
                     end

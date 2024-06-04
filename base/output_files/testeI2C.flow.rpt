@@ -1,5 +1,5 @@
 Flow report for testeI2C
-Wed May 29 20:26:53 2024
+Mon Jun  3 23:08:44 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed May 29 20:26:53 2024       ;
+; Flow Status                     ; Successful - Mon Jun  3 23:08:44 2024       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; testeI2C                                    ;
 ; Top-level Entity Name           ; testeI2C                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1 / 32,070 ( < 1 % )                        ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 43 / 457 ( 9 % )                            ;
+; Logic utilization (in ALMs)     ; 37 / 32,070 ( < 1 % )                       ;
+; Total registers                 ; 55                                          ;
+; Total pins                      ; 37 / 457 ( 8 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
@@ -57,7 +57,7 @@ refer to the applicable agreement for further details.
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
 ; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0 / 6 ( 0 % )                               ;
+; Total PLLs                      ; 1 / 6 ( 17 % )                              ;
 ; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
 +---------------------------------+---------------------------------------------+
 
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/29/2024 20:26:08 ;
+; Start date & time ; 06/03/2024 23:08:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; testeI2C            ;
 +-------------------+---------------------+
@@ -78,15 +78,19 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 251776451552160.171702516735627        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 251776451552135.171746689838943        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
 ; MISC_FILE                           ; pll.cmp                                ; --            ; --          ; --             ;
 ; MISC_FILE                           ; pll_sim/pll.vo                         ; --            ; --          ; --             ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
 ; SPD_FILE                            ; pll.spd                                ; --            ; --          ; --             ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                     ; --            ; --          ; --             ;
@@ -98,22 +102,22 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 1152 MB             ; 00:00:26                           ;
-; Fitter               ; 00:00:28     ; 1.0                     ; 3064 MB             ; 00:01:09                           ;
-; Assembler            ; 00:00:07     ; 1.0                     ; 1169 MB             ; 00:00:07                           ;
-; Total                ; 00:00:44     ; --                      ; --                  ; 00:01:42                           ;
+; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 1266 MB             ; 00:00:13                           ;
+; Fitter               ; 00:00:16     ; 1.0                     ; 3169 MB             ; 00:00:53                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 1171 MB             ; 00:00:03                           ;
+; Total                ; 00:00:24     ; --                      ; --                  ; 00:01:09                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                            ;
-+----------------------+------------------------+-------------+-------------+----------------+
-; Module Name          ; Machine Hostname       ; OS Name     ; OS Version  ; Processor type ;
-+----------------------+------------------------+-------------+-------------+----------------+
-; Analysis & Synthesis ; fred.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; Fitter               ; fred.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; Assembler            ; fred.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-+----------------------+------------------------+-------------+-------------+----------------+
++-----------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                               ;
++----------------------+---------------------------+-------------+-------------+----------------+
+; Module Name          ; Machine Hostname          ; OS Name     ; OS Version  ; Processor type ;
++----------------------+---------------------------+-------------+-------------+----------------+
+; Analysis & Synthesis ; catatau.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; Fitter               ; catatau.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; Assembler            ; catatau.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
++----------------------+---------------------------+-------------+-------------+----------------+
 
 
 ------------

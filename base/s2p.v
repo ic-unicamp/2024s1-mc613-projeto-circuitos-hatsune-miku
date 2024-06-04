@@ -14,7 +14,7 @@ module s2p ( // serial to parallel
         if (reset) begin
             count <= 4'b0;
             data_out <= 16'h0000;   
-            ready <= 0; 
+            ready <= 0;  
         end else begin
             if (enable) begin
                 if (count == len) begin
