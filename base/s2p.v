@@ -5,17 +5,28 @@ module s2p ( // serial to parallel
     input enable,
     output reg [15:0] data_out,
     input [3:0] len, 
-    output reg ready
+    output reg ready,
+    output reg [4:0] countAUX 
 );
 
-    reg [4:0] count;
-
+    reg [4:0] count; 
+ 
     always @(negedge clk or posedge reset) begin
         if (reset) begin
-            count <= 4'b0;
+            countAUX <= 4'hf;  
+        end else begin  
+            if (data_in != 0 && enable) begin
+                countAUX <= count;
+            end
+        end
+    end 
+
+    always @(posedge clk or posedge reset) begin 
+        if (reset) begin
+            count <= 4'h0;
             data_out <= 16'h0000;   
             ready <= 0;  
-        end else begin
+        end else begin 
             if (enable) begin
                 if (count == len) begin
                     ready <= 1;
@@ -24,7 +35,7 @@ module s2p ( // serial to parallel
                     count <= count + 1;
                 end 
             end else begin
-                ready <= 1;
+                ready <= 0;
             end
         end
     end

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for testeI2C
-Mon Jun  3 23:08:23 2024
+Wed Jun  5 11:57:11 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -13,21 +13,17 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis IP Cores Summary
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: pll:pll_inst|pll_0002:pll_inst|altera_pll:altera_pll_i
- 15. Port Connectivity Checks: "s2p:s2p_inst"
- 16. Port Connectivity Checks: "p2s:p2s_inst"
- 17. Port Connectivity Checks: "cb7s:decoder_digito5"
- 18. Port Connectivity Checks: "cb7s:decoder_digito0"
- 19. Port Connectivity Checks: "pll:pll_inst"
- 20. Post-Synthesis Netlist Statistics for Top Partition
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Port Connectivity Checks: "s2p:s2p_inst"
+ 14. Port Connectivity Checks: "p2s:p2s_inst"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+ 18. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -53,14 +49,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Jun  3 23:08:23 2024       ;
+; Analysis & Synthesis Status     ; Successful - Wed Jun  5 11:57:11 2024       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; testeI2C                                    ;
 ; Top-level Entity Name           ; testeI2C                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 50                                          ;
-; Total pins                      ; 37                                          ;
+; Total registers                 ; 97                                          ;
+; Total pins                      ; 65                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -68,7 +64,7 @@ refer to the applicable agreement for further details.
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
 ; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 1                                           ;
+; Total PLLs                      ; 0                                           ;
 ; Total DLLs                      ; 0                                           ;
 +---------------------------------+---------------------------------------------+
 
@@ -177,19 +173,16 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                         ;
-+----------------------------------+-----------------+-----------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                   ; File Name with Absolute Path                                                                                      ; Library ;
-+----------------------------------+-----------------+-----------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
-; cb7s.v                           ; yes             ; User Verilog HDL File       ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/cb7s.v         ;         ;
-; s2p.v                            ; yes             ; User Verilog HDL File       ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/s2p.v          ;         ;
-; p2s.v                            ; yes             ; User Verilog HDL File       ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/p2s.v          ;         ;
-; testeI2C.v                       ; yes             ; User Verilog HDL File       ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v     ;         ;
-; pll.v                            ; yes             ; User Wizard-Generated File  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/pll.v          ; pll     ;
-; pll/pll_0002.v                   ; yes             ; User Verilog HDL File       ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/pll/pll_0002.v ; pll     ;
-; altera_pll.v                     ; yes             ; Megafunction                ; /opt/altera/17.1/quartus/libraries/megafunctions/altera_pll.v                                                     ;         ;
-+----------------------------------+-----------------+-----------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                  ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------------+---------+
+; cb7s.v                           ; yes             ; User Verilog HDL File  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/cb7s.v     ;         ;
+; s2p.v                            ; yes             ; User Verilog HDL File  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/s2p.v      ;         ;
+; p2s.v                            ; yes             ; User Verilog HDL File  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/p2s.v      ;         ;
+; testeI2C.v                       ; yes             ; User Verilog HDL File  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------+
@@ -197,76 +190,63 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------------+
 ; Resource                                    ; Usage             ;
 +---------------------------------------------+-------------------+
-; Estimate of Logic utilization (ALMs needed) ; 36                ;
+; Estimate of Logic utilization (ALMs needed) ; 54                ;
 ;                                             ;                   ;
-; Combinational ALUT usage for logic          ; 60                ;
-;     -- 7 input functions                    ; 0                 ;
-;     -- 6 input functions                    ; 10                ;
-;     -- 5 input functions                    ; 8                 ;
-;     -- 4 input functions                    ; 11                ;
-;     -- <=3 input functions                  ; 31                ;
+; Combinational ALUT usage for logic          ; 94                ;
+;     -- 7 input functions                    ; 2                 ;
+;     -- 6 input functions                    ; 8                 ;
+;     -- 5 input functions                    ; 7                 ;
+;     -- 4 input functions                    ; 43                ;
+;     -- <=3 input functions                  ; 34                ;
 ;                                             ;                   ;
-; Dedicated logic registers                   ; 50                ;
+; Dedicated logic registers                   ; 97                ;
 ;                                             ;                   ;
-; I/O pins                                    ; 37                ;
+; I/O pins                                    ; 65                ;
 ;                                             ;                   ;
 ; Total DSP Blocks                            ; 0                 ;
 ;                                             ;                   ;
-; Total PLLs                                  ; 1                 ;
-;     -- PLLs                                 ; 1                 ;
-;                                             ;                   ;
 ; Maximum fan-out node                        ; AUX_FPGA_I2C_SCLK ;
-; Maximum fan-out                             ; 51                ;
-; Total fan-out                               ; 434               ;
-; Average fan-out                             ; 2.33              ;
+; Maximum fan-out                             ; 87                ;
+; Total fan-out                               ; 728               ;
+; Average fan-out                             ; 2.26              ;
 +---------------------------------------------+-------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                         ;
-+------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                              ; Entity Name ; Library Name ;
-+------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------+-------------+--------------+
-; |testeI2C                          ; 60 (17)             ; 50 (9)                    ; 0                 ; 0          ; 37   ; 0            ; |testeI2C                                                        ; testeI2C    ; work         ;
-;    |cb7s:decoder_digito0|          ; 2 (2)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|cb7s:decoder_digito0                                   ; cb7s        ; work         ;
-;    |cb7s:decoder_digito5|          ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|cb7s:decoder_digito5                                   ; cb7s        ; work         ;
-;    |p2s:p2s_inst|                  ; 10 (10)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|p2s:p2s_inst                                           ; p2s         ; work         ;
-;    |pll:pll_inst|                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|pll:pll_inst                                           ; pll         ; pll          ;
-;       |pll_0002:pll_inst|          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|pll:pll_inst|pll_0002:pll_inst                         ; pll_0002    ; pll          ;
-;          |altera_pll:altera_pll_i| ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|pll:pll_inst|pll_0002:pll_inst|altera_pll:altera_pll_i ; altera_pll  ; work         ;
-;    |s2p:s2p_inst|                  ; 23 (23)             ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|s2p:s2p_inst                                           ; s2p         ; work         ;
-+------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                               ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------+-------------+--------------+
+; |testeI2C                  ; 94 (27)             ; 97 (22)                   ; 0                 ; 0          ; 65   ; 0            ; |testeI2C                      ; testeI2C    ; work         ;
+;    |cb7s:decoder_digito0|  ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|cb7s:decoder_digito0 ; cb7s        ; work         ;
+;    |cb7s:decoder_digito1|  ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|cb7s:decoder_digito1 ; cb7s        ; work         ;
+;    |cb7s:decoder_digito2|  ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|cb7s:decoder_digito2 ; cb7s        ; work         ;
+;    |cb7s:decoder_digito3|  ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|cb7s:decoder_digito3 ; cb7s        ; work         ;
+;    |cb7s:decoder_digito4|  ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|cb7s:decoder_digito4 ; cb7s        ; work         ;
+;    |cb7s:decoder_digito5|  ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|cb7s:decoder_digito5 ; cb7s        ; work         ;
+;    |p2s:p2s_inst|          ; 12 (12)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|p2s:p2s_inst         ; p2s         ; work         ;
+;    |s2p:s2p_inst|          ; 13 (13)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|s2p:s2p_inst         ; s2p         ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                    ;
-+--------+--------------+---------+--------------+--------------+------------------------+-----------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance        ; IP Include File ;
-+--------+--------------+---------+--------------+--------------+------------------------+-----------------+
-; Altera ; altera_pll   ; 17.1    ; N/A          ; N/A          ; |testeI2C|pll:pll_inst ; pll.v           ;
-+--------+--------------+---------+--------------+--------------+------------------------+-----------------+
-
-
-+------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                 ;
-+----------------------------------------+-------------------------------------------+
-; Register name                          ; Reason for Removal                        ;
-+----------------------------------------+-------------------------------------------+
-; len_msg_slave[0..3]                    ; Stuck at GND due to stuck port data_in    ;
-; state[3]                               ; Merged with state[2]                      ;
-; len_msg_master[3]                      ; Merged with len_msg_master[0]             ;
-; msg_master[7,9,10]                     ; Merged with len_msg_master[0]             ;
-; msg_master[0..6,8,11..13,15]           ; Merged with len_msg_master[1]             ;
-; msg_master[14]                         ; Merged with len_msg_master[2]             ;
-; cb7s:decoder_digito0|saida[3]          ; Merged with cb7s:decoder_digito0|saida[0] ;
-; len_msg_master[1]                      ; Stuck at GND due to stuck port data_in    ;
-; cb7s:decoder_digito0|saida[1]          ; Stuck at GND due to stuck port data_in    ;
-; enable_s2p                             ; Stuck at VCC due to stuck port data_in    ;
-; state[2]                               ; Stuck at GND due to stuck port data_in    ;
-; p2s:p2s_inst|posicao[4]                ; Stuck at GND due to stuck port data_in    ;
-; Total Number of Removed Registers = 28 ;                                           ;
-+----------------------------------------+-------------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; len_msg_slave[3]                       ; Stuck at GND due to stuck port data_in ;
+; len_msg_slave[2]                       ; Stuck at VCC due to stuck port data_in ;
+; len_msg_slave[0,1]                     ; Stuck at GND due to stuck port data_in ;
+; msg_master[9]                          ; Merged with len_msg_master[0]          ;
+; msg_master[0..7,10,11,15]              ; Merged with len_msg_master[1]          ;
+; msg_master[8,12]                       ; Merged with len_msg_master[3]          ;
+; len_msg_master[1]                      ; Stuck at GND due to stuck port data_in ;
+; state[3]                               ; Stuck at GND due to stuck port data_in ;
+; certo                                  ; Stuck at GND due to stuck port data_in ;
+; p2s:p2s_inst|posicao[4]                ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 22 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +----------------------------------------------------------------------------------------+
@@ -276,6 +256,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------+---------------------------+----------------------------------------+
 ; len_msg_master[1] ; Stuck at GND              ; p2s:p2s_inst|posicao[4]                ;
 ;                   ; due to stuck port data_in ;                                        ;
+; state[3]          ; Stuck at GND              ; certo                                  ;
+;                   ; due to stuck port data_in ;                                        ;
 +-------------------+---------------------------+----------------------------------------+
 
 
@@ -284,12 +266,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 50    ;
-; Number of registers using Synchronous Clear  ; 4     ;
-; Number of registers using Synchronous Load   ; 3     ;
-; Number of registers using Asynchronous Clear ; 28    ;
+; Total registers                              ; 97    ;
+; Number of registers using Synchronous Clear  ; 14    ;
+; Number of registers using Synchronous Load   ; 2     ;
+; Number of registers using Asynchronous Clear ; 32    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 14    ;
+; Number of registers using Clock Enable       ; 32    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -299,280 +281,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; p2s:p2s_inst|posicao[3]                ; 6       ;
+; p2s:p2s_inst|posicao[3]                ; 5       ;
+; p2s:p2s_inst|posicao[2]                ; 6       ;
 ; p2s:p2s_inst|posicao[1]                ; 7       ;
 ; p2s:p2s_inst|posicao[0]                ; 7       ;
-; p2s:p2s_inst|posicao[2]                ; 6       ;
-; Total number of inverted registers = 4 ;         ;
+; s2p:s2p_inst|countAUX[0]               ; 7       ;
+; s2p:s2p_inst|countAUX[1]               ; 7       ;
+; s2p:s2p_inst|countAUX[2]               ; 7       ;
+; s2p:s2p_inst|countAUX[3]               ; 7       ;
+; Total number of inverted registers = 8 ;         ;
 +----------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |testeI2C|cb7s:decoder_digito0|saida[4] ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |testeI2C|cb7s:decoder_digito0|saida[0] ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 2 LEs                ; 10 LEs                 ; Yes        ; |testeI2C|len_msg_master[0]             ;
-; 11:1               ; 6 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; Yes        ; |testeI2C|cb7s:decoder_digito5|saida[5] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 18:1               ; 2 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |testeI2C|msg_master[14]   ;
+; 18:1               ; 4 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |testeI2C|msg_master[13]   ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 10 LEs               ; 14 LEs                 ; Yes        ; |testeI2C|state[3]         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: pll:pll_inst|pll_0002:pll_inst|altera_pll:altera_pll_i ;
-+--------------------------------------+------------------------+-------------------------------------+
-; Parameter Name                       ; Value                  ; Type                                ;
-+--------------------------------------+------------------------+-------------------------------------+
-; reference_clock_frequency            ; 50.0 MHz               ; String                              ;
-; fractional_vco_multiplier            ; false                  ; String                              ;
-; pll_type                             ; General                ; String                              ;
-; pll_subtype                          ; General                ; String                              ;
-; number_of_clocks                     ; 1                      ; Signed Integer                      ;
-; operation_mode                       ; direct                 ; String                              ;
-; deserialization_factor               ; 4                      ; Signed Integer                      ;
-; data_rate                            ; 0                      ; Signed Integer                      ;
-; sim_additional_refclk_cycles_to_lock ; 0                      ; Signed Integer                      ;
-; output_clock_frequency0              ; 1.171875 MHz           ; String                              ;
-; phase_shift0                         ; 0 ps                   ; String                              ;
-; duty_cycle0                          ; 50                     ; Signed Integer                      ;
-; output_clock_frequency1              ; 0 MHz                  ; String                              ;
-; phase_shift1                         ; 0 ps                   ; String                              ;
-; duty_cycle1                          ; 50                     ; Signed Integer                      ;
-; output_clock_frequency2              ; 0 MHz                  ; String                              ;
-; phase_shift2                         ; 0 ps                   ; String                              ;
-; duty_cycle2                          ; 50                     ; Signed Integer                      ;
-; output_clock_frequency3              ; 0 MHz                  ; String                              ;
-; phase_shift3                         ; 0 ps                   ; String                              ;
-; duty_cycle3                          ; 50                     ; Signed Integer                      ;
-; output_clock_frequency4              ; 0 MHz                  ; String                              ;
-; phase_shift4                         ; 0 ps                   ; String                              ;
-; duty_cycle4                          ; 50                     ; Signed Integer                      ;
-; output_clock_frequency5              ; 0 MHz                  ; String                              ;
-; phase_shift5                         ; 0 ps                   ; String                              ;
-; duty_cycle5                          ; 50                     ; Signed Integer                      ;
-; output_clock_frequency6              ; 0 MHz                  ; String                              ;
-; phase_shift6                         ; 0 ps                   ; String                              ;
-; duty_cycle6                          ; 50                     ; Signed Integer                      ;
-; output_clock_frequency7              ; 0 MHz                  ; String                              ;
-; phase_shift7                         ; 0 ps                   ; String                              ;
-; duty_cycle7                          ; 50                     ; Signed Integer                      ;
-; output_clock_frequency8              ; 0 MHz                  ; String                              ;
-; phase_shift8                         ; 0 ps                   ; String                              ;
-; duty_cycle8                          ; 50                     ; Signed Integer                      ;
-; output_clock_frequency9              ; 0 MHz                  ; String                              ;
-; phase_shift9                         ; 0 ps                   ; String                              ;
-; duty_cycle9                          ; 50                     ; Signed Integer                      ;
-; output_clock_frequency10             ; 0 MHz                  ; String                              ;
-; phase_shift10                        ; 0 ps                   ; String                              ;
-; duty_cycle10                         ; 50                     ; Signed Integer                      ;
-; output_clock_frequency11             ; 0 MHz                  ; String                              ;
-; phase_shift11                        ; 0 ps                   ; String                              ;
-; duty_cycle11                         ; 50                     ; Signed Integer                      ;
-; output_clock_frequency12             ; 0 MHz                  ; String                              ;
-; phase_shift12                        ; 0 ps                   ; String                              ;
-; duty_cycle12                         ; 50                     ; Signed Integer                      ;
-; output_clock_frequency13             ; 0 MHz                  ; String                              ;
-; phase_shift13                        ; 0 ps                   ; String                              ;
-; duty_cycle13                         ; 50                     ; Signed Integer                      ;
-; output_clock_frequency14             ; 0 MHz                  ; String                              ;
-; phase_shift14                        ; 0 ps                   ; String                              ;
-; duty_cycle14                         ; 50                     ; Signed Integer                      ;
-; output_clock_frequency15             ; 0 MHz                  ; String                              ;
-; phase_shift15                        ; 0 ps                   ; String                              ;
-; duty_cycle15                         ; 50                     ; Signed Integer                      ;
-; output_clock_frequency16             ; 0 MHz                  ; String                              ;
-; phase_shift16                        ; 0 ps                   ; String                              ;
-; duty_cycle16                         ; 50                     ; Signed Integer                      ;
-; output_clock_frequency17             ; 0 MHz                  ; String                              ;
-; phase_shift17                        ; 0 ps                   ; String                              ;
-; duty_cycle17                         ; 50                     ; Signed Integer                      ;
-; clock_name_0                         ;                        ; String                              ;
-; clock_name_1                         ;                        ; String                              ;
-; clock_name_2                         ;                        ; String                              ;
-; clock_name_3                         ;                        ; String                              ;
-; clock_name_4                         ;                        ; String                              ;
-; clock_name_5                         ;                        ; String                              ;
-; clock_name_6                         ;                        ; String                              ;
-; clock_name_7                         ;                        ; String                              ;
-; clock_name_8                         ;                        ; String                              ;
-; clock_name_global_0                  ; false                  ; String                              ;
-; clock_name_global_1                  ; false                  ; String                              ;
-; clock_name_global_2                  ; false                  ; String                              ;
-; clock_name_global_3                  ; false                  ; String                              ;
-; clock_name_global_4                  ; false                  ; String                              ;
-; clock_name_global_5                  ; false                  ; String                              ;
-; clock_name_global_6                  ; false                  ; String                              ;
-; clock_name_global_7                  ; false                  ; String                              ;
-; clock_name_global_8                  ; false                  ; String                              ;
-; m_cnt_hi_div                         ; 1                      ; Signed Integer                      ;
-; m_cnt_lo_div                         ; 1                      ; Signed Integer                      ;
-; m_cnt_bypass_en                      ; false                  ; String                              ;
-; m_cnt_odd_div_duty_en                ; false                  ; String                              ;
-; n_cnt_hi_div                         ; 1                      ; Signed Integer                      ;
-; n_cnt_lo_div                         ; 1                      ; Signed Integer                      ;
-; n_cnt_bypass_en                      ; false                  ; String                              ;
-; n_cnt_odd_div_duty_en                ; false                  ; String                              ;
-; c_cnt_hi_div0                        ; 1                      ; Signed Integer                      ;
-; c_cnt_lo_div0                        ; 1                      ; Signed Integer                      ;
-; c_cnt_bypass_en0                     ; false                  ; String                              ;
-; c_cnt_in_src0                        ; ph_mux_clk             ; String                              ;
-; c_cnt_odd_div_duty_en0               ; false                  ; String                              ;
-; c_cnt_prst0                          ; 1                      ; Signed Integer                      ;
-; c_cnt_ph_mux_prst0                   ; 0                      ; Signed Integer                      ;
-; c_cnt_hi_div1                        ; 1                      ; Signed Integer                      ;
-; c_cnt_lo_div1                        ; 1                      ; Signed Integer                      ;
-; c_cnt_bypass_en1                     ; false                  ; String                              ;
-; c_cnt_in_src1                        ; ph_mux_clk             ; String                              ;
-; c_cnt_odd_div_duty_en1               ; false                  ; String                              ;
-; c_cnt_prst1                          ; 1                      ; Signed Integer                      ;
-; c_cnt_ph_mux_prst1                   ; 0                      ; Signed Integer                      ;
-; c_cnt_hi_div2                        ; 1                      ; Signed Integer                      ;
-; c_cnt_lo_div2                        ; 1                      ; Signed Integer                      ;
-; c_cnt_bypass_en2                     ; false                  ; String                              ;
-; c_cnt_in_src2                        ; ph_mux_clk             ; String                              ;
-; c_cnt_odd_div_duty_en2               ; false                  ; String                              ;
-; c_cnt_prst2                          ; 1                      ; Signed Integer                      ;
-; c_cnt_ph_mux_prst2                   ; 0                      ; Signed Integer                      ;
-; c_cnt_hi_div3                        ; 1                      ; Signed Integer                      ;
-; c_cnt_lo_div3                        ; 1                      ; Signed Integer                      ;
-; c_cnt_bypass_en3                     ; false                  ; String                              ;
-; c_cnt_in_src3                        ; ph_mux_clk             ; String                              ;
-; c_cnt_odd_div_duty_en3               ; false                  ; String                              ;
-; c_cnt_prst3                          ; 1                      ; Signed Integer                      ;
-; c_cnt_ph_mux_prst3                   ; 0                      ; Signed Integer                      ;
-; c_cnt_hi_div4                        ; 1                      ; Signed Integer                      ;
-; c_cnt_lo_div4                        ; 1                      ; Signed Integer                      ;
-; c_cnt_bypass_en4                     ; false                  ; String                              ;
-; c_cnt_in_src4                        ; ph_mux_clk             ; String                              ;
-; c_cnt_odd_div_duty_en4               ; false                  ; String                              ;
-; c_cnt_prst4                          ; 1                      ; Signed Integer                      ;
-; c_cnt_ph_mux_prst4                   ; 0                      ; Signed Integer                      ;
-; c_cnt_hi_div5                        ; 1                      ; Signed Integer                      ;
-; c_cnt_lo_div5                        ; 1                      ; Signed Integer                      ;
-; c_cnt_bypass_en5                     ; false                  ; String                              ;
-; c_cnt_in_src5                        ; ph_mux_clk             ; String                              ;
-; c_cnt_odd_div_duty_en5               ; false                  ; String                              ;
-; c_cnt_prst5                          ; 1                      ; Signed Integer                      ;
-; c_cnt_ph_mux_prst5                   ; 0                      ; Signed Integer                      ;
-; c_cnt_hi_div6                        ; 1                      ; Signed Integer                      ;
-; c_cnt_lo_div6                        ; 1                      ; Signed Integer                      ;
-; c_cnt_bypass_en6                     ; false                  ; String                              ;
-; c_cnt_in_src6                        ; ph_mux_clk             ; String                              ;
-; c_cnt_odd_div_duty_en6               ; false                  ; String                              ;
-; c_cnt_prst6                          ; 1                      ; Signed Integer                      ;
-; c_cnt_ph_mux_prst6                   ; 0                      ; Signed Integer                      ;
-; c_cnt_hi_div7                        ; 1                      ; Signed Integer                      ;
-; c_cnt_lo_div7                        ; 1                      ; Signed Integer                      ;
-; c_cnt_bypass_en7                     ; false                  ; String                              ;
-; c_cnt_in_src7                        ; ph_mux_clk             ; String                              ;
-; c_cnt_odd_div_duty_en7               ; false                  ; String                              ;
-; c_cnt_prst7                          ; 1                      ; Signed Integer                      ;
-; c_cnt_ph_mux_prst7                   ; 0                      ; Signed Integer                      ;
-; c_cnt_hi_div8                        ; 1                      ; Signed Integer                      ;
-; c_cnt_lo_div8                        ; 1                      ; Signed Integer                      ;
-; c_cnt_bypass_en8                     ; false                  ; String                              ;
-; c_cnt_in_src8                        ; ph_mux_clk             ; String                              ;
-; c_cnt_odd_div_duty_en8               ; false                  ; String                              ;
-; c_cnt_prst8                          ; 1                      ; Signed Integer                      ;
-; c_cnt_ph_mux_prst8                   ; 0                      ; Signed Integer                      ;
-; c_cnt_hi_div9                        ; 1                      ; Signed Integer                      ;
-; c_cnt_lo_div9                        ; 1                      ; Signed Integer                      ;
-; c_cnt_bypass_en9                     ; false                  ; String                              ;
-; c_cnt_in_src9                        ; ph_mux_clk             ; String                              ;
-; c_cnt_odd_div_duty_en9               ; false                  ; String                              ;
-; c_cnt_prst9                          ; 1                      ; Signed Integer                      ;
-; c_cnt_ph_mux_prst9                   ; 0                      ; Signed Integer                      ;
-; c_cnt_hi_div10                       ; 1                      ; Signed Integer                      ;
-; c_cnt_lo_div10                       ; 1                      ; Signed Integer                      ;
-; c_cnt_bypass_en10                    ; false                  ; String                              ;
-; c_cnt_in_src10                       ; ph_mux_clk             ; String                              ;
-; c_cnt_odd_div_duty_en10              ; false                  ; String                              ;
-; c_cnt_prst10                         ; 1                      ; Signed Integer                      ;
-; c_cnt_ph_mux_prst10                  ; 0                      ; Signed Integer                      ;
-; c_cnt_hi_div11                       ; 1                      ; Signed Integer                      ;
-; c_cnt_lo_div11                       ; 1                      ; Signed Integer                      ;
-; c_cnt_bypass_en11                    ; false                  ; String                              ;
-; c_cnt_in_src11                       ; ph_mux_clk             ; String                              ;
-; c_cnt_odd_div_duty_en11              ; false                  ; String                              ;
-; c_cnt_prst11                         ; 1                      ; Signed Integer                      ;
-; c_cnt_ph_mux_prst11                  ; 0                      ; Signed Integer                      ;
-; c_cnt_hi_div12                       ; 1                      ; Signed Integer                      ;
-; c_cnt_lo_div12                       ; 1                      ; Signed Integer                      ;
-; c_cnt_bypass_en12                    ; false                  ; String                              ;
-; c_cnt_in_src12                       ; ph_mux_clk             ; String                              ;
-; c_cnt_odd_div_duty_en12              ; false                  ; String                              ;
-; c_cnt_prst12                         ; 1                      ; Signed Integer                      ;
-; c_cnt_ph_mux_prst12                  ; 0                      ; Signed Integer                      ;
-; c_cnt_hi_div13                       ; 1                      ; Signed Integer                      ;
-; c_cnt_lo_div13                       ; 1                      ; Signed Integer                      ;
-; c_cnt_bypass_en13                    ; false                  ; String                              ;
-; c_cnt_in_src13                       ; ph_mux_clk             ; String                              ;
-; c_cnt_odd_div_duty_en13              ; false                  ; String                              ;
-; c_cnt_prst13                         ; 1                      ; Signed Integer                      ;
-; c_cnt_ph_mux_prst13                  ; 0                      ; Signed Integer                      ;
-; c_cnt_hi_div14                       ; 1                      ; Signed Integer                      ;
-; c_cnt_lo_div14                       ; 1                      ; Signed Integer                      ;
-; c_cnt_bypass_en14                    ; false                  ; String                              ;
-; c_cnt_in_src14                       ; ph_mux_clk             ; String                              ;
-; c_cnt_odd_div_duty_en14              ; false                  ; String                              ;
-; c_cnt_prst14                         ; 1                      ; Signed Integer                      ;
-; c_cnt_ph_mux_prst14                  ; 0                      ; Signed Integer                      ;
-; c_cnt_hi_div15                       ; 1                      ; Signed Integer                      ;
-; c_cnt_lo_div15                       ; 1                      ; Signed Integer                      ;
-; c_cnt_bypass_en15                    ; false                  ; String                              ;
-; c_cnt_in_src15                       ; ph_mux_clk             ; String                              ;
-; c_cnt_odd_div_duty_en15              ; false                  ; String                              ;
-; c_cnt_prst15                         ; 1                      ; Signed Integer                      ;
-; c_cnt_ph_mux_prst15                  ; 0                      ; Signed Integer                      ;
-; c_cnt_hi_div16                       ; 1                      ; Signed Integer                      ;
-; c_cnt_lo_div16                       ; 1                      ; Signed Integer                      ;
-; c_cnt_bypass_en16                    ; false                  ; String                              ;
-; c_cnt_in_src16                       ; ph_mux_clk             ; String                              ;
-; c_cnt_odd_div_duty_en16              ; false                  ; String                              ;
-; c_cnt_prst16                         ; 1                      ; Signed Integer                      ;
-; c_cnt_ph_mux_prst16                  ; 0                      ; Signed Integer                      ;
-; c_cnt_hi_div17                       ; 1                      ; Signed Integer                      ;
-; c_cnt_lo_div17                       ; 1                      ; Signed Integer                      ;
-; c_cnt_bypass_en17                    ; false                  ; String                              ;
-; c_cnt_in_src17                       ; ph_mux_clk             ; String                              ;
-; c_cnt_odd_div_duty_en17              ; false                  ; String                              ;
-; c_cnt_prst17                         ; 1                      ; Signed Integer                      ;
-; c_cnt_ph_mux_prst17                  ; 0                      ; Signed Integer                      ;
-; pll_vco_div                          ; 1                      ; Signed Integer                      ;
-; pll_slf_rst                          ; false                  ; String                              ;
-; pll_bw_sel                           ; low                    ; String                              ;
-; pll_output_clk_frequency             ; 0 MHz                  ; String                              ;
-; pll_cp_current                       ; 0                      ; Signed Integer                      ;
-; pll_bwctrl                           ; 0                      ; Signed Integer                      ;
-; pll_fractional_division              ; 1                      ; Signed Integer                      ;
-; pll_fractional_cout                  ; 24                     ; Signed Integer                      ;
-; pll_dsm_out_sel                      ; 1st_order              ; String                              ;
-; mimic_fbclk_type                     ; gclk                   ; String                              ;
-; pll_fbclk_mux_1                      ; glb                    ; String                              ;
-; pll_fbclk_mux_2                      ; fb_1                   ; String                              ;
-; pll_m_cnt_in_src                     ; ph_mux_clk             ; String                              ;
-; pll_vcoph_div                        ; 1                      ; Signed Integer                      ;
-; refclk1_frequency                    ; 0 MHz                  ; String                              ;
-; pll_clkin_0_src                      ; clk_0                  ; String                              ;
-; pll_clkin_1_src                      ; clk_0                  ; String                              ;
-; pll_clk_loss_sw_en                   ; false                  ; String                              ;
-; pll_auto_clk_sw_en                   ; false                  ; String                              ;
-; pll_manu_clk_sw_en                   ; false                  ; String                              ;
-; pll_clk_sw_dly                       ; 0                      ; Signed Integer                      ;
-; pll_extclk_0_cnt_src                 ; pll_extclk_cnt_src_vss ; String                              ;
-; pll_extclk_1_cnt_src                 ; pll_extclk_cnt_src_vss ; String                              ;
-+--------------------------------------+------------------------+-------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "s2p:s2p_inst"                                                                                                                                                                   ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; len  ; Input ; Warning  ; Input port expression (5 bits) is wider than the input port (4 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "s2p:s2p_inst"                                                                                                                                                                        ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                          ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; len      ; Input  ; Warning  ; Input port expression (5 bits) is wider than the input port (4 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; countAUX ; Output ; Warning  ; Output or bidir port (5 bits) is wider than the port expression (4 bits) it drives; bit(s) "countAUX[4..4]" have no fanouts                                                      ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -584,61 +323,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cb7s:decoder_digito5"                                                                                                                                                                ;
-+---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; entrada ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (4 bits) it drives.  The 12 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-+---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cb7s:decoder_digito0"                                                                                                                                                              ;
-+---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                                                                                                                                          ;
-+---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; entrada ; Input ; Warning  ; Input port expression (8 bits) is wider than the input port (4 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-+---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "pll:pll_inst"                                                                                              ;
-+--------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                                                  ;
-+--------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; locked ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+----------------------------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 50                          ;
-;     CLR               ; 23                          ;
-;     ENA               ; 7                           ;
-;     ENA CLR           ; 5                           ;
-;     ENA SCLR          ; 2                           ;
-;     SCLR              ; 2                           ;
-;     SLD               ; 3                           ;
-;     plain             ; 8                           ;
+; arriav_ff             ; 97                          ;
+;     CLR               ; 7                           ;
+;     ENA               ; 6                           ;
+;     ENA CLR           ; 25                          ;
+;     ENA SCLR          ; 1                           ;
+;     SCLR              ; 13                          ;
+;     SLD               ; 2                           ;
+;     plain             ; 43                          ;
 ; arriav_io_obuf        ; 1                           ;
-; arriav_lcell_comb     ; 62                          ;
-;     normal            ; 62                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 8                           ;
-;         3 data inputs ; 20                          ;
-;         4 data inputs ; 11                          ;
-;         5 data inputs ; 8                           ;
-;         6 data inputs ; 10                          ;
-; boundary_port         ; 37                          ;
-; generic_pll           ; 1                           ;
+; arriav_lcell_comb     ; 95                          ;
+;     arith             ; 10                          ;
+;         1 data inputs ; 10                          ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 83                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 43                          ;
+;         5 data inputs ; 7                           ;
+;         6 data inputs ; 8                           ;
+; boundary_port         ; 65                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.53                        ;
+; Average LUT depth     ; 1.10                        ;
 +-----------------------+-----------------------------+
 
 
@@ -657,10 +372,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Jun  3 23:08:18 2024
+    Info: Processing started: Wed Jun  5 11:57:06 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off testeI2C -c testeI2C
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Warning (12019): Can't analyze file -- file pll200hz/pll200hz.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file cb7s.v
     Info (12023): Found entity 1: cb7s File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/cb7s.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file s2p.v
@@ -669,91 +385,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file p2s.v
     Info (12023): Found entity 1: p2s File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/p2s.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testeI2C.v
     Info (12023): Found entity 1: testeI2C File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 10
-Info (12021): Found 1 design units, including 1 entities, in source file pll.v
-    Info (12023): Found entity 1: pll File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/pll.v Line: 8
-Info (12021): Found 1 design units, including 1 entities, in source file pll/pll_0002.v
-    Info (12023): Found entity 1: pll_0002 File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/pll/pll_0002.v Line: 2
 Info (12127): Elaborating entity "testeI2C" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at testeI2C.v(87): object "jump" assigned a value but never read File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 87
-Warning (10034): Output port "LEDR[9..7]" at testeI2C.v(15) has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 15
-Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 46
-Info (12128): Elaborating entity "pll_0002" for hierarchy "pll:pll_inst|pll_0002:pll_inst" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/pll.v Line: 20
-Info (12128): Elaborating entity "altera_pll" for hierarchy "pll:pll_inst|pll_0002:pll_inst|altera_pll:altera_pll_i" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/pll/pll_0002.v Line: 85
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "pll:pll_inst|pll_0002:pll_inst|altera_pll:altera_pll_i" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/pll/pll_0002.v Line: 85
-Info (12133): Instantiated megafunction "pll:pll_inst|pll_0002:pll_inst|altera_pll:altera_pll_i" with the following parameter: File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/pll/pll_0002.v Line: 85
-    Info (12134): Parameter "fractional_vco_multiplier" = "false"
-    Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
-    Info (12134): Parameter "operation_mode" = "direct"
-    Info (12134): Parameter "number_of_clocks" = "1"
-    Info (12134): Parameter "output_clock_frequency0" = "1.171875 MHz"
-    Info (12134): Parameter "phase_shift0" = "0 ps"
-    Info (12134): Parameter "duty_cycle0" = "50"
-    Info (12134): Parameter "output_clock_frequency1" = "0 MHz"
-    Info (12134): Parameter "phase_shift1" = "0 ps"
-    Info (12134): Parameter "duty_cycle1" = "50"
-    Info (12134): Parameter "output_clock_frequency2" = "0 MHz"
-    Info (12134): Parameter "phase_shift2" = "0 ps"
-    Info (12134): Parameter "duty_cycle2" = "50"
-    Info (12134): Parameter "output_clock_frequency3" = "0 MHz"
-    Info (12134): Parameter "phase_shift3" = "0 ps"
-    Info (12134): Parameter "duty_cycle3" = "50"
-    Info (12134): Parameter "output_clock_frequency4" = "0 MHz"
-    Info (12134): Parameter "phase_shift4" = "0 ps"
-    Info (12134): Parameter "duty_cycle4" = "50"
-    Info (12134): Parameter "output_clock_frequency5" = "0 MHz"
-    Info (12134): Parameter "phase_shift5" = "0 ps"
-    Info (12134): Parameter "duty_cycle5" = "50"
-    Info (12134): Parameter "output_clock_frequency6" = "0 MHz"
-    Info (12134): Parameter "phase_shift6" = "0 ps"
-    Info (12134): Parameter "duty_cycle6" = "50"
-    Info (12134): Parameter "output_clock_frequency7" = "0 MHz"
-    Info (12134): Parameter "phase_shift7" = "0 ps"
-    Info (12134): Parameter "duty_cycle7" = "50"
-    Info (12134): Parameter "output_clock_frequency8" = "0 MHz"
-    Info (12134): Parameter "phase_shift8" = "0 ps"
-    Info (12134): Parameter "duty_cycle8" = "50"
-    Info (12134): Parameter "output_clock_frequency9" = "0 MHz"
-    Info (12134): Parameter "phase_shift9" = "0 ps"
-    Info (12134): Parameter "duty_cycle9" = "50"
-    Info (12134): Parameter "output_clock_frequency10" = "0 MHz"
-    Info (12134): Parameter "phase_shift10" = "0 ps"
-    Info (12134): Parameter "duty_cycle10" = "50"
-    Info (12134): Parameter "output_clock_frequency11" = "0 MHz"
-    Info (12134): Parameter "phase_shift11" = "0 ps"
-    Info (12134): Parameter "duty_cycle11" = "50"
-    Info (12134): Parameter "output_clock_frequency12" = "0 MHz"
-    Info (12134): Parameter "phase_shift12" = "0 ps"
-    Info (12134): Parameter "duty_cycle12" = "50"
-    Info (12134): Parameter "output_clock_frequency13" = "0 MHz"
-    Info (12134): Parameter "phase_shift13" = "0 ps"
-    Info (12134): Parameter "duty_cycle13" = "50"
-    Info (12134): Parameter "output_clock_frequency14" = "0 MHz"
-    Info (12134): Parameter "phase_shift14" = "0 ps"
-    Info (12134): Parameter "duty_cycle14" = "50"
-    Info (12134): Parameter "output_clock_frequency15" = "0 MHz"
-    Info (12134): Parameter "phase_shift15" = "0 ps"
-    Info (12134): Parameter "duty_cycle15" = "50"
-    Info (12134): Parameter "output_clock_frequency16" = "0 MHz"
-    Info (12134): Parameter "phase_shift16" = "0 ps"
-    Info (12134): Parameter "duty_cycle16" = "50"
-    Info (12134): Parameter "output_clock_frequency17" = "0 MHz"
-    Info (12134): Parameter "phase_shift17" = "0 ps"
-    Info (12134): Parameter "duty_cycle17" = "50"
-    Info (12134): Parameter "pll_type" = "General"
-    Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "cb7s" for hierarchy "cb7s:decoder_digito0" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 58
-Info (12128): Elaborating entity "p2s" for hierarchy "p2s:p2s_inst" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 74
+Warning (10036): Verilog HDL or VHDL warning at testeI2C.v(125): object "jump" assigned a value but never read File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 125
+Warning (10230): Verilog HDL assignment warning at testeI2C.v(58): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 58
+Warning (10034): Output port "LEDR[8..5]" at testeI2C.v(15) has no driver File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 15
+Info (12128): Elaborating entity "cb7s" for hierarchy "cb7s:decoder_digito0" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 70
+Info (12128): Elaborating entity "p2s" for hierarchy "p2s:p2s_inst" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 111
 Warning (10230): Verilog HDL assignment warning at p2s.v(26): truncated value with size 32 to match size of target (5) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/p2s.v Line: 26
-Info (12128): Elaborating entity "s2p" for hierarchy "s2p:s2p_inst" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 84
-Warning (10230): Verilog HDL assignment warning at s2p.v(24): truncated value with size 32 to match size of target (5) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/s2p.v Line: 24
-Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "s2p" for hierarchy "s2p:s2p_inst" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 122
+Warning (10230): Verilog HDL assignment warning at s2p.v(35): truncated value with size 32 to match size of target (5) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/s2p.v Line: 35
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[5]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 15
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 15
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 15
     Warning (13410): Pin "LEDR[7]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 15
     Warning (13410): Pin "LEDR[8]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 15
     Warning (13410): Pin "LEDR[9]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 15
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 18
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 571 assignments for entity "DE1_SoC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[0] -entity DE1_SoC was ignored
@@ -1327,8 +974,9 @@ Warning (20013): Ignored 571 assignments for entity "DE1_SoC" -- entity does not
     Warning (20014): Assignment for entity set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[9] -entity DE1_SoC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name D5_DELAY 2 -to HPS_DDR3_CK_N -entity DE1_SoC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name D5_DELAY 2 -to HPS_DDR3_CK_P -entity DE1_SoC was ignored
+Info (144001): Generated suppressed messages file /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/output_files/testeI2C.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 9 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[1]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 16
     Warning (15610): No output dependent on input pin "SW[2]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 16
@@ -1339,16 +987,21 @@ Warning (21074): Design contains 9 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 16
     Warning (15610): No output dependent on input pin "SW[8]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 16
     Warning (15610): No output dependent on input pin "SW[9]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 16
-Info (21057): Implemented 101 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 178 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 25 output pins
+    Info (21059): Implemented 53 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 63 logic cells
-    Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 594 warnings
-    Info: Peak virtual memory: 1285 megabytes
-    Info: Processing ended: Mon Jun  3 23:08:23 2024
+    Info (21061): Implemented 113 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 596 warnings
+    Info: Peak virtual memory: 1277 megabytes
+    Info: Processing ended: Wed Jun  5 11:57:11 2024
     Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Total CPU time (on all processors): 00:00:13
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/output_files/testeI2C.map.smsg.
 
 
