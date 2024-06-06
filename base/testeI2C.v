@@ -226,7 +226,7 @@ module testeI2C (
 
                 4'b1000: begin // envia BW_RATE + R
                     if (done_p2s) begin
-                        enable_p2s <= 1;
+                        enable_p2s <= 0;
                         state <= 4'b1001;
                         len_msg_slave <= 4'h1;
                     end
@@ -235,7 +235,7 @@ module testeI2C (
                 4'b1001: begin // Aguarda o ACK
                     if (done_s2p) begin 
                         if (msg_slave[0] == ACK) begin // ACK
-                            enable_p2s <= 0;
+                            enable_p2s <= 1;
                             state <= 4'b1010;
                         end else begin // Deu errado
                             enable_p2s <= 1;
