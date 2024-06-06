@@ -10,7 +10,7 @@ module cb7s (
             saida <= ~7'b0000110;
         end else if (entrada == 2) begin
             saida <= ~7'b1011011;
-        end else if (entrada == 3) begin
+        end else if (entrada == 3) begin 
             saida <= ~7'b1001111;
         end else if (entrada == 4) begin
             saida <= ~7'b1100110;

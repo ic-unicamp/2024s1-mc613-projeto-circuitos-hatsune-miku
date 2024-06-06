@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at testeI2C.v(142): always construct contains both blocking and non-blocking assignments File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 142
+Warning (10268): Verilog HDL information at testeI2C.v(137): always construct contains both blocking and non-blocking assignments File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 137
