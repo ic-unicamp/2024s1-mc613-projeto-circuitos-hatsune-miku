@@ -1,25 +1,10 @@
-/*
-    possíveis problemas:
-        questão do mux
-        qual pino uso, ver a declaração do modulo
-        endereço do sensor
-		  orsem que envio os bits 
-		  sinal start 
-*/  
-         
 module testeI2C (    
     input CLOCK_50,            
-  
-    // output FPGA_I2C_SCLK, // Verificar a frequência máxima, provavelmente usar PLL
-    // inout FPGA_I2C_SDAT, 
-
     output HPS_I2C1_SCLK, // Verificar a frequência máxima, provavelmente usar PLL
     inout HPS_I2C1_SDAT, 
     input HPS_GSENSOR_INT,
-        
     output reg [9:0] LEDR,     
     input [9:0] SW ,       
-    
     output [6:0] HEX0, // digito da direita        
     output [6:0] HEX1,    
     output [6:0] HEX2,            
@@ -27,7 +12,6 @@ module testeI2C (
     output [6:0] HEX4,         
     output [6:0] HEX5 // digito da esquerda   
 );      
-    assign HEX1 = 7'b0111111;
 	    
     wire reset;  
     assign reset = SW[0];
@@ -41,7 +25,6 @@ module testeI2C (
 
     wire done_p2s;
     wire done_s2p;
-    reg inicio;
 
     reg [15:0] msg_master;
     wire [15:0] msg_slave;
@@ -51,30 +34,23 @@ module testeI2C (
 
     reg ACK; 
 
-    reg [9:0] count_200k;
+    reg [9:0] count_500; // 100 kHz = 50 MHz / 500
 
     reg AUX_HPS_I2C1_SCLK;
-    // assign HPS_I2C1_SCLK = 0;
     assign HPS_I2C1_SCLK = AUX_HPS_I2C1_SCLK;
 
-    reg enable_clk;
+    reg [3:0] state;
 
-    always @(posedge CLOCK_50) begin
-        if (count_200k >= 499) begin
-            count_200k <= count_200k + 1;
+    always @(posedge CLOCK_50) begin // Dividor de clock, AUX_HPS_I2C1_SCLK <= 100KHz
+        if (count_500 >= 499) begin
+            count_500 <= count_500 + 1;
         end else begin
-            count_200k <= 0;
+            count_500 <= 0;
             AUX_HPS_I2C1_SCLK <= ~AUX_HPS_I2C1_SCLK;
         end
     end
  
-
-    cb7s decoder_digito0( //estado
-        .clk(HPS_I2C1_SCLK),
-        .entrada(state),
-        .saida(HEX0)
-    );
-
+    // Do HEX2 ao HEX5 usao para mosntar a mensagem que o slave envia
     cb7s decoder_digito5(
         .clk(HPS_I2C1_SCLK),
         .entrada(msg_slave[15:12]),
@@ -99,7 +75,15 @@ module testeI2C (
         .saida(HEX2)
     );
 
-    p2s p2s_inst(
+    assign HEX1 = 7'b0111111; // Um traço
+
+    cb7s decoder_digito0( // Mostra o estado onde a maquina parou
+        .clk(HPS_I2C1_SCLK),
+        .entrada(state),
+        .saida(HEX0)
+    );
+
+    p2s p2s_inst( // Modulo que faz o envio na serial
         .clk(HPS_I2C1_SCLK),
         .reset(reset),
         .data_in(msg_master),
@@ -109,7 +93,7 @@ module testeI2C (
         .done(done_p2s)
     );
 
-    s2p s2p_inst( 
+    s2p s2p_inst( // Modulo que que reccebe pela serial
         .clk(HPS_I2C1_SCLK),
         .reset(reset),
         .data_in(HPS_I2C1_SDAT),
@@ -119,25 +103,10 @@ module testeI2C (
         .ready(done_s2p)
     );
 
-    reg [3:0] state;
-    reg [3:0] jump; // Irei usar o mesmo estado para esperar e ele fará state = jump;
-
-    always @(*) begin
-        LEDR[0] = done_p2s;
-        LEDR[1] = done_s2p;
-
-        LEDR[2] = enable_p2s;
-        LEDR[3] = enable_s2p;
-
-        LEDR[4] = inicio;
-
-        LEDR[9] = HPS_GSENSOR_INT;
-    end
 
     always @(posedge HPS_I2C1_SCLK) begin
         if (reset) begin
             state <= 4'b0000;
-            inicio <= 1;
             enable_p2s <= 1;
             len_msg_slave <= 4'h0;
             ACK <= 1'b0;
@@ -168,7 +137,6 @@ module testeI2C (
                         enable_p2s <= 0;
                         len_msg_slave <= 4'h1;
                         state <= 4'b0011;
-                        inicio <= 1;
                     end
                 end
 
@@ -182,12 +150,12 @@ module testeI2C (
                             len_msg_master <= 4'h08;
                         end else begin // Deu errado
                             enable_p2s <= 1; 
-                            state <= 4'b1111; //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                            state <= 4'b1111;
                         end
                     end
                 end
 
-                4'b0100: begin // Envia o endero do registrador
+                4'b0100: begin // Envia o endero do registrador TALVEZ TENHA ERRO 
                      if (done_p2s) begin
                         enable_p2s <= 0;
                         state <= 4'b0101;
@@ -197,15 +165,14 @@ module testeI2C (
 
                 4'b0101: begin // Aguarda o ACK
                      if (done_s2p) begin 
-                        if (msg_slave[0] == ACK) begin // ACK
+                        if (msg_slave[0] == ACK) begin 
                             state <= 4'b0110;
                             enable_p2s <= 1;
-                            msg_master <= 16'h4000; // restart
+                            msg_master <= 16'h4000; // restart ANALIZAR ISSO E O START
                             len_msg_master <= 4'h2;
                         end else begin // Deu errado
                             enable_p2s <= 1;
-                            state <= 4'b1110; //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-                            // state <= 4'b1111;
+                            state <= 4'b1111;
                         end
                     end
                 end
@@ -219,7 +186,7 @@ module testeI2C (
 
                 4'b0111: begin // Aguarda um clock
                     state <= 4'b1000; //envio
-                    msg_master <= 16'h2C00; // BW_RATE + R (1000) 
+                    msg_master <= 16'h2C80; // BW_RATE + R (1000) 
                     len_msg_master <= 4'h09;
                     enable_p2s <= 1;
                 end
@@ -253,7 +220,6 @@ module testeI2C (
                 4'b1011: begin // leio 8 bits
                     if (done_s2p) begin 
                         state <= 4'b1100;
-                        inicio <= 1; 
                     end
                 end
 
