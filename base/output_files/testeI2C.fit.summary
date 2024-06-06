@@ -1,16 +1,16 @@
-Fitter Status : Successful - Thu Jun  6 06:05:38 2024
+Fitter Status : Successful - Thu Jun  6 07:07:18 2024
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : testeI2C
 Top-level Entity Name : testeI2C
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 339 / 32,070 ( 1 % )
-Total registers : 706
+Logic utilization (in ALMs) : 390 / 32,070 ( 1 % )
+Total registers : 842
 Total pins : 66 / 457 ( 14 % )
 Total virtual pins : 0
-Total block memory bits : 1,728 / 4,065,280 ( < 1 % )
-Total RAM Blocks : 1 / 397 ( < 1 % )
+Total block memory bits : 61,440 / 4,065,280 ( 2 % )
+Total RAM Blocks : 6 / 397 ( 2 % )
 Total DSP Blocks : 0 / 87 ( 0 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

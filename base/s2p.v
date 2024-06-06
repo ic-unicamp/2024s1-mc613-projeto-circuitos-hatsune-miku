@@ -8,7 +8,7 @@ module s2p (
     output reg ready
 );
 
-    reg [4:0] count;  
+    reg [3:0] count;  
 
     always @(negedge clk or posedge reset) begin 
         if (reset) begin
@@ -20,8 +20,10 @@ module s2p (
                 if (count == 0) begin
                     data_out <= 16'h0000;  // Reset data_out at the beginning of a new read
                 end
-                if (count == len - 1) begin  
+                if (count == len - 4'h1) begin  
                     ready <= 1;
+                    count <= 4'h0;
+                    data_out <= {data_out[14:0], data_in};
                 end else begin
                     data_out <= {data_out[14:0], data_in};
                     count <= count + 1;

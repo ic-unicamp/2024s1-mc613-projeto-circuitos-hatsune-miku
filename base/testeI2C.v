@@ -46,8 +46,8 @@ module testeI2C (
     reg [15:0] msg_master;
     wire [15:0] msg_slave;
 
-    reg [4:0] len_msg_master;
-    reg [4:0] len_msg_slave;
+    reg [3:0] len_msg_master;
+    reg [3:0] len_msg_slave;
 
     reg ACK; 
 
@@ -148,11 +148,7 @@ module testeI2C (
             case (state)
 
                 4'b0000: begin // Envia o start
-                    if (!done_p2s && inicio) begin
-                        enable_p2s <= 1;
-                        inicio <= 0;
-                        enable_clk <= 1;
-                    end else if (done_p2s) begin
+                    if (done_p2s) begin
                         enable_p2s <= 0;
                         len_msg_slave <= 4'h0;
                         state <= 4'b0001;
@@ -170,7 +166,7 @@ module testeI2C (
                 4'b0010: begin // envia slave address + write
                     if (done_p2s) begin
                         enable_p2s <= 0;
-                        len_msg_slave <= 16'h0001;
+                        len_msg_slave <= 4'h1;
                         state <= 4'b0011;
                         inicio <= 1;
                     end
@@ -179,7 +175,7 @@ module testeI2C (
                 4'b0011: begin // Aguarda o ACK
                      if (done_s2p) begin 
                         if (msg_slave[0] == ACK) begin // ACK
-                            len_msg_slave <= 16'h0001;
+                            len_msg_slave <= 4'h1;
                             enable_p2s <= 1;
                             state <= 4'b0100;
                             msg_master <= 16'h3100; // registrador DATA_FORMAT
@@ -195,7 +191,7 @@ module testeI2C (
                      if (done_p2s) begin
                         enable_p2s <= 0;
                         state <= 4'b0101;
-                        len_msg_slave <= 16'h0001;
+                        len_msg_slave <= 4'h1;
                     end
                 end
 
@@ -232,7 +228,7 @@ module testeI2C (
                     if (done_p2s) begin
                         enable_p2s <= 0;
                         state <= 4'b1001;
-                        len_msg_slave <= 16'h0001;
+                        len_msg_slave <= 4'h1;
                     end
                 end
 
@@ -249,7 +245,7 @@ module testeI2C (
                 end
 
                 4'b1010: begin // Aguarda um clock
-                    len_msg_slave <= 8;
+                    len_msg_slave <= 4'h8;
                     enable_p2s <= 0; //ativa o s2p
                     state <= 4'b1011; //envio
                 end
