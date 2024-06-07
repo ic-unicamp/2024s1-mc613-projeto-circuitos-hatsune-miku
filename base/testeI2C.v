@@ -83,25 +83,14 @@ module testeI2C (
         .saida(HEX0)
     );
 
-    p2s p2s_inst( // Modulo que faz o envio na serial
-        .clk(HPS_I2C1_SCLK),
-        .reset(reset),
-        .data_in(msg_master),
-        .len(len_msg_master),
-        .enable(enable_p2s),
-        .data_out(HPS_I2C1_SDAT),
-        .done(done_p2s)
-    );
+    reg [3:0] count_p2s;
+    reg [3:0] count_s2p;
+    reg aux_data_out;
 
-    s2p s2p_inst( // Modulo que que reccebe pela serial
-        .clk(HPS_I2C1_SCLK),
-        .reset(reset),
-        .data_in(HPS_I2C1_SDAT),
-        .len(len_msg_slave),
-        .enable(enable_s2p),
-        .data_out(msg_slave),
-        .ready(done_s2p)
-    );
+    wire [3:0] posicao_p2s;
+    assign posicao_p2s = 4'hf - count_p2s;
+
+    assign HPS_I2C1_SDAT = enable_p2s ? msg_master[posicao_p2s] : 1'bz; // tri-state, sempre que não estou enviando dados, ele deixa em alta impedância
 
 
     always @(posedge HPS_I2C1_SCLK) begin
@@ -111,17 +100,24 @@ module testeI2C (
             len_msg_slave <= 4'h0;
             ACK <= 1'b0;
             msg_master <= 16'h4000; // Start
-            len_msg_master <= 4;
-            enable_clk <= 0;
+            len_msg_master <= 4'h2;
+            count_p2s <= 4'h0;
     end else begin
+
+            aux_data_out = 1'b1;
+
             case (state)
 
                 4'b0000: begin // Envia o start
-                    if (done_p2s) begin
-                        enable_p2s <= 0;
-                        len_msg_slave <= 4'h0;
-                        state <= 4'b0001;
-                        enable_clk <= 1;
+                    if (count_p2s < len_msg_master) begin
+                        if (count_p2s == len_msg_master - 4'h1) begin // Verifica se está enviando o último bit
+                            count_p2s <= 4'h0;
+                            enable_p2s <= 0;
+                            len_msg_slave <= 4'h0;
+                            state <= 4'b0001;
+                        end else begin
+                            count_p2s <= count_p2s + 4'h1;
+                        end
                     end
                 end
 
@@ -133,10 +129,15 @@ module testeI2C (
                 end
 
                 4'b0010: begin // envia slave address + write
-                    if (done_p2s) begin
-                        enable_p2s <= 0;
-                        len_msg_slave <= 4'h1;
-                        state <= 4'b0011;
+                    if (count_p2s < len_msg_master) begin
+                        if (count_p2s == len_msg_master - 4'h1) begin // Verifica se está enviando o último bit
+                            count_p2s <= 4'h0;
+                            enable_p2s <= 0;
+                            len_msg_slave <= 4'h1;
+                            state <= 4'b0011;
+                        end else begin
+                            count_p2s <= count_p2s + 4'h1;
+                        end
                     end
                 end
 
@@ -156,10 +157,15 @@ module testeI2C (
                 end
 
                 4'b0100: begin // Envia o endero do registrador TALVEZ TENHA ERRO 
-                     if (done_p2s) begin
-                        enable_p2s <= 0;
-                        state <= 4'b0101;
-                        len_msg_slave <= 4'h1;
+                    if (count_p2s < len_msg_master) begin
+                        if (count_p2s == len_msg_master - 4'h1) begin // Verifica se está enviando o último bit
+                            count_p2s <= 4'h0;
+                            enable_p2s <= 0;
+                            len_msg_slave <= 4'h1;
+                            state <= 4'b0101;
+                        end else begin
+                            count_p2s <= count_p2s + 4'h1;
+                        end
                     end
                 end
 
@@ -176,11 +182,17 @@ module testeI2C (
                         end
                     end
                 end
-
-                4'b0110: begin // Envia o restart
-                    if (done_p2s) begin
-                        enable_p2s <= 0;
-                        state <= 4'b0111;
+                
+                4'b0110: begin
+                    if (count_p2s < len_msg_master) begin
+                        if (count_p2s == len_msg_master - 4'h1) begin // Verifica se está enviando o último bit
+                            count_p2s <= 4'h0;
+                            enable_p2s <= 0;
+                            len_msg_slave <= 4'h0;
+                            state <= 4'b0111;
+                        end else begin
+                            count_p2s <= count_p2s + 4'h1;
+                        end
                     end
                 end
 
@@ -191,13 +203,19 @@ module testeI2C (
                     enable_p2s <= 1;
                 end
 
-                4'b1000: begin // envia BW_RATE + R
-                    if (done_p2s) begin
-                        enable_p2s <= 0;
-                        state <= 4'b1001;
-                        len_msg_slave <= 4'h1;
+                4'b1000: begin
+                    if (count_p2s < len_msg_master) begin
+                        if (count_p2s == len_msg_master - 4'h1) begin // Verifica se está enviando o último bit
+                            count_p2s <= 4'h0;
+                            enable_p2s <= 0;
+                            len_msg_slave <= 4'h1;
+                            state <= 4'b1001;
+                        end else begin
+                            count_p2s <= count_p2s + 4'h1;
+                        end
                     end
                 end
+
 
                 4'b1001: begin // Aguarda o ACK
                     if (done_s2p) begin 
@@ -216,10 +234,16 @@ module testeI2C (
                     enable_p2s <= 0; //ativa o s2p
                     state <= 4'b1011; //envio
                 end
-
-                4'b1011: begin // leio 8 bits
-                    if (done_s2p) begin 
-                        state <= 4'b1100;
+                4'b1011: begin
+                    if (count_p2s < len_msg_master) begin
+                        if (count_p2s == len_msg_master - 4'h1) begin // Verifica se está enviando o último bit
+                            count_p2s <= 4'h0;
+                            enable_p2s <= 0;
+                            len_msg_slave <= 4'h0;
+                            state <= 4'b1100;
+                        end else begin
+                            count_p2s <= count_p2s + 4'h1;
+                        end
                     end
                 end
 

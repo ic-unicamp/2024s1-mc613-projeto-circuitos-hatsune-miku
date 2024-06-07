@@ -8,26 +8,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "LEDR[0]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[1]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[2]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[3]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR[9]",
-					"strict" : false
-				},
-				{
 					"name" : "HEX0[0]",
 					"strict" : false
 				},
@@ -169,10 +149,6 @@
 				},
 				{
 					"name" : "HPS_I2C1_SDAT",
-					"strict" : false
-				},
-				{
-					"name" : "HPS_GSENSOR_INT",
 					"strict" : false
 				},
 				{
