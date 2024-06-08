@@ -1,33 +1,26 @@
 module testeI2C (    
     input CLOCK_50,            
     output HPS_I2C1_SCLK, // Verificar a frequência máxima, provavelmente usar PLL
-    inout HPS_I2C1_SDAT, 
-    input HPS_GSENSOR_INT,
-    output reg [9:0] LEDR,     
-    input [9:0] SW ,       
+    inout wire HPS_I2C1_SDAT,  
+    input [9:0] SW,       
     output [6:0] HEX0, // digito da direita        
     output [6:0] HEX1,    
-    output [6:0] HEX2,            
-    output [6:0] HEX3,                        
+    output [6:0] HEX2,             
+    output [6:0] HEX3,                          
     output [6:0] HEX4,         
     output [6:0] HEX5 // digito da esquerda   
-);      
+);       
 	    
-    wire reset;  
+    wire reset;    
     assign reset = SW[0];
 	 
-    reg enable_p2s; 
-    reg enable_s2p;
+    reg enable_p2s;  
+    wire enable_s2p; 
+    assign enable_s2p = ~enable_p2s; 
 
-    always @(posedge CLOCK_50) begin
-        enable_s2p = ~enable_p2s;
-    end
-
-    wire done_p2s;
-    wire done_s2p;
 
     reg [15:0] msg_master;
-    wire [15:0] msg_slave;
+    reg [15:0] msg_slave;
 
     reg [3:0] len_msg_master;
     reg [3:0] len_msg_slave;
@@ -41,16 +34,8 @@ module testeI2C (
 
     reg [3:0] state;
 
-    always @(posedge CLOCK_50) begin // Dividor de clock, AUX_HPS_I2C1_SCLK <= 100KHz
-        if (count_500 >= 499) begin
-            count_500 <= count_500 + 1;
-        end else begin
-            count_500 <= 0;
-            AUX_HPS_I2C1_SCLK <= ~AUX_HPS_I2C1_SCLK;
-        end
-    end
  
-    // Do HEX2 ao HEX5 usao para mosntar a mensagem que o slave envia
+    // Do HEX2 ao HEX5 usao para mostrar a mensagem que o slave envia
     cb7s decoder_digito5(
         .clk(HPS_I2C1_SCLK),
         .entrada(msg_slave[15:12]),
@@ -85,38 +70,54 @@ module testeI2C (
 
     reg [3:0] count_p2s;
     reg [3:0] count_s2p;
-    reg aux_data_out;
 
     wire [3:0] posicao_p2s;
     assign posicao_p2s = 4'hf - count_p2s;
 
-    assign HPS_I2C1_SDAT = enable_p2s ? msg_master[posicao_p2s] : 1'bz; // tri-state, sempre que não estou enviando dados, ele deixa em alta impedância
+    assign HPS_I2C1_SDAT = (enable_p2s == 1'b1) ? msg_master[posicao_p2s] : 1'bz; // tri-state, sempre que não estou enviando dados, ele deixa em alta impedância // posicao_p2s
 
+    always @(posedge CLOCK_50) begin // Dividor de clock, AUX_HPS_I2C1_SCLK <= 100KHz
+        if (count_500 >= 499) begin
+            count_500 <= count_500 + 1;
+        end else begin
+            count_500 <= 0;
+            AUX_HPS_I2C1_SCLK <= ~AUX_HPS_I2C1_SCLK;
+        end
+    end
+
+    always @(posedge HPS_I2C1_SCLK) begin
+        if (reset) begin
+            count_p2s <= 4'h0;
+            count_s2p <= 4'h0;
+        end else begin
+            if (enable_p2s) begin
+                count_p2s <= count_p2s + 4'h1;
+                count_s2p <= 4'h0;
+            end else begin
+                count_p2s <= 4'h0;
+                count_s2p <= count_s2p + 4'h1;
+            end 
+        end
+    end
 
     always @(posedge HPS_I2C1_SCLK) begin
         if (reset) begin
             state <= 4'b0000;
-            enable_p2s <= 1;
+            enable_p2s <= 1'b1;
             len_msg_slave <= 4'h0;
             ACK <= 1'b0;
             msg_master <= 16'h4000; // Start
             len_msg_master <= 4'h2;
-            count_p2s <= 4'h0;
-    end else begin
-
-            aux_data_out = 1'b1;
-
+            msg_slave <= 16'h0000;
+        end else begin
             case (state)
 
                 4'b0000: begin // Envia o start
                     if (count_p2s < len_msg_master) begin
                         if (count_p2s == len_msg_master - 4'h1) begin // Verifica se está enviando o último bit
-                            count_p2s <= 4'h0;
-                            enable_p2s <= 0;
+                            enable_p2s <= 1'b0;
                             len_msg_slave <= 4'h0;
                             state <= 4'b0001;
-                        end else begin
-                            count_p2s <= count_p2s + 4'h1;
                         end
                     end
                 end
@@ -125,74 +126,64 @@ module testeI2C (
                     msg_master <= 16'h5300; // Slave Address + W (0000) A6 A7 53
                     len_msg_master <= 4'h09;
                     state <= 4'b0010; //envio
-                    enable_p2s <= 1;
+                    enable_p2s <= 1'b1;
                 end
 
                 4'b0010: begin // envia slave address + write
                     if (count_p2s < len_msg_master) begin
                         if (count_p2s == len_msg_master - 4'h1) begin // Verifica se está enviando o último bit
-                            count_p2s <= 4'h0;
-                            enable_p2s <= 0;
+                            enable_p2s <= 1'b0;
                             len_msg_slave <= 4'h1;
                             state <= 4'b0011;
-                        end else begin
-                            count_p2s <= count_p2s + 4'h1;
-                        end
+                        end 
                     end
                 end
 
                 4'b0011: begin // Aguarda o ACK
-                     if (done_s2p) begin 
-                        if (msg_slave[0] == ACK) begin // ACK
-                            len_msg_slave <= 4'h1;
-                            enable_p2s <= 1;
-                            state <= 4'b0100;
-                            msg_master <= 16'h3100; // registrador DATA_FORMAT
-                            len_msg_master <= 4'h08;
-                        end else begin // Deu errado
-                            enable_p2s <= 1; 
-                            state <= 4'b1111;
-                        end
+                    if (count_s2p == len_msg_slave - 4'h1) begin  
+                        msg_slave <= {HPS_I2C1_SDAT, msg_slave[14:0]};
+                        state <= 4'b0100;
+                        enable_p2s <= 1'b1; 
+                        len_msg_slave <= 4'h0;
+                        len_msg_master <= 4'h08;
+                        msg_master <= 16'h3100; // registrador DATA_FORMAT
+                    end else begin
+                        msg_slave <= {HPS_I2C1_SDAT, msg_slave[14:0]};
                     end
                 end
 
                 4'b0100: begin // Envia o endero do registrador TALVEZ TENHA ERRO 
                     if (count_p2s < len_msg_master) begin
                         if (count_p2s == len_msg_master - 4'h1) begin // Verifica se está enviando o último bit
-                            count_p2s <= 4'h0;
-                            enable_p2s <= 0;
+                            enable_p2s <= 1'b0;
                             len_msg_slave <= 4'h1;
                             state <= 4'b0101;
-                        end else begin
-                            count_p2s <= count_p2s + 4'h1;
-                        end
+                            len_msg_master <= 4'h00;
+                            msg_master <= 16'h0000; // registrador DATA_FORMAT
+                        end 
                     end
                 end
 
                 4'b0101: begin // Aguarda o ACK
-                     if (done_s2p) begin 
-                        if (msg_slave[0] == ACK) begin 
-                            state <= 4'b0110;
-                            enable_p2s <= 1;
-                            msg_master <= 16'h4000; // restart ANALIZAR ISSO E O START
-                            len_msg_master <= 4'h2;
-                        end else begin // Deu errado
-                            enable_p2s <= 1;
-                            state <= 4'b1111;
-                        end
+                    if (count_s2p == len_msg_slave - 4'h1) begin  
+                        msg_slave <= {HPS_I2C1_SDAT, msg_slave[14:0]};
+                        state <= 4'b0110;
+                        enable_p2s <= 1'b1; 
+                        len_msg_slave <= 4'h0;
+                        msg_master <= 16'h4000; // restart ANALIZAR ISSO E O START
+                        len_msg_master <= 4'h2;
+                    end else begin
+                        msg_slave <= {HPS_I2C1_SDAT, msg_slave[14:0]};
                     end
                 end
                 
                 4'b0110: begin
                     if (count_p2s < len_msg_master) begin
                         if (count_p2s == len_msg_master - 4'h1) begin // Verifica se está enviando o último bit
-                            count_p2s <= 4'h0;
-                            enable_p2s <= 0;
+                            enable_p2s <= 1'b0;
                             len_msg_slave <= 4'h0;
                             state <= 4'b0111;
-                        end else begin
-                            count_p2s <= count_p2s + 4'h1;
-                        end
+                        end 
                     end
                 end
 
@@ -200,49 +191,43 @@ module testeI2C (
                     state <= 4'b1000; //envio
                     msg_master <= 16'h2C80; // BW_RATE + R (1000) 
                     len_msg_master <= 4'h09;
-                    enable_p2s <= 1;
+                    enable_p2s <= 1'b1;
                 end
 
                 4'b1000: begin
                     if (count_p2s < len_msg_master) begin
                         if (count_p2s == len_msg_master - 4'h1) begin // Verifica se está enviando o último bit
-                            count_p2s <= 4'h0;
-                            enable_p2s <= 0;
+                            enable_p2s <= 1'b0;
                             len_msg_slave <= 4'h1;
                             state <= 4'b1001;
-                        end else begin
-                            count_p2s <= count_p2s + 4'h1;
                         end
                     end
                 end
 
 
                 4'b1001: begin // Aguarda o ACK
-                    if (done_s2p) begin 
-                        if (msg_slave[0] == ACK) begin // ACK
-                            enable_p2s <= 1;
-                            state <= 4'b1010;
-                        end else begin // Deu errado
-                            enable_p2s <= 1;
-                            state <= 4'b1111;
-                        end
+                    if (count_s2p == len_msg_slave - 4'h1) begin  
+                        msg_slave <= {HPS_I2C1_SDAT, msg_slave[14:0]};
+                        state <= 4'b1010;
+                        enable_p2s <= 1'b1; 
+                        len_msg_slave <= 4'h0;
+                    end else begin
+                        msg_slave <= {HPS_I2C1_SDAT, msg_slave[14:0]};
                     end
                 end
 
                 4'b1010: begin // Aguarda um clock
                     len_msg_slave <= 4'h8;
-                    enable_p2s <= 0; //ativa o s2p
+                    enable_p2s <= 1'b0; //ativa o s2p
                     state <= 4'b1011; //envio
                 end
+
                 4'b1011: begin
                     if (count_p2s < len_msg_master) begin
                         if (count_p2s == len_msg_master - 4'h1) begin // Verifica se está enviando o último bit
-                            count_p2s <= 4'h0;
-                            enable_p2s <= 0;
+                            enable_p2s <= 1'b0;
                             len_msg_slave <= 4'h0;
                             state <= 4'b1100;
-                        end else begin
-                            count_p2s <= count_p2s + 4'h1;
                         end
                     end
                 end
