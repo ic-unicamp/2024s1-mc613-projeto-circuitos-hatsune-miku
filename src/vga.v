@@ -16,7 +16,7 @@ always @(posedge CLOCK_50) begin
   if (reset) begin
     VGA_CLK = 1'b0;
   end else begin
-    VGA_CLK = ~VGA_CLK; 
+    VGA_CLK = ~VGA_CLK;
   end
 end
 
