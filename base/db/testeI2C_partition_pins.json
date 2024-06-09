@@ -8,6 +8,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "HPS_I2C1_SDAT",
+					"strict" : false
+				},
+				{
 					"name" : "HEX0[0]",
 					"strict" : false
 				},
@@ -36,11 +40,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[6]",
+					"name" : "HEX2[0]",
 					"strict" : false
 				},
 				{
-					"name" : "HPS_I2C1_SDAT",
+					"name" : "HEX2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[5]",
 					"strict" : false
 				},
 				{

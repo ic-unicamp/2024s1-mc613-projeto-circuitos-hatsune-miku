@@ -1,5 +1,5 @@
 Analysis & Synthesis report for testeI2C
-Sat Jun  8 12:17:24 2024
+Sun Jun  9 19:11:04 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -52,13 +52,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Jun  8 12:17:24 2024       ;
+; Analysis & Synthesis Status     ; Successful - Sun Jun  9 19:11:04 2024       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; testeI2C                                    ;
 ; Top-level Entity Name           ; testeI2C                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 743                                         ;
+; Total registers                 ; 740                                         ;
 ; Total pins                      ; 55                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 7,040                                       ;
@@ -172,8 +172,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-12        ;   0.0%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -182,8 +181,8 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
 ; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                                                          ; Library     ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
-; cb7s.v                                                             ; yes             ; User Verilog HDL File                        ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/cb7s.v                                                             ;             ;
-; testeI2C.v                                                         ; yes             ; User Verilog HDL File                        ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v                                                         ;             ;
+; src/testeI2C.v                                                     ; yes             ; User Verilog HDL File                        ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v                                                     ;             ;
+; src/cb7.v                                                          ; yes             ; User Verilog HDL File                        ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/cb7.v                                                          ;             ;
 ; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_signaltap.vhd                                                                                                    ;             ;
 ; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                                                                               ;             ;
 ; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_ela_control.vhd                                                                                                  ;             ;
@@ -202,7 +201,7 @@ refer to the applicable agreement for further details.
 ; altrom.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altrom.inc                                                                                                           ;             ;
 ; altram.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altram.inc                                                                                                           ;             ;
 ; altdpram.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altdpram.inc                                                                                                         ;             ;
-; db/altsyncram_rb84.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/altsyncram_rb84.tdf                                             ;             ;
+; db/altsyncram_qb84.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/altsyncram_qb84.tdf                                             ;             ;
 ; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altdpram.tdf                                                                                                         ;             ;
 ; memmodes.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/others/maxplus2/memmodes.inc                                                                                                       ;             ;
 ; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/a_hdffe.inc                                                                                                          ;             ;
@@ -222,7 +221,7 @@ refer to the applicable agreement for further details.
 ; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/cmpconst.inc                                                                                                         ;             ;
 ; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_counter.inc                                                                                                      ;             ;
 ; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                                                                              ;             ;
-; db/cntr_d9i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_d9i.tdf                                                    ;             ;
+; db/cntr_69i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_69i.tdf                                                    ;             ;
 ; db/cmpr_e9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cmpr_e9c.tdf                                                    ;             ;
 ; db/cntr_4vi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_4vi.tdf                                                    ;             ;
 ; db/cntr_09i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_09i.tdf                                                    ;             ;
@@ -248,16 +247,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------------+
 ; Resource                                    ; Usage             ;
 +---------------------------------------------+-------------------+
-; Estimate of Logic utilization (ALMs needed) ; 427               ;
+; Estimate of Logic utilization (ALMs needed) ; 430               ;
 ;                                             ;                   ;
-; Combinational ALUT usage for logic          ; 380               ;
+; Combinational ALUT usage for logic          ; 390               ;
 ;     -- 7 input functions                    ; 2                 ;
-;     -- 6 input functions                    ; 91                ;
-;     -- 5 input functions                    ; 59                ;
-;     -- 4 input functions                    ; 56                ;
-;     -- <=3 input functions                  ; 172               ;
+;     -- 6 input functions                    ; 94                ;
+;     -- 5 input functions                    ; 66                ;
+;     -- 4 input functions                    ; 64                ;
+;     -- <=3 input functions                  ; 164               ;
 ;                                             ;                   ;
-; Dedicated logic registers                   ; 743               ;
+; Dedicated logic registers                   ; 740               ;
 ;                                             ;                   ;
 ; I/O pins                                    ; 55                ;
 ; Total MLAB memory bits                      ; 0                 ;
@@ -266,9 +265,9 @@ refer to the applicable agreement for further details.
 ; Total DSP Blocks                            ; 0                 ;
 ;                                             ;                   ;
 ; Maximum fan-out node                        ; AUX_HPS_I2C1_SCLK ;
-; Maximum fan-out                             ; 467               ;
-; Total fan-out                               ; 4912              ;
-; Average fan-out                             ; 3.78              ;
+; Maximum fan-out                             ; 464               ;
+; Total fan-out                               ; 4971              ;
+; Average fan-out                             ; 3.81              ;
 +---------------------------------------------+-------------------+
 
 
@@ -277,9 +276,9 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                  ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |testeI2C                                                                                                                               ; 380 (70)            ; 743 (35)                  ; 7040              ; 0          ; 55   ; 0            ; |testeI2C                                                                                                                                                                                                                                                                                                                                            ; testeI2C                          ; work         ;
+; |testeI2C                                                                                                                               ; 390 (81)            ; 740 (32)                  ; 7040              ; 0          ; 55   ; 0            ; |testeI2C                                                                                                                                                                                                                                                                                                                                            ; testeI2C                          ; work         ;
 ;    |cb7s:decoder_digito0|                                                                                                               ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|cb7s:decoder_digito0                                                                                                                                                                                                                                                                                                                       ; cb7s                              ; work         ;
-;    |cb7s:decoder_digito5|                                                                                                               ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|cb7s:decoder_digito5                                                                                                                                                                                                                                                                                                                       ; cb7s                              ; work         ;
+;    |cb7s:decoder_digito2|                                                                                                               ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|cb7s:decoder_digito2                                                                                                                                                                                                                                                                                                                       ; cb7s                              ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 92 (1)              ; 91 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 91 (0)              ; 91 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
 ;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 91 (0)              ; 91 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
@@ -295,7 +294,7 @@ refer to the applicable agreement for further details.
 ;                |lpm_decode:wdecoder|                                                                                                    ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder                                                                                                                                             ; lpm_decode                        ; work         ;
 ;                   |decode_vnf:auto_generated|                                                                                           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder|decode_vnf:auto_generated                                                                                                                   ; decode_vnf                        ; work         ;
 ;             |altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|                                                                           ; 0 (0)               ; 0 (0)                     ; 7040              ; 0          ; 0    ; 0            ; |testeI2C|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram                                                                                                                                                                                ; altsyncram                        ; work         ;
-;                |altsyncram_rb84:auto_generated|                                                                                         ; 0 (0)               ; 0 (0)                     ; 7040              ; 0          ; 0    ; 0            ; |testeI2C|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_rb84:auto_generated                                                                                                                                                 ; altsyncram_rb84                   ; work         ;
+;                |altsyncram_qb84:auto_generated|                                                                                         ; 0 (0)               ; 0 (0)                     ; 7040              ; 0          ; 0    ; 0            ; |testeI2C|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_qb84:auto_generated                                                                                                                                                 ; altsyncram_qb84                   ; work         ;
 ;             |lpm_shiftreg:segment_offset_config_deserialize|                                                                            ; 0 (0)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|lpm_shiftreg:segment_offset_config_deserialize                                                                                                                                                                                 ; lpm_shiftreg                      ; work         ;
 ;             |lpm_shiftreg:status_register|                                                                                              ; 17 (17)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|lpm_shiftreg:status_register                                                                                                                                                                                                   ; lpm_shiftreg                      ; work         ;
 ;             |serial_crc_16:\tdo_crc_gen:tdo_crc_calc|                                                                                   ; 4 (4)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|serial_crc_16:\tdo_crc_gen:tdo_crc_calc                                                                                                                                                                                        ; serial_crc_16                     ; work         ;
@@ -310,7 +309,7 @@ refer to the applicable agreement for further details.
 ;                   |lpm_shiftreg:trigger_config_deserialize|                                                                             ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity|lpm_shiftreg:trigger_config_deserialize                                                                                              ; lpm_shiftreg                      ; work         ;
 ;             |sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|                                          ; 37 (11)             ; 103 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst                                                                                                                                               ; sld_offload_buffer_mgr            ; work         ;
 ;                |lpm_counter:\adv_point_3_and_more:advance_pointer_counter|                                                              ; 8 (0)               ; 6 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter                                                                                     ; lpm_counter                       ; work         ;
-;                   |cntr_d9i:auto_generated|                                                                                             ; 8 (8)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter|cntr_d9i:auto_generated                                                             ; cntr_d9i                          ; work         ;
+;                   |cntr_69i:auto_generated|                                                                                             ; 8 (8)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter|cntr_69i:auto_generated                                                             ; cntr_69i                          ; work         ;
 ;                |lpm_counter:read_pointer_counter|                                                                                       ; 7 (0)               ; 7 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter                                                                                                              ; lpm_counter                       ; work         ;
 ;                   |cntr_4vi:auto_generated|                                                                                             ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter|cntr_4vi:auto_generated                                                                                      ; cntr_4vi                          ; work         ;
 ;                |lpm_counter:status_advance_pointer_counter|                                                                             ; 6 (0)               ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter                                                                                                    ; lpm_counter                       ; work         ;
@@ -330,7 +329,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 ; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_rb84:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 55           ; 128          ; 55           ; 7040 ; None ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_qb84:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 55           ; 128          ; 55           ; 7040 ; None ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 
 
@@ -352,25 +351,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+-------------------------------------------+
 ; Register name                          ; Reason for Removal                        ;
 +----------------------------------------+-------------------------------------------+
-; msg_slave[0..14]                       ; Stuck at GND due to stuck port data_in    ;
-; cb7s:decoder_digito2|saida[1..5]       ; Merged with cb7s:decoder_digito2|saida[0] ;
+; msg_slave[1..15]                       ; Stuck at GND due to stuck port data_in    ;
+; cb7s:decoder_digito2|saida[3..5]       ; Merged with cb7s:decoder_digito2|saida[0] ;
+; cb7s:decoder_digito2|saida[2]          ; Merged with cb7s:decoder_digito2|saida[1] ;
 ; cb7s:decoder_digito3|saida[1..5]       ; Merged with cb7s:decoder_digito3|saida[0] ;
 ; cb7s:decoder_digito4|saida[1..5]       ; Merged with cb7s:decoder_digito4|saida[0] ;
 ; cb7s:decoder_digito5|saida[1..5]       ; Merged with cb7s:decoder_digito5|saida[0] ;
-; cb7s:decoder_digito3|saida[0]          ; Merged with cb7s:decoder_digito2|saida[0] ;
-; cb7s:decoder_digito4|saida[0]          ; Merged with cb7s:decoder_digito2|saida[0] ;
-; cb7s:decoder_digito3|saida[6]          ; Merged with cb7s:decoder_digito2|saida[6] ;
-; cb7s:decoder_digito4|saida[6]          ; Merged with cb7s:decoder_digito2|saida[6] ;
-; msg_master[0..6,15]                    ; Merged with len_msg_master[2]             ;
+; cb7s:decoder_digito4|saida[0]          ; Merged with cb7s:decoder_digito3|saida[0] ;
+; cb7s:decoder_digito5|saida[0]          ; Merged with cb7s:decoder_digito3|saida[0] ;
+; cb7s:decoder_digito4|saida[6]          ; Merged with cb7s:decoder_digito3|saida[6] ;
+; cb7s:decoder_digito5|saida[6]          ; Merged with cb7s:decoder_digito3|saida[6] ;
+; msg_master[9,15]                       ; Merged with len_msg_master[0]             ;
+; msg_master[14]                         ; Merged with len_msg_master[1]             ;
+; msg_master[0..6,8,12]                  ; Merged with len_msg_master[2]             ;
+; msg_master[10,13]                      ; Merged with len_msg_master[3]             ;
 ; len_msg_slave[2]                       ; Merged with len_msg_slave[1]              ;
-; msg_master[7,11]                       ; Merged with msg_master[10]                ;
-; msg_master[8]                          ; Merged with msg_master[12]                ;
+; cb7s:decoder_digito3|saida[6]          ; Stuck at VCC due to stuck port data_in    ;
+; cb7s:decoder_digito3|saida[0]          ; Stuck at GND due to stuck port data_in    ;
+; cb7s:decoder_digito2|saida[1]          ; Stuck at GND due to stuck port data_in    ;
 ; cb7s:decoder_digito2|saida[6]          ; Stuck at VCC due to stuck port data_in    ;
-; cb7s:decoder_digito2|saida[0]          ; Stuck at GND due to stuck port data_in    ;
-; cb7s:decoder_digito5|saida[0]          ; Stuck at GND due to stuck port data_in    ;
 ; len_msg_slave[1]                       ; Stuck at GND due to stuck port data_in    ;
 ; len_msg_master[2]                      ; Stuck at GND due to stuck port data_in    ;
-; Total Number of Removed Registers = 56 ;                                           ;
+; Total Number of Removed Registers = 59 ;                                           ;
 +----------------------------------------+-------------------------------------------+
 
 
@@ -379,9 +381,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------+---------------------------+--------------------------------------------------------------+
 ; Register name    ; Reason for Removal        ; Registers Removed due to This Register                       ;
 +------------------+---------------------------+--------------------------------------------------------------+
-; msg_slave[3]     ; Stuck at GND              ; cb7s:decoder_digito2|saida[6], cb7s:decoder_digito2|saida[0] ;
+; msg_slave[7]     ; Stuck at GND              ; cb7s:decoder_digito3|saida[6], cb7s:decoder_digito3|saida[0] ;
 ;                  ; due to stuck port data_in ;                                                              ;
-; msg_slave[12]    ; Stuck at GND              ; cb7s:decoder_digito5|saida[0]                                ;
+; msg_slave[3]     ; Stuck at GND              ; cb7s:decoder_digito2|saida[1], cb7s:decoder_digito2|saida[6] ;
 ;                  ; due to stuck port data_in ;                                                              ;
 ; len_msg_slave[1] ; Stuck at GND              ; len_msg_master[2]                                            ;
 ;                  ; due to stuck port data_in ;                                                              ;
@@ -393,12 +395,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 743   ;
-; Number of registers using Synchronous Clear  ; 119   ;
-; Number of registers using Synchronous Load   ; 167   ;
+; Total registers                              ; 740   ;
+; Number of registers using Synchronous Clear  ; 118   ;
+; Number of registers using Synchronous Load   ; 166   ;
 ; Number of registers using Asynchronous Clear ; 187   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 279   ;
+; Number of registers using Clock Enable       ; 274   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -427,12 +429,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |testeI2C|count_p2s[1]      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |testeI2C|count_p2s[0]      ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |testeI2C|count_s2p[0]      ;
-; 18:1               ; 4 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |testeI2C|len_msg_master[2] ;
 ; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |testeI2C|len_msg_slave[1]  ;
-; 20:1               ; 2 bits    ; 26 LEs        ; 6 LEs                ; 20 LEs                 ; Yes        ; |testeI2C|len_msg_master[1] ;
-; 20:1               ; 3 bits    ; 39 LEs        ; 9 LEs                ; 30 LEs                 ; Yes        ; |testeI2C|len_msg_master[3] ;
+; 17:1               ; 3 bits    ; 33 LEs        ; 6 LEs                ; 27 LEs                 ; Yes        ; |testeI2C|len_msg_master[2] ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |testeI2C|msg_master[11]    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
 
 
@@ -525,31 +526,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 43                          ;
-;     ENA               ; 2                           ;
-;     ENA SCLR          ; 4                           ;
-;     ENA SLD           ; 2                           ;
+; arriav_ff             ; 40                          ;
+;     ENA SCLR          ; 3                           ;
 ;     SCLR              ; 16                          ;
-;     SLD               ; 1                           ;
-;     plain             ; 18                          ;
+;     SLD               ; 2                           ;
+;     plain             ; 19                          ;
 ; arriav_io_obuf        ; 1                           ;
-; arriav_lcell_comb     ; 79                          ;
+; arriav_lcell_comb     ; 89                          ;
 ;     arith             ; 10                          ;
 ;         1 data inputs ; 10                          ;
 ;     extend            ; 2                           ;
 ;         7 data inputs ; 2                           ;
-;     normal            ; 67                          ;
+;     normal            ; 77                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 8                           ;
-;         4 data inputs ; 17                          ;
-;         5 data inputs ; 10                          ;
-;         6 data inputs ; 19                          ;
-; boundary_port         ; 109                         ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 25                          ;
+;         5 data inputs ; 17                          ;
+;         6 data inputs ; 22                          ;
+; boundary_port         ; 108                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.12                        ;
+; Average LUT depth     ; 2.20                        ;
 +-----------------------+-----------------------------+
 
 
@@ -567,8 +565,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+---------------+-----------+--------------------------------+-------------------+-------------------------------------+---------+
 ; Name                 ; Type          ; Status    ; Partition Name                 ; Netlist Type Used ; Actual Connection                   ; Details ;
 +----------------------+---------------+-----------+--------------------------------+-------------------+-------------------------------------+---------+
-; AUX_HPS_I2C1_SCLK    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AUX_HPS_I2C1_SCLK                   ; N/A     ;
-; HPS_I2C1_SDAT        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; HPS_I2C1_SDAT                       ; N/A     ;
+; HPS_I2C1_SCLK        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AUX_HPS_I2C1_SCLK                   ; N/A     ;
+; HPS_I2C1_SDAT        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; Mux0~3                              ; N/A     ;
 ; SW[0]                ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SW[0]                               ; N/A     ;
 ; SW[0]                ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SW[0]                               ; N/A     ;
 ; count_p2s[0]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; count_p2s[0]                        ; N/A     ;
@@ -589,28 +587,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; len_msg_slave[2]     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A     ;
 ; len_msg_slave[3]     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; len_msg_slave[3]                    ; N/A     ;
 ; msg_master[0]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A     ;
-; msg_master[10]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; msg_master[10]                      ; N/A     ;
-; msg_master[11]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; msg_master[10]                      ; N/A     ;
-; msg_master[12]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; msg_master[12]                      ; N/A     ;
-; msg_master[13]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; msg_master[13]                      ; N/A     ;
-; msg_master[14]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; msg_master[14]                      ; N/A     ;
-; msg_master[15]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A     ;
+; msg_master[10]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; len_msg_master[3]                   ; N/A     ;
+; msg_master[11]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; msg_master[11]                      ; N/A     ;
+; msg_master[12]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A     ;
+; msg_master[13]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; len_msg_master[3]                   ; N/A     ;
+; msg_master[14]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; len_msg_master[1]                   ; N/A     ;
+; msg_master[15]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; len_msg_master[0]                   ; N/A     ;
 ; msg_master[1]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A     ;
 ; msg_master[2]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A     ;
 ; msg_master[3]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A     ;
 ; msg_master[4]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A     ;
 ; msg_master[5]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A     ;
 ; msg_master[6]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A     ;
-; msg_master[7]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; msg_master[10]                      ; N/A     ;
-; msg_master[8]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; msg_master[12]                      ; N/A     ;
-; msg_master[9]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; msg_master[9]                       ; N/A     ;
-; msg_slave[0]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A     ;
+; msg_master[7]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; msg_master[7]                       ; N/A     ;
+; msg_master[8]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A     ;
+; msg_master[9]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; len_msg_master[0]                   ; N/A     ;
+; msg_slave[0]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; msg_slave[0]                        ; N/A     ;
 ; msg_slave[10]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A     ;
 ; msg_slave[11]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A     ;
 ; msg_slave[12]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A     ;
 ; msg_slave[13]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A     ;
 ; msg_slave[14]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A     ;
-; msg_slave[15]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; msg_slave[15]                       ; N/A     ;
+; msg_slave[15]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A     ;
 ; msg_slave[1]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A     ;
 ; msg_slave[2]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A     ;
 ; msg_slave[3]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                 ; N/A     ;
@@ -640,11 +638,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A     ;
 ; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A     ;
 ; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A     ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A     ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A     ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A     ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A     ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A     ;
 ; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A     ;
 ; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A     ;
 ; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A     ;
@@ -665,27 +663,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Jun  8 12:17:11 2024
+    Info: Processing started: Sun Jun  9 19:10:50 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off testeI2C -c testeI2C
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file cb7s.v
-    Info (12023): Found entity 1: cb7s File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/cb7s.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file testeI2C.v
-    Info (12023): Found entity 1: testeI2C File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/testeI2C.v
+    Info (12023): Found entity 1: testeI2C File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/cb7.v
+    Info (12023): Found entity 1: cb7s File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/cb7.v Line: 1
 Info (12127): Elaborating entity "testeI2C" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at testeI2C.v(18): object "enable_s2p" assigned a value but never read File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 18
-Warning (10036): Verilog HDL or VHDL warning at testeI2C.v(28): object "ACK" assigned a value but never read File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 28
-Warning (10230): Verilog HDL assignment warning at testeI2C.v(81): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 81
-Info (12128): Elaborating entity "cb7s" for hierarchy "cb7s:decoder_digito5" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 43
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_rb84.tdf
-    Info (12023): Found entity 1: altsyncram_rb84 File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/altsyncram_rb84.tdf Line: 27
+Warning (10036): Verilog HDL or VHDL warning at testeI2C.v(18): object "enable_s2p" assigned a value but never read File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 18
+Warning (10036): Verilog HDL or VHDL warning at testeI2C.v(28): object "ACK" assigned a value but never read File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 28
+Warning (10230): Verilog HDL assignment warning at testeI2C.v(81): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 81
+Info (12128): Elaborating entity "cb7s" for hierarchy "cb7s:decoder_digito5" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_qb84.tdf
+    Info (12023): Found entity 1: altsyncram_qb84 File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/altsyncram_qb84.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_elc.tdf
     Info (12023): Found entity 1: mux_elc File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/mux_elc.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_vnf.tdf
     Info (12023): Found entity 1: decode_vnf File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/decode_vnf.tdf Line: 22
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_d9i.tdf
-    Info (12023): Found entity 1: cntr_d9i File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_d9i.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_69i.tdf
+    Info (12023): Found entity 1: cntr_69i File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_69i.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_e9c.tdf
     Info (12023): Found entity 1: cmpr_e9c File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cmpr_e9c.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_4vi.tdf
@@ -700,7 +698,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cmpr_99c.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.06.08.12:17:19 Progress: Loading sld397e2936/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.06.09.19:10:59 Progress: Loading sld397e2936/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -723,41 +721,40 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "HPS_I2C1_SDAT" to the node "msg_slave" into an OR gate File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 4
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 7
-    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 7
-    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 7
-    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 7
-    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 7
-    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 7
-    Warning (13410): Pin "HEX1[6]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 7
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 8
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 8
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 8
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 8
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 8
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 8
-    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 8
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 9
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 9
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 9
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 9
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 9
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 9
-    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 9
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 10
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 10
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 10
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 10
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 10
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 10
-    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 10
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 12
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 12
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 12
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 12
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 12
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 12
+    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 7
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 7
+    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 7
+    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 7
+    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 7
+    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 7
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 7
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 8
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 8
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 8
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 9
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 9
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 9
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 9
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 9
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 9
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 9
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 10
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 10
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 10
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 10
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 10
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 10
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 10
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 12
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 12
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 12
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 12
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 12
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 12
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 12
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Warning (20013): Ignored 571 assignments for entity "DE1_SoC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[0] -entity DE1_SoC was ignored
@@ -1335,25 +1332,24 @@ Info (35024): Successfully connected in-system debug instance "auto_signaltap_0"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 9 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 9 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[1]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[2]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[3]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[4]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[5]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[6]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[7]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[8]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[9]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/testeI2C.v Line: 5
-Info (21057): Implemented 1033 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "SW[1]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[2]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[3]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[4]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[5]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[6]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[7]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[8]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[9]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
+Info (21057): Implemented 1043 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
-    Info (21059): Implemented 44 output pins
-    Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 918 logic cells
+    Info (21059): Implemented 45 output pins
+    Info (21061): Implemented 928 logic cells
     Info (21064): Implemented 55 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 621 warnings
-    Info: Peak virtual memory: 1399 megabytes
-    Info: Processing ended: Sat Jun  8 12:17:24 2024
-    Info: Elapsed time: 00:00:13
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 620 warnings
+    Info: Peak virtual memory: 1367 megabytes
+    Info: Processing ended: Sun Jun  9 19:11:04 2024
+    Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:30
 
 
