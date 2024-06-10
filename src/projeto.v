@@ -14,7 +14,7 @@ module projeto(
   	output [6:0] HEX1,
   	output [6:0] HEX2,
   	output [6:0] HEX3,
-  	output [6:0] HEX4,
+  	output [6:0] HEX4, 
   	output [6:0] HEX5, // digito da esquerda
 	output [9:0] LEDR
 );
@@ -63,7 +63,7 @@ module projeto(
         .altura_nave(altura_nave),
         .x_inimigo(x_inimigo),
         .y_inimigo(y_inimigo),
-        .largura_inimigo(largura_inimigo),
+        .largura_inimigo(largura_inimigo), 
         .altura_inimigo(altura_inimigo)
     );
 
@@ -103,13 +103,13 @@ module projeto(
 
         .x_nave(x_nave),
         .y_nave(y_nave),
-        .largura_nave(largura_nave),
-        .altura_nave(altura_nave),
+        // .largura_nave(largura_nave),
+        // .altura_nave(altura_nave),
 
         .x_inimigo(x_inimigo),
         .y_inimigo(y_inimigo),
-        .largura_inimigo(largura_inimigo),
-        .altura_inimigo(altura_inimigo),
+        // .largura_inimigo(largura_inimigo),
+        // .altura_inimigo(altura_inimigo),
 
         .VGA_X(VGA_X),
         .VGA_Y(VGA_Y),

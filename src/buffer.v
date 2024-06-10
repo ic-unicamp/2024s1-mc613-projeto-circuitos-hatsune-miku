@@ -8,12 +8,12 @@ module buffer(
     input [9:0] LARGURA_OBJETO, // pior dos dados LARGURA_OBJETO = 40
     input [9:0] ALTURA_OBJETO, // pior dos dados ALTURA_OBJETO = 40 
     input [9:0] MULTPLICADOR,
-    input [0:254] BUFFER_R, // pior caso 1600 = 12'b 0110 0100 0000
-    input [0:254] BUFFER_G, // caso a imagem seja menor, não ha problema, ela será oculpado do 0 para o 11 digito
-    input [0:254] BUFFER_B,
+    input [0:400] BUFFER_R, // pior caso 1600 = 12'b 0110 0100 0000
+    input [0:400] BUFFER_G, // caso a imagem seja menor, não ha problema, ela será oculpado do 0 para o 11 digito
+    input [0:400] BUFFER_B,
     output R_VGA, // sempre irei retornar o 3 bit mais significativos do RGB
     output G_VGA, 
-    output B_VGA   
+    output B_VGA    
 );
     reg [9:0] X_BUFFER;  
     reg [9:0] Y_BUFFER;
@@ -29,9 +29,9 @@ module buffer(
 
     assign R_VGA = enable_read ? BUFFER_R [indice] : 0;
     assign G_VGA = enable_read ? BUFFER_G [indice] : 0;
-    assign B_VGA = enable_read ? BUFFER_B [indice] : 0;
+    assign B_VGA = enable_read ? BUFFER_B [indice] : 0; 
 
-    always @(posedge CLK) begin
+    always @(posedge CLK) begin 
         if (reset) begin
             X_BUFFER = 0;
             Y_BUFFER = 0;

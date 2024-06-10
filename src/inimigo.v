@@ -4,23 +4,21 @@ module inimigo(
     input pausa,
     input reiniciarJogo,
     
-    output wire [9:0] largura,
-    output wire [9:0] altura,
+    output reg [9:0] largura,
+    output reg [9:0] altura,
     output reg [9:0] x,
     output reg [9:0] y
 
 );
-
-    assign largura = 30;
-    assign altura = 30;
+    wire resetInimigo;
     assign resetInimigo = reset || reiniciarJogo;
 
     always @(posedge CLOCK_50 or posedge resetInimigo) begin
         if (resetInimigo) begin
             x = 300;
             y = 300;
-        end else if (pausa == 0) begin
-
+            largura = 11;
+            altura = 8;
         end
     end
 
