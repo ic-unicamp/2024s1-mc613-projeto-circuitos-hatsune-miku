@@ -3,3 +3,11 @@ tb_vga
 gabarito
 teste.txt
 *.vcd
+*.rpt
+*.cdf
+*.done
+*.rpt
+*.smsg
+*.summary
+*.jdi
+*.sld
