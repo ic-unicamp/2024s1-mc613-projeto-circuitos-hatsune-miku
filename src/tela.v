@@ -14,7 +14,7 @@ module tela(
 
 	input [9:0] x_nave,
 	input [9:0] y_nave, 
-	input [9:0] largura_nave, 
+	input [9:0] largura_nave,  
 	input [9:0] altura_nave,   
   
     input [9:0] x_inimigo,
@@ -72,6 +72,8 @@ module tela(
     reg [7:0] largura = 8'd15;
     reg [7:0] altura = 8'd16;
 
+    reg [3:0] MULTPLICADOR_NAVE;
+
     wire nave_r;
     wire nave_g;
     wire nave_b;
@@ -84,7 +86,7 @@ module tela(
         .Y_OBJETO(y_nave),
         .LARGURA_OBJETO(largura),
         .ALTURA_OBJETO(altura),
-        .MULTPLICADOR(2),
+        .MULTPLICADOR(MULTPLICADOR_NAVE),
         .BUFFER_G(buffer_nave),
         .BUFFER_B(buffer_nave),
         .BUFFER_R(buffer_nave),
@@ -99,6 +101,7 @@ module tela(
 		   	VGA_R = 0;
             VGA_G = 0;
             VGA_B = 0;
+            MULTPLICADOR_NAVE = 4'h2;
         end else begin
             if (ativo && !perdeu) begin
                 if (delta_x_aliado + delta_y_aliado < raioquadrado_aliado) begin // bola aliada
@@ -110,7 +113,7 @@ module tela(
 					VGA_G = 0;
 					VGA_B = 0;
 				// end else if ((x_nave + 144 <= VGA_X ) && (VGA_X <= 144 + x_nave + largura_nave) && (y_nave + 35 <= VGA_Y) && (VGA_Y <= y_nave + 35 + altura_nave)) begin // nave
-				end else if (nave_r && (x_nave + 144 <= VGA_X ) && (VGA_X <= 144 + x_nave + largura) && (y_nave + 35 <= VGA_Y) && (VGA_Y <= y_nave + 35 + altura)) begin // nave
+				end else if (nave_r && (x_nave + 144 <= VGA_X ) && (VGA_X <= 144 + x_nave + largura * MULTPLICADOR_NAVE) && (y_nave + 35 <= VGA_Y) && (VGA_Y <= y_nave + 35 + altura * MULTPLICADOR_NAVE)) begin // nave
 					VGA_R = nave_r * 255;
 					VGA_G = nave_g * 255;
 					VGA_B = nave_b * 255;

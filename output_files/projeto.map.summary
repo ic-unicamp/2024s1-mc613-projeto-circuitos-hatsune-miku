@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Sun Jun  9 23:57:19 2024
+Analysis & Synthesis Status : Successful - Mon Jun 10 00:14:07 2024
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : projeto
 Top-level Entity Name : projeto
@@ -8,7 +8,7 @@ Total registers : 1131
 Total pins : 96
 Total virtual pins : 0
 Total block memory bits : 2,228,224
-Total DSP Blocks : 11
+Total DSP Blocks : 15
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0

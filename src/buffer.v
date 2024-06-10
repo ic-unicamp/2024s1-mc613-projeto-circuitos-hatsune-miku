@@ -13,16 +13,19 @@ module buffer(
     input [0:254] BUFFER_B,
     output R_VGA, // sempre irei retornar o 3 bit mais significativos do RGB
     output G_VGA,
-    output B_VGA  
+    output B_VGA   
 );
-    reg [9:0] X_BUFFER; 
+    reg [9:0] X_BUFFER;  
     reg [9:0] Y_BUFFER;
     
     wire [9:0] indice;
-    assign indice = Y_BUFFER * LARGURA_OBJETO + X_BUFFER;
+    assign indice = (Y_BUFFER / MULTPLICADOR) * LARGURA_OBJETO + X_BUFFER / MULTPLICADOR;
 
     wire enable_read;
-    assign enable_read = (X_OBJETO <= X_VGA) && (X_VGA <= X_OBJETO + LARGURA_OBJETO) &&  (Y_OBJETO <= Y_VGA) && (Y_VGA <= Y_OBJETO + ALTURA_OBJETO);
+    assign enable_read = (X_OBJETO <= X_VGA) && (X_VGA <= X_OBJETO + LARGURA_OBJETO * MULTPLICADOR) &&  (Y_OBJETO <= Y_VGA) && (Y_VGA <= Y_OBJETO + ALTURA_OBJETO * MULTPLICADOR);
+
+    // indice = (VGA_Y - 35) / 10 * (64) + ((VGA_X - 144) / 10); 
+
 
     assign R_VGA = enable_read ? BUFFER_R [indice] : 0;
     assign G_VGA = enable_read ? BUFFER_G [indice] : 0;
@@ -34,9 +37,9 @@ module buffer(
             Y_BUFFER = 0;
         end else begin
             if (enable_read) begin
-                if (X_BUFFER == LARGURA_OBJETO - 0) begin
+                if (X_BUFFER == LARGURA_OBJETO * MULTPLICADOR) begin
                     X_BUFFER = 0;
-                    if (Y_BUFFER == ALTURA_OBJETO - 0) begin
+                    if (Y_BUFFER == ALTURA_OBJETO * MULTPLICADOR) begin
                         Y_BUFFER = 0;
                     end else begin
                         Y_BUFFER = Y_BUFFER + 1;

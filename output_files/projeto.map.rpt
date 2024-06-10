@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projeto
-Sun Jun  9 23:57:19 2024
+Mon Jun 10 00:14:07 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -57,7 +57,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Jun  9 23:57:19 2024       ;
+; Analysis & Synthesis Status     ; Successful - Mon Jun 10 00:14:07 2024       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; projeto                                     ;
 ; Top-level Entity Name           ; projeto                                     ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 ; Total pins                      ; 96                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 2,228,224                                   ;
-; Total DSP Blocks                ; 11                                          ;
+; Total DSP Blocks                ; 15                                          ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -276,14 +276,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 714            ;
+; Estimate of Logic utilization (ALMs needed) ; 731            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 983            ;
+; Combinational ALUT usage for logic          ; 1004           ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 226            ;
-;     -- 5 input functions                    ; 107            ;
-;     -- 4 input functions                    ; 81             ;
-;     -- <=3 input functions                  ; 569            ;
+;     -- 6 input functions                    ; 245            ;
+;     -- 5 input functions                    ; 104            ;
+;     -- 4 input functions                    ; 89             ;
+;     -- <=3 input functions                  ; 566            ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 1131           ;
 ;                                             ;                ;
@@ -291,12 +291,12 @@ refer to the applicable agreement for further details.
 ; Total MLAB memory bits                      ; 0              ;
 ; Total block memory bits                     ; 2228224        ;
 ;                                             ;                ;
-; Total DSP Blocks                            ; 11             ;
+; Total DSP Blocks                            ; 15             ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 915            ;
-; Total fan-out                               ; 15908          ;
-; Average fan-out                             ; 6.12           ;
+; Total fan-out                               ; 16009          ;
+; Average fan-out                             ; 6.10           ;
 +---------------------------------------------+----------------+
 
 
@@ -305,7 +305,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                 ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |projeto                                                                                                                                ; 983 (3)             ; 1131 (0)                  ; 2228224           ; 11         ; 96   ; 0            ; |projeto                                                                                                                                                                                                                                                                                                                                            ; projeto                           ; work         ;
+; |projeto                                                                                                                                ; 1004 (3)            ; 1131 (0)                  ; 2228224           ; 15         ; 96   ; 0            ; |projeto                                                                                                                                                                                                                                                                                                                                            ; projeto                           ; work         ;
 ;    |entities:entitiesInstancia|                                                                                                         ; 138 (0)             ; 64 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia                                                                                                                                                                                                                                                                                                                 ; entities                          ; work         ;
 ;       |bola:bolaAliada|                                                                                                                 ; 83 (83)             ; 55 (55)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|bola:bolaAliada                                                                                                                                                                                                                                                                                                 ; bola                              ; work         ;
 ;       |nave:naveInstancia|                                                                                                              ; 55 (55)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|nave:naveInstancia                                                                                                                                                                                                                                                                                              ; nave                              ; work         ;
@@ -353,8 +353,8 @@ refer to the applicable agreement for further details.
 ;                |lpm_shiftreg:ram_data_shift_out|                                                                                        ; 68 (68)             ; 68 (68)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                               ; lpm_shiftreg                      ; work         ;
 ;                |lpm_shiftreg:status_data_shift_out|                                                                                     ; 1 (1)               ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                            ; lpm_shiftreg                      ; work         ;
 ;             |sld_rom_sr:crc_rom_sr|                                                                                                     ; 20 (20)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                          ; sld_rom_sr                        ; work         ;
-;    |tela:telaInstancia|                                                                                                                 ; 297 (230)           ; 44 (24)                   ; 0                 ; 11         ; 0    ; 0            ; |projeto|tela:telaInstancia                                                                                                                                                                                                                                                                                                                         ; tela                              ; work         ;
-;       |buffer:buffer_int|                                                                                                               ; 67 (67)             ; 20 (20)                   ; 0                 ; 1          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_int                                                                                                                                                                                                                                                                                                       ; buffer                            ; work         ;
+;    |tela:telaInstancia|                                                                                                                 ; 318 (236)           ; 44 (24)                   ; 0                 ; 15         ; 0    ; 0            ; |projeto|tela:telaInstancia                                                                                                                                                                                                                                                                                                                         ; tela                              ; work         ;
+;       |buffer:buffer_int|                                                                                                               ; 82 (82)             ; 20 (20)                   ; 0                 ; 3          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_int                                                                                                                                                                                                                                                                                                       ; buffer                            ; work         ;
 ;    |vga:v|                                                                                                                              ; 33 (33)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|vga:v                                                                                                                                                                                                                                                                                                                                      ; vga                               ; work         ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -374,13 +374,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+-------------+
 ; Statistic                       ; Number Used ;
 +---------------------------------+-------------+
-; Independent 9x9                 ; 2           ;
+; Independent 9x9                 ; 4           ;
 ; Two Independent 18x18           ; 4           ;
-; Independent 18x18 plus 36       ; 1           ;
+; Independent 18x18 plus 36       ; 3           ;
 ; Sum of two 18x18                ; 4           ;
-; Total number of DSP blocks      ; 11          ;
+; Total number of DSP blocks      ; 15          ;
 ;                                 ;             ;
-; Fixed Point Unsigned Multiplier ; 15          ;
+; Fixed Point Unsigned Multiplier ; 19          ;
 +---------------------------------+-------------+
 
 
@@ -435,12 +435,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; entities:entitiesInstancia|nave:naveInstancia|x_nave[1]                                                                                                                                                                                                                                                                         ; 15      ;
-; entities:entitiesInstancia|nave:naveInstancia|x_nave[8]                                                                                                                                                                                                                                                                         ; 17      ;
+; entities:entitiesInstancia|nave:naveInstancia|x_nave[8]                                                                                                                                                                                                                                                                         ; 13      ;
 ; entities:entitiesInstancia|nave:naveInstancia|x_nave[6]                                                                                                                                                                                                                                                                         ; 17      ;
-; entities:entitiesInstancia|nave:naveInstancia|x_nave[4]                                                                                                                                                                                                                                                                         ; 18      ;
+; entities:entitiesInstancia|nave:naveInstancia|x_nave[4]                                                                                                                                                                                                                                                                         ; 20      ;
 ; entities:entitiesInstancia|nave:naveInstancia|x_nave[3]                                                                                                                                                                                                                                                                         ; 10      ;
 ; entities:entitiesInstancia|nave:naveInstancia|x_nave[2]                                                                                                                                                                                                                                                                         ; 10      ;
+; entities:entitiesInstancia|nave:naveInstancia|x_nave[1]                                                                                                                                                                                                                                                                         ; 13      ;
 ; entities:entitiesInstancia|bola:bolaAliada|x[3]                                                                                                                                                                                                                                                                                 ; 1       ;
 ; entities:entitiesInstancia|bola:bolaAliada|x[5]                                                                                                                                                                                                                                                                                 ; 1       ;
 ; entities:entitiesInstancia|bola:bolaAliada|x[6]                                                                                                                                                                                                                                                                                 ; 1       ;
@@ -480,10 +480,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|bola:bolaAliada|x[2]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|bola:bolaAliada|x[1]  ;
 ; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffer_int|Y_BUFFER[9] ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffer_int|X_BUFFER[3] ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|bola:bolaAliada|x[9]  ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffer_int|X_BUFFER[2] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|bola:bolaAliada|x[3]  ;
 ; 5:1                ; 5 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; No         ; |projeto|tela:telaInstancia|VGA_B                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 
@@ -830,30 +830,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 96                          ;
 ;     SCLR              ; 43                          ;
 ;     plain             ; 4                           ;
-; arriav_lcell_comb     ; 554                         ;
-;     arith             ; 303                         ;
+; arriav_lcell_comb     ; 575                         ;
+;     arith             ; 300                         ;
 ;         0 data inputs ; 3                           ;
-;         1 data inputs ; 209                         ;
-;         2 data inputs ; 78                          ;
-;         3 data inputs ; 4                           ;
+;         1 data inputs ; 202                         ;
+;         2 data inputs ; 86                          ;
 ;         4 data inputs ; 9                           ;
-;     normal            ; 199                         ;
+;     normal            ; 223                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 12                          ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 10                          ;
-;         4 data inputs ; 28                          ;
-;         5 data inputs ; 42                          ;
-;         6 data inputs ; 93                          ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 13                          ;
+;         4 data inputs ; 36                          ;
+;         5 data inputs ; 39                          ;
+;         6 data inputs ; 112                         ;
 ;     shared            ; 52                          ;
 ;         0 data inputs ; 2                           ;
 ;         2 data inputs ; 20                          ;
 ;         3 data inputs ; 30                          ;
-; arriav_mac            ; 11                          ;
+; arriav_mac            ; 15                          ;
 ; boundary_port         ; 144                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.90                        ;
-; Average LUT depth     ; 4.60                        ;
+; Average LUT depth     ; 4.65                        ;
 +-----------------------+-----------------------------+
 
 
@@ -900,11 +899,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; tela:telaInstancia|buffer:buffer_int|X_VGA[2]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|x[2]                                                        ; N/A                                                                                                                                                            ;
 ; tela:telaInstancia|buffer:buffer_int|X_VGA[3]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|x[3]                                                        ; N/A                                                                                                                                                            ;
 ; tela:telaInstancia|buffer:buffer_int|X_VGA[4]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|x[4]~_wirecell                                              ; N/A                                                                                                                                                            ;
-; tela:telaInstancia|buffer:buffer_int|X_VGA[5]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add4~4_wirecell                                ; N/A                                                                                                                                                            ;
-; tela:telaInstancia|buffer:buffer_int|X_VGA[6]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add4~3_wirecell                                ; N/A                                                                                                                                                            ;
-; tela:telaInstancia|buffer:buffer_int|X_VGA[7]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add4~2                                         ; N/A                                                                                                                                                            ;
-; tela:telaInstancia|buffer:buffer_int|X_VGA[8]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add4~1_wirecell                                ; N/A                                                                                                                                                            ;
-; tela:telaInstancia|buffer:buffer_int|X_VGA[9]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add4~0_wirecell                                ; N/A                                                                                                                                                            ;
+; tela:telaInstancia|buffer:buffer_int|X_VGA[5]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add4~2_wirecell                                ; N/A                                                                                                                                                            ;
+; tela:telaInstancia|buffer:buffer_int|X_VGA[6]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add4~1_wirecell                                ; N/A                                                                                                                                                            ;
+; tela:telaInstancia|buffer:buffer_int|X_VGA[7]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add4~0                                         ; N/A                                                                                                                                                            ;
+; tela:telaInstancia|buffer:buffer_int|X_VGA[8]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add4~4_wirecell                                ; N/A                                                                                                                                                            ;
+; tela:telaInstancia|buffer:buffer_int|X_VGA[9]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add4~3_wirecell                                ; N/A                                                                                                                                                            ;
 ; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[0]  ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
 ; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[1]  ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
 ; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[2]  ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
@@ -925,16 +924,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; tela:telaInstancia|buffer:buffer_int|Y_OBJETO[7] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; VCC                                                               ; N/A                                                                                                                                                            ;
 ; tela:telaInstancia|buffer:buffer_int|Y_OBJETO[8] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; VCC                                                               ; N/A                                                                                                                                                            ;
 ; tela:telaInstancia|buffer:buffer_int|Y_OBJETO[9] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                                               ; N/A                                                                                                                                                            ;
-; tela:telaInstancia|buffer:buffer_int|Y_VGA[0]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add5~13                                        ; N/A                                                                                                                                                            ;
-; tela:telaInstancia|buffer:buffer_int|Y_VGA[1]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add5~17                                        ; N/A                                                                                                                                                            ;
+; tela:telaInstancia|buffer:buffer_int|Y_VGA[0]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add5~17                                        ; N/A                                                                                                                                                            ;
+; tela:telaInstancia|buffer:buffer_int|Y_VGA[1]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add5~13                                        ; N/A                                                                                                                                                            ;
 ; tela:telaInstancia|buffer:buffer_int|Y_VGA[2]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add5~9                                         ; N/A                                                                                                                                                            ;
-; tela:telaInstancia|buffer:buffer_int|Y_VGA[3]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add5~1                                         ; N/A                                                                                                                                                            ;
-; tela:telaInstancia|buffer:buffer_int|Y_VGA[4]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add5~5                                         ; N/A                                                                                                                                                            ;
+; tela:telaInstancia|buffer:buffer_int|Y_VGA[3]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add5~5                                         ; N/A                                                                                                                                                            ;
+; tela:telaInstancia|buffer:buffer_int|Y_VGA[4]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add5~1                                         ; N/A                                                                                                                                                            ;
 ; tela:telaInstancia|buffer:buffer_int|Y_VGA[5]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add5~29                                        ; N/A                                                                                                                                                            ;
-; tela:telaInstancia|buffer:buffer_int|Y_VGA[6]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add5~33                                        ; N/A                                                                                                                                                            ;
-; tela:telaInstancia|buffer:buffer_int|Y_VGA[7]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add5~37                                        ; N/A                                                                                                                                                            ;
-; tela:telaInstancia|buffer:buffer_int|Y_VGA[8]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add5~21                                        ; N/A                                                                                                                                                            ;
-; tela:telaInstancia|buffer:buffer_int|Y_VGA[9]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add5~25                                        ; N/A                                                                                                                                                            ;
+; tela:telaInstancia|buffer:buffer_int|Y_VGA[6]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add5~25                                        ; N/A                                                                                                                                                            ;
+; tela:telaInstancia|buffer:buffer_int|Y_VGA[7]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add5~21                                        ; N/A                                                                                                                                                            ;
+; tela:telaInstancia|buffer:buffer_int|Y_VGA[8]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add5~37                                        ; N/A                                                                                                                                                            ;
+; tela:telaInstancia|buffer:buffer_int|Y_VGA[9]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|Add5~33                                        ; N/A                                                                                                                                                            ;
 ; tela:telaInstancia|buffer:buffer_int|reset       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SW[0]                                                             ; N/A                                                                                                                                                            ;
 ; tela:telaInstancia|buffer:buffer_int|reset       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SW[0]                                                             ; N/A                                                                                                                                                            ;
 ; tela:telaInstancia|reset                         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SW[0]                                                             ; N/A                                                                                                                                                            ;
@@ -982,7 +981,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Jun  9 23:57:04 2024
+    Info: Processing started: Mon Jun 10 00:13:53 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto -c projeto
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -1068,15 +1067,20 @@ Warning (10230): Verilog HDL assignment warning at vga.v(35): truncated value wi
 Warning (10230): Verilog HDL assignment warning at vga.v(38): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/vga.v Line: 38
 Info (12128): Elaborating entity "keys" for hierarchy "keys:keysInstancia" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 87
 Info (12128): Elaborating entity "tela" for hierarchy "tela:telaInstancia" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 119
-Warning (10230): Verilog HDL assignment warning at tela.v(114): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 114
-Warning (10230): Verilog HDL assignment warning at tela.v(115): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 115
-Warning (10230): Verilog HDL assignment warning at tela.v(116): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 116
-Info (12128): Elaborating entity "buffer" for hierarchy "tela:telaInstancia|buffer:buffer_int" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 94
-Warning (10230): Verilog HDL assignment warning at buffer.v(27): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 27
-Warning (10230): Verilog HDL assignment warning at buffer.v(28): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 28
-Warning (10230): Verilog HDL assignment warning at buffer.v(29): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 29
-Warning (10230): Verilog HDL assignment warning at buffer.v(42): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 42
+Warning (10230): Verilog HDL assignment warning at tela.v(117): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 117
+Warning (10230): Verilog HDL assignment warning at tela.v(118): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 118
+Warning (10230): Verilog HDL assignment warning at tela.v(119): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 119
+Warning (10240): Verilog HDL Always Construct warning at tela.v(99): inferring latch(es) for variable "MULTPLICADOR_NAVE", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 99
+Info (10041): Inferred latch for "MULTPLICADOR_NAVE[0]" at tela.v(106) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 106
+Info (10041): Inferred latch for "MULTPLICADOR_NAVE[1]" at tela.v(106) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 106
+Info (10041): Inferred latch for "MULTPLICADOR_NAVE[2]" at tela.v(106) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 106
+Info (10041): Inferred latch for "MULTPLICADOR_NAVE[3]" at tela.v(106) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 106
+Info (12128): Elaborating entity "buffer" for hierarchy "tela:telaInstancia|buffer:buffer_int" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 96
+Warning (10230): Verilog HDL assignment warning at buffer.v(30): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 30
+Warning (10230): Verilog HDL assignment warning at buffer.v(31): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 31
+Warning (10230): Verilog HDL assignment warning at buffer.v(32): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 32
 Warning (10230): Verilog HDL assignment warning at buffer.v(45): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 45
+Warning (10230): Verilog HDL assignment warning at buffer.v(48): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 48
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ul84.tdf
     Info (12023): Found entity 1: altsyncram_ul84 File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/db/altsyncram_ul84.tdf Line: 31
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_8la.tdf
@@ -1103,7 +1107,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/db/cmpr_99c.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.06.09.23:57:13 Progress: Loading sld3172de05/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.06.10.00:14:01 Progress: Loading sld3172de05/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1197,16 +1201,16 @@ Warning (21074): Design contains 10 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[9]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 3
     Warning (15610): No output dependent on input pin "KEY[2]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 4
     Warning (15610): No output dependent on input pin "KEY[3]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 4
-Info (21057): Implemented 2161 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2186 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 82 output pins
-    Info (21061): Implemented 1777 logic cells
+    Info (21061): Implemented 1798 logic cells
     Info (21064): Implemented 272 RAM segments
-    Info (21062): Implemented 11 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 102 warnings
-    Info: Peak virtual memory: 1425 megabytes
-    Info: Processing ended: Sun Jun  9 23:57:19 2024
-    Info: Elapsed time: 00:00:15
+    Info (21062): Implemented 15 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 103 warnings
+    Info: Peak virtual memory: 1409 megabytes
+    Info: Processing ended: Mon Jun 10 00:14:07 2024
+    Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:32
 
 
