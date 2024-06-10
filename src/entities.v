@@ -57,6 +57,9 @@ module entities(
         .pausa(pausa),
         .reiniciarJogo(0),
 
+        .xi(500),
+        .yi(50),
+
         .largura(largura_inimigo),
         .altura(altura_inimigo),
         .x(x_inimigo),

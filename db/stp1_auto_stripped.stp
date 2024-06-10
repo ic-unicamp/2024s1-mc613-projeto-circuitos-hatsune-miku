@@ -1,12 +1,12 @@
 <session jtag_chain="DE-SoC [3-1]" jtag_device="@2: 5CSE(BA5|MA5)/5CSTFD5D5/.. (0x02D120DD)" sof_file="">
   <display_tree gui_logging_enabled="0">
-    <display_branch instance="auto_signaltap_0" log="USE_GLOBAL_TEMP" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+    <display_branch instance="auto_signaltap_0" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
   </display_tree>
   <instance enabled="true" entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
     <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
-    <signal_set global_temp="1" is_expanded="true" name="signal_set: 2024/06/09 20:35:26  #0">
+    <signal_set global_temp="1" is_expanded="true" name="signal_set: 2024/06/09 20:43:34  #0">
       <clock name="CLOCK_50" polarity="posedge" tap_mode="classic"/>
-      <config pipeline_level="0" ram_type="AUTO" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="16384" trigger_in_enable="no" trigger_out_enable="no"/>
+      <config pipeline_level="0" ram_type="AUTO" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="32768" trigger_in_enable="no" trigger_out_enable="no"/>
       <top_entity/>
       <signal_vec>
         <trigger_input_vec>
@@ -219,7 +219,7 @@
             <node data_index="54" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="false" name="tela:telaInstancia|buffer:buffer_int|Y_VGA[1]" storage_index="54" tap_mode="classic" type="unknown"/>
             <node data_index="53" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="false" name="tela:telaInstancia|buffer:buffer_int|Y_VGA[0]" storage_index="53" tap_mode="classic" type="unknown"/>
           </node>
-          <node is_selected="true" level-0="alt_or" name="tela:telaInstancia|buffer:buffer_int|Y_OBJETO[9..0]" order="msb_to_lsb" type="combinatorial">
+          <node is_selected="false" level-0="alt_or" name="tela:telaInstancia|buffer:buffer_int|Y_OBJETO[9..0]" order="msb_to_lsb" type="combinatorial">
             <node data_index="52" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="false" name="tela:telaInstancia|buffer:buffer_int|Y_OBJETO[9]" storage_index="52" tap_mode="classic" type="unknown"/>
             <node data_index="51" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="false" name="tela:telaInstancia|buffer:buffer_int|Y_OBJETO[8]" storage_index="51" tap_mode="classic" type="unknown"/>
             <node data_index="50" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="false" name="tela:telaInstancia|buffer:buffer_int|Y_OBJETO[7]" storage_index="50" tap_mode="classic" type="unknown"/>
@@ -301,7 +301,7 @@
             <net data_index="54" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="false" name="tela:telaInstancia|buffer:buffer_int|Y_VGA[1]" storage_index="54" tap_mode="classic" type="unknown"/>
             <net data_index="53" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="false" name="tela:telaInstancia|buffer:buffer_int|Y_VGA[0]" storage_index="53" tap_mode="classic" type="unknown"/>
           </bus>
-          <bus is_selected="true" level-0="alt_or" name="tela:telaInstancia|buffer:buffer_int|Y_OBJETO[9..0]" order="msb_to_lsb" type="combinatorial">
+          <bus is_selected="false" level-0="alt_or" name="tela:telaInstancia|buffer:buffer_int|Y_OBJETO[9..0]" order="msb_to_lsb" type="combinatorial">
             <net data_index="52" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="false" name="tela:telaInstancia|buffer:buffer_int|Y_OBJETO[9]" storage_index="52" tap_mode="classic" type="unknown"/>
             <net data_index="51" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="false" name="tela:telaInstancia|buffer:buffer_int|Y_OBJETO[8]" storage_index="51" tap_mode="classic" type="unknown"/>
             <net data_index="50" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="false" name="tela:telaInstancia|buffer:buffer_int|Y_OBJETO[7]" storage_index="50" tap_mode="classic" type="unknown"/>
@@ -383,7 +383,7 @@
             <net data_index="54" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="false" name="tela:telaInstancia|buffer:buffer_int|Y_VGA[1]" storage_index="54" tap_mode="classic" type="unknown"/>
             <net data_index="53" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="false" name="tela:telaInstancia|buffer:buffer_int|Y_VGA[0]" storage_index="53" tap_mode="classic" type="unknown"/>
           </bus>
-          <bus is_selected="true" level-0="alt_or" name="tela:telaInstancia|buffer:buffer_int|Y_OBJETO[9..0]" order="msb_to_lsb" type="combinatorial">
+          <bus is_selected="false" level-0="alt_or" name="tela:telaInstancia|buffer:buffer_int|Y_OBJETO[9..0]" order="msb_to_lsb" type="combinatorial">
             <net data_index="52" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="false" name="tela:telaInstancia|buffer:buffer_int|Y_OBJETO[9]" storage_index="52" tap_mode="classic" type="unknown"/>
             <net data_index="51" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="false" name="tela:telaInstancia|buffer:buffer_int|Y_OBJETO[8]" storage_index="51" tap_mode="classic" type="unknown"/>
             <net data_index="50" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="false" name="tela:telaInstancia|buffer:buffer_int|Y_OBJETO[7]" storage_index="50" tap_mode="classic" type="unknown"/>
@@ -403,12 +403,13 @@
         <trigger_in_editor/>
         <trigger_out_editor/>
       </presentation>
-      <trigger CRC="236C087E" attribute_mem_mode="false" gap_record="true" global_temp="1" is_expanded="true" name="trigger: 2024/06/09 20:35:26  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="16384" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_type="circular">
+      <trigger CRC="A931087E" attribute_mem_mode="false" gap_record="true" global_temp="1" is_expanded="true" name="trigger: 2024/06/09 20:43:34  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="8192" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_type="circular">
         <power_up_trigger position="pre" storage_qualifier_disabled="no"/>
         <events use_custom_flow_control="no">
           <level enabled="yes" name="condition1" type="basic">'tela:telaInstancia|buffer:buffer_int|reset' == falling edge
             <power_up enabled="yes">
-            </power_up><op_node/>
+            </power_up>
+            <op_node/>
           </level>
         </events>
         <storage_qualifier_events>
@@ -434,8 +435,8 @@
       </trigger>
     </signal_set>
     <position_info>
-      <single attribute="active tab" value="0"/>
-      <single attribute="data horizontal scroll position" value="14789"/>
+      <single attribute="active tab" value="1"/>
+      <single attribute="data horizontal scroll position" value="0"/>
       <single attribute="data vertical scroll position" value="0"/>
       <single attribute="setup horizontal scroll position" value="0"/>
       <single attribute="setup vertical scroll position" value="0"/>
