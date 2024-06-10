@@ -11,3 +11,7 @@ teste.txt
 *.summary
 *.jdi
 *.sld
+*.hdb
+*.cdb
+*.tdf
+*.tdf
