@@ -87,6 +87,7 @@ module projeto(
 	);
 
     tela telaInstancia(
+		.VGA_CLK(VGA_CLK),
         .CLOCK_50(CLOCK_50),
         .reset(reset),
         .ativo(ativoVGA),

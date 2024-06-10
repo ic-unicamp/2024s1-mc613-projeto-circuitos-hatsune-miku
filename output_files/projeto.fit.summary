@@ -1,16 +1,16 @@
-Fitter Status : Successful - Sun Jun  9 20:43:14 2024
-Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Fitter Status : Successful - Sun Jun  9 23:57:55 2024
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : projeto
 Top-level Entity Name : projeto
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 877 / 32,070 ( 3 % )
-Total registers : 1123
+Logic utilization (in ALMs) : 734 / 32,070 ( 2 % )
+Total registers : 1150
 Total pins : 96 / 457 ( 21 % )
 Total virtual pins : 0
-Total block memory bits : 1,114,112 / 4,065,280 ( 27 % )
-Total RAM Blocks : 136 / 397 ( 34 % )
+Total block memory bits : 2,228,224 / 4,065,280 ( 55 % )
+Total RAM Blocks : 272 / 397 ( 69 % )
 Total DSP Blocks : 11 / 87 ( 13 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

@@ -1,6 +1,6 @@
 Assembler report for projeto
-Sun Jun  9 20:43:22 2024
-Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Sun Jun  9 23:58:02 2024
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -19,9 +19,9 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2017  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -31,15 +31,14 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Jun  9 20:43:22 2024 ;
+; Assembler Status      ; Successful - Sun Jun  9 23:58:02 2024 ;
 ; Revision Name         ; projeto                               ;
 ; Top-level Entity Name ; projeto                               ;
 ; Family                ; Cyclone V                             ;
@@ -64,13 +63,13 @@ https://fpgasoftware.intel.com/eula.
 +--------+------------------------+--------------+
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                   ;
-+-------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                   ;
-+-------------------------------------------------------------------------------------------------------------+
-; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/output_files/projeto.sof ;
-+-------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                              ;
++------------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                              ;
++------------------------------------------------------------------------------------------------------------------------+
+; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/output_files/projeto.sof ;
++------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------+
@@ -78,8 +77,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+----------------------+
 ; Option         ; Setting              ;
 +----------------+----------------------+
-; JTAG usercode  ; 0x0386D2E7           ;
-; Checksum       ; 0x0386D2E7           ;
+; JTAG usercode  ; 0x06394591           ;
+; Checksum       ; 0x06394591           ;
 +----------------+----------------------+
 
 
@@ -88,15 +87,15 @@ https://fpgasoftware.intel.com/eula.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
-    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Sun Jun  9 20:43:16 2024
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Sun Jun  9 23:57:57 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off projeto -c projeto
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 538 megabytes
-    Info: Processing ended: Sun Jun  9 20:43:22 2024
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Peak virtual memory: 1227 megabytes
+    Info: Processing ended: Sun Jun  9 23:58:02 2024
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 

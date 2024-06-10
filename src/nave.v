@@ -20,10 +20,8 @@ module nave(
 
     always @(posedge CLOCK_50 or posedge resetNave) begin
         if (resetNave) begin
-            // x_nave = 350;
-            x_nave = 150;
-            y_nave = 2;
-            // y_nave = 420;
+            x_nave = 350;
+            y_nave = 420;
             iniciarBola = 0;
         end else if (pausa == 0) begin
             if (pausa == 0) begin
