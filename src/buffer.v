@@ -1,5 +1,5 @@
 module buffer(
-    input CLK,
+    input CLK, 
     input reset,
     input [9:0] X_VGA,
     input [9:0] Y_VGA,
@@ -12,7 +12,7 @@ module buffer(
     input [0:254] BUFFER_G, // caso a imagem seja menor, não ha problema, ela será oculpado do 0 para o 11 digito
     input [0:254] BUFFER_B,
     output R_VGA, // sempre irei retornar o 3 bit mais significativos do RGB
-    output G_VGA,
+    output G_VGA, 
     output B_VGA   
 );
     reg [9:0] X_BUFFER;  
@@ -37,7 +37,7 @@ module buffer(
             Y_BUFFER = 0;
         end else begin
             if (enable_read) begin
-                if (X_BUFFER == LARGURA_OBJETO * MULTPLICADOR) begin
+                if (X_BUFFER == LARGURA_OBJETO * MULTPLICADOR ) begin
                     X_BUFFER = 0;
                     if (Y_BUFFER == ALTURA_OBJETO * MULTPLICADOR) begin
                         Y_BUFFER = 0;

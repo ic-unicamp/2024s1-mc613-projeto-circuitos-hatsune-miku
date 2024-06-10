@@ -1,7 +1,7 @@
 module tela(
     input VGA_CLK,
     input CLOCK_50,
-	input reset,
+	input reset, 
 	input ativo,
 	input perdeu,
 
@@ -10,13 +10,13 @@ module tela(
 	input [9:0] raio_bola_aliada,
 	input [9:0] x_bola_inimiga,
 	input [9:0] y_bola_inimiga, 
-	input [9:0] raio_bola_inimiga,
+	input [9:0] raio_bola_inimiga, 
 
 	input [9:0] x_nave,
 	input [9:0] y_nave, 
 	input [9:0] largura_nave,  
 	input [9:0] altura_nave,   
-  
+   
     input [9:0] x_inimigo,
     input [9:0] y_inimigo,
     input [9:0] largura_inimigo,
@@ -66,7 +66,9 @@ module tela(
             100000010000001
     */
 
-    reg [0:254] buffer_nave = 255'b000000010000000000000010000000000000010000000000000111000000000000111000000000100111001000000100111001000000101111101000100111111111001100111111111001100111111111001101111111111101111111111111111111011111110111110011010110011100000010000001;
+    reg [0:254] buffer_nave_R = 255'b000000010000000000000010000000000000010000000000000111000000000000111000000000000111000000000000111000000000101111101000000101101101000000011000110000100111010111001101111111111101111110111011111111000111000111110000010000011100000010000001;
+    reg [0:254] buffer_nave_G = 255'b000000010000000000000010000000000000010000000000000111000000000000111000000000100111001000000100111001000000101111101000100101111101001100011111110001100111111111001101111111111101111111111111111111011111110111110011010110011100000010000001;
+    reg [0:254] buffer_nave_B = 255'b000000010000000000000010000000000000010000000000000111000000000000111000000000000111000000000000111000000000101111101000000111101111000000111000111000100111010111001101111111111101111110111011111111000111000111110000010000011100000010000001;
     // reg [0:254] buffer_nave = 255'b000000000011111000001000001111000001100000111000001110000011000001111000001000000000000000000000000010000000000000011000000000000011100000000000011110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
  
     reg [7:0] largura = 8'd15;
@@ -87,9 +89,9 @@ module tela(
         .LARGURA_OBJETO(largura),
         .ALTURA_OBJETO(altura),
         .MULTPLICADOR(MULTPLICADOR_NAVE),
-        .BUFFER_G(buffer_nave),
-        .BUFFER_B(buffer_nave),
-        .BUFFER_R(buffer_nave),
+        .BUFFER_R(buffer_nave_R),
+        .BUFFER_G(buffer_nave_G),
+        .BUFFER_B(buffer_nave_B),
         .R_VGA(nave_r),
         .G_VGA(nave_g),
         .B_VGA(nave_b)
@@ -113,20 +115,14 @@ module tela(
 					VGA_G = 0;
 					VGA_B = 0;
 				// end else if ((x_nave + 144 <= VGA_X ) && (VGA_X <= 144 + x_nave + largura_nave) && (y_nave + 35 <= VGA_Y) && (VGA_Y <= y_nave + 35 + altura_nave)) begin // nave
-				end else if (nave_r && (x_nave + 144 <= VGA_X ) && (VGA_X <= 144 + x_nave + largura * MULTPLICADOR_NAVE) && (y_nave + 35 <= VGA_Y) && (VGA_Y <= y_nave + 35 + altura * MULTPLICADOR_NAVE)) begin // nave
+				end else if ((nave_r || nave_g || nave_b) && (x_nave + 144 <= VGA_X ) && (VGA_X <= 144 + x_nave + largura * MULTPLICADOR_NAVE) && (y_nave + 35 <= VGA_Y) && (VGA_Y <= y_nave + 35 + altura * MULTPLICADOR_NAVE)) begin // nave
 					VGA_R = nave_r * 255;
 					VGA_G = nave_g * 255;
 					VGA_B = nave_b * 255;
-                end 
-                // else if ((x_inimigo + 144 <= VGA_X ) && (VGA_X <= 144 + x_inimigo + largura_inimigo) && (y_inimigo + 35 <= VGA_Y) && (VGA_Y <= y_inimigo + 35 + altura_inimigo)) begin
-                //     VGA_R = 0;
-                //     VGA_G = 255;
-                //     VGA_B = 0;
-                // end 
-                else begin
+                end else begin
                     VGA_R = 0; 
-                    VGA_G = 50;
-                    VGA_B = 50;
+                    VGA_G = 0;
+                    VGA_B = 0;
                 end
 				
             end else begin 
