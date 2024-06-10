@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projeto
-Sun Jun  9 15:24:58 2024
+Sun Jun  9 20:42:22 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -13,17 +13,27 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis DSP Block Usage Summary
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Port Connectivity Checks: "memory:memoryInstancia"
- 14. Port Connectivity Checks: "entities:entitiesInstancia|bola:bolaAliada"
- 15. Port Connectivity Checks: "entities:entitiesInstancia|nave:naveInstancia"
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis DSP Block Usage Summary
+ 10. Analysis & Synthesis IP Cores Summary
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for sld_signaltap:auto_signaltap_0
+ 16. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
+ 17. Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffer_int|lpm_divide:Mod0
+ 18. Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffer_int|lpm_divide:Div0
+ 19. Port Connectivity Checks: "tela:telaInstancia|buffer:buffer_int"
+ 20. Port Connectivity Checks: "tela:telaInstancia"
+ 21. Port Connectivity Checks: "entities:entitiesInstancia|bola:bolaAliada"
+ 22. Port Connectivity Checks: "entities:entitiesInstancia|inimigo:inimigoInstancia"
+ 23. Port Connectivity Checks: "entities:entitiesInstancia|nave:naveInstancia"
+ 24. Signal Tap Logic Analyzer Settings
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Connections to In-System Debugging Instance "auto_signaltap_0"
+ 28. Analysis & Synthesis Messages
 
 
 
@@ -50,17 +60,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Jun  9 15:24:58 2024          ;
+; Analysis & Synthesis Status     ; Successful - Sun Jun  9 20:42:22 2024          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; projeto                                        ;
 ; Top-level Entity Name           ; projeto                                        ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 178                                            ;
+; Total registers                 ; 1111                                           ;
 ; Total pins                      ; 96                                             ;
 ; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 0                                              ;
-; Total DSP Blocks                ; 10                                             ;
+; Total block memory bits         ; 1,114,112                                      ;
+; Total DSP Blocks                ; 11                                             ;
 ; Total HSSI RX PCSs              ; 0                                              ;
 ; Total HSSI PMA RX Deserializers ; 0                                              ;
 ; Total HSSI TX PCSs              ; 0                                              ;
@@ -176,19 +186,86 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                      ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------+---------+
-; src/bola.v                       ; yes             ; User Verilog HDL File  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/bola.v     ;         ;
-; src/entities.v                   ; yes             ; User Verilog HDL File  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v ;         ;
-; src/keys.v                       ; yes             ; User Verilog HDL File  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/keys.v     ;         ;
-; src/memory.v                     ; yes             ; User Verilog HDL File  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/memory.v   ;         ;
-; src/nave.v                       ; yes             ; User Verilog HDL File  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v     ;         ;
-; src/projeto.v                    ; yes             ; User Verilog HDL File  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v  ;         ;
-; src/vga.v                        ; yes             ; User Verilog HDL File  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/vga.v      ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                                    ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                                          ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; src/buffer.v                                                       ; yes             ; User Verilog HDL File                        ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v                                                       ;             ;
+; src/entities.v                                                     ; yes             ; User Verilog HDL File                        ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v                                                     ;             ;
+; src/inimigo.v                                                      ; yes             ; User Verilog HDL File                        ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v                                                      ;             ;
+; src/keys.v                                                         ; yes             ; User Verilog HDL File                        ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/keys.v                                                         ;             ;
+; src/nave.v                                                         ; yes             ; User Verilog HDL File                        ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v                                                         ;             ;
+; src/projeto.v                                                      ; yes             ; User Verilog HDL File                        ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v                                                      ;             ;
+; src/tela.v                                                         ; yes             ; User Verilog HDL File                        ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v                                                         ;             ;
+; src/vga.v                                                          ; yes             ; User Verilog HDL File                        ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/vga.v                                                          ;             ;
+; src/bola.v                                                         ; yes             ; User Verilog HDL File                        ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/bola.v                                                         ;             ;
+; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/sld_signaltap.vhd                                                                                 ;             ;
+; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                                                            ;             ;
+; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/sld_ela_control.vhd                                                                               ;             ;
+; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                                                                  ;             ;
+; lpm_constant.inc                                                   ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/lpm_constant.inc                                                                                  ;             ;
+; dffeea.inc                                                         ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/dffeea.inc                                                                                        ;             ;
+; aglobal231.inc                                                     ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/aglobal231.inc                                                                                    ;             ;
+; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/sld_mbpmg.vhd                                                                                     ;             ;
+; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                                                                      ;             ;
+; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                                                            ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                                    ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                             ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                                       ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/lpm_decode.inc                                                                                    ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                                     ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altrom.inc                                                                                        ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altram.inc                                                                                        ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altdpram.inc                                                                                      ;             ;
+; db/altsyncram_kl84.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/altsyncram_kl84.tdf                                             ;             ;
+; db/decode_5la.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/decode_5la.tdf                                                  ;             ;
+; db/mux_bhb.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/mux_bhb.tdf                                                     ;             ;
+; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altdpram.tdf                                                                                      ;             ;
+; memmodes.inc                                                       ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/others/maxplus2/memmodes.inc                                                                                    ;             ;
+; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/a_hdffe.inc                                                                                       ;             ;
+; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                                                               ;             ;
+; altsyncram.inc                                                     ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altsyncram.inc                                                                                    ;             ;
+; lpm_mux.tdf                                                        ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/lpm_mux.tdf                                                                                       ;             ;
+; muxlut.inc                                                         ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/muxlut.inc                                                                                        ;             ;
+; bypassff.inc                                                       ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/bypassff.inc                                                                                      ;             ;
+; altshift.inc                                                       ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altshift.inc                                                                                      ;             ;
+; db/mux_jlc.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/mux_jlc.tdf                                                     ;             ;
+; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/lpm_decode.tdf                                                                                    ;             ;
+; declut.inc                                                         ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/declut.inc                                                                                        ;             ;
+; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/lpm_compare.inc                                                                                   ;             ;
+; db/decode_vnf.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/decode_vnf.tdf                                                  ;             ;
+; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/lpm_counter.tdf                                                                                   ;             ;
+; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                                                   ;             ;
+; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/cmpconst.inc                                                                                      ;             ;
+; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/lpm_counter.inc                                                                                   ;             ;
+; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                                                           ;             ;
+; db/cntr_b9i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/cntr_b9i.tdf                                                    ;             ;
+; db/cmpr_f9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/cmpr_f9c.tdf                                                    ;             ;
+; db/cntr_t3j.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/cntr_t3j.tdf                                                    ;             ;
+; db/cntr_69i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/cntr_69i.tdf                                                    ;             ;
+; db/cmpr_d9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/cmpr_d9c.tdf                                                    ;             ;
+; db/cntr_kri.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/cntr_kri.tdf                                                    ;             ;
+; db/cmpr_99c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/cmpr_99c.tdf                                                    ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                                                    ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                                                     ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                                                 ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/sld_hub.vhd                                                                                       ; altera_sld  ;
+; db/ip/sld3172de05/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/ip/sld3172de05/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                                                  ;             ;
+; lpm_divide.tdf                                                     ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                                                    ;             ;
+; abs_divider.inc                                                    ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/abs_divider.inc                                                                                   ;             ;
+; sign_div_unsign.inc                                                ; yes             ; Megafunction                                 ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                                                               ;             ;
+; db/lpm_divide_35m.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/lpm_divide_35m.tdf                                              ;             ;
+; db/sign_div_unsign_9nh.tdf                                         ; yes             ; Auto-Generated Megafunction                  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/sign_div_unsign_9nh.tdf                                         ;             ;
+; db/alt_u_div_o2f.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/alt_u_div_o2f.tdf                                               ;             ;
+; db/lpm_divide_vcm.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/lpm_divide_vcm.tdf                                              ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
 +--------------------------------------------------------------+
@@ -196,42 +273,104 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 252            ;
+; Estimate of Logic utilization (ALMs needed) ; 942            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 438            ;
-;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 63             ;
-;     -- 5 input functions                    ; 20             ;
-;     -- 4 input functions                    ; 22             ;
-;     -- <=3 input functions                  ; 333            ;
+; Combinational ALUT usage for logic          ; 1410           ;
+;     -- 7 input functions                    ; 68             ;
+;     -- 6 input functions                    ; 175            ;
+;     -- 5 input functions                    ; 159            ;
+;     -- 4 input functions                    ; 174            ;
+;     -- <=3 input functions                  ; 834            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 178            ;
+; Dedicated logic registers                   ; 1111           ;
 ;                                             ;                ;
 ; I/O pins                                    ; 96             ;
+; Total MLAB memory bits                      ; 0              ;
+; Total block memory bits                     ; 1114112        ;
 ;                                             ;                ;
-; Total DSP Blocks                            ; 10             ;
+; Total DSP Blocks                            ; 11             ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 137            ;
-; Total fan-out                               ; 2222           ;
-; Average fan-out                             ; 2.72           ;
+; Maximum fan-out                             ; 813            ;
+; Total fan-out                               ; 12914          ;
+; Average fan-out                             ; 4.50           ;
 +---------------------------------------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                            ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Entity Name ; Library Name ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+-------------+--------------+
-; |projeto                        ; 438 (0)             ; 178 (0)                   ; 0                 ; 10         ; 96   ; 0            ; |projeto                                               ; projeto     ; work         ;
-;    |entities:entitiesInstancia| ; 113 (0)             ; 65 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia                    ; entities    ; work         ;
-;       |bola:bolaAliada|         ; 83 (83)             ; 55 (55)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|bola:bolaAliada    ; bola        ; work         ;
-;       |nave:naveInstancia|      ; 30 (30)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|nave:naveInstancia ; nave        ; work         ;
-;    |keys:keysInstancia|         ; 84 (84)             ; 68 (68)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|keys:keysInstancia                            ; keys        ; work         ;
-;    |memory:memoryInstancia|     ; 208 (208)           ; 24 (24)                   ; 0                 ; 10         ; 0    ; 0            ; |projeto|memory:memoryInstancia                        ; memory      ; work         ;
-;    |vga:v|                      ; 33 (33)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|vga:v                                         ; vga         ; work         ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
+; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                 ; Entity Name                       ; Library Name ;
++-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
+; |projeto                                                                                                                                ; 1410 (2)            ; 1111 (0)                  ; 1114112           ; 11         ; 96   ; 0            ; |projeto                                                                                                                                                                                                                                                                                                                                            ; projeto                           ; work         ;
+;    |entities:entitiesInstancia|                                                                                                         ; 135 (0)             ; 64 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia                                                                                                                                                                                                                                                                                                                 ; entities                          ; work         ;
+;       |bola:bolaAliada|                                                                                                                 ; 83 (83)             ; 55 (55)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|bola:bolaAliada                                                                                                                                                                                                                                                                                                 ; bola                              ; work         ;
+;       |nave:naveInstancia|                                                                                                              ; 52 (52)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|nave:naveInstancia                                                                                                                                                                                                                                                                                              ; nave                              ; work         ;
+;    |keys:keysInstancia|                                                                                                                 ; 84 (84)             ; 68 (68)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|keys:keysInstancia                                                                                                                                                                                                                                                                                                                         ; keys                              ; work         ;
+;    |sld_hub:auto_hub|                                                                                                                   ; 92 (1)              ; 90 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
+;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 91 (0)              ; 90 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
+;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 91 (0)              ; 90 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
+;             |alt_sld_fab_alt_sld_fab:alt_sld_fab|                                                                                       ; 91 (1)              ; 90 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                    ; alt_sld_fab_alt_sld_fab           ; alt_sld_fab  ;
+;                |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|                                                                            ; 90 (0)              ; 85 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                        ; alt_sld_fab_alt_sld_fab_sldfabric ; alt_sld_fab  ;
+;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 90 (57)             ; 85 (57)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                           ; sld_jtag_hub                      ; work         ;
+;                      |sld_rom_sr:hub_info_reg|                                                                                          ; 15 (15)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg   ; sld_rom_sr                        ; work         ;
+;                      |sld_shadow_jsm:shadow_jsm|                                                                                        ; 18 (18)             ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm ; sld_shadow_jsm                    ; altera_sld   ;
+;    |sld_signaltap:auto_signaltap_0|                                                                                                     ; 324 (2)             ; 823 (69)                  ; 1114112           ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0                                                                                                                                                                                                                                                                                                             ; sld_signaltap                     ; work         ;
+;       |sld_signaltap_impl:sld_signaltap_body|                                                                                           ; 322 (0)             ; 754 (0)                   ; 1114112           ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body                                                                                                                                                                                                                                                                       ; sld_signaltap_impl                ; work         ;
+;          |sld_signaltap_implb:sld_signaltap_body|                                                                                       ; 322 (67)            ; 754 (360)                 ; 1114112           ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body                                                                                                                                                                                                                                ; sld_signaltap_implb               ; work         ;
+;             |altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|                                                            ; 2 (0)               ; 88 (88)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem                                                                                                                                                                 ; altdpram                          ; work         ;
+;                |lpm_decode:wdecoder|                                                                                                    ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder                                                                                                                                             ; lpm_decode                        ; work         ;
+;                   |decode_vnf:auto_generated|                                                                                           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder|decode_vnf:auto_generated                                                                                                                   ; decode_vnf                        ; work         ;
+;             |altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|                                                                           ; 2 (0)               ; 1 (0)                     ; 1114112           ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram                                                                                                                                                                                ; altsyncram                        ; work         ;
+;                |altsyncram_kl84:auto_generated|                                                                                         ; 2 (0)               ; 1 (1)                     ; 1114112           ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_kl84:auto_generated                                                                                                                                                 ; altsyncram_kl84                   ; work         ;
+;                   |decode_5la:decode2|                                                                                                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_kl84:auto_generated|decode_5la:decode2                                                                                                                              ; decode_5la                        ; work         ;
+;             |lpm_shiftreg:segment_offset_config_deserialize|                                                                            ; 0 (0)               ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|lpm_shiftreg:segment_offset_config_deserialize                                                                                                                                                                                 ; lpm_shiftreg                      ; work         ;
+;             |lpm_shiftreg:status_register|                                                                                              ; 17 (17)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|lpm_shiftreg:status_register                                                                                                                                                                                                   ; lpm_shiftreg                      ; work         ;
+;             |serial_crc_16:\tdo_crc_gen:tdo_crc_calc|                                                                                   ; 4 (4)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|serial_crc_16:\tdo_crc_gen:tdo_crc_calc                                                                                                                                                                                        ; serial_crc_16                     ; work         ;
+;             |sld_buffer_manager:sld_buffer_manager_inst|                                                                                ; 96 (96)             ; 79 (79)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst                                                                                                                                                                                     ; sld_buffer_manager                ; work         ;
+;             |sld_ela_control:ela_control|                                                                                               ; 3 (1)               ; 21 (1)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control                                                                                                                                                                                                    ; sld_ela_control                   ; work         ;
+;                |lpm_shiftreg:trigger_config_deserialize|                                                                                ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|lpm_shiftreg:trigger_config_deserialize                                                                                                                                                            ; lpm_shiftreg                      ; work         ;
+;                |sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|                                 ; 1 (0)               ; 5 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm                                                                                                             ; sld_ela_basic_multi_level_trigger ; work         ;
+;                   |lpm_shiftreg:trigger_condition_deserialize|                                                                          ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|lpm_shiftreg:trigger_condition_deserialize                                                                  ; lpm_shiftreg                      ; work         ;
+;                   |sld_mbpmg:\trigger_modules_gen:0:trigger_match|                                                                      ; 1 (0)               ; 2 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match                                                              ; sld_mbpmg                         ; work         ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:0:sm1|                                                            ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:0:sm1        ; sld_sbpmg                         ; work         ;
+;                |sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity|                                                          ; 1 (1)               ; 11 (1)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity                                                                                                                                      ; sld_ela_trigger_flow_mgr          ; work         ;
+;                   |lpm_shiftreg:trigger_config_deserialize|                                                                             ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity|lpm_shiftreg:trigger_config_deserialize                                                                                              ; lpm_shiftreg                      ; work         ;
+;             |sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|                                          ; 111 (9)             ; 153 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst                                                                                                                                               ; sld_offload_buffer_mgr            ; work         ;
+;                |lpm_counter:\adv_point_3_and_more:advance_pointer_counter|                                                              ; 9 (0)               ; 7 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter                                                                                     ; lpm_counter                       ; work         ;
+;                   |cntr_b9i:auto_generated|                                                                                             ; 9 (9)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter|cntr_b9i:auto_generated                                                             ; cntr_b9i                          ; work         ;
+;                |lpm_counter:read_pointer_counter|                                                                                       ; 14 (0)              ; 14 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter                                                                                                              ; lpm_counter                       ; work         ;
+;                   |cntr_t3j:auto_generated|                                                                                             ; 14 (14)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter|cntr_t3j:auto_generated                                                                                      ; cntr_t3j                          ; work         ;
+;                |lpm_counter:status_advance_pointer_counter|                                                                             ; 7 (0)               ; 5 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter                                                                                                    ; lpm_counter                       ; work         ;
+;                   |cntr_69i:auto_generated|                                                                                             ; 7 (7)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter|cntr_69i:auto_generated                                                                            ; cntr_69i                          ; work         ;
+;                |lpm_counter:status_read_pointer_counter|                                                                                ; 3 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter                                                                                                       ; lpm_counter                       ; work         ;
+;                   |cntr_kri:auto_generated|                                                                                             ; 3 (3)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter|cntr_kri:auto_generated                                                                               ; cntr_kri                          ; work         ;
+;                |lpm_shiftreg:info_data_shift_out|                                                                                       ; 0 (0)               ; 29 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:info_data_shift_out                                                                                                              ; lpm_shiftreg                      ; work         ;
+;                |lpm_shiftreg:ram_data_shift_out|                                                                                        ; 68 (68)             ; 68 (68)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                               ; lpm_shiftreg                      ; work         ;
+;                |lpm_shiftreg:status_data_shift_out|                                                                                     ; 1 (1)               ; 29 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                            ; lpm_shiftreg                      ; work         ;
+;             |sld_rom_sr:crc_rom_sr|                                                                                                     ; 20 (20)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                          ; sld_rom_sr                        ; work         ;
+;    |tela:telaInstancia|                                                                                                                 ; 739 (239)           ; 45 (24)                   ; 0                 ; 11         ; 0    ; 0            ; |projeto|tela:telaInstancia                                                                                                                                                                                                                                                                                                                         ; tela                              ; work         ;
+;       |buffer:buffer_int|                                                                                                               ; 500 (53)            ; 21 (21)                   ; 0                 ; 1          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_int                                                                                                                                                                                                                                                                                                       ; buffer                            ; work         ;
+;          |lpm_divide:Div0|                                                                                                              ; 158 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_int|lpm_divide:Div0                                                                                                                                                                                                                                                                                       ; lpm_divide                        ; work         ;
+;             |lpm_divide_vcm:auto_generated|                                                                                             ; 158 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_int|lpm_divide:Div0|lpm_divide_vcm:auto_generated                                                                                                                                                                                                                                                         ; lpm_divide_vcm                    ; work         ;
+;                |sign_div_unsign_9nh:divider|                                                                                            ; 158 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_int|lpm_divide:Div0|lpm_divide_vcm:auto_generated|sign_div_unsign_9nh:divider                                                                                                                                                                                                                             ; sign_div_unsign_9nh               ; work         ;
+;                   |alt_u_div_o2f:divider|                                                                                               ; 158 (158)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_int|lpm_divide:Div0|lpm_divide_vcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_o2f:divider                                                                                                                                                                                                       ; alt_u_div_o2f                     ; work         ;
+;          |lpm_divide:Mod0|                                                                                                              ; 289 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_int|lpm_divide:Mod0                                                                                                                                                                                                                                                                                       ; lpm_divide                        ; work         ;
+;             |lpm_divide_35m:auto_generated|                                                                                             ; 289 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_int|lpm_divide:Mod0|lpm_divide_35m:auto_generated                                                                                                                                                                                                                                                         ; lpm_divide_35m                    ; work         ;
+;                |sign_div_unsign_9nh:divider|                                                                                            ; 289 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_int|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_9nh:divider                                                                                                                                                                                                                             ; sign_div_unsign_9nh               ; work         ;
+;                   |alt_u_div_o2f:divider|                                                                                               ; 289 (289)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_int|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_o2f:divider                                                                                                                                                                                                       ; alt_u_div_o2f                     ; work         ;
+;    |vga:v|                                                                                                                              ; 34 (34)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|vga:v                                                                                                                                                                                                                                                                                                                                      ; vga                               ; work         ;
++-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                             ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
+; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF  ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_kl84:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16384        ; 68           ; 16384        ; 68           ; 1114112 ; None ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
 
 
 +-----------------------------------------------+
@@ -241,29 +380,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+-------------+
 ; Independent 9x9                 ; 2           ;
 ; Two Independent 18x18           ; 4           ;
+; Independent 18x18 plus 36       ; 1           ;
 ; Sum of two 18x18                ; 4           ;
-; Total number of DSP blocks      ; 10          ;
+; Total number of DSP blocks      ; 11          ;
 ;                                 ;             ;
-; Fixed Point Unsigned Multiplier ; 14          ;
+; Fixed Point Unsigned Multiplier ; 15          ;
 +---------------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                     ;
-+---------------------------------------------------------------+----------------------------------------+
-; Register name                                                 ; Reason for Removal                     ;
-+---------------------------------------------------------------+----------------------------------------+
-; entities:entitiesInstancia|bola:bolaAliada|divisorCLK[0..5]   ; Stuck at GND due to stuck port data_in ;
-; entities:entitiesInstancia|bola:bolaAliada|divisorCLK[6]      ; Stuck at VCC due to stuck port data_in ;
-; entities:entitiesInstancia|bola:bolaAliada|divisorCLK[7]      ; Stuck at GND due to stuck port data_in ;
-; entities:entitiesInstancia|bola:bolaAliada|divisorCLK[8]      ; Stuck at VCC due to stuck port data_in ;
-; entities:entitiesInstancia|bola:bolaAliada|divisorCLK[9]      ; Stuck at GND due to stuck port data_in ;
-; entities:entitiesInstancia|bola:bolaAliada|divisorCLK[10,11]  ; Stuck at VCC due to stuck port data_in ;
-; entities:entitiesInstancia|bola:bolaAliada|divisorCLK[12..15] ; Stuck at GND due to stuck port data_in ;
-; entities:entitiesInstancia|bola:bolaAliada|divisorCLK[16,17]  ; Stuck at VCC due to stuck port data_in ;
-; entities:entitiesInstancia|bola:bolaAliada|divisorCLK[18..32] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 33                        ;                                        ;
-+---------------------------------------------------------------+----------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                                                                                                                                                          ;
++--------+--------------+---------+--------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                                                                                                                                                                                                                              ; IP Include File ;
++--------+--------------+---------+--------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |projeto|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                 ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |projeto|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                             ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |projeto|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_presplit:presplit   ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |projeto|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |projeto|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_splitter:splitter   ;                 ;
++--------+--------------+---------+--------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                     ;
++---------------------------------------------------------------+--------------------------------------------------------+
+; Register name                                                 ; Reason for Removal                                     ;
++---------------------------------------------------------------+--------------------------------------------------------+
+; entities:entitiesInstancia|bola:bolaAliada|divisorCLK[0..5]   ; Stuck at GND due to stuck port data_in                 ;
+; entities:entitiesInstancia|bola:bolaAliada|divisorCLK[6]      ; Stuck at VCC due to stuck port data_in                 ;
+; entities:entitiesInstancia|bola:bolaAliada|divisorCLK[7]      ; Stuck at GND due to stuck port data_in                 ;
+; entities:entitiesInstancia|bola:bolaAliada|divisorCLK[8]      ; Stuck at VCC due to stuck port data_in                 ;
+; entities:entitiesInstancia|bola:bolaAliada|divisorCLK[9]      ; Stuck at GND due to stuck port data_in                 ;
+; entities:entitiesInstancia|bola:bolaAliada|divisorCLK[10,11]  ; Stuck at VCC due to stuck port data_in                 ;
+; entities:entitiesInstancia|bola:bolaAliada|divisorCLK[12..15] ; Stuck at GND due to stuck port data_in                 ;
+; entities:entitiesInstancia|bola:bolaAliada|divisorCLK[16,17]  ; Stuck at VCC due to stuck port data_in                 ;
+; entities:entitiesInstancia|bola:bolaAliada|divisorCLK[18..32] ; Stuck at GND due to stuck port data_in                 ;
+; tela:telaInstancia|buffer:buffer_int|G_VGA                    ; Merged with tela:telaInstancia|buffer:buffer_int|B_VGA ;
+; tela:telaInstancia|buffer:buffer_int|R_VGA                    ; Merged with tela:telaInstancia|buffer:buffer_int|B_VGA ;
+; Total Number of Removed Registers = 35                        ;                                                        ;
++---------------------------------------------------------------+--------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -271,41 +426,56 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 178   ;
-; Number of registers using Synchronous Clear  ; 119   ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 55    ;
+; Total registers                              ; 1111  ;
+; Number of registers using Synchronous Clear  ; 275   ;
+; Number of registers using Synchronous Load   ; 154   ;
+; Number of registers using Asynchronous Clear ; 316   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 107   ;
+; Number of registers using Clock Enable       ; 488   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------+
-; Inverted Register Statistics                                      ;
-+---------------------------------------------------------+---------+
-; Inverted Register                                       ; Fan out ;
-+---------------------------------------------------------+---------+
-; entities:entitiesInstancia|nave:naveInstancia|x_nave[1] ; 5       ;
-; entities:entitiesInstancia|nave:naveInstancia|x_nave[2] ; 4       ;
-; entities:entitiesInstancia|nave:naveInstancia|x_nave[4] ; 14      ;
-; entities:entitiesInstancia|nave:naveInstancia|x_nave[3] ; 5       ;
-; entities:entitiesInstancia|nave:naveInstancia|x_nave[6] ; 9       ;
-; entities:entitiesInstancia|nave:naveInstancia|x_nave[8] ; 8       ;
-; entities:entitiesInstancia|bola:bolaAliada|x[3]         ; 1       ;
-; entities:entitiesInstancia|bola:bolaAliada|x[5]         ; 1       ;
-; entities:entitiesInstancia|bola:bolaAliada|x[6]         ; 1       ;
-; entities:entitiesInstancia|bola:bolaAliada|x[7]         ; 1       ;
-; entities:entitiesInstancia|bola:bolaAliada|x[8]         ; 1       ;
-; entities:entitiesInstancia|bola:bolaAliada|x[9]         ; 1       ;
-; entities:entitiesInstancia|bola:bolaAliada|y[3]         ; 2       ;
-; entities:entitiesInstancia|bola:bolaAliada|y[5]         ; 2       ;
-; entities:entitiesInstancia|bola:bolaAliada|y[6]         ; 2       ;
-; entities:entitiesInstancia|bola:bolaAliada|y[7]         ; 2       ;
-; entities:entitiesInstancia|bola:bolaAliada|y[8]         ; 2       ;
-; entities:entitiesInstancia|bola:bolaAliada|y[9]         ; 2       ;
-; Total number of inverted registers = 18                 ;         ;
-+---------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                                                                                                                                                                                                                                                              ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; entities:entitiesInstancia|nave:naveInstancia|x_nave[1]                                                                                                                                                                                                                                                                         ; 15      ;
+; entities:entitiesInstancia|nave:naveInstancia|x_nave[2]                                                                                                                                                                                                                                                                         ; 10      ;
+; entities:entitiesInstancia|nave:naveInstancia|x_nave[4]                                                                                                                                                                                                                                                                         ; 14      ;
+; entities:entitiesInstancia|nave:naveInstancia|x_nave[7]                                                                                                                                                                                                                                                                         ; 11      ;
+; entities:entitiesInstancia|bola:bolaAliada|x[3]                                                                                                                                                                                                                                                                                 ; 1       ;
+; entities:entitiesInstancia|bola:bolaAliada|x[5]                                                                                                                                                                                                                                                                                 ; 1       ;
+; entities:entitiesInstancia|bola:bolaAliada|x[6]                                                                                                                                                                                                                                                                                 ; 1       ;
+; entities:entitiesInstancia|bola:bolaAliada|x[7]                                                                                                                                                                                                                                                                                 ; 1       ;
+; entities:entitiesInstancia|bola:bolaAliada|x[8]                                                                                                                                                                                                                                                                                 ; 1       ;
+; entities:entitiesInstancia|bola:bolaAliada|x[9]                                                                                                                                                                                                                                                                                 ; 1       ;
+; entities:entitiesInstancia|bola:bolaAliada|y[3]                                                                                                                                                                                                                                                                                 ; 2       ;
+; entities:entitiesInstancia|bola:bolaAliada|y[5]                                                                                                                                                                                                                                                                                 ; 2       ;
+; entities:entitiesInstancia|bola:bolaAliada|y[6]                                                                                                                                                                                                                                                                                 ; 2       ;
+; entities:entitiesInstancia|bola:bolaAliada|y[7]                                                                                                                                                                                                                                                                                 ; 2       ;
+; entities:entitiesInstancia|bola:bolaAliada|y[8]                                                                                                                                                                                                                                                                                 ; 2       ;
+; entities:entitiesInstancia|bola:bolaAliada|y[9]                                                                                                                                                                                                                                                                                 ; 2       ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2] ; 3       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[12]                                                                                                                                                  ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[13]                                                                                                                                                  ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[14]                                                                                                                                                  ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[9]                                                                                                                                                   ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[10]                                                                                                                                                  ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[11]                                                                                                                                                  ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[6]                                                                                                                                                   ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[7]                                                                                                                                                   ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[8]                                                                                                                                                   ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[0]                                                                                                                                                   ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[1]                                                                                                                                                   ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[2]                                                                                                                                                   ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[3]                                                                                                                                                   ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[4]                                                                                                                                                   ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[5]                                                                                                                                                   ; 1       ;
+; Total number of inverted registers = 33                                                                                                                                                                                                                                                                                         ;         ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -313,15 +483,311 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|bola:bolaAliada|x[0] ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|bola:bolaAliada|x[5] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |projeto|memory:memoryInstancia|VGA_G                    ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |projeto|memory:memoryInstancia|VGA_B                    ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffer_int|X_ATUAL[0] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|bola:bolaAliada|x[4] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |projeto|tela:telaInstancia|VGA_R[7]                     ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|bola:bolaAliada|x[9] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |projeto|tela:telaInstancia|VGA_B                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
 
 
++-------------------------------------------------------+
+; Source assignments for sld_signaltap:auto_signaltap_0 ;
++-----------------+-------+------+----------------------+
+; Assignment      ; Value ; From ; To                   ;
++-----------------+-------+------+----------------------+
+; MESSAGE_DISABLE ; 13410 ; -    ; -                    ;
++-----------------+-------+------+----------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0                    ;
++-------------------------------------------------+---------------------------------+----------------+
+; Parameter Name                                  ; Value                           ; Type           ;
++-------------------------------------------------+---------------------------------+----------------+
+; lpm_type                                        ; sld_signaltap                   ; String         ;
+; sld_node_info                                   ; 805334528                       ; Untyped        ;
+; SLD_SECTION_ID                                  ; hdl_signaltap_0                 ; String         ;
+; SLD_IP_VERSION                                  ; 6                               ; Signed Integer ;
+; SLD_IP_MINOR_VERSION                            ; 0                               ; Signed Integer ;
+; SLD_COMMON_IP_VERSION                           ; 0                               ; Signed Integer ;
+; sld_data_bits                                   ; 68                              ; Untyped        ;
+; sld_trigger_bits                                ; 1                               ; Untyped        ;
+; SLD_NODE_CRC_BITS                               ; 32                              ; Signed Integer ;
+; SLD_NODE_CRC_HIWORD                             ; 41394                           ; Signed Integer ;
+; SLD_NODE_CRC_LOWORD                             ; 50132                           ; Signed Integer ;
+; sld_incremental_routing                         ; 1                               ; Untyped        ;
+; sld_sample_depth                                ; 16384                           ; Untyped        ;
+; sld_segment_size                                ; 16384                           ; Untyped        ;
+; sld_ram_block_type                              ; AUTO                            ; Untyped        ;
+; sld_state_bits                                  ; 11                              ; Untyped        ;
+; sld_buffer_full_stop                            ; 1                               ; Untyped        ;
+; SLD_MEM_ADDRESS_BITS                            ; 7                               ; Signed Integer ;
+; SLD_DATA_BIT_CNTR_BITS                          ; 4                               ; Signed Integer ;
+; sld_trigger_level                               ; 1                               ; Untyped        ;
+; sld_trigger_in_enabled                          ; 0                               ; Untyped        ;
+; SLD_HPS_TRIGGER_IN_ENABLED                      ; 0                               ; Signed Integer ;
+; SLD_HPS_TRIGGER_OUT_ENABLED                     ; 0                               ; Signed Integer ;
+; SLD_HPS_EVENT_ENABLED                           ; 0                               ; Signed Integer ;
+; SLD_HPS_EVENT_ID                                ; 0                               ; Signed Integer ;
+; sld_advanced_trigger_entity                     ; basic,1,                        ; Untyped        ;
+; sld_trigger_level_pipeline                      ; 1                               ; Untyped        ;
+; sld_trigger_pipeline                            ; 0                               ; Untyped        ;
+; sld_ram_pipeline                                ; 0                               ; Untyped        ;
+; sld_counter_pipeline                            ; 0                               ; Untyped        ;
+; sld_enable_advanced_trigger                     ; 0                               ; Untyped        ;
+; SLD_ADVANCED_TRIGGER_1                          ; NONE                            ; String         ;
+; SLD_ADVANCED_TRIGGER_2                          ; NONE                            ; String         ;
+; SLD_ADVANCED_TRIGGER_3                          ; NONE                            ; String         ;
+; SLD_ADVANCED_TRIGGER_4                          ; NONE                            ; String         ;
+; SLD_ADVANCED_TRIGGER_5                          ; NONE                            ; String         ;
+; SLD_ADVANCED_TRIGGER_6                          ; NONE                            ; String         ;
+; SLD_ADVANCED_TRIGGER_7                          ; NONE                            ; String         ;
+; SLD_ADVANCED_TRIGGER_8                          ; NONE                            ; String         ;
+; SLD_ADVANCED_TRIGGER_9                          ; NONE                            ; String         ;
+; SLD_ADVANCED_TRIGGER_10                         ; NONE                            ; String         ;
+; sld_inversion_mask_length                       ; 31                              ; Untyped        ;
+; sld_inversion_mask                              ; 0000000000000000000000000000000 ; Untyped        ;
+; sld_power_up_trigger                            ; 0                               ; Untyped        ;
+; SLD_STATE_FLOW_MGR_ENTITY                       ; state_flow_mgr_entity.vhd       ; String         ;
+; sld_state_flow_use_generated                    ; 0                               ; Untyped        ;
+; sld_current_resource_width                      ; 1                               ; Untyped        ;
+; sld_attribute_mem_mode                          ; OFF                             ; Untyped        ;
+; sld_storage_qualifier_bits                      ; 68                              ; Untyped        ;
+; SLD_STORAGE_QUALIFIER_GAP_RECORD                ; 0                               ; Signed Integer ;
+; SLD_STORAGE_QUALIFIER_MODE                      ; OFF                             ; String         ;
+; SLD_STORAGE_QUALIFIER_ENABLE_ADVANCED_CONDITION ; 0                               ; Signed Integer ;
+; sld_storage_qualifier_inversion_mask_length     ; 0                               ; Untyped        ;
+; SLD_STORAGE_QUALIFIER_ADVANCED_CONDITION_ENTITY ; basic                           ; String         ;
+; SLD_STORAGE_QUALIFIER_PIPELINE                  ; 0                               ; Signed Integer ;
+; SLD_CREATE_MONITOR_INTERFACE                    ; 0                               ; Signed Integer ;
+; SLD_USE_JTAG_SIGNAL_ADAPTER                     ; 1                               ; Signed Integer ;
++-------------------------------------------------+---------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffer_int|lpm_divide:Mod0 ;
++------------------------+----------------+-------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                        ;
++------------------------+----------------+-------------------------------------------------------------+
+; LPM_WIDTHN             ; 11             ; Untyped                                                     ;
+; LPM_WIDTHD             ; 32             ; Untyped                                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                     ;
+; CBXI_PARAMETER         ; lpm_divide_35m ; Untyped                                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                              ;
++------------------------+----------------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffer_int|lpm_divide:Div0 ;
++------------------------+----------------+-------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                        ;
++------------------------+----------------+-------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                     ;
+; LPM_WIDTHD             ; 32             ; Untyped                                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                     ;
+; CBXI_PARAMETER         ; lpm_divide_vcm ; Untyped                                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                              ;
++------------------------+----------------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "tela:telaInstancia|buffer:buffer_int" ;
++----------------------+-------+----------+------------------------+
+; Port                 ; Type  ; Severity ; Details                ;
++----------------------+-------+----------+------------------------+
+; LARGURA_OBJETO[3..1] ; Input ; Info     ; Stuck at VCC           ;
+; LARGURA_OBJETO[7..4] ; Input ; Info     ; Stuck at GND           ;
+; LARGURA_OBJETO[0]    ; Input ; Info     ; Stuck at GND           ;
+; ALTURA_OBJETO[7..5]  ; Input ; Info     ; Stuck at GND           ;
+; ALTURA_OBJETO[3..1]  ; Input ; Info     ; Stuck at GND           ;
+; ALTURA_OBJETO[4]     ; Input ; Info     ; Stuck at VCC           ;
+; ALTURA_OBJETO[0]     ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[41..43]     ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[58..60]     ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[75..77]     ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[92..94]     ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[109..111]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[126..128]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[142..146]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[159..163]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[174..182]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[188..189]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[191..199]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[201..202]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[205..219]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[222..236]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[0..7]       ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[9..24]      ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[26..40]     ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[44..57]     ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[61..74]     ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[78..88]     ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[90..91]     ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[95..96]     ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[98..105]    ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[107..108]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[112..113]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[115..122]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[124..125]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[129..130]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[132..139]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[149..156]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[166..173]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[183..187]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[203..204]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[220..221]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[8]          ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[25]         ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[89]         ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[97]         ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[106]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[114]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[123]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[131]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[140]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[141]        ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[147]        ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[148]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[157]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[158]        ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[164]        ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[165]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_G[190]        ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[200]        ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_G[237]        ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[41..43]     ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[58..60]     ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[75..77]     ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[92..94]     ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[109..111]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[126..128]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[142..146]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[159..163]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[174..182]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[188..189]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[191..199]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[201..202]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[205..219]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[222..236]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[0..7]       ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[9..24]      ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[26..40]     ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[44..57]     ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[61..74]     ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[78..88]     ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[90..91]     ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[95..96]     ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[98..105]    ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[107..108]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[112..113]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[115..122]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[124..125]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[129..130]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[132..139]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[149..156]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[166..173]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[183..187]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[203..204]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[220..221]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[8]          ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[25]         ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[89]         ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[97]         ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[106]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[114]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[123]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[131]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[140]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[141]        ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[147]        ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[148]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[157]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[158]        ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[164]        ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[165]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_B[190]        ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[200]        ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_B[237]        ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[41..43]     ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[58..60]     ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[75..77]     ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[92..94]     ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[109..111]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[126..128]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[142..146]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[159..163]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[174..182]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[188..189]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[191..199]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[201..202]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[205..219]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[222..236]   ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[0..7]       ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[9..24]      ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[26..40]     ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[44..57]     ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[61..74]     ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[78..88]     ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[90..91]     ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[95..96]     ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[98..105]    ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[107..108]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[112..113]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[115..122]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[124..125]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[129..130]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[132..139]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[149..156]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[166..173]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[183..187]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[203..204]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[220..221]   ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[8]          ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[25]         ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[89]         ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[97]         ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[106]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[114]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[123]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[131]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[140]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[141]        ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[147]        ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[148]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[157]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[158]        ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[164]        ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[165]        ; Input ; Info     ; Stuck at VCC           ;
+; BUFFER_R[190]        ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[200]        ; Input ; Info     ; Stuck at GND           ;
+; BUFFER_R[237]        ; Input ; Info     ; Stuck at GND           ;
++----------------------+-------+----------+------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "memory:memoryInstancia"                                                                                                                                                                 ;
+; Port Connectivity Checks: "tela:telaInstancia"                                                                                                                                                                     ;
 +------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port       ; Type  ; Severity ; Details                                                                                                                                                                            ;
 +------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -344,6 +810,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "entities:entitiesInstancia|inimigo:inimigoInstancia"                                                                                                                                           ;
++-------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port              ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reiniciarJogo     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reiniciarJogo[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++-------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "entities:entitiesInstancia|nave:naveInstancia"                                                                                                                                                  ;
 +-------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -355,40 +831,52 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Tap Logic Analyzer Settings                                                                                                                                                                                                                                      ;
++----------------+------------------+---------------------+------------------+--------------+----------+------------------------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
+; Instance Index ; Instance Name    ; Trigger Input Width ; Data Input Width ; Sample Depth ; Segments ; Storage Qualifier Type ; Trigger Flow Control ; Trigger Conditions ; Advanced Trigger Conditions ; Trigger In Used ; Trigger Out Used ; Power-Up Trigger Enabled ;
++----------------+------------------+---------------------+------------------+--------------+----------+------------------------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
+; 0              ; auto_signaltap_0 ; 1                   ; 68               ; 16384        ; 1        ; continuous             ; sequential           ; 1                  ; 0                           ; no              ; no               ; no                       ;
++----------------+------------------+---------------------+------------------+--------------+----------+------------------------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 178                         ;
+; arriav_ff             ; 198                         ;
 ;     CLR               ; 24                          ;
-;     ENA CLR           ; 31                          ;
-;     ENA SCLR          ; 76                          ;
+;     ENA               ; 1                           ;
+;     ENA CLR           ; 30                          ;
+;     ENA SCLR          ; 96                          ;
 ;     SCLR              ; 43                          ;
 ;     plain             ; 4                           ;
-; arriav_lcell_comb     ; 441                         ;
-;     arith             ; 257                         ;
+; arriav_lcell_comb     ; 994                         ;
+;     arith             ; 533                         ;
+;         0 data inputs ; 42                          ;
+;         1 data inputs ; 274                         ;
+;         2 data inputs ; 115                         ;
+;         3 data inputs ; 16                          ;
+;         4 data inputs ; 86                          ;
+;     normal            ; 403                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 172                         ;
-;         2 data inputs ; 79                          ;
-;         3 data inputs ; 4                           ;
-;     normal            ; 132                         ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 15                          ;
-;         4 data inputs ; 22                          ;
-;         5 data inputs ; 20                          ;
-;         6 data inputs ; 63                          ;
-;     shared            ; 52                          ;
-;         0 data inputs ; 2                           ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 116                         ;
+;         3 data inputs ; 24                          ;
+;         4 data inputs ; 52                          ;
+;         5 data inputs ; 92                          ;
+;         6 data inputs ; 112                         ;
+;     shared            ; 58                          ;
+;         0 data inputs ; 4                           ;
+;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 20                          ;
 ;         3 data inputs ; 30                          ;
-; arriav_mac            ; 10                          ;
-; boundary_port         ; 96                          ;
+; arriav_mac            ; 11                          ;
+; boundary_port         ; 164                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.40                        ;
-; Average LUT depth     ; 4.43                        ;
+; Max LUT depth         ; 33.00                       ;
+; Average LUT depth     ; 13.03                       ;
 +-----------------------+-----------------------------+
 
 
@@ -397,8 +885,118 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Connections to In-System Debugging Instance "auto_signaltap_0"                                                                                                                                                  ;
++--------------------------------------------------+---------------+-----------+--------------------------------+-------------------+-------------------------------------------------------------------+---------+
+; Name                                             ; Type          ; Status    ; Partition Name                 ; Netlist Type Used ; Actual Connection                                                 ; Details ;
++--------------------------------------------------+---------------+-----------+--------------------------------+-------------------+-------------------------------------------------------------------+---------+
+; CLOCK_50                                         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; CLOCK_50                                                          ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|B_VGA       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|B_VGA                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|G_VGA       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|B_VGA                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|R_VGA       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|B_VGA                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_ATUAL[0]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|X_ATUAL[0]                   ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_ATUAL[1]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|X_ATUAL[1]                   ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_ATUAL[2]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|X_ATUAL[2]                   ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_ATUAL[3]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|X_ATUAL[3]                   ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_ATUAL[4]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|X_ATUAL[4]                   ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_ATUAL[5]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|X_ATUAL[5]                   ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_ATUAL[6]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|X_ATUAL[6]                   ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_ATUAL[7]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|X_ATUAL[7]                   ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_ATUAL[8]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|X_ATUAL[8]                   ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_ATUAL[9]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|X_ATUAL[9]                   ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_OBJETO[0] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                                               ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_OBJETO[1] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; entities:entitiesInstancia|nave:naveInstancia|x_nave[1]~_wirecell ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_OBJETO[2] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; entities:entitiesInstancia|nave:naveInstancia|x_nave[2]~_wirecell ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_OBJETO[3] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; entities:entitiesInstancia|nave:naveInstancia|x_nave[3]           ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_OBJETO[4] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; entities:entitiesInstancia|nave:naveInstancia|x_nave[4]~_wirecell ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_OBJETO[5] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; entities:entitiesInstancia|nave:naveInstancia|x_nave[5]           ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_OBJETO[6] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; entities:entitiesInstancia|nave:naveInstancia|x_nave[6]           ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_OBJETO[7] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; entities:entitiesInstancia|nave:naveInstancia|x_nave[7]~_wirecell ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_OBJETO[8] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; entities:entitiesInstancia|nave:naveInstancia|x_nave[8]           ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_OBJETO[9] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; entities:entitiesInstancia|nave:naveInstancia|x_nave[9]           ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_VGA[0]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|x[0]                                                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_VGA[1]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|x[1]                                                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_VGA[2]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|x[2]                                                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_VGA[3]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|x[3]                                                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_VGA[4]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|x[4]                                                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_VGA[5]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|x[5]                                                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_VGA[6]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|x[6]                                                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_VGA[7]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|x[7]                                                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_VGA[8]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|x[8]                                                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|X_VGA[9]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|x[9]                                                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[0]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[0]                   ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[1]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[1]                   ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[2]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[2]                   ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[3]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[3]                   ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[4]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[4]                   ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[5]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[5]                   ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[6]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[6]                   ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[7]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[7]                   ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[8]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[8]                   ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[9]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tela:telaInstancia|buffer:buffer_int|Y_ATUAL[9]                   ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_OBJETO[0] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                                               ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_OBJETO[1] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; VCC                                                               ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_OBJETO[2] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                                               ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_OBJETO[3] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                                               ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_OBJETO[4] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                                               ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_OBJETO[5] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                                               ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_OBJETO[6] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                                               ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_OBJETO[7] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                                               ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_OBJETO[8] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                                               ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_OBJETO[9] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                                               ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_VGA[0]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|y[0]                                                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_VGA[1]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|y[1]                                                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_VGA[2]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|y[2]                                                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_VGA[3]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|y[3]                                                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_VGA[4]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|y[4]                                                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_VGA[5]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|y[5]                                                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_VGA[6]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|y[6]                                                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_VGA[7]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|y[7]                                                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_VGA[8]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|y[8]                                                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|Y_VGA[9]    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|y[9]                                                        ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|reset       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SW[0]                                                             ; N/A     ;
+; tela:telaInstancia|buffer:buffer_int|reset       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SW[0]                                                             ; N/A     ;
+; tela:telaInstancia|reset                         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SW[0]                                                             ; N/A     ;
+; vga:v|VGA_HS                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|LessThan2~0_wirecell                                        ; N/A     ;
+; vga:v|VGA_VS                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|LessThan3~0                                                 ; N/A     ;
+; vga:v|ativo                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga:v|ativo~2                                                     ; N/A     ;
+; auto_signaltap_0|gnd                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                               ; N/A     ;
+; auto_signaltap_0|gnd                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                               ; N/A     ;
+; auto_signaltap_0|gnd                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                               ; N/A     ;
+; auto_signaltap_0|gnd                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                               ; N/A     ;
+; auto_signaltap_0|gnd                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                               ; N/A     ;
+; auto_signaltap_0|gnd                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                               ; N/A     ;
+; auto_signaltap_0|gnd                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                               ; N/A     ;
+; auto_signaltap_0|gnd                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                               ; N/A     ;
+; auto_signaltap_0|gnd                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                               ; N/A     ;
+; auto_signaltap_0|gnd                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                               ; N/A     ;
+; auto_signaltap_0|gnd                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                               ; N/A     ;
+; auto_signaltap_0|gnd                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                               ; N/A     ;
+; auto_signaltap_0|gnd                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                               ; N/A     ;
+; auto_signaltap_0|gnd                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                               ; N/A     ;
+; auto_signaltap_0|gnd                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                               ; N/A     ;
+; auto_signaltap_0|gnd                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                               ; N/A     ;
+; auto_signaltap_0|gnd                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                               ; N/A     ;
+; auto_signaltap_0|gnd                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                               ; N/A     ;
+; auto_signaltap_0|vcc                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                               ; N/A     ;
+; auto_signaltap_0|vcc                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                               ; N/A     ;
+; auto_signaltap_0|vcc                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                               ; N/A     ;
+; auto_signaltap_0|vcc                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                               ; N/A     ;
+; auto_signaltap_0|vcc                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                               ; N/A     ;
+; auto_signaltap_0|vcc                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                               ; N/A     ;
+; auto_signaltap_0|vcc                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                               ; N/A     ;
+; auto_signaltap_0|vcc                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                               ; N/A     ;
+; auto_signaltap_0|vcc                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                               ; N/A     ;
+; auto_signaltap_0|vcc                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                               ; N/A     ;
+; auto_signaltap_0|vcc                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                               ; N/A     ;
+; auto_signaltap_0|vcc                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                               ; N/A     ;
+; auto_signaltap_0|vcc                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                               ; N/A     ;
+; auto_signaltap_0|vcc                             ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                               ; N/A     ;
++--------------------------------------------------+---------------+-----------+--------------------------------+-------------------+-------------------------------------------------------------------+---------+
 
 
 +-------------------------------+
@@ -407,25 +1005,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Sun Jun  9 15:24:52 2024
+    Info: Processing started: Sun Jun  9 20:42:06 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto -c projeto
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file src/bola.v
-    Info (12023): Found entity 1: bola File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/bola.v Line: 1
-Warning (10275): Verilog HDL Module Instantiation warning at entities.v(47): ignored dangling comma in List of Port Connections File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 47
+Info (12021): Found 1 design units, including 1 entities, in source file src/buffer.v
+    Info (12023): Found entity 1: buffer File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 1
+Warning (10275): Verilog HDL Module Instantiation warning at entities.v(52): ignored dangling comma in List of Port Connections File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 52
 Info (12021): Found 1 design units, including 1 entities, in source file src/entities.v
     Info (12023): Found entity 1: entities File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/inimigo.v
+    Info (12023): Found entity 1: inimigo File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/keys.v
     Info (12023): Found entity 1: keys File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/keys.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file src/memory.v
-    Info (12023): Found entity 1: memory File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/memory.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/nave.v
     Info (12023): Found entity 1: nave File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/projeto.v
     Info (12023): Found entity 1: projeto File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 1
+Warning (10229): Verilog HDL Expression warning at tela.v(67): truncated literal to match 238 bits File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 67
+Info (12021): Found 1 design units, including 1 entities, in source file src/tela.v
+    Info (12023): Found entity 1: tela File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/vga.v
     Info (12023): Found entity 1: vga File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/vga.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/bola.v
+    Info (12023): Found entity 1: bola File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/bola.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at inimigo.v(16): created implicit net for "resetInimigo" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 16
 Warning (10236): Verilog HDL Implicit Net warning at nave.v(19): created implicit net for "resetNave" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 19
 Info (12127): Elaborating entity "projeto" for the top level hierarchy
 Warning (10034): Output port "HEX0" at projeto.v(13) has no driver File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 13
@@ -435,35 +1039,135 @@ Warning (10034): Output port "HEX3" at projeto.v(16) has no driver File: /home/h
 Warning (10034): Output port "HEX4" at projeto.v(17) has no driver File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 17
 Warning (10034): Output port "HEX5" at projeto.v(18) has no driver File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 18
 Warning (10034): Output port "LEDR" at projeto.v(20) has no driver File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 20
-Info (12128): Elaborating entity "entities" for hierarchy "entities:entitiesInstancia" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 59
-Info (12128): Elaborating entity "nave" for hierarchy "entities:entitiesInstancia|nave:naveInstancia" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 47
-Warning (10230): Verilog HDL assignment warning at nave.v(29): truncated value with size 32 to match size of target (10) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 29
-Warning (10230): Verilog HDL assignment warning at nave.v(32): truncated value with size 32 to match size of target (10) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 32
+Info (12128): Elaborating entity "entities" for hierarchy "entities:entitiesInstancia" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 68
+Info (12128): Elaborating entity "nave" for hierarchy "entities:entitiesInstancia|nave:naveInstancia" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 52
+Warning (10230): Verilog HDL assignment warning at nave.v(31): truncated value with size 32 to match size of target (10) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 31
+Warning (10230): Verilog HDL assignment warning at nave.v(34): truncated value with size 32 to match size of target (10) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 34
+Warning (10240): Verilog HDL Always Construct warning at nave.v(21): inferring latch(es) for variable "x_nave", which holds its previous value in one or more paths through the always construct File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 21
 Warning (10240): Verilog HDL Always Construct warning at nave.v(21): inferring latch(es) for variable "y_nave", which holds its previous value in one or more paths through the always construct File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 21
-Info (10041): Inferred latch for "y_nave[0]" at nave.v(26) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 26
-Info (10041): Inferred latch for "y_nave[1]" at nave.v(26) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 26
-Info (10041): Inferred latch for "y_nave[2]" at nave.v(26) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 26
-Info (10041): Inferred latch for "y_nave[3]" at nave.v(26) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 26
-Info (10041): Inferred latch for "y_nave[4]" at nave.v(26) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 26
-Info (10041): Inferred latch for "y_nave[5]" at nave.v(26) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 26
-Info (10041): Inferred latch for "y_nave[6]" at nave.v(26) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 26
-Info (10041): Inferred latch for "y_nave[7]" at nave.v(26) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 26
-Info (10041): Inferred latch for "y_nave[8]" at nave.v(26) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 26
-Info (10041): Inferred latch for "y_nave[9]" at nave.v(26) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 26
-Info (12128): Elaborating entity "bola" for hierarchy "entities:entitiesInstancia|bola:bolaAliada" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 62
+Info (10041): Inferred latch for "y_nave[0]" at nave.v(28) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 28
+Info (10041): Inferred latch for "y_nave[1]" at nave.v(28) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 28
+Info (10041): Inferred latch for "y_nave[2]" at nave.v(28) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 28
+Info (10041): Inferred latch for "y_nave[3]" at nave.v(28) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 28
+Info (10041): Inferred latch for "y_nave[4]" at nave.v(28) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 28
+Info (10041): Inferred latch for "y_nave[5]" at nave.v(28) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 28
+Info (10041): Inferred latch for "y_nave[6]" at nave.v(28) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 28
+Info (10041): Inferred latch for "y_nave[7]" at nave.v(28) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 28
+Info (10041): Inferred latch for "y_nave[8]" at nave.v(28) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 28
+Info (10041): Inferred latch for "y_nave[9]" at nave.v(28) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 28
+Info (10041): Inferred latch for "x_nave[0]" at nave.v(28) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 28
+Info (12128): Elaborating entity "inimigo" for hierarchy "entities:entitiesInstancia|inimigo:inimigoInstancia" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 64
+Warning (10240): Verilog HDL Always Construct warning at inimigo.v(18): inferring latch(es) for variable "x", which holds its previous value in one or more paths through the always construct File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 18
+Warning (10240): Verilog HDL Always Construct warning at inimigo.v(18): inferring latch(es) for variable "y", which holds its previous value in one or more paths through the always construct File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 18
+Info (10041): Inferred latch for "y[0]" at inimigo.v(22) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 22
+Info (10041): Inferred latch for "y[1]" at inimigo.v(22) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 22
+Info (10041): Inferred latch for "y[2]" at inimigo.v(22) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 22
+Info (10041): Inferred latch for "y[3]" at inimigo.v(22) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 22
+Info (10041): Inferred latch for "y[4]" at inimigo.v(22) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 22
+Info (10041): Inferred latch for "y[5]" at inimigo.v(22) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 22
+Info (10041): Inferred latch for "y[6]" at inimigo.v(22) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 22
+Info (10041): Inferred latch for "y[7]" at inimigo.v(22) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 22
+Info (10041): Inferred latch for "y[8]" at inimigo.v(22) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 22
+Info (10041): Inferred latch for "y[9]" at inimigo.v(22) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 22
+Info (10041): Inferred latch for "x[0]" at inimigo.v(22) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 22
+Info (10041): Inferred latch for "x[1]" at inimigo.v(22) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 22
+Info (10041): Inferred latch for "x[2]" at inimigo.v(22) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 22
+Info (10041): Inferred latch for "x[3]" at inimigo.v(22) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 22
+Info (10041): Inferred latch for "x[4]" at inimigo.v(22) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 22
+Info (10041): Inferred latch for "x[5]" at inimigo.v(22) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 22
+Info (10041): Inferred latch for "x[6]" at inimigo.v(22) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 22
+Info (10041): Inferred latch for "x[7]" at inimigo.v(22) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 22
+Info (10041): Inferred latch for "x[8]" at inimigo.v(22) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 22
+Info (10041): Inferred latch for "x[9]" at inimigo.v(22) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 22
+Info (12128): Elaborating entity "bola" for hierarchy "entities:entitiesInstancia|bola:bolaAliada" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 79
 Warning (10230): Verilog HDL assignment warning at bola.v(43): truncated value with size 32 to match size of target (10) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/bola.v Line: 43
 Warning (10230): Verilog HDL assignment warning at bola.v(44): truncated value with size 32 to match size of target (10) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/bola.v Line: 44
 Warning (10230): Verilog HDL assignment warning at bola.v(50): truncated value with size 32 to match size of target (10) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/bola.v Line: 50
 Warning (10230): Verilog HDL assignment warning at bola.v(52): truncated value with size 32 to match size of target (10) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/bola.v Line: 52
-Info (12128): Elaborating entity "vga" for hierarchy "vga:v" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 72
+Info (12128): Elaborating entity "vga" for hierarchy "vga:v" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 81
 Warning (10230): Verilog HDL assignment warning at vga.v(24): truncated value with size 32 to match size of target (10) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/vga.v Line: 24
 Warning (10230): Verilog HDL assignment warning at vga.v(27): truncated value with size 32 to match size of target (10) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/vga.v Line: 27
 Warning (10230): Verilog HDL assignment warning at vga.v(34): truncated value with size 32 to match size of target (1) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/vga.v Line: 34
 Warning (10230): Verilog HDL assignment warning at vga.v(35): truncated value with size 32 to match size of target (1) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/vga.v Line: 35
 Warning (10230): Verilog HDL assignment warning at vga.v(38): truncated value with size 32 to match size of target (1) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/vga.v Line: 38
-Info (12128): Elaborating entity "keys" for hierarchy "keys:keysInstancia" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 78
-Info (12128): Elaborating entity "memory" for hierarchy "memory:memoryInstancia" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 100
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "keys" for hierarchy "keys:keysInstancia" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 87
+Info (12128): Elaborating entity "tela" for hierarchy "tela:telaInstancia" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 118
+Info (12128): Elaborating entity "buffer" for hierarchy "tela:telaInstancia|buffer:buffer_int" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 90
+Warning (10230): Verilog HDL assignment warning at buffer.v(30): truncated value with size 32 to match size of target (10) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 30
+Warning (10230): Verilog HDL assignment warning at buffer.v(31): truncated value with size 32 to match size of target (10) File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 31
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_kl84.tdf
+    Info (12023): Found entity 1: altsyncram_kl84 File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/altsyncram_kl84.tdf Line: 32
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_5la.tdf
+    Info (12023): Found entity 1: decode_5la File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/decode_5la.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_bhb.tdf
+    Info (12023): Found entity 1: mux_bhb File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/mux_bhb.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_jlc.tdf
+    Info (12023): Found entity 1: mux_jlc File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/mux_jlc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_vnf.tdf
+    Info (12023): Found entity 1: decode_vnf File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/decode_vnf.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_b9i.tdf
+    Info (12023): Found entity 1: cntr_b9i File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/cntr_b9i.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_f9c.tdf
+    Info (12023): Found entity 1: cmpr_f9c File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/cmpr_f9c.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_t3j.tdf
+    Info (12023): Found entity 1: cntr_t3j File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/cntr_t3j.tdf Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_69i.tdf
+    Info (12023): Found entity 1: cntr_69i File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/cntr_69i.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_d9c.tdf
+    Info (12023): Found entity 1: cmpr_d9c File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/cmpr_d9c.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_kri.tdf
+    Info (12023): Found entity 1: cntr_kri File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/cntr_kri.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_99c.tdf
+    Info (12023): Found entity 1: cmpr_99c File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/cmpr_99c.tdf Line: 23
+Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
+Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
+Info (11172): 2024.06.09.20:42:16 Progress: Loading sld3172de05/alt_sld_fab_wrapper_hw.tcl
+Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
+Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
+Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
+Info (11172): Presplit: "alt_sld_fab" instantiated altera_super_splitter "presplit"
+Info (11172): Splitter: "alt_sld_fab" instantiated altera_sld_splitter "splitter"
+Info (11172): Sldfabric: "alt_sld_fab" instantiated altera_sld_jtag_hub "sldfabric"
+Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification_hub "ident"
+Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
+Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld3172de05/alt_sld_fab.v
+    Info (12023): Found entity 1: alt_sld_fab File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/ip/sld3172de05/alt_sld_fab.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab.v
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab_ident.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffer_int|Mod0" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 31
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffer_int|Div0" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 30
+Info (12130): Elaborated megafunction instantiation "tela:telaInstancia|buffer:buffer_int|lpm_divide:Mod0" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 31
+Info (12133): Instantiated megafunction "tela:telaInstancia|buffer:buffer_int|lpm_divide:Mod0" with the following parameter: File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 31
+    Info (12134): Parameter "LPM_WIDTHN" = "11"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_35m.tdf
+    Info (12023): Found entity 1: lpm_divide_35m File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/lpm_divide_35m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9nh File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/sign_div_unsign_9nh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_o2f.tdf
+    Info (12023): Found entity 1: alt_u_div_o2f File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/alt_u_div_o2f.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "tela:telaInstancia|buffer:buffer_int|lpm_divide:Div0" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 30
+Info (12133): Instantiated megafunction "tela:telaInstancia|buffer:buffer_int|lpm_divide:Div0" with the following parameter: File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 30
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_vcm.tdf
+    Info (12023): Found entity 1: lpm_divide_vcm File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/lpm_divide_vcm.tdf Line: 25
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_BLANK_N" is stuck at VCC File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 10
     Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 11
@@ -519,9 +1223,10 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[7]" is stuck at GND File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 20
     Warning (13410): Pin "LEDR[8]" is stuck at GND File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 20
     Warning (13410): Pin "LEDR[9]" is stuck at GND File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 20
-Info (286030): Timing-Driven Synthesis is running
+Info (286031): Timing-Driven Synthesis is running on partition "Top"
+Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 102 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+    Info (16011): Adding 9 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 10 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[2]" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 3
     Warning (15610): No output dependent on input pin "SW[3]" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 3
@@ -533,15 +1238,16 @@ Warning (21074): Design contains 10 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[9]" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 3
     Warning (15610): No output dependent on input pin "KEY[2]" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 4
     Warning (15610): No output dependent on input pin "KEY[3]" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 4
-Info (21057): Implemented 670 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 15 input pins
-    Info (21059): Implemented 81 output pins
-    Info (21061): Implemented 564 logic cells
-    Info (21062): Implemented 10 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 89 warnings
-    Info: Peak virtual memory: 484 megabytes
-    Info: Processing ended: Sun Jun  9 15:24:58 2024
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:15
+Info (21057): Implemented 2437 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 82 output pins
+    Info (21061): Implemented 2189 logic cells
+    Info (21064): Implemented 136 RAM segments
+    Info (21062): Implemented 11 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 96 warnings
+    Info: Peak virtual memory: 592 megabytes
+    Info: Processing ended: Sun Jun  9 20:42:22 2024
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:37
 
 

@@ -41,6 +41,11 @@ module projeto(
     wire [9:0] largura_nave;
     wire [9:0] altura_nave;
 
+    wire [9:0] x_inimigo;
+    wire [9:0] y_inimigo;
+    wire [9:0] largura_inimigo;
+    wire [9:0] altura_inimigo;
+
     entities entitiesInstancia(
         .CLOCK_50(CLOCK_50),
         .reset(reset),
@@ -55,7 +60,11 @@ module projeto(
         .x_nave(x_nave),
         .y_nave(y_nave),
         .largura_nave(largura_nave),
-        .altura_nave(altura_nave)
+        .altura_nave(altura_nave),
+        .x_inimigo(x_inimigo),
+        .y_inimigo(y_inimigo),
+        .largura_inimigo(largura_inimigo),
+        .altura_inimigo(altura_inimigo)
     );
 
     vga v(
@@ -77,21 +86,30 @@ module projeto(
 		.keysout(keysout)
 	);
 
-    memory memoryInstancia(
+    tela telaInstancia(
         .CLOCK_50(CLOCK_50),
         .reset(reset),
         .ativo(ativoVGA),
         .perdeu(0),
+
         .x_bola_aliada(x_bola_aliada),
         .y_bola_aliada(y_bola_aliada),
         .raio_bola_aliada(raio_bola_aliada),
+
         .x_bola_inimiga(x_bola_inimiga),
         .y_bola_inimiga(y_bola_inimiga),
         .raio_bola_inimiga(raio_bola_inimiga),
+
         .x_nave(x_nave),
         .y_nave(y_nave),
         .largura_nave(largura_nave),
         .altura_nave(altura_nave),
+
+        .x_inimigo(x_inimigo),
+        .y_inimigo(y_inimigo),
+        .largura_inimigo(largura_inimigo),
+        .altura_inimigo(altura_inimigo),
+
         .VGA_X(VGA_X),
         .VGA_Y(VGA_Y),
         .VGA_R(VGA_R),

@@ -15,7 +15,12 @@ module entities(
     output [9:0] x_nave,
     output [9:0] y_nave,
     output [9:0] largura_nave,
-    output [9:0] altura_nave
+    output [9:0] altura_nave,
+
+    output [9:0] x_inimigo,
+    output [9:0] y_inimigo,
+    output [9:0] largura_inimigo,
+    output [9:0] altura_inimigo
 );
     assign x_bola_inimiga = 500;
     assign y_bola_inimiga = 100;
@@ -44,6 +49,18 @@ module entities(
         .altura_nave(altura_nave),
         .x_nave(x_nave),
         .y_nave(y_nave),
+    );
+
+    inimigo inimigoInstancia(
+        .CLOCK_50(CLOCK_50),
+        .reset(reset),
+        .pausa(pausa),
+        .reiniciarJogo(0),
+
+        .largura(largura_inimigo),
+        .altura(altura_inimigo),
+        .x(x_inimigo),
+        .y(y_inimigo)
     );
 
     bola bolaAliada(
