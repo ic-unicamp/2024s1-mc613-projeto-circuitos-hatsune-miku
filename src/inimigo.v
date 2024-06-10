@@ -32,7 +32,7 @@ module inimigo(
 
     always @(posedge CLOCK_50) begin
         if (resetInimigo) begin
-            divisorCLK = 50000000;
+            divisorCLK = 25000000;
         end
     end
 
@@ -42,7 +42,7 @@ module inimigo(
             y = yi;
             sentidoX = 0;
         end else if (pausa == 0) begin
-            if (x < 0 || x + largura > 640) begin // abaixa
+            if (x <= 0 || x + largura >= 640) begin // abaixa
                 y = y + 20;
                 sentidoX = ~sentidoX;
             end

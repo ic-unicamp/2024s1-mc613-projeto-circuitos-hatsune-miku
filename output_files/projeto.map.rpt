@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projeto
-Sun Jun  9 23:46:12 2024
+Mon Jun 10 00:19:14 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -57,7 +57,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Jun  9 23:46:12 2024          ;
+; Analysis & Synthesis Status     ; Successful - Mon Jun 10 00:19:14 2024          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; projeto                                        ;
 ; Top-level Entity Name           ; projeto                                        ;
@@ -262,14 +262,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 733            ;
+; Estimate of Logic utilization (ALMs needed) ; 735            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 1016           ;
+; Combinational ALUT usage for logic          ; 1019           ;
 ;     -- 7 input functions                    ; 1              ;
-;     -- 6 input functions                    ; 221            ;
+;     -- 6 input functions                    ; 223            ;
 ;     -- 5 input functions                    ; 111            ;
 ;     -- 4 input functions                    ; 82             ;
-;     -- <=3 input functions                  ; 601            ;
+;     -- <=3 input functions                  ; 602            ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 1161           ;
 ;                                             ;                ;
@@ -281,7 +281,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 973            ;
-; Total fan-out                               ; 16078          ;
+; Total fan-out                               ; 16093          ;
 ; Average fan-out                             ; 6.04           ;
 +---------------------------------------------+----------------+
 
@@ -291,10 +291,10 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                 ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |projeto                                                                                                                                ; 1016 (1)            ; 1161 (0)                  ; 2228224           ; 10         ; 96   ; 0            ; |projeto                                                                                                                                                                                                                                                                                                                                            ; projeto                           ; work         ;
-;    |entities:entitiesInstancia|                                                                                                         ; 210 (0)             ; 115 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia                                                                                                                                                                                                                                                                                                                 ; entities                          ; work         ;
+; |projeto                                                                                                                                ; 1019 (1)            ; 1161 (0)                  ; 2228224           ; 10         ; 96   ; 0            ; |projeto                                                                                                                                                                                                                                                                                                                                            ; projeto                           ; work         ;
+;    |entities:entitiesInstancia|                                                                                                         ; 213 (0)             ; 115 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia                                                                                                                                                                                                                                                                                                                 ; entities                          ; work         ;
 ;       |bola:bolaAliada|                                                                                                                 ; 83 (83)             ; 55 (55)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|bola:bolaAliada                                                                                                                                                                                                                                                                                                 ; bola                              ; work         ;
-;       |inimigo:inimigoInstancia|                                                                                                        ; 78 (78)             ; 51 (51)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|inimigo:inimigoInstancia                                                                                                                                                                                                                                                                                        ; inimigo                           ; work         ;
+;       |inimigo:inimigoInstancia|                                                                                                        ; 81 (81)             ; 51 (51)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|inimigo:inimigoInstancia                                                                                                                                                                                                                                                                                        ; inimigo                           ; work         ;
 ;       |nave:naveInstancia|                                                                                                              ; 49 (49)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|nave:naveInstancia                                                                                                                                                                                                                                                                                              ; nave                              ; work         ;
 ;    |keys:keysInstancia|                                                                                                                 ; 84 (84)             ; 68 (68)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|keys:keysInstancia                                                                                                                                                                                                                                                                                                                         ; keys                              ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 92 (1)              ; 90 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
@@ -396,17 +396,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; entities:entitiesInstancia|bola:bolaAliada|divisorCLK[12..15]          ; Stuck at GND due to stuck port data_in ;
 ; entities:entitiesInstancia|bola:bolaAliada|divisorCLK[16,17]           ; Stuck at VCC due to stuck port data_in ;
 ; entities:entitiesInstancia|bola:bolaAliada|divisorCLK[18..32]          ; Stuck at GND due to stuck port data_in ;
-; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[0..6]   ; Stuck at GND due to stuck port data_in ;
-; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[7]      ; Stuck at VCC due to stuck port data_in ;
-; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[8..11]  ; Stuck at GND due to stuck port data_in ;
-; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[12..15] ; Stuck at VCC due to stuck port data_in ;
-; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[16]     ; Stuck at GND due to stuck port data_in ;
-; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[17]     ; Stuck at VCC due to stuck port data_in ;
-; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[18]     ; Stuck at GND due to stuck port data_in ;
-; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[19..23] ; Stuck at VCC due to stuck port data_in ;
-; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[24]     ; Stuck at GND due to stuck port data_in ;
-; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[25]     ; Stuck at VCC due to stuck port data_in ;
-; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[26..32] ; Stuck at GND due to stuck port data_in ;
+; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[0..5]   ; Stuck at GND due to stuck port data_in ;
+; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[6]      ; Stuck at VCC due to stuck port data_in ;
+; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[7..10]  ; Stuck at GND due to stuck port data_in ;
+; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[11..14] ; Stuck at VCC due to stuck port data_in ;
+; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[15]     ; Stuck at GND due to stuck port data_in ;
+; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[16]     ; Stuck at VCC due to stuck port data_in ;
+; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[17]     ; Stuck at GND due to stuck port data_in ;
+; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[18..22] ; Stuck at VCC due to stuck port data_in ;
+; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[23]     ; Stuck at GND due to stuck port data_in ;
+; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[24]     ; Stuck at VCC due to stuck port data_in ;
+; entities:entitiesInstancia|inimigo:inimigoInstancia|divisorCLK[25..32] ; Stuck at GND due to stuck port data_in ;
 ; Total Number of Removed Registers = 66                                 ;                                        ;
 +------------------------------------------------------------------------+----------------------------------------+
 
@@ -437,12 +437,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; entities:entitiesInstancia|nave:naveInstancia|x_nave[2]                                                                                                                                                                                                                                                                         ; 8       ;
 ; entities:entitiesInstancia|inimigo:inimigoInstancia|y[5]                                                                                                                                                                                                                                                                        ; 3       ;
 ; entities:entitiesInstancia|inimigo:inimigoInstancia|y[4]                                                                                                                                                                                                                                                                        ; 3       ;
-; entities:entitiesInstancia|inimigo:inimigoInstancia|x[2]                                                                                                                                                                                                                                                                        ; 6       ;
-; entities:entitiesInstancia|inimigo:inimigoInstancia|x[8]                                                                                                                                                                                                                                                                        ; 8       ;
-; entities:entitiesInstancia|inimigo:inimigoInstancia|x[7]                                                                                                                                                                                                                                                                        ; 7       ;
-; entities:entitiesInstancia|inimigo:inimigoInstancia|x[6]                                                                                                                                                                                                                                                                        ; 9       ;
-; entities:entitiesInstancia|inimigo:inimigoInstancia|x[5]                                                                                                                                                                                                                                                                        ; 10      ;
-; entities:entitiesInstancia|inimigo:inimigoInstancia|x[4]                                                                                                                                                                                                                                                                        ; 12      ;
+; entities:entitiesInstancia|inimigo:inimigoInstancia|x[2]                                                                                                                                                                                                                                                                        ; 7       ;
+; entities:entitiesInstancia|inimigo:inimigoInstancia|x[8]                                                                                                                                                                                                                                                                        ; 9       ;
+; entities:entitiesInstancia|inimigo:inimigoInstancia|x[7]                                                                                                                                                                                                                                                                        ; 8       ;
+; entities:entitiesInstancia|inimigo:inimigoInstancia|x[6]                                                                                                                                                                                                                                                                        ; 10      ;
+; entities:entitiesInstancia|inimigo:inimigoInstancia|x[5]                                                                                                                                                                                                                                                                        ; 11      ;
+; entities:entitiesInstancia|inimigo:inimigoInstancia|x[4]                                                                                                                                                                                                                                                                        ; 13      ;
 ; entities:entitiesInstancia|bola:bolaAliada|x[3]                                                                                                                                                                                                                                                                                 ; 1       ;
 ; entities:entitiesInstancia|bola:bolaAliada|x[5]                                                                                                                                                                                                                                                                                 ; 1       ;
 ; entities:entitiesInstancia|bola:bolaAliada|x[6]                                                                                                                                                                                                                                                                                 ; 1       ;
@@ -641,7 +641,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 76                          ;
 ;     SCLR              ; 76                          ;
 ;     plain             ; 5                           ;
-; arriav_lcell_comb     ; 590                         ;
+; arriav_lcell_comb     ; 593                         ;
 ;     arith             ; 348                         ;
 ;         0 data inputs ; 5                           ;
 ;         1 data inputs ; 238                         ;
@@ -649,14 +649,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 7                           ;
 ;         4 data inputs ; 10                          ;
 ;         5 data inputs ; 7                           ;
-;     normal            ; 190                         ;
+;     normal            ; 193                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 10                          ;
 ;         2 data inputs ; 10                          ;
-;         3 data inputs ; 11                          ;
+;         3 data inputs ; 12                          ;
 ;         4 data inputs ; 30                          ;
 ;         5 data inputs ; 40                          ;
-;         6 data inputs ; 87                          ;
+;         6 data inputs ; 89                          ;
 ;     shared            ; 52                          ;
 ;         0 data inputs ; 2                           ;
 ;         2 data inputs ; 20                          ;
@@ -794,8 +794,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Sun Jun  9 23:45:58 2024
-Info: Command: quartus_map --read_settings_files=off --write_settings_files=off projeto -c projeto
+    Info: Processing started: Mon Jun 10 00:18:59 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto -c projeto
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file src/bola.v
@@ -891,7 +891,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/db/cmpr_99c.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.06.09.23:46:07 Progress: Loading sld3172de05/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.06.10.00:19:09 Progress: Loading sld3172de05/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -987,16 +987,16 @@ Warning (21074): Design contains 10 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[9]" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 3
     Warning (15610): No output dependent on input pin "KEY[2]" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 4
     Warning (15610): No output dependent on input pin "KEY[3]" File: /home/henrique/Documents/unicamp/mc613/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 4
-Info (21057): Implemented 2229 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2233 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 82 output pins
-    Info (21061): Implemented 1846 logic cells
+    Info (21061): Implemented 1850 logic cells
     Info (21064): Implemented 272 RAM segments
     Info (21062): Implemented 10 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 97 warnings
-    Info: Peak virtual memory: 567 megabytes
-    Info: Processing ended: Sun Jun  9 23:46:12 2024
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:32
+    Info: Peak virtual memory: 576 megabytes
+    Info: Processing ended: Mon Jun 10 00:19:14 2024
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:34
 
 
