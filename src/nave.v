@@ -13,12 +13,9 @@ module nave(
     output reg [9:0] x_nave,
     output reg [9:0] y_nave
 );
-
-    
-    
     assign resetNave = reset || reiniciarJogo;
 
-    always @(posedge CLOCK_50 or posedge resetQNave) begin
+    always @(posedge CLOCK_50 or posedge resetNave) begin
         if (resetNave) begin   
             x_nave = 350;
             y_nave = 240;

@@ -14,8 +14,8 @@ module tela(
 
 	input [9:0] x_nave, 
 	input [9:0] y_nave,   
-	output [9:0] largura_nave,  
-	output [9:0] altura_nave,    
+	output wire [9:0] largura_nave,  
+	output wire [9:0] altura_nave,    
     
     input [9:0] x_inimigo,
     input [9:0] y_inimigo, 
@@ -40,8 +40,8 @@ module tela(
     wire [32:0] delta_x_aliado;
     wire [32:0] delta_y_aliado;
     wire [9:0] raioquadrado_aliado;
-    assign delta_x_aliado = (x_bola_aliada - VGA_X - 144) ** 2;
-    assign delta_y_aliado = (y_bola_aliada - VGA_Y - 144) ** 2;
+    assign delta_x_aliado = (x_bola_aliada + 144 - VGA_X) ** 2;
+    assign delta_y_aliado = (y_bola_aliada + 144 - VGA_Y) ** 2;
     assign raioquadrado_aliado = raio_bola_aliada ** 2;
 
 	// bola inimiga
@@ -82,8 +82,8 @@ module tela(
         .ALTURA_OBJETO(altura_nave_imagem),
         .MULTPLICADOR(multiplicador_nave),
         .BUFFER_R(buffer_nave_R << 146),
-        .BUFFER_G(buffer_nave_G << 146),
-        .BUFFER_B(buffer_nave_B << 146),
+        .BUFFER_G(buffer_nave_G),
+        .BUFFER_B(buffer_nave_B),
         .R_VGA(nave_r),
         .G_VGA(nave_g),
         .B_VGA(nave_b)
@@ -134,7 +134,7 @@ module tela(
 					VGA_R = inimigo_r * 255;
 					VGA_G = inimigo_g * 255;
 					VGA_B = inimigo_b * 255;
-				end else if ((x_nave + 144 <= VGA_X ) && (VGA_X <= 144 + x_nave + largura_nave) && (y_nave + 35 <= VGA_Y) && (VGA_Y <= y_nave + 35 + altura_nave)) begin // nave
+				end else if ((nave_r || nave_g || nave_b) && (x_nave + 144 <= VGA_X ) && (VGA_X <= 144 + x_nave + largura_nave) && (y_nave + 35 <= VGA_Y) && (VGA_Y <= y_nave + 35 + altura_nave)) begin // nave
 					VGA_R = nave_r * 255;
 					VGA_G = nave_g * 255;
 					VGA_B = nave_b * 255;
@@ -145,9 +145,9 @@ module tela(
                 end
 				
             end else begin 
-                    VGA_R = 128;
-                    VGA_G = 128;
-                    VGA_B = 128;  
+                    VGA_R = 0;
+                    VGA_G = 0;
+                    VGA_B = 0;  
             end
         end
     end
