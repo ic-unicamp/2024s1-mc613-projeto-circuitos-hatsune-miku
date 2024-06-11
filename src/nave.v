@@ -8,22 +8,20 @@ module nave(
     output reg iniciarBola,
     input bateu,
 
-    output wire [9:0] largura_nave,
-    output wire [9:0] altura_nave,
+    input [9:0] largura_nave,
+    input [9:0] altura_nave,
     output reg [9:0] x_nave,
     output reg [9:0] y_nave
 );
 
-    assign largura_nave = 30;
-    assign altura_nave = 30;
+    
+    
     assign resetNave = reset || reiniciarJogo;
 
-    always @(posedge CLOCK_50 or posedge resetNave) begin
-        if (resetNave) begin
-            // x_nave = 350;
-            x_nave = 150;
-            y_nave = 2;
-            // y_nave = 420;
+    always @(posedge CLOCK_50 or posedge resetQNave) begin
+        if (resetNave) begin   
+            x_nave = 350;
+            y_nave = 240;
             iniciarBola = 0;
         end else if (pausa == 0) begin
             if (pausa == 0) begin

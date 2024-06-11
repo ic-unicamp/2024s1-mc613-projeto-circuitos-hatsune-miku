@@ -10,26 +10,20 @@ module bola(
     output reg bateu,
     output reg [9:0] x,
     output reg [9:0] y,
-    output [9:0] raio
+    output [9:0] raio,
+    input [9:0] larguraAtirador
 );
     reg clk;
     reg movimentar;
     reg [32:0] contador;
-    reg [32:0] divisorCLK;
     assign raio = 5;
 
     always @(posedge CLOCK_50) begin //divisor de clock
         contador = contador + 1;
-        if (contador >= divisorCLK) begin 
+        if (contador >= 200000) begin 
             contador = 0;
             clk = ~clk;
         end 
-    end 
-
-    always @(posedge CLOCK_50) begin
-        if (reset) begin
-            divisorCLK = 200000;
-        end
     end
 
     always @(posedge clk or posedge reset) begin
@@ -40,7 +34,7 @@ module bola(
             movimentar = 0;
         end else if (pausa == 0) begin
             if (iniciar_movimento && !movimentar) begin
-                x = xi + 144 + 15;
+                x = xi + (larguraAtirador) / 2 ;
                 y = yi + 35;
                 movimentar = 1;
                 bateu = 0;

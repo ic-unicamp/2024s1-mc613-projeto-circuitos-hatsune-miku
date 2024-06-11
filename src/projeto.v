@@ -14,8 +14,8 @@ module projeto(
   	output [6:0] HEX1,
   	output [6:0] HEX2,
   	output [6:0] HEX3,
-  	output [6:0] HEX4,
-  	output [6:0] HEX5, // digito da esquerda
+  	output [6:0] HEX4, 
+  	output [6:0] HEX5, // digito da esquerda 
 	output [9:0] LEDR
 );
     wire [3:0] keysout;
@@ -35,6 +35,7 @@ module projeto(
     wire [9:0] x_bola_inimiga;
     wire [9:0] y_bola_inimiga;
     wire [9:0] raio_bola_inimiga;
+    wire inimigo_vivo;
 
     wire [9:0] x_nave;
     wire [9:0] y_nave;
@@ -63,8 +64,9 @@ module projeto(
         .altura_nave(altura_nave),
         .x_inimigo(x_inimigo),
         .y_inimigo(y_inimigo),
-        .largura_inimigo(largura_inimigo),
-        .altura_inimigo(altura_inimigo)
+        .largura_inimigo(largura_inimigo), 
+        .altura_inimigo(altura_inimigo),
+        .inimigo_vivo(inimigo_vivo)
     );
 
     vga v(
@@ -87,6 +89,7 @@ module projeto(
 	);
 
     tela telaInstancia(
+		.VGA_CLK(VGA_CLK),
         .CLOCK_50(CLOCK_50),
         .reset(reset),
         .ativo(ativoVGA),
@@ -107,14 +110,16 @@ module projeto(
 
         .x_inimigo(x_inimigo),
         .y_inimigo(y_inimigo),
-        .largura_inimigo(largura_inimigo),
-        .altura_inimigo(altura_inimigo),
+        .inimigo_vivo(inimigo_vivo),
+        // .largura_inimigo(largura_inimigo),
+        // .altura_inimigo(altura_inimigo),
 
         .VGA_X(VGA_X),
         .VGA_Y(VGA_Y),
         .VGA_R(VGA_R),
         .VGA_G(VGA_G),
-        .VGA_B(VGA_B)
+        .VGA_B(VGA_B),
+        .LEDR(LEDR)
     );
 
 

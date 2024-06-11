@@ -5,14 +5,14 @@ module testeI2C (
     input [9:0] SW,       
     output [6:0] HEX0, // digito da direita        
     output [6:0] HEX1,    
-    output [6:0] HEX2,             
+    output [6:0] HEX2,              
     output [6:0] HEX3,                          
     output [6:0] HEX4,         
-    output [6:0] HEX5 // digito da esquerda   
+    output [6:0] HEX5 // digito da esquerda    
 );       
 	    
     wire reset;    
-    assign reset = SW[0];  
+    assign reset = SW[0];   
 	   
     reg enable_p2s;  
     wire enable_s2p;   

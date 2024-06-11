@@ -1,5 +1,5 @@
 Analysis & Synthesis report for testeI2C
-Sun Jun  9 19:11:04 2024
+Tue Jun 11 13:12:31 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -52,7 +52,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Jun  9 19:11:04 2024       ;
+; Analysis & Synthesis Status     ; Successful - Tue Jun 11 13:12:31 2024       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; testeI2C                                    ;
 ; Top-level Entity Name           ; testeI2C                                    ;
@@ -176,70 +176,70 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                                                    ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                                                          ; Library     ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
-; src/testeI2C.v                                                     ; yes             ; User Verilog HDL File                        ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v                                                     ;             ;
-; src/cb7.v                                                          ; yes             ; User Verilog HDL File                        ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/cb7.v                                                          ;             ;
-; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_signaltap.vhd                                                                                                    ;             ;
-; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                                                                               ;             ;
-; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_ela_control.vhd                                                                                                  ;             ;
-; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                                                                                     ;             ;
-; lpm_constant.inc                                                   ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_constant.inc                                                                                                     ;             ;
-; dffeea.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/dffeea.inc                                                                                                           ;             ;
-; aglobal171.inc                                                     ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/aglobal171.inc                                                                                                       ;             ;
-; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_mbpmg.vhd                                                                                                        ;             ;
-; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                                                                                         ;             ;
-; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                                                                               ;             ;
-; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                                                       ;             ;
-; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                                                ;             ;
-; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                                                          ;             ;
-; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_decode.inc                                                                                                       ;             ;
-; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                                                        ;             ;
-; altrom.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altrom.inc                                                                                                           ;             ;
-; altram.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altram.inc                                                                                                           ;             ;
-; altdpram.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altdpram.inc                                                                                                         ;             ;
-; db/altsyncram_qb84.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/altsyncram_qb84.tdf                                             ;             ;
-; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altdpram.tdf                                                                                                         ;             ;
-; memmodes.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/others/maxplus2/memmodes.inc                                                                                                       ;             ;
-; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/a_hdffe.inc                                                                                                          ;             ;
-; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                                                                                  ;             ;
-; altsyncram.inc                                                     ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altsyncram.inc                                                                                                       ;             ;
-; lpm_mux.tdf                                                        ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_mux.tdf                                                                                                          ;             ;
-; muxlut.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/muxlut.inc                                                                                                           ;             ;
-; bypassff.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/bypassff.inc                                                                                                         ;             ;
-; altshift.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altshift.inc                                                                                                         ;             ;
-; db/mux_elc.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/mux_elc.tdf                                                     ;             ;
-; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_decode.tdf                                                                                                       ;             ;
-; declut.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/declut.inc                                                                                                           ;             ;
-; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_compare.inc                                                                                                      ;             ;
-; db/decode_vnf.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/decode_vnf.tdf                                                  ;             ;
-; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_counter.tdf                                                                                                      ;             ;
-; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                                                                      ;             ;
-; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/cmpconst.inc                                                                                                         ;             ;
-; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_counter.inc                                                                                                      ;             ;
-; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                                                                              ;             ;
-; db/cntr_69i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_69i.tdf                                                    ;             ;
-; db/cmpr_e9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cmpr_e9c.tdf                                                    ;             ;
-; db/cntr_4vi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_4vi.tdf                                                    ;             ;
-; db/cntr_09i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_09i.tdf                                                    ;             ;
-; db/cmpr_c9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cmpr_c9c.tdf                                                    ;             ;
-; db/cntr_kri.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_kri.tdf                                                    ;             ;
-; db/cmpr_99c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cmpr_99c.tdf                                                    ;             ;
-; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                                                                       ;             ;
-; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                                                                        ;             ;
-; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                                                                    ;             ;
-; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_hub.vhd                                                                                                          ; altera_sld  ;
-; db/ip/sld397e2936/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
-; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                                                                     ;             ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                        ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                              ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; src/testeI2C.v                                                     ; yes             ; User Verilog HDL File                        ; /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v                                                     ;             ;
+; src/cb7.v                                                          ; yes             ; User Verilog HDL File                        ; /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/cb7.v                                                          ;             ;
+; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_signaltap.vhd                                                                        ;             ;
+; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                                                   ;             ;
+; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_ela_control.vhd                                                                      ;             ;
+; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                                                         ;             ;
+; lpm_constant.inc                                                   ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_constant.inc                                                                         ;             ;
+; dffeea.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/dffeea.inc                                                                               ;             ;
+; aglobal171.inc                                                     ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/aglobal171.inc                                                                           ;             ;
+; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_mbpmg.vhd                                                                            ;             ;
+; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                                                             ;             ;
+; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                                                   ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                           ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                    ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                              ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_decode.inc                                                                           ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                            ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altrom.inc                                                                               ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altram.inc                                                                               ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altdpram.inc                                                                             ;             ;
+; db/altsyncram_qb84.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/altsyncram_qb84.tdf                                             ;             ;
+; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altdpram.tdf                                                                             ;             ;
+; memmodes.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/others/maxplus2/memmodes.inc                                                                           ;             ;
+; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/a_hdffe.inc                                                                              ;             ;
+; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                                                      ;             ;
+; altsyncram.inc                                                     ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altsyncram.inc                                                                           ;             ;
+; lpm_mux.tdf                                                        ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_mux.tdf                                                                              ;             ;
+; muxlut.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/muxlut.inc                                                                               ;             ;
+; bypassff.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/bypassff.inc                                                                             ;             ;
+; altshift.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altshift.inc                                                                             ;             ;
+; db/mux_elc.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/mux_elc.tdf                                                     ;             ;
+; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_decode.tdf                                                                           ;             ;
+; declut.inc                                                         ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/declut.inc                                                                               ;             ;
+; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_compare.inc                                                                          ;             ;
+; db/decode_vnf.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/decode_vnf.tdf                                                  ;             ;
+; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_counter.tdf                                                                          ;             ;
+; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                                          ;             ;
+; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/cmpconst.inc                                                                             ;             ;
+; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_counter.inc                                                                          ;             ;
+; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; /opt/altera/17.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                                                  ;             ;
+; db/cntr_69i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_69i.tdf                                                    ;             ;
+; db/cmpr_e9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cmpr_e9c.tdf                                                    ;             ;
+; db/cntr_4vi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_4vi.tdf                                                    ;             ;
+; db/cntr_09i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_09i.tdf                                                    ;             ;
+; db/cmpr_c9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cmpr_c9c.tdf                                                    ;             ;
+; db/cntr_kri.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_kri.tdf                                                    ;             ;
+; db/cmpr_99c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cmpr_99c.tdf                                                    ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                                           ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                                            ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                                        ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_hub.vhd                                                                              ; altera_sld  ;
+; db/ip/sld397e2936/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; /opt/altera/17.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                                         ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
 +-----------------------------------------------------------------+
@@ -247,13 +247,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------------+
 ; Resource                                    ; Usage             ;
 +---------------------------------------------+-------------------+
-; Estimate of Logic utilization (ALMs needed) ; 430               ;
+; Estimate of Logic utilization (ALMs needed) ; 429               ;
 ;                                             ;                   ;
-; Combinational ALUT usage for logic          ; 390               ;
-;     -- 7 input functions                    ; 2                 ;
-;     -- 6 input functions                    ; 94                ;
-;     -- 5 input functions                    ; 66                ;
-;     -- 4 input functions                    ; 64                ;
+; Combinational ALUT usage for logic          ; 387               ;
+;     -- 7 input functions                    ; 0                 ;
+;     -- 6 input functions                    ; 91                ;
+;     -- 5 input functions                    ; 70                ;
+;     -- 4 input functions                    ; 62                ;
 ;     -- <=3 input functions                  ; 164               ;
 ;                                             ;                   ;
 ; Dedicated logic registers                   ; 740               ;
@@ -266,8 +266,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                   ;
 ; Maximum fan-out node                        ; AUX_HPS_I2C1_SCLK ;
 ; Maximum fan-out                             ; 464               ;
-; Total fan-out                               ; 4971              ;
-; Average fan-out                             ; 3.81              ;
+; Total fan-out                               ; 4953              ;
+; Average fan-out                             ; 3.80              ;
 +---------------------------------------------+-------------------+
 
 
@@ -276,7 +276,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                  ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |testeI2C                                                                                                                               ; 390 (81)            ; 740 (32)                  ; 7040              ; 0          ; 55   ; 0            ; |testeI2C                                                                                                                                                                                                                                                                                                                                            ; testeI2C                          ; work         ;
+; |testeI2C                                                                                                                               ; 387 (78)            ; 740 (32)                  ; 7040              ; 0          ; 55   ; 0            ; |testeI2C                                                                                                                                                                                                                                                                                                                                            ; testeI2C                          ; work         ;
 ;    |cb7s:decoder_digito0|                                                                                                               ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|cb7s:decoder_digito0                                                                                                                                                                                                                                                                                                                       ; cb7s                              ; work         ;
 ;    |cb7s:decoder_digito2|                                                                                                               ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|cb7s:decoder_digito2                                                                                                                                                                                                                                                                                                                       ; cb7s                              ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 92 (1)              ; 91 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |testeI2C|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
@@ -429,11 +429,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |testeI2C|count_p2s[0]      ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |testeI2C|count_s2p[0]      ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |testeI2C|len_msg_slave[1]  ;
-; 17:1               ; 3 bits    ; 33 LEs        ; 6 LEs                ; 27 LEs                 ; Yes        ; |testeI2C|len_msg_master[2] ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |testeI2C|msg_master[11]    ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |testeI2C|count_p2s[1]      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |testeI2C|count_s2p[2]      ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |testeI2C|len_msg_slave[3]  ;
+; 17:1               ; 3 bits    ; 33 LEs        ; 6 LEs                ; 27 LEs                 ; Yes        ; |testeI2C|msg_master[7]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |testeI2C|len_msg_master[3] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
 
 
@@ -532,22 +532,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 2                           ;
 ;     plain             ; 19                          ;
 ; arriav_io_obuf        ; 1                           ;
-; arriav_lcell_comb     ; 89                          ;
+; arriav_lcell_comb     ; 86                          ;
 ;     arith             ; 10                          ;
 ;         1 data inputs ; 10                          ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 77                          ;
+;     normal            ; 76                          ;
 ;         0 data inputs ; 2                           ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 5                           ;
-;         4 data inputs ; 25                          ;
-;         5 data inputs ; 17                          ;
-;         6 data inputs ; 22                          ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 23                          ;
+;         5 data inputs ; 21                          ;
+;         6 data inputs ; 19                          ;
 ; boundary_port         ; 108                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.20                        ;
+; Average LUT depth     ; 2.23                        ;
 +-----------------------+-----------------------------+
 
 
@@ -566,7 +564,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Name                 ; Type          ; Status    ; Partition Name                 ; Netlist Type Used ; Actual Connection                   ; Details ;
 +----------------------+---------------+-----------+--------------------------------+-------------------+-------------------------------------+---------+
 ; HPS_I2C1_SCLK        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AUX_HPS_I2C1_SCLK                   ; N/A     ;
-; HPS_I2C1_SDAT        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; Mux0~3                              ; N/A     ;
+; HPS_I2C1_SDAT        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; HPS_I2C1_SDAT                       ; N/A     ;
 ; SW[0]                ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SW[0]                               ; N/A     ;
 ; SW[0]                ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SW[0]                               ; N/A     ;
 ; count_p2s[0]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; count_p2s[0]                        ; N/A     ;
@@ -663,42 +661,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Jun  9 19:10:50 2024
+    Info: Processing started: Tue Jun 11 13:12:17 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off testeI2C -c testeI2C
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file src/testeI2C.v
-    Info (12023): Found entity 1: testeI2C File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 1
+    Info (12023): Found entity 1: testeI2C File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/cb7.v
-    Info (12023): Found entity 1: cb7s File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/cb7.v Line: 1
+    Info (12023): Found entity 1: cb7s File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/cb7.v Line: 1
 Info (12127): Elaborating entity "testeI2C" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at testeI2C.v(18): object "enable_s2p" assigned a value but never read File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 18
-Warning (10036): Verilog HDL or VHDL warning at testeI2C.v(28): object "ACK" assigned a value but never read File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 28
-Warning (10230): Verilog HDL assignment warning at testeI2C.v(81): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 81
-Info (12128): Elaborating entity "cb7s" for hierarchy "cb7s:decoder_digito5" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 43
+Warning (10036): Verilog HDL or VHDL warning at testeI2C.v(18): object "enable_s2p" assigned a value but never read File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 18
+Warning (10036): Verilog HDL or VHDL warning at testeI2C.v(27): object "ACK" assigned a value but never read File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 27
+Warning (10230): Verilog HDL assignment warning at testeI2C.v(80): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 80
+Info (12128): Elaborating entity "cb7s" for hierarchy "cb7s:decoder_digito5" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 42
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_qb84.tdf
-    Info (12023): Found entity 1: altsyncram_qb84 File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/altsyncram_qb84.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_qb84 File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/altsyncram_qb84.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_elc.tdf
-    Info (12023): Found entity 1: mux_elc File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/mux_elc.tdf Line: 22
+    Info (12023): Found entity 1: mux_elc File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/mux_elc.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_vnf.tdf
-    Info (12023): Found entity 1: decode_vnf File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/decode_vnf.tdf Line: 22
+    Info (12023): Found entity 1: decode_vnf File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/decode_vnf.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_69i.tdf
-    Info (12023): Found entity 1: cntr_69i File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_69i.tdf Line: 27
+    Info (12023): Found entity 1: cntr_69i File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_69i.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_e9c.tdf
-    Info (12023): Found entity 1: cmpr_e9c File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cmpr_e9c.tdf Line: 22
+    Info (12023): Found entity 1: cmpr_e9c File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cmpr_e9c.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_4vi.tdf
-    Info (12023): Found entity 1: cntr_4vi File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_4vi.tdf Line: 25
+    Info (12023): Found entity 1: cntr_4vi File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_4vi.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_09i.tdf
-    Info (12023): Found entity 1: cntr_09i File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_09i.tdf Line: 27
+    Info (12023): Found entity 1: cntr_09i File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_09i.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_c9c.tdf
-    Info (12023): Found entity 1: cmpr_c9c File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cmpr_c9c.tdf Line: 22
+    Info (12023): Found entity 1: cmpr_c9c File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cmpr_c9c.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_kri.tdf
-    Info (12023): Found entity 1: cntr_kri File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_kri.tdf Line: 27
+    Info (12023): Found entity 1: cntr_kri File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cntr_kri.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_99c.tdf
-    Info (12023): Found entity 1: cmpr_99c File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cmpr_99c.tdf Line: 22
+    Info (12023): Found entity 1: cmpr_99c File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/cmpr_99c.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.06.09.19:10:59 Progress: Loading sld397e2936/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.06.11.13:12:25 Progress: Loading sld397e2936/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -709,52 +707,50 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld397e2936/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
-Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13047): Converted the fan-out from the tri-state buffer "HPS_I2C1_SDAT" to the node "msg_slave" into an OR gate File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 4
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/db/ip/sld397e2936/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 7
-    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 7
-    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 7
-    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 7
-    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 7
-    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 7
-    Warning (13410): Pin "HEX1[6]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 7
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 8
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 8
-    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 8
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 9
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 9
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 9
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 9
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 9
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 9
-    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 9
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 10
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 10
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 10
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 10
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 10
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 10
-    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 10
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 12
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 12
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 12
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 12
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 12
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 12
-    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 12
+    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 7
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 7
+    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 7
+    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 7
+    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 7
+    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 7
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 7
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 8
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 8
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 8
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 9
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 9
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 9
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 9
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 9
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 9
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 9
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 10
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 10
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 10
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 10
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 10
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 10
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 10
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 12
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 12
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 12
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 12
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 12
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 12
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 12
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Warning (20013): Ignored 571 assignments for entity "DE1_SoC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[0] -entity DE1_SoC was ignored
@@ -1332,24 +1328,25 @@ Info (35024): Successfully connected in-system debug instance "auto_signaltap_0"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 9 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 9 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[1]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[2]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[3]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[4]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[5]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[6]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[7]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[8]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[9]" File: /home/ec2022/ra260731/Documents/mc613/repositorio/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
-Info (21057): Implemented 1043 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "SW[1]" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[2]" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[3]" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[4]" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[5]" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[6]" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[7]" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[8]" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[9]" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/base/src/testeI2C.v Line: 5
+Info (21057): Implemented 1040 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
-    Info (21059): Implemented 45 output pins
-    Info (21061): Implemented 928 logic cells
+    Info (21059): Implemented 44 output pins
+    Info (21060): Implemented 1 bidirectional pins
+    Info (21061): Implemented 925 logic cells
     Info (21064): Implemented 55 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 620 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 618 warnings
     Info: Peak virtual memory: 1367 megabytes
-    Info: Processing ended: Sun Jun  9 19:11:04 2024
+    Info: Processing ended: Tue Jun 11 13:12:31 2024
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Total CPU time (on all processors): 00:00:37
 
 
