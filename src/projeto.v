@@ -64,7 +64,8 @@ module projeto(
         .y_nave(y_nave),
         .x_inimigo(x_inimigo),
         .y_inimigo(y_inimigo),
-        .inimigo_vivo(inimigo_vivo)
+        .inimigo_vivo(inimigo_vivo),
+        .LEDR(LEDR)
     );
 
     vga v(

@@ -13,16 +13,17 @@ module entities(
     output [9:0] y_nave,
     output [9:0] x_inimigo,
     output [9:0] y_inimigo,
-    output inimigo_vivo
+    output inimigo_vivo,
+    output [9:0] LEDR
 );
-    assign x_bola_inimiga = 500;
-    assign y_bola_inimiga = 100;
+    // assign x_bola_inimiga = 500;
+    // assign y_bola_inimiga = 100;
     assign raio_bola_inimiga = 5;
 
     wire [9:0] xi_bola;
     wire [9:0] yi_bola;
     assign xi_bola = x_nave + (45 / 2);
-    assign yi_bola = y_nave + 10;
+    assign yi_bola = y_nave + 10  - 45/2;
     wire bateu;
 
     nave naveInstancia(
@@ -46,7 +47,13 @@ module entities(
         .y(y_inimigo),
         .x_bola_nave(x_bola_aliada),
         .y_bola_nave(y_bola_aliada),
-        .vivo(inimigo_vivo)
+        .vivo(inimigo_vivo),
+        .decrementar_vida_nave(),
+        .x_bola(x_bola_inimiga),
+        .y_bola(y_bola_inimiga),
+        .x_nave(x_nave),
+        .y_nave(y_nave),
+        .LEDR(LEDR)
     );
 
     bola bolaAliada(
@@ -56,11 +63,10 @@ module entities(
         .reiniciarJogo(0),
         .xi(xi_bola),
         .yi(yi_bola),
-        .sentidoY(1),
+        // .sentidoY(1),
         .x(x_bola_aliada),
         .y(y_bola_aliada),
-        .raio(raio_bola_aliada),
-        .larguraAtirador(largura_nave)
+        .raio(raio_bola_aliada)
     );
 
 endmodule

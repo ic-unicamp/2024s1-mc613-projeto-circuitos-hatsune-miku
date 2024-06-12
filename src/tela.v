@@ -39,8 +39,8 @@ module tela(
     wire [32:0] delta_x_inimigo;
     wire [32:0] delta_y_inimigo;
     wire [9:0] raioquadrado_inimigo;
-    assign delta_x_inimigo = (x_bola_inimiga - VGA_X) ** 2;
-    assign delta_y_inimigo = (y_bola_inimiga - VGA_Y) ** 2;
+    assign delta_x_inimigo = (x_bola_inimiga + 144 - VGA_X) ** 2;
+    assign delta_y_inimigo = (y_bola_inimiga + 35 - VGA_Y) ** 2;
     assign raioquadrado_inimigo = raio_bola_inimiga ** 2;
     
     //inimigo
@@ -50,8 +50,8 @@ module tela(
     reg [3:0] multiplicador_inimigo;
     reg [9:0] largura_inimigo_imagem;
     reg [9:0] altura_inimigo_imagem;
-    reg [0:88] buffer_inimigo_R = 255'b0000000000000000000000000000000000001000100000000000000000000000000000000000000000000000;
-    reg [0:88] buffer_inimigo_G = 255'b0010000010000010001000001111111000111111111011111111111101111111011010000010100011011000;
+    reg [0:88] buffer_inimigo_R = 88'b0000000000000000000000000000000000001000100000000000000000000000000000000000000000000000;
+    reg [0:88] buffer_inimigo_G = 88'b0010000010000010001000001111111000111111111011111111111101111111011010000010100011011000;
     buffer buffer_inimigo (
         .CLK(VGA_CLK),
         .reset(reset),
@@ -184,6 +184,10 @@ module tela(
                     VGA_R = 255;
                     VGA_G = 255;
                     VGA_B = 255;
+                end else if (inimigo_vivo && delta_x_inimigo + delta_y_inimigo < raioquadrado_inimigo) begin // bola inimiga
+                    VGA_R = 255;
+                    VGA_G = 0;
+                    VGA_B = 0;
 				end else if (inimigo_vivo && (inimigo_r || inimigo_g || inimigo_b)) begin // inimigo
 					VGA_R = inimigo_r * 255;
 					VGA_G = inimigo_g * 255;

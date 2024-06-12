@@ -5,11 +5,10 @@ module bola(
     input reiniciarJogo,
     input [9:0] xi, 
     input [9:0] yi,
-    input sentidoY,
+    // input sentidoY,
     output reg [9:0] x,
     output reg [9:0] y,
-    output [9:0] raio,
-    input [9:0] larguraAtirador
+    output [9:0] raio
 );
     reg clk;
     reg movimentar;
@@ -26,17 +25,17 @@ module bola(
 
     always @(posedge clk or posedge reset) begin
         if (reset) begin
-            x = xi ;
-            y = yi - 35;
+            x = xi;
+            y = yi;
         end else if (pausa == 0) begin
-            if (sentidoY) begin
+            // if (sentidoY) begin
                 y = y - 1;
-            end else begin
-                y = y + 1;
-            end
+            // end else begin
+            //     y = y + 1;
+            // end
             if (y >= 480) begin
-                x = xi ;
-                y = yi + 35;
+                x = xi;
+                y = yi - 35;
             end
         end
     end

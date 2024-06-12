@@ -9,7 +9,13 @@ module inimigo(
     output reg [9:0] y, 
     input [9:0] x_bola_nave, 
     input [9:0] y_bola_nave, 
-    output reg vivo
+    output reg vivo,
+    output decrementar_vida_nave,
+    output [9:0] x_bola,
+    output [9:0] y_bola,
+    input [9:0] x_nave,
+    input [9:0] y_nave,
+    output [9:0] LEDR
 );
     reg clk;
     reg [32:0] contador;
@@ -17,8 +23,27 @@ module inimigo(
     reg sentidoX;
     reg [9:0] largura;
     reg [9:0] altura;
+    wire bola_morta;
+    assign bola_morta = !vivo;
 
     assign resetInimigo = reset || reiniciarJogo;
+
+
+    bolainimiga bolainimigaInstancia(
+        .CLOCK_50(CLOCK_50),
+        .reset(reset),
+        .pausa(pausa),
+        .reiniciarJogo(0),
+        .xi(x + (33 / 2)),
+        .yi(y + 24),
+        .x_nave(x_nave),
+        .y_nave(y_nave),
+        .x(x_bola),
+        .y(y_bola),
+        .bateunave(decrementar_vida_nave),
+        .bola_morta(bola_morta),
+        .LEDR(LEDR)
+    );
 
     always @(posedge CLOCK_50) begin //divisor de clock
         if (contador >= 320000) begin 
