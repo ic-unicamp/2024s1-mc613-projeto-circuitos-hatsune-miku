@@ -5,9 +5,9 @@ module entities(
     input pausa,
 
     output [9:0] x_bola_aliada,
-    output [9:0] y_bola_aliada,
-    output [9:0] raio_bola_aliada,
-
+    output [9:0] y_bola_aliada, 
+    output [9:0] raio_bola_aliada, 
+ 
     output [9:0] x_bola_inimiga,
     output [9:0] y_bola_inimiga,
     output [9:0] raio_bola_inimiga,
@@ -19,9 +19,10 @@ module entities(
 
     output [9:0] x_inimigo,
     output [9:0] y_inimigo,
-    output [9:0] largura_inimigo,
-    output [9:0] altura_inimigo,
-    output inimigo_vivo
+    input [9:0] largura_inimigo,
+    input wire [9:0] altura_inimigo,
+    output inimigo_vivo,
+    output [9:0] LEDR
 );
     assign x_bola_inimiga = 500;
     assign y_bola_inimiga = 100;
@@ -32,7 +33,7 @@ module entities(
     wire [9:0] xi_bola;
     wire [9:0] yi_bola;
     assign xi_bola = x_nave + (largura_nave / 2);
-    assign yi_bola = y_nave;
+    assign yi_bola = y_nave + 10;
     wire bateu;
     wire iniciarBola;
 
@@ -55,8 +56,11 @@ module entities(
     inimigo inimigoInstancia(
         .CLOCK_50(CLOCK_50),
         .reset(reset),
-        .pausa(pausa),
+        .pausa(pausa), 
         .reiniciarJogo(0),
+
+        .xi(20),
+        .yi(40),
 
         .largura(largura_inimigo),
         .altura(altura_inimigo),
@@ -64,8 +68,9 @@ module entities(
         .y(y_inimigo),
 
         .bola_nave_x(x_bola_aliada),
-        .bola_nave_y(x_bola_aliada),
-        .vivo(inimigo_vivo)
+        .bola_nave_y(y_bola_aliada),
+        .vivo(inimigo_vivo),
+        .LEDR(LEDR)
     );
 
     bola bolaAliada(

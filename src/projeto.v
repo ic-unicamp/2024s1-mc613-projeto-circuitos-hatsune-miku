@@ -10,9 +10,9 @@ module projeto(
 	output wire VGA_BLANK_N,  
 	output wire VGA_SYNC_N, 
 	output wire VGA_CLK,   
-	output [6:0] HEX0, // digito da direita
+	output [6:0] HEX0, // digito da direita 
   	output [6:0] HEX1,
-  	output [6:0] HEX2,
+  	output [6:0] HEX2, 
   	output [6:0] HEX3,
   	output [6:0] HEX4, 
   	output [6:0] HEX5, // digito da esquerda 
@@ -44,8 +44,10 @@ module projeto(
 
     wire [9:0] x_inimigo;
     wire [9:0] y_inimigo;
+
     wire [9:0] largura_inimigo;
     wire [9:0] altura_inimigo;
+
 
     entities entitiesInstancia(
         .CLOCK_50(CLOCK_50),
@@ -66,7 +68,8 @@ module projeto(
         .y_inimigo(y_inimigo),
         .largura_inimigo(largura_inimigo), 
         .altura_inimigo(altura_inimigo),
-        .inimigo_vivo(inimigo_vivo)
+        .inimigo_vivo(inimigo_vivo),
+        .LEDR(LEDR)
     );
 
     vga v(
@@ -111,15 +114,15 @@ module projeto(
         .x_inimigo(x_inimigo),
         .y_inimigo(y_inimigo),
         .inimigo_vivo(inimigo_vivo),
-        // .largura_inimigo(largura_inimigo),
-        // .altura_inimigo(altura_inimigo),
+        .largura_inimigo(largura_inimigo),
+        .altura_inimigo(altura_inimigo),
 
         .VGA_X(VGA_X),
         .VGA_Y(VGA_Y),
         .VGA_R(VGA_R),
         .VGA_G(VGA_G),
-        .VGA_B(VGA_B),
-        .LEDR(LEDR)
+        .VGA_B(VGA_B)
+        // .LEDR(LEDR)
     );
 
 
