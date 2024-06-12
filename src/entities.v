@@ -14,13 +14,9 @@ module entities(
 
     output [9:0] x_nave,
     output [9:0] y_nave,
-    input [9:0] largura_nave,
-    input [9:0] altura_nave,
 
     output [9:0] x_inimigo,
     output [9:0] y_inimigo,
-    input [9:0] largura_inimigo,
-    input wire [9:0] altura_inimigo,
     output inimigo_vivo,
     output [9:0] LEDR
 );
@@ -32,7 +28,7 @@ module entities(
 
     wire [9:0] xi_bola;
     wire [9:0] yi_bola;
-    assign xi_bola = x_nave + (largura_nave / 2);
+    assign xi_bola = x_nave + (45 / 2);
     assign yi_bola = y_nave + 10;
     wire bateu;
     wire iniciarBola;
@@ -46,9 +42,6 @@ module entities(
 
         .iniciarBola(iniciarBola),
         .bateu(bateu),
-
-        .largura_nave(largura_nave),
-        .altura_nave(altura_nave),
         .x_nave(x_nave),
         .y_nave(y_nave),
     );
@@ -62,8 +55,6 @@ module entities(
         .xi(20),
         .yi(40),
 
-        .largura(largura_inimigo),
-        .altura(altura_inimigo),
         .x(x_inimigo),
         .y(y_inimigo),
 

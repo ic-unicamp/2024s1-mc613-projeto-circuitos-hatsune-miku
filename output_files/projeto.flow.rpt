@@ -1,5 +1,5 @@
 Flow report for projeto
-Tue Jun 11 23:11:37 2024
+Tue Jun 11 23:20:46 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,19 +40,19 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Jun 11 23:11:37 2024       ;
+; Flow Status                     ; Successful - Tue Jun 11 23:20:46 2024       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; projeto                                     ;
 ; Top-level Entity Name           ; projeto                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1,112 / 32,070 ( 3 % )                      ;
-; Total registers                 ; 1243                                        ;
+; Logic utilization (in ALMs)     ; 1,092 / 32,070 ( 3 % )                      ;
+; Total registers                 ; 1241                                        ;
 ; Total pins                      ; 96 / 457 ( 21 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 2,228,224 / 4,065,280 ( 55 % )              ;
-; Total DSP Blocks                ; 17 / 87 ( 20 % )                            ;
+; Total DSP Blocks                ; 14 / 87 ( 16 % )                            ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/11/2024 23:10:37 ;
+; Start date & time ; 06/11/2024 23:19:44 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; projeto             ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+-----------------------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                     ; Value                                               ; Default Value ; Entity Name ; Section Id       ;
 +-------------------------------------+-----------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 251776451539040.171815823753502                     ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID               ; 251776451539040.171815878400503                     ; --            ; --          ; --               ;
 ; ENABLE_SIGNALTAP                    ; On                                                  ; --            ; --          ; --               ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                  ; --            ; --          ; --               ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                   ; --            ; --          ; --               ;
@@ -125,10 +125,10 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 1426 MB             ; 00:00:30                           ;
-; Fitter               ; 00:00:37     ; 1.5                     ; 3301 MB             ; 00:02:46                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 1230 MB             ; 00:00:05                           ;
-; Total                ; 00:00:56     ; --                      ; --                  ; 00:03:21                           ;
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 1423 MB             ; 00:00:29                           ;
+; Fitter               ; 00:00:37     ; 1.5                     ; 3299 MB             ; 00:02:55                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 1236 MB             ; 00:00:05                           ;
+; Total                ; 00:00:56     ; --                      ; --                  ; 00:03:29                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

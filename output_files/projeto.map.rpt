@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projeto
-Tue Jun 11 23:10:52 2024
+Tue Jun 11 23:19:59 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -66,17 +66,17 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Jun 11 23:10:52 2024       ;
+; Analysis & Synthesis Status     ; Successful - Tue Jun 11 23:19:59 2024       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; projeto                                     ;
 ; Top-level Entity Name           ; projeto                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1222                                        ;
+; Total registers                 ; 1221                                        ;
 ; Total pins                      ; 96                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 2,228,224                                   ;
-; Total DSP Blocks                ; 17                                          ;
+; Total DSP Blocks                ; 14                                          ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -193,7 +193,8 @@ refer to the applicable agreement for further details.
 ;     Processor 6            ;   0.0%      ;
 ;     Processor 7            ;   0.0%      ;
 ;     Processor 8            ;   0.0%      ;
-;     Processors 9-12        ;   0.0%      ;
+;     Processor 9            ;   0.0%      ;
+;     Processors 10-12       ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -283,27 +284,27 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 1128           ;
+; Estimate of Logic utilization (ALMs needed) ; 1108           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 1744           ;
+; Combinational ALUT usage for logic          ; 1711           ;
 ;     -- 7 input functions                    ; 5              ;
-;     -- 6 input functions                    ; 308            ;
-;     -- 5 input functions                    ; 161            ;
-;     -- 4 input functions                    ; 212            ;
-;     -- <=3 input functions                  ; 1058           ;
+;     -- 6 input functions                    ; 298            ;
+;     -- 5 input functions                    ; 170            ;
+;     -- 4 input functions                    ; 208            ;
+;     -- <=3 input functions                  ; 1030           ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 1222           ;
+; Dedicated logic registers                   ; 1221           ;
 ;                                             ;                ;
 ; I/O pins                                    ; 96             ;
 ; Total MLAB memory bits                      ; 0              ;
 ; Total block memory bits                     ; 2228224        ;
 ;                                             ;                ;
-; Total DSP Blocks                            ; 17             ;
+; Total DSP Blocks                            ; 14             ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 950            ;
-; Total fan-out                               ; 18458          ;
-; Average fan-out                             ; 5.34           ;
+; Total fan-out                               ; 18342          ;
+; Average fan-out                             ; 5.36           ;
 +---------------------------------------------+----------------+
 
 
@@ -312,12 +313,12 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                 ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |projeto                                                                                                                                ; 1744 (1)            ; 1222 (0)                  ; 2228224           ; 17         ; 96   ; 0            ; |projeto                                                                                                                                                                                                                                                                                                                                            ; projeto                           ; work         ;
-;    |entities:entitiesInstancia|                                                                                                         ; 281 (9)             ; 115 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia                                                                                                                                                                                                                                                                                                                 ; entities                          ; work         ;
-;       |bola:bolaAliada|                                                                                                                 ; 92 (92)             ; 53 (53)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|bola:bolaAliada                                                                                                                                                                                                                                                                                                 ; bola                              ; work         ;
-;       |inimigo:inimigoInstancia|                                                                                                        ; 131 (131)           ; 53 (53)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|inimigo:inimigoInstancia                                                                                                                                                                                                                                                                                        ; inimigo                           ; work         ;
-;       |nave:naveInstancia|                                                                                                              ; 49 (49)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|nave:naveInstancia                                                                                                                                                                                                                                                                                              ; nave                              ; work         ;
-;    |keys:keysInstancia|                                                                                                                 ; 84 (84)             ; 68 (68)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|keys:keysInstancia                                                                                                                                                                                                                                                                                                                         ; keys                              ; work         ;
+; |projeto                                                                                                                                ; 1711 (1)            ; 1221 (0)                  ; 2228224           ; 14         ; 96   ; 0            ; |projeto                                                                                                                                                                                                                                                                                                                                            ; projeto                           ; work         ;
+;    |entities:entitiesInstancia|                                                                                                         ; 246 (9)             ; 114 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia                                                                                                                                                                                                                                                                                                                 ; entities                          ; work         ;
+;       |bola:bolaAliada|                                                                                                                 ; 89 (89)             ; 52 (52)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|bola:bolaAliada                                                                                                                                                                                                                                                                                                 ; bola                              ; work         ;
+;       |inimigo:inimigoInstancia|                                                                                                        ; 105 (105)           ; 53 (53)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|inimigo:inimigoInstancia                                                                                                                                                                                                                                                                                        ; inimigo                           ; work         ;
+;       |nave:naveInstancia|                                                                                                              ; 43 (43)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|nave:naveInstancia                                                                                                                                                                                                                                                                                              ; nave                              ; work         ;
+;    |keys:keysInstancia|                                                                                                                 ; 86 (86)             ; 68 (68)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|keys:keysInstancia                                                                                                                                                                                                                                                                                                                         ; keys                              ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 93 (1)              ; 91 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 92 (0)              ; 91 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
 ;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 92 (0)              ; 91 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
@@ -361,7 +362,7 @@ refer to the applicable agreement for further details.
 ;                |lpm_shiftreg:ram_data_shift_out|                                                                                        ; 68 (68)             ; 68 (68)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                               ; lpm_shiftreg                      ; work         ;
 ;                |lpm_shiftreg:status_data_shift_out|                                                                                     ; 1 (1)               ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                            ; lpm_shiftreg                      ; work         ;
 ;             |sld_rom_sr:crc_rom_sr|                                                                                                     ; 20 (20)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                          ; sld_rom_sr                        ; work         ;
-;    |tela:telaInstancia|                                                                                                                 ; 918 (145)           ; 84 (24)                   ; 0                 ; 17         ; 0    ; 0            ; |projeto|tela:telaInstancia                                                                                                                                                                                                                                                                                                                         ; tela                              ; work         ;
+;    |tela:telaInstancia|                                                                                                                 ; 918 (145)           ; 84 (24)                   ; 0                 ; 14         ; 0    ; 0            ; |projeto|tela:telaInstancia                                                                                                                                                                                                                                                                                                                         ; tela                              ; work         ;
 ;       |buffer:buffer_coracao|                                                                                                           ; 251 (89)            ; 20 (20)                   ; 0                 ; 3          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao                                                                                                                                                                                                                                                                                                   ; buffer                            ; work         ;
 ;          |lpm_divide:Div0|                                                                                                              ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao|lpm_divide:Div0                                                                                                                                                                                                                                                                                   ; lpm_divide                        ; work         ;
 ;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao|lpm_divide:Div0|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                                     ; lpm_divide_ebm                    ; work         ;
@@ -408,13 +409,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+-------------+
 ; Statistic                       ; Number Used ;
 +---------------------------------+-------------+
-; Independent 9x9                 ; 10          ;
+; Independent 9x9                 ; 7           ;
 ; Two Independent 18x18           ; 2           ;
 ; Independent 18x18 plus 36       ; 3           ;
 ; Sum of two 18x18                ; 2           ;
-; Total number of DSP blocks      ; 17          ;
+; Total number of DSP blocks      ; 14          ;
 ;                                 ;             ;
-; Fixed Point Unsigned Multiplier ; 19          ;
+; Fixed Point Unsigned Multiplier ; 16          ;
 +---------------------------------+-------------+
 
 
@@ -436,10 +437,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------+----------------------------------------+
 ; Register name                                         ; Reason for Removal                     ;
 +-------------------------------------------------------+----------------------------------------+
+; entities:entitiesInstancia|bola:bolaAliada|x[0]       ; Stuck at GND due to stuck port data_in ;
 ; entities:entitiesInstancia|bola:bolaAliada|y[9]       ; Stuck at GND due to stuck port data_in ;
 ; tela:telaInstancia|buffer:buffer_fundo|Y_BUFFER[0..9] ; Lost fanout                            ;
 ; tela:telaInstancia|buffer:buffer_fundo|X_BUFFER[0..9] ; Lost fanout                            ;
-; Total Number of Removed Registers = 21                ;                                        ;
+; Total Number of Removed Registers = 22                ;                                        ;
 +-------------------------------------------------------+----------------------------------------+
 
 
@@ -448,12 +450,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1222  ;
+; Total registers                              ; 1221  ;
 ; Number of registers using Synchronous Clear  ; 353   ;
 ; Number of registers using Synchronous Load   ; 228   ;
-; Number of registers using Asynchronous Clear ; 342   ;
+; Number of registers using Asynchronous Clear ; 341   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 558   ;
+; Number of registers using Clock Enable       ; 557   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -463,13 +465,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; entities:entitiesInstancia|inimigo:inimigoInstancia|x[4]                                                                                                                                                                                                                                                                        ; 7       ;
-; entities:entitiesInstancia|inimigo:inimigoInstancia|x[2]                                                                                                                                                                                                                                                                        ; 7       ;
+; entities:entitiesInstancia|inimigo:inimigoInstancia|x[4]                                                                                                                                                                                                                                                                        ; 6       ;
+; entities:entitiesInstancia|inimigo:inimigoInstancia|x[2]                                                                                                                                                                                                                                                                        ; 6       ;
 ; entities:entitiesInstancia|inimigo:inimigoInstancia|y[5]                                                                                                                                                                                                                                                                        ; 6       ;
 ; entities:entitiesInstancia|inimigo:inimigoInstancia|y[3]                                                                                                                                                                                                                                                                        ; 7       ;
 ; entities:entitiesInstancia|nave:naveInstancia|x_nave[8]                                                                                                                                                                                                                                                                         ; 8       ;
 ; entities:entitiesInstancia|nave:naveInstancia|x_nave[6]                                                                                                                                                                                                                                                                         ; 9       ;
-; entities:entitiesInstancia|bola:bolaAliada|y[8]                                                                                                                                                                                                                                                                                 ; 6       ;
+; entities:entitiesInstancia|bola:bolaAliada|y[8]                                                                                                                                                                                                                                                                                 ; 5       ;
 ; entities:entitiesInstancia|bola:bolaAliada|y[7]                                                                                                                                                                                                                                                                                 ; 4       ;
 ; entities:entitiesInstancia|bola:bolaAliada|y[0]                                                                                                                                                                                                                                                                                 ; 3       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
@@ -1133,17 +1135,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tela:telaInstancia"                                                                                                                                                                           ;
-+-----------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+-----------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; perdeu          ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; perdeu[-1]      ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; largura_inimigo ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (10 bits) it drives.  The 9 most-significant bit(s) in the port expression will be connected to GND.             ;
-; altura_inimigo  ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (10 bits) it drives.  The 9 most-significant bit(s) in the port expression will be connected to GND.             ;
-; LEDR            ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
-+-----------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tela:telaInstancia"                                                                                                                                                                      ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                                                            ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; perdeu     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; perdeu[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; LEDR       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1157,6 +1157,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ehAliada[-1]          ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
 ; iniciar_movimento     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
 ; iniciar_movimento[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; larguraAtirador       ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (10 bits) it drives.  Extra input bit(s) "larguraAtirador[9..1]" will be connected to GND.                           ;
 +-----------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1207,40 +1208,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 288                         ;
+; arriav_ff             ; 287                         ;
 ;     CLR               ; 25                          ;
-;     ENA CLR           ; 45                          ;
+;     ENA CLR           ; 44                          ;
 ;     ENA SCLR          ; 136                         ;
 ;     SCLR              ; 76                          ;
 ;     SLD               ; 1                           ;
 ;     plain             ; 5                           ;
-; arriav_lcell_comb     ; 1317                        ;
-;     arith             ; 696                         ;
+; arriav_lcell_comb     ; 1284                        ;
+;     arith             ; 692                         ;
 ;         0 data inputs ; 61                          ;
-;         1 data inputs ; 406                         ;
-;         2 data inputs ; 86                          ;
-;         3 data inputs ; 56                          ;
+;         1 data inputs ; 410                         ;
+;         2 data inputs ; 78                          ;
+;         3 data inputs ; 48                          ;
 ;         4 data inputs ; 87                          ;
+;         5 data inputs ; 8                           ;
 ;     extend            ; 5                           ;
 ;         7 data inputs ; 5                           ;
-;     normal            ; 577                         ;
+;     normal            ; 560                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 7                           ;
-;         2 data inputs ; 171                         ;
+;         2 data inputs ; 167                         ;
 ;         3 data inputs ; 45                          ;
-;         4 data inputs ; 81                          ;
-;         5 data inputs ; 96                          ;
-;         6 data inputs ; 175                         ;
-;     shared            ; 39                          ;
-;         0 data inputs ; 3                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 20                          ;
+;         4 data inputs ; 77                          ;
+;         5 data inputs ; 97                          ;
+;         6 data inputs ; 165                         ;
+;     shared            ; 27                          ;
+;         0 data inputs ; 2                           ;
+;         2 data inputs ; 10                          ;
 ;         3 data inputs ; 15                          ;
-; arriav_mac            ; 17                          ;
+; arriav_mac            ; 14                          ;
 ; boundary_port         ; 100                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 18.50                       ;
-; Average LUT depth     ; 8.48                        ;
+; Average LUT depth     ; 8.56                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1369,7 +1370,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Jun 11 23:10:37 2024
+    Info: Processing started: Tue Jun 11 23:19:43 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto -c projeto
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -1385,19 +1386,20 @@ Info (12021): Found 1 design units, including 1 entities, in source file src/key
     Info (12023): Found entity 1: keys File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/keys.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/inimigo.v
     Info (12023): Found entity 1: inimigo File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 1
-Warning (10275): Verilog HDL Module Instantiation warning at entities.v(54): ignored dangling comma in List of Port Connections File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 54
+Warning (10275): Verilog HDL Module Instantiation warning at entities.v(47): ignored dangling comma in List of Port Connections File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 47
 Info (12021): Found 1 design units, including 1 entities, in source file src/entities.v
     Info (12023): Found entity 1: entities File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/buffer.v
     Info (12023): Found entity 1: buffer File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/bola.v
     Info (12023): Found entity 1: bola File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/bola.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at tela.v(86): created implicit net for "largura_coracao" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 86
-Warning (10236): Verilog HDL Implicit Net warning at tela.v(165): created implicit net for "buffer_fundo_R" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 165
-Warning (10236): Verilog HDL Implicit Net warning at tela.v(166): created implicit net for "buffer_fundo_G" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 166
-Warning (10236): Verilog HDL Implicit Net warning at tela.v(167): created implicit net for "buffer_fundo_B" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 167
-Warning (10236): Verilog HDL Implicit Net warning at nave.v(16): created implicit net for "resetNave" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 16
-Warning (10236): Verilog HDL Implicit Net warning at inimigo.v(27): created implicit net for "resetInimigo" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 27
+Warning (10236): Verilog HDL Implicit Net warning at tela.v(76): created implicit net for "largura_coracao" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 76
+Warning (10236): Verilog HDL Implicit Net warning at tela.v(155): created implicit net for "buffer_fundo_R" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 155
+Warning (10236): Verilog HDL Implicit Net warning at tela.v(156): created implicit net for "buffer_fundo_G" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 156
+Warning (10236): Verilog HDL Implicit Net warning at tela.v(157): created implicit net for "buffer_fundo_B" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 157
+Warning (10236): Verilog HDL Implicit Net warning at nave.v(13): created implicit net for "resetNave" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at inimigo.v(25): created implicit net for "resetInimigo" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 25
+Warning (10236): Verilog HDL Implicit Net warning at entities.v(80): created implicit net for "largura_nave" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 80
 Info (12127): Elaborating entity "projeto" for the top level hierarchy
 Warning (10034): Output port "HEX0" at projeto.v(13) has no driver File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 13
 Warning (10034): Output port "HEX1" at projeto.v(14) has no driver File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 14
@@ -1405,14 +1407,25 @@ Warning (10034): Output port "HEX2" at projeto.v(15) has no driver File: /home/e
 Warning (10034): Output port "HEX3" at projeto.v(16) has no driver File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 16
 Warning (10034): Output port "HEX4" at projeto.v(17) has no driver File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 17
 Warning (10034): Output port "HEX5" at projeto.v(18) has no driver File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 18
-Info (12128): Elaborating entity "entities" for hierarchy "entities:entitiesInstancia" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 73
-Warning (10230): Verilog HDL assignment warning at entities.v(35): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 35
-Warning (10230): Verilog HDL assignment warning at entities.v(36): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 36
-Info (12128): Elaborating entity "nave" for hierarchy "entities:entitiesInstancia|nave:naveInstancia" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 54
+Info (12128): Elaborating entity "entities" for hierarchy "entities:entitiesInstancia" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 69
+Warning (10230): Verilog HDL assignment warning at entities.v(31): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 31
+Warning (10230): Verilog HDL assignment warning at entities.v(32): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 32
+Info (12128): Elaborating entity "nave" for hierarchy "entities:entitiesInstancia|nave:naveInstancia" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 47
 Warning (10230): Verilog HDL assignment warning at nave.v(26): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 26
 Warning (10230): Verilog HDL assignment warning at nave.v(29): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 29
-Warning (10240): Verilog HDL Always Construct warning at nave.v(18): inferring latch(es) for variable "x_nave", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 18
-Warning (10240): Verilog HDL Always Construct warning at nave.v(18): inferring latch(es) for variable "y_nave", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 18
+Warning (10240): Verilog HDL Always Construct warning at nave.v(17): inferring latch(es) for variable "x_nave", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 17
+Warning (10240): Verilog HDL Always Construct warning at nave.v(17): inferring latch(es) for variable "y_nave", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 17
+Warning (10240): Verilog HDL Always Construct warning at nave.v(17): inferring latch(es) for variable "largura_nave", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 17
+Info (10041): Inferred latch for "largura_nave[0]" at nave.v(23) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 23
+Info (10041): Inferred latch for "largura_nave[1]" at nave.v(23) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 23
+Info (10041): Inferred latch for "largura_nave[2]" at nave.v(23) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 23
+Info (10041): Inferred latch for "largura_nave[3]" at nave.v(23) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 23
+Info (10041): Inferred latch for "largura_nave[4]" at nave.v(23) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 23
+Info (10041): Inferred latch for "largura_nave[5]" at nave.v(23) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 23
+Info (10041): Inferred latch for "largura_nave[6]" at nave.v(23) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 23
+Info (10041): Inferred latch for "largura_nave[7]" at nave.v(23) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 23
+Info (10041): Inferred latch for "largura_nave[8]" at nave.v(23) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 23
+Info (10041): Inferred latch for "largura_nave[9]" at nave.v(23) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 23
 Info (10041): Inferred latch for "y_nave[0]" at nave.v(23) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 23
 Info (10041): Inferred latch for "y_nave[1]" at nave.v(23) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 23
 Info (10041): Inferred latch for "y_nave[2]" at nave.v(23) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 23
@@ -1424,165 +1437,146 @@ Info (10041): Inferred latch for "y_nave[7]" at nave.v(23) File: /home/ec2022/ra
 Info (10041): Inferred latch for "y_nave[8]" at nave.v(23) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 23
 Info (10041): Inferred latch for "y_nave[9]" at nave.v(23) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 23
 Info (10041): Inferred latch for "x_nave[0]" at nave.v(23) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/nave.v Line: 23
-Info (12128): Elaborating entity "inimigo" for hierarchy "entities:entitiesInstancia|inimigo:inimigoInstancia" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 74
+Info (12128): Elaborating entity "inimigo" for hierarchy "entities:entitiesInstancia|inimigo:inimigoInstancia" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 65
+Warning (10036): Verilog HDL or VHDL warning at inimigo.v(45): object "largura" assigned a value but never read File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 45
+Warning (10230): Verilog HDL assignment warning at inimigo.v(55): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 55
+Warning (10230): Verilog HDL assignment warning at inimigo.v(59): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 59
 Warning (10230): Verilog HDL assignment warning at inimigo.v(61): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 61
-Warning (10230): Verilog HDL assignment warning at inimigo.v(65): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 65
-Warning (10230): Verilog HDL assignment warning at inimigo.v(67): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 67
-Warning (10240): Verilog HDL Always Construct warning at inimigo.v(54): inferring latch(es) for variable "x", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 54
-Warning (10240): Verilog HDL Always Construct warning at inimigo.v(54): inferring latch(es) for variable "y", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 54
-Info (10041): Inferred latch for "y[0]" at inimigo.v(59) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 59
-Info (10041): Inferred latch for "y[1]" at inimigo.v(59) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 59
-Info (10041): Inferred latch for "x[0]" at inimigo.v(59) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 59
-Info (12128): Elaborating entity "bola" for hierarchy "entities:entitiesInstancia|bola:bolaAliada" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 90
+Warning (10240): Verilog HDL Always Construct warning at inimigo.v(47): inferring latch(es) for variable "x", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 47
+Warning (10240): Verilog HDL Always Construct warning at inimigo.v(47): inferring latch(es) for variable "y", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 47
+Warning (10034): Output port "LEDR" at inimigo.v(19) has no driver File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 19
+Info (10041): Inferred latch for "y[0]" at inimigo.v(53) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 53
+Info (10041): Inferred latch for "y[1]" at inimigo.v(53) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 53
+Info (10041): Inferred latch for "x[0]" at inimigo.v(53) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 53
+Info (12128): Elaborating entity "bola" for hierarchy "entities:entitiesInstancia|bola:bolaAliada" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/entities.v Line: 81
 Warning (10230): Verilog HDL assignment warning at bola.v(32): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/bola.v Line: 32
 Warning (10230): Verilog HDL assignment warning at bola.v(35): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/bola.v Line: 35
 Warning (10230): Verilog HDL assignment warning at bola.v(37): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/bola.v Line: 37
 Warning (10230): Verilog HDL assignment warning at bola.v(41): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/bola.v Line: 41
 Warning (10034): Output port "bateu" at bola.v(10) has no driver File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/bola.v Line: 10
-Info (12128): Elaborating entity "vga" for hierarchy "vga:v" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 86
+Info (12128): Elaborating entity "vga" for hierarchy "vga:v" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 82
 Warning (10230): Verilog HDL assignment warning at vga.v(24): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/vga.v Line: 24
 Warning (10230): Verilog HDL assignment warning at vga.v(27): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/vga.v Line: 27
 Warning (10230): Verilog HDL assignment warning at vga.v(34): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/vga.v Line: 34
 Warning (10230): Verilog HDL assignment warning at vga.v(35): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/vga.v Line: 35
 Warning (10230): Verilog HDL assignment warning at vga.v(38): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/vga.v Line: 38
-Info (12128): Elaborating entity "keys" for hierarchy "keys:keysInstancia" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 92
-Info (12128): Elaborating entity "tela" for hierarchy "tela:telaInstancia" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 126
-Warning (10036): Verilog HDL or VHDL warning at tela.v(86): object "largura_coracao" assigned a value but never read File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 86
-Warning (10036): Verilog HDL or VHDL warning at tela.v(46): object "delta_x_inimigo" assigned a value but never read File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 46
-Warning (10036): Verilog HDL or VHDL warning at tela.v(47): object "delta_y_inimigo" assigned a value but never read File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 47
-Warning (10036): Verilog HDL or VHDL warning at tela.v(48): object "raioquadrado_inimigo" assigned a value but never read File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 48
-Warning (10036): Verilog HDL or VHDL warning at tela.v(97): object "buffer_fundo_r" assigned a value but never read File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 97
-Warning (10036): Verilog HDL or VHDL warning at tela.v(98): object "buffer_fundo_g" assigned a value but never read File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 98
-Warning (10036): Verilog HDL or VHDL warning at tela.v(99): object "buffer_fundo_b" assigned a value but never read File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 99
-Warning (10230): Verilog HDL assignment warning at tela.v(60): truncated value with size 10 to match size of target (1) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 60
-Warning (10230): Verilog HDL assignment warning at tela.v(61): truncated value with size 10 to match size of target (1) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 61
-Warning (10230): Verilog HDL assignment warning at tela.v(63): truncated value with size 255 to match size of target (89) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 63
-Warning (10230): Verilog HDL assignment warning at tela.v(64): truncated value with size 255 to match size of target (89) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 64
-Warning (10230): Verilog HDL assignment warning at tela.v(86): truncated value with size 10 to match size of target (1) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 86
+Info (12128): Elaborating entity "keys" for hierarchy "keys:keysInstancia" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 88
+Info (12128): Elaborating entity "tela" for hierarchy "tela:telaInstancia" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 118
+Warning (10036): Verilog HDL or VHDL warning at tela.v(76): object "largura_coracao" assigned a value but never read File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 76
+Warning (10036): Verilog HDL or VHDL warning at tela.v(40): object "delta_x_inimigo" assigned a value but never read File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 40
+Warning (10036): Verilog HDL or VHDL warning at tela.v(41): object "delta_y_inimigo" assigned a value but never read File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 41
+Warning (10036): Verilog HDL or VHDL warning at tela.v(42): object "raioquadrado_inimigo" assigned a value but never read File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 42
+Warning (10036): Verilog HDL or VHDL warning at tela.v(87): object "buffer_fundo_r" assigned a value but never read File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 87
+Warning (10036): Verilog HDL or VHDL warning at tela.v(88): object "buffer_fundo_g" assigned a value but never read File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 88
+Warning (10036): Verilog HDL or VHDL warning at tela.v(89): object "buffer_fundo_b" assigned a value but never read File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 89
+Warning (10230): Verilog HDL assignment warning at tela.v(55): truncated value with size 255 to match size of target (89) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 55
+Warning (10230): Verilog HDL assignment warning at tela.v(56): truncated value with size 255 to match size of target (89) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 56
+Warning (10230): Verilog HDL assignment warning at tela.v(76): truncated value with size 10 to match size of target (1) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 76
+Warning (10230): Verilog HDL assignment warning at tela.v(188): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 188
+Warning (10230): Verilog HDL assignment warning at tela.v(189): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 189
+Warning (10230): Verilog HDL assignment warning at tela.v(190): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 190
+Warning (10230): Verilog HDL assignment warning at tela.v(192): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
+Warning (10230): Verilog HDL assignment warning at tela.v(193): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 193
+Warning (10230): Verilog HDL assignment warning at tela.v(194): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 194
+Warning (10230): Verilog HDL assignment warning at tela.v(196): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 196
+Warning (10230): Verilog HDL assignment warning at tela.v(197): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 197
 Warning (10230): Verilog HDL assignment warning at tela.v(198): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 198
-Warning (10230): Verilog HDL assignment warning at tela.v(199): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 199
 Warning (10230): Verilog HDL assignment warning at tela.v(200): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 200
+Warning (10230): Verilog HDL assignment warning at tela.v(201): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 201
 Warning (10230): Verilog HDL assignment warning at tela.v(202): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 202
-Warning (10230): Verilog HDL assignment warning at tela.v(203): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 203
-Warning (10230): Verilog HDL assignment warning at tela.v(204): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 204
-Warning (10230): Verilog HDL assignment warning at tela.v(206): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 206
-Warning (10230): Verilog HDL assignment warning at tela.v(207): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 207
-Warning (10230): Verilog HDL assignment warning at tela.v(208): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 208
-Warning (10230): Verilog HDL assignment warning at tela.v(210): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 210
-Warning (10230): Verilog HDL assignment warning at tela.v(211): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 211
-Warning (10230): Verilog HDL assignment warning at tela.v(212): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 212
-Warning (10240): Verilog HDL Always Construct warning at tela.v(173): inferring latch(es) for variable "multiplicador_inimigo", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 173
-Warning (10240): Verilog HDL Always Construct warning at tela.v(173): inferring latch(es) for variable "largura_inimigo_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 173
-Warning (10240): Verilog HDL Always Construct warning at tela.v(173): inferring latch(es) for variable "altura_inimigo_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 173
-Warning (10240): Verilog HDL Always Construct warning at tela.v(173): inferring latch(es) for variable "multiplicador_nave", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 173
-Warning (10240): Verilog HDL Always Construct warning at tela.v(173): inferring latch(es) for variable "largura_nave_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 173
-Warning (10240): Verilog HDL Always Construct warning at tela.v(173): inferring latch(es) for variable "altura_nave_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 173
-Warning (10240): Verilog HDL Always Construct warning at tela.v(173): inferring latch(es) for variable "multiplicador_coracao", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 173
-Warning (10240): Verilog HDL Always Construct warning at tela.v(173): inferring latch(es) for variable "largura_coracao_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 173
-Warning (10240): Verilog HDL Always Construct warning at tela.v(173): inferring latch(es) for variable "largura_fundo_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 173
-Warning (10240): Verilog HDL Always Construct warning at tela.v(173): inferring latch(es) for variable "multiplicador_fundo", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 173
-Warning (10034): Output port "LEDR" at tela.v(35) has no driver File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 35
-Info (10041): Inferred latch for "multiplicador_fundo[0]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "multiplicador_fundo[1]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "multiplicador_fundo[2]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "multiplicador_fundo[3]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_fundo_imagem[0]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_fundo_imagem[1]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_fundo_imagem[2]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_fundo_imagem[3]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_fundo_imagem[4]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_fundo_imagem[5]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_fundo_imagem[6]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_fundo_imagem[7]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_fundo_imagem[8]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_fundo_imagem[9]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_coracao_imagem[0]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_coracao_imagem[1]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_coracao_imagem[2]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_coracao_imagem[3]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_coracao_imagem[4]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_coracao_imagem[5]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_coracao_imagem[6]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_coracao_imagem[7]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_coracao_imagem[8]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_coracao_imagem[9]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "multiplicador_coracao[0]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "multiplicador_coracao[1]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "multiplicador_coracao[2]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "multiplicador_coracao[3]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "altura_nave_imagem[0]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "altura_nave_imagem[1]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "altura_nave_imagem[2]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "altura_nave_imagem[3]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "altura_nave_imagem[4]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "altura_nave_imagem[5]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "altura_nave_imagem[6]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "altura_nave_imagem[7]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "altura_nave_imagem[8]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "altura_nave_imagem[9]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_nave_imagem[0]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_nave_imagem[1]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_nave_imagem[2]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_nave_imagem[3]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_nave_imagem[4]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_nave_imagem[5]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_nave_imagem[6]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_nave_imagem[7]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_nave_imagem[8]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_nave_imagem[9]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "multiplicador_nave[0]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "multiplicador_nave[1]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "multiplicador_nave[2]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "multiplicador_nave[3]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "altura_inimigo_imagem[0]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "altura_inimigo_imagem[1]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "altura_inimigo_imagem[2]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "altura_inimigo_imagem[3]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "altura_inimigo_imagem[4]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "altura_inimigo_imagem[5]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "altura_inimigo_imagem[6]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "altura_inimigo_imagem[7]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "altura_inimigo_imagem[8]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "altura_inimigo_imagem[9]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_inimigo_imagem[0]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_inimigo_imagem[1]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_inimigo_imagem[2]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_inimigo_imagem[3]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_inimigo_imagem[4]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_inimigo_imagem[5]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_inimigo_imagem[6]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_inimigo_imagem[7]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_inimigo_imagem[8]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "largura_inimigo_imagem[9]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "multiplicador_inimigo[0]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "multiplicador_inimigo[1]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "multiplicador_inimigo[2]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (10041): Inferred latch for "multiplicador_inimigo[3]" at tela.v(192) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 192
-Info (12128): Elaborating entity "buffer" for hierarchy "tela:telaInstancia|buffer:buffer_nave" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at tela.v(163): inferring latch(es) for variable "multiplicador_inimigo", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 163
+Warning (10240): Verilog HDL Always Construct warning at tela.v(163): inferring latch(es) for variable "largura_inimigo_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 163
+Warning (10240): Verilog HDL Always Construct warning at tela.v(163): inferring latch(es) for variable "altura_inimigo_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 163
+Warning (10240): Verilog HDL Always Construct warning at tela.v(163): inferring latch(es) for variable "multiplicador_nave", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 163
+Warning (10240): Verilog HDL Always Construct warning at tela.v(163): inferring latch(es) for variable "largura_nave_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 163
+Warning (10240): Verilog HDL Always Construct warning at tela.v(163): inferring latch(es) for variable "altura_nave_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 163
+Warning (10240): Verilog HDL Always Construct warning at tela.v(163): inferring latch(es) for variable "multiplicador_coracao", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 163
+Warning (10240): Verilog HDL Always Construct warning at tela.v(163): inferring latch(es) for variable "largura_coracao_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 163
+Warning (10240): Verilog HDL Always Construct warning at tela.v(163): inferring latch(es) for variable "largura_fundo_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 163
+Warning (10240): Verilog HDL Always Construct warning at tela.v(163): inferring latch(es) for variable "multiplicador_fundo", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 163
+Warning (10034): Output port "LEDR" at tela.v(29) has no driver File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 29
+Info (10041): Inferred latch for "multiplicador_fundo[0]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "multiplicador_fundo[1]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "multiplicador_fundo[2]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "multiplicador_fundo[3]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_fundo_imagem[0]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_fundo_imagem[1]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_fundo_imagem[2]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_fundo_imagem[3]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_fundo_imagem[4]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_fundo_imagem[5]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_fundo_imagem[6]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_fundo_imagem[7]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_fundo_imagem[8]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_fundo_imagem[9]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_coracao_imagem[0]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_coracao_imagem[1]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_coracao_imagem[2]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_coracao_imagem[3]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_coracao_imagem[4]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_coracao_imagem[5]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_coracao_imagem[6]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_coracao_imagem[7]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_coracao_imagem[8]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_coracao_imagem[9]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "multiplicador_coracao[0]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "multiplicador_coracao[1]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "multiplicador_coracao[2]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "multiplicador_coracao[3]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "altura_nave_imagem[0]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "altura_nave_imagem[1]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "altura_nave_imagem[2]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "altura_nave_imagem[3]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "altura_nave_imagem[4]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "altura_nave_imagem[5]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "altura_nave_imagem[6]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "altura_nave_imagem[7]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "altura_nave_imagem[8]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "altura_nave_imagem[9]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_nave_imagem[0]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_nave_imagem[1]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_nave_imagem[2]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_nave_imagem[3]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_nave_imagem[4]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_nave_imagem[5]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_nave_imagem[6]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_nave_imagem[7]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_nave_imagem[8]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_nave_imagem[9]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "multiplicador_nave[0]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "multiplicador_nave[1]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "multiplicador_nave[2]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "multiplicador_nave[3]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "altura_inimigo_imagem[0]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "altura_inimigo_imagem[1]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "altura_inimigo_imagem[2]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "altura_inimigo_imagem[3]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "altura_inimigo_imagem[4]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "altura_inimigo_imagem[5]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "altura_inimigo_imagem[6]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "altura_inimigo_imagem[7]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "altura_inimigo_imagem[8]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "altura_inimigo_imagem[9]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_inimigo_imagem[0]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_inimigo_imagem[1]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_inimigo_imagem[2]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_inimigo_imagem[3]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_inimigo_imagem[4]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_inimigo_imagem[5]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_inimigo_imagem[6]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_inimigo_imagem[7]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_inimigo_imagem[8]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "largura_inimigo_imagem[9]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "multiplicador_inimigo[0]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "multiplicador_inimigo[1]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "multiplicador_inimigo[2]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (10041): Inferred latch for "multiplicador_inimigo[3]" at tela.v(182) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 182
+Info (12128): Elaborating entity "buffer" for hierarchy "tela:telaInstancia|buffer:buffer_nave" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/tela.v Line: 107
 Warning (10230): Verilog HDL assignment warning at buffer.v(29): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 29
 Warning (10230): Verilog HDL assignment warning at buffer.v(30): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 30
 Warning (10230): Verilog HDL assignment warning at buffer.v(31): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 31
 Warning (10230): Verilog HDL assignment warning at buffer.v(44): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 44
 Warning (10230): Verilog HDL assignment warning at buffer.v(47): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/buffer.v Line: 47
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "largura_inimigo[9]" is missing source, defaulting to GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 48
-    Warning (12110): Net "largura_inimigo[8]" is missing source, defaulting to GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 48
-    Warning (12110): Net "largura_inimigo[7]" is missing source, defaulting to GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 48
-    Warning (12110): Net "largura_inimigo[6]" is missing source, defaulting to GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 48
-    Warning (12110): Net "largura_inimigo[5]" is missing source, defaulting to GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 48
-    Warning (12110): Net "largura_inimigo[4]" is missing source, defaulting to GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 48
-    Warning (12110): Net "largura_inimigo[3]" is missing source, defaulting to GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 48
-    Warning (12110): Net "largura_inimigo[2]" is missing source, defaulting to GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 48
-    Warning (12110): Net "largura_inimigo[1]" is missing source, defaulting to GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 48
-    Warning (12110): Net "altura_inimigo[9]" is missing source, defaulting to GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 49
-    Warning (12110): Net "altura_inimigo[8]" is missing source, defaulting to GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 49
-    Warning (12110): Net "altura_inimigo[7]" is missing source, defaulting to GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 49
-    Warning (12110): Net "altura_inimigo[6]" is missing source, defaulting to GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 49
-    Warning (12110): Net "altura_inimigo[5]" is missing source, defaulting to GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 49
-    Warning (12110): Net "altura_inimigo[4]" is missing source, defaulting to GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 49
-    Warning (12110): Net "altura_inimigo[3]" is missing source, defaulting to GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 49
-    Warning (12110): Net "altura_inimigo[2]" is missing source, defaulting to GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 49
-    Warning (12110): Net "altura_inimigo[1]" is missing source, defaulting to GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 49
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ul84.tdf
     Info (12023): Found entity 1: altsyncram_ul84 File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/db/altsyncram_ul84.tdf Line: 31
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_8la.tdf
@@ -1609,7 +1603,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/db/cmpr_99c.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.06.11.23:10:45 Progress: Loading sld3172de05/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.06.11.23:19:52 Progress: Loading sld3172de05/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1652,7 +1646,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_eve.tdf
     Info (12023): Found entity 1: alt_u_div_eve File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/db/alt_u_div_eve.tdf Line: 22
 Warning (12241): 8 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 59
+Info (13000): Registers with preset signals will power-up high File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/inimigo.v Line: 53
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
     Warning (13310): Register "entities:entitiesInstancia|bola:bolaAliada|x[9]" is converted into an equivalent circuit using register "entities:entitiesInstancia|bola:bolaAliada|x[9]~_emulated" and latch "entities:entitiesInstancia|bola:bolaAliada|x[9]~1" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/bola.v Line: 33
@@ -1664,7 +1658,6 @@ Warning (13004): Presettable and clearable registers converted to equivalent cir
     Warning (13310): Register "entities:entitiesInstancia|bola:bolaAliada|x[3]" is converted into an equivalent circuit using register "entities:entitiesInstancia|bola:bolaAliada|x[3]~_emulated" and latch "entities:entitiesInstancia|bola:bolaAliada|x[3]~25" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/bola.v Line: 33
     Warning (13310): Register "entities:entitiesInstancia|bola:bolaAliada|x[2]" is converted into an equivalent circuit using register "entities:entitiesInstancia|bola:bolaAliada|x[2]~_emulated" and latch "entities:entitiesInstancia|bola:bolaAliada|x[2]~29" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/bola.v Line: 33
     Warning (13310): Register "entities:entitiesInstancia|bola:bolaAliada|x[1]" is converted into an equivalent circuit using register "entities:entitiesInstancia|bola:bolaAliada|x[1]~_emulated" and latch "entities:entitiesInstancia|bola:bolaAliada|x[1]~33" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/bola.v Line: 33
-    Warning (13310): Register "entities:entitiesInstancia|bola:bolaAliada|x[0]" is converted into an equivalent circuit using register "entities:entitiesInstancia|bola:bolaAliada|x[0]~_emulated" and latch "entities:entitiesInstancia|bola:bolaAliada|x[0]~37" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/bola.v Line: 33
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_BLANK_N" is stuck at VCC File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 10
     Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 11
@@ -1710,6 +1703,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX5[4]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 18
     Warning (13410): Pin "HEX5[5]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 18
     Warning (13410): Pin "HEX5[6]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 18
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 20
     Warning (13410): Pin "LEDR[1]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 20
     Warning (13410): Pin "LEDR[2]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 20
     Warning (13410): Pin "LEDR[3]" is stuck at GND File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 20
@@ -1735,16 +1729,16 @@ Warning (21074): Design contains 10 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[9]" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 3
     Warning (15610): No output dependent on input pin "KEY[2]" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 4
     Warning (15610): No output dependent on input pin "KEY[3]" File: /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/src/projeto.v Line: 4
-Info (21057): Implemented 2961 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2925 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 82 output pins
-    Info (21061): Implemented 2571 logic cells
+    Info (21061): Implemented 2538 logic cells
     Info (21064): Implemented 272 RAM segments
-    Info (21062): Implemented 17 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 172 warnings
-    Info: Peak virtual memory: 1438 megabytes
-    Info: Processing ended: Tue Jun 11 23:10:52 2024
-    Info: Elapsed time: 00:00:15
+    Info (21062): Implemented 14 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 155 warnings
+    Info: Peak virtual memory: 1434 megabytes
+    Info: Processing ended: Tue Jun 11 23:19:59 2024
+    Info: Elapsed time: 00:00:16
     Info: Total CPU time (on all processors): 00:00:31
 
 

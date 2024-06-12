@@ -62,12 +62,8 @@ module projeto(
         .raio_bola_inimiga(raio_bola_inimiga),
         .x_nave(x_nave),
         .y_nave(y_nave),
-        .largura_nave(largura_nave),
-        .altura_nave(altura_nave),
         .x_inimigo(x_inimigo),
         .y_inimigo(y_inimigo),
-        .largura_inimigo(largura_inimigo), 
-        .altura_inimigo(altura_inimigo),
         .inimigo_vivo(inimigo_vivo),
         .LEDR(LEDR)
     );
@@ -108,14 +104,10 @@ module projeto(
 
         .x_nave(x_nave),
         .y_nave(y_nave),
-        .largura_nave(largura_nave),
-        .altura_nave(altura_nave),
 
         .x_inimigo(x_inimigo),
         .y_inimigo(y_inimigo),
         .inimigo_vivo(inimigo_vivo),
-        .largura_inimigo(largura_inimigo),
-        .altura_inimigo(altura_inimigo),
 
         .VGA_X(VGA_X),
         .VGA_Y(VGA_Y),

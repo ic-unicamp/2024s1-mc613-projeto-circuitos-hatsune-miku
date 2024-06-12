@@ -7,19 +7,19 @@ module nave(
 
     output reg iniciarBola,
     input bateu,
-
-    input [9:0] largura_nave,
-    input [9:0] altura_nave,
     output reg [9:0] x_nave,
     output reg [9:0] y_nave
 );
     assign resetNave = reset || reiniciarJogo;
+
+    reg [9:0] largura_nave;
 
     always @(posedge CLOCK_50 or posedge resetNave) begin
         if (resetNave) begin   
             x_nave = 320;
             y_nave = 410;
             iniciarBola = 0;
+            largura_nave = 45;
         end else if (pausa == 0) begin
             if (pausa == 0) begin
                 if (keysout[0] && x_nave + largura_nave <= 640) begin // direita
