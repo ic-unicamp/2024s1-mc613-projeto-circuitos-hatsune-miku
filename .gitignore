@@ -18,3 +18,4 @@ teste.txt
 db/*
 simulation/*
 incremental_db/*
+*.bak
