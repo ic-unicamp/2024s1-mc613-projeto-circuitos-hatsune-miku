@@ -52,8 +52,8 @@ module projeto(
     entities entitiesInstancia(
         .CLOCK_50(CLOCK_50),
         .reset(reset),
-        .keysout(keysout),
         .pausa(pausa),
+        .keysout(keysout),
         .x_bola_aliada(x_bola_aliada),
         .y_bola_aliada(y_bola_aliada),
         .raio_bola_aliada(raio_bola_aliada),
@@ -64,8 +64,7 @@ module projeto(
         .y_nave(y_nave),
         .x_inimigo(x_inimigo),
         .y_inimigo(y_inimigo),
-        .inimigo_vivo(inimigo_vivo),
-        .LEDR(LEDR)
+        .inimigo_vivo(inimigo_vivo)
     );
 
     vga v(
@@ -114,7 +113,6 @@ module projeto(
         .VGA_R(VGA_R),
         .VGA_G(VGA_G),
         .VGA_B(VGA_B)
-        // .LEDR(LEDR)
     );
 
 
