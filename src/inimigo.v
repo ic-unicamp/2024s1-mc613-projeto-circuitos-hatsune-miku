@@ -1,5 +1,6 @@
 module inimigo(
     input CLOCK_50,
+    input CLOCK_MV,
     input reset,
     input pausa,
     input reiniciarJogo,
@@ -12,25 +13,13 @@ module inimigo(
 
     input [9:0] bola_nave_x, 
     input [9:0] bola_nave_y, 
-  
-    output reg vivo,
-    output [9:0] LEDR
-
+    
+    input sentidoX,
+    output reg vivo
 );
-    reg clk;
-    reg [32:0] contador;
     reg [32:0] divisorCLK;
-    reg sentidoX;
 
     assign resetInimigo = reset || reiniciarJogo;
-
-    always @(posedge CLOCK_50) begin //divisor de clock
-        contador = contador + 1;
-        if (contador >= 320000) begin 
-            contador = 0;
-            clk = ~clk;
-        end
-    end 
 
     always @(posedge CLOCK_50) begin
         if (reset) begin
@@ -44,25 +33,23 @@ module inimigo(
 
     reg [9:0] largura;
 
-    always @(posedge clk or posedge resetInimigo) begin
+    always @(posedge CLOCK_MV or posedge resetInimigo) begin
         if (resetInimigo) begin
             x = xi;
             y = yi;
-            sentidoX = 0;
             largura = 33;
-        end else if (pausa == 0) begin
-            if (x > 640 || x + 33 > 640) begin // abaixa
-                y = y + 20;
-                sentidoX = ~sentidoX;
+        end else begin
+            if (pausa == 0) begin
+                if (x < 20 || x + 33 > 640) begin // abaixa
+                    y = y + 20;
+                end
+                if(sentidoX) begin // direita
+                    x = x + 2;
+                end else begin // esquerda
+                    x = x - 2;
+                end
             end
-            if(sentidoX) begin // direita
-                x = x + 2;
-            end else begin // esquerda
-                x = x - 2;
-            end
-
         end
     end
-
 
 endmodule
