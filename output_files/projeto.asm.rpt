@@ -1,6 +1,6 @@
 Assembler report for projeto
-Tue Jun 11 23:20:46 2024
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Wed Jun 12 01:05:37 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
 ---------------------
@@ -19,9 +19,9 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2017  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -31,14 +31,15 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Jun 11 23:20:46 2024 ;
+; Assembler Status      ; Successful - Wed Jun 12 01:05:37 2024 ;
 ; Revision Name         ; projeto                               ;
 ; Top-level Entity Name ; projeto                               ;
 ; Family                ; Cyclone V                             ;
@@ -63,13 +64,13 @@ refer to the applicable agreement for further details.
 +--------+------------------------+--------------+
 
 
-+--------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                  ;
-+--------------------------------------------------------------------------------------------+
-; File Name                                                                                  ;
-+--------------------------------------------------------------------------------------------+
-; /home/ec2022/ra260731/2024s1-mc613-projeto-circuitos-hatsune-miku/output_files/projeto.sof ;
-+--------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                     ;
++-----------------------------------------------------------------------------------------------+
+; File Name                                                                                     ;
++-----------------------------------------------------------------------------------------------+
+; /home/henrique/Downloads/2024s1-mc613-projeto-circuitos-hatsune-miku/output_files/projeto.sof ;
++-----------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------+
@@ -77,8 +78,8 @@ refer to the applicable agreement for further details.
 +----------------+----------------------+
 ; Option         ; Setting              ;
 +----------------+----------------------+
-; JTAG usercode  ; 0x064485F3           ;
-; Checksum       ; 0x064485F3           ;
+; JTAG usercode  ; 0x06437E13           ;
+; Checksum       ; 0x06437E13           ;
 +----------------+----------------------+
 
 
@@ -87,15 +88,15 @@ refer to the applicable agreement for further details.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
-    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Jun 11 23:20:41 2024
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Wed Jun 12 01:05:30 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off projeto -c projeto
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 1236 megabytes
-    Info: Processing ended: Tue Jun 11 23:20:46 2024
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 546 megabytes
+    Info: Processing ended: Wed Jun 12 01:05:37 2024
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
 
 

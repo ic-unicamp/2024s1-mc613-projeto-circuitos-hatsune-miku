@@ -9,7 +9,7 @@ module inimigo(
     output reg [9:0] y, 
     input [9:0] x_bola_nave, 
     input [9:0] y_bola_nave, 
-    output reg vivo,
+    output reg vivo
 );
     reg clk;
     reg [32:0] contador;
