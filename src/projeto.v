@@ -1,4 +1,4 @@
-module projeto(
+module projeto #(parameter SIZE_ENEMY = 1) (
 	input CLOCK_50,
 	input [9:0] SW,
 	input [3:0] KEY,
@@ -42,31 +42,40 @@ module projeto(
     wire [9:0] largura_nave;
     wire [9:0] altura_nave;
 
-    wire [9:0] x_inimigo;
-    wire [9:0] y_inimigo;
-    wire [9:0] largura_inimigo;
-    wire [9:0] altura_inimigo;
+    // wire [9:0] x_inimigo;
+    // wire [9:0] y_inimigo;
+    // wire [9:0] largura_inimigo;
+    // wire [9:0] altura_inimigo;
 
-    entities entitiesInstancia(
+    wire [10*(SIZE_ENEMY-1):0] x_inimigo;
+    wire [10*(SIZE_ENEMY-1):0] y_inimigo;
+    wire [(SIZE_ENEMY-1):0] vidas_inimigo;
+
+    entities #(.SIZE_ENEMY(SIZE_ENEMY)) entitiesInstancia(
         .CLOCK_50(CLOCK_50),
         .reset(reset),
         .keysout(keysout),
         .pausa(pausa),
+
         .x_bola_aliada(x_bola_aliada),
         .y_bola_aliada(y_bola_aliada),
         .raio_bola_aliada(raio_bola_aliada),
+
         .x_bola_inimiga(x_bola_inimiga),
         .y_bola_inimiga(y_bola_inimiga),
         .raio_bola_inimiga(raio_bola_inimiga),
+
         .x_nave(x_nave),
         .y_nave(y_nave),
+
         .largura_nave(largura_nave),
         .altura_nave(altura_nave),
-        .x_inimigo(x_inimigo),
-        .y_inimigo(y_inimigo),
         .largura_inimigo(largura_inimigo), 
         .altura_inimigo(altura_inimigo),
-        .inimigo_vivo(inimigo_vivo)
+
+        .x_inimigo(x_inimigo),
+        .y_inimigo(y_inimigo),
+        .vidas_inimigo(vidas_inimigo)
     );
 
     vga v(
@@ -88,7 +97,7 @@ module projeto(
 		.keysout(keysout)
 	);
 
-    tela telaInstancia(
+    tela #(.SIZE_ENEMY(SIZE_ENEMY)) telaInstancia(
 		.VGA_CLK(VGA_CLK),
         .CLOCK_50(CLOCK_50),
         .reset(reset),
@@ -108,11 +117,13 @@ module projeto(
         .largura_nave(largura_nave),
         .altura_nave(altura_nave),
 
+
         .x_inimigo(x_inimigo),
         .y_inimigo(y_inimigo),
-        .inimigo_vivo(inimigo_vivo),
-        // .largura_inimigo(largura_inimigo),
-        // .altura_inimigo(altura_inimigo),
+        .vidas_inimigo(vidas_inimigo),
+        
+        .largura_inimigo(largura_inimigo),
+        .altura_inimigo(altura_inimigo),
 
         .VGA_X(VGA_X),
         .VGA_Y(VGA_Y),

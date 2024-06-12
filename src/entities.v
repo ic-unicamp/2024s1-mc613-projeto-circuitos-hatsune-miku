@@ -1,4 +1,4 @@
-module entities(
+module entities #(parameter SIZE_ENEMY = 10)(
 	input CLOCK_50,
     input reset,
     input [3:0] keysout,
@@ -14,14 +14,15 @@ module entities(
 
     output [9:0] x_nave,
     output [9:0] y_nave,
+
     input [9:0] largura_nave,
     input [9:0] altura_nave,
+    input [9:0] largura_inimigo,
+    input [9:0] altura_inimigo,
 
-    output [9:0] x_inimigo,
-    output [9:0] y_inimigo,
-    output [9:0] largura_inimigo,
-    output [9:0] altura_inimigo,
-    output inimigo_vivo
+    output [10*(SIZE_ENEMY-1):0] x_inimigo,
+    output [10*(SIZE_ENEMY-1):0] y_inimigo,
+    output [SIZE_ENEMY-1:0] vidas_inimigo
 );
     assign x_bola_inimiga = 500;
     assign y_bola_inimiga = 100;
@@ -52,21 +53,30 @@ module entities(
         .y_nave(y_nave),
     );
 
-    inimigo inimigoInstancia(
-        .CLOCK_50(CLOCK_50),
-        .reset(reset),
-        .pausa(pausa),
-        .reiniciarJogo(0),
+    genvar i;
 
-        .largura(largura_inimigo),
-        .altura(altura_inimigo),
-        .x(x_inimigo),
-        .y(y_inimigo),
+    generate
+        for (i = 0;i < SIZE_ENEMY ; i = i + 1) begin: inimigo_loop
+            inimigo inimigoInstancia(
+                .CLOCK_50(CLOCK_50),
+                .reset(reset),
+                .pausa(pausa),
+                .reiniciarJogo(0),
 
-        .bola_nave_x(x_bola_aliada),
-        .bola_nave_y(x_bola_aliada),
-        .vivo(inimigo_vivo)
-    );
+                .xi(10 + i * (3 * largura_inimigo / 2)),
+                .yi(100),
+
+                .largura(largura_inimigo),
+                .altura(altura_inimigo),
+                .x(x_inimigo[i]),
+                .y(y_inimigo[i]),
+
+                .bola_nave_x(x_bola_aliada),
+                .bola_nave_y(x_bola_aliada),
+                .vivo(vidas_inimigo[i])
+            );
+        end
+    endgenerate
 
     bola bolaAliada(
         .CLOCK_50(CLOCK_50),

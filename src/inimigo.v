@@ -7,8 +7,9 @@ module inimigo(
     input [9:0] xi,
     input [9:0] yi,
     
-    output wire [9:0] largura,
-    output wire [9:0] altura,
+    input [9:0] largura,
+    input [9:0] altura,
+    
     output reg [9:0] x,
     output reg [9:0] y,
 
@@ -23,13 +24,11 @@ module inimigo(
     reg [32:0] divisorCLK;
     reg sentidoX;
 
-    assign largura = 33;
-    assign altura = 24;
     assign resetInimigo = reset || reiniciarJogo;
 
     always @(posedge CLOCK_50) begin //divisor de clock
         contador = contador + 1;
-        if (contador >= 25000000) begin 
+        if (contador >= 320000) begin 
             contador = 0;
             clk = ~clk;
         end
@@ -51,14 +50,14 @@ module inimigo(
             y = yi;
             sentidoX = 0;
         end else if (pausa == 0) begin
-            if (x <= 0 || x + largura >= 640) begin // abaixa
+            if (x - largura > 640 || x + largura + 30 > 640) begin // abaixa
                 y = y + 20;
                 sentidoX = ~sentidoX;
             end
             if(sentidoX) begin // direita
-                x = x + 20;
+                x = x + 2;
             end else begin // esquerda
-                x = x - 20;
+                x = x - 2;
             end
 
         end

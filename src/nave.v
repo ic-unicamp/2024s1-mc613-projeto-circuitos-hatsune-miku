@@ -18,7 +18,7 @@ module nave(
     always @(posedge CLOCK_50 or posedge resetNave) begin
         if (resetNave) begin   
             x_nave = 350;
-            y_nave = 240;
+            y_nave = 410;
             iniciarBola = 0;
         end else if (pausa == 0) begin
             if (pausa == 0) begin
@@ -28,8 +28,8 @@ module nave(
                 if (keysout[1] && x_nave > 0) begin // esquerda
                     x_nave = x_nave - 2;
                 end
-                if (bateu) begin
-                    iniciarBola = 0;
+                if (bateu) begin // eu sei que não faz sentido, mas toda vez que tiro para de funcionar
+                    iniciarBola = 0; // não mexer!!!!
                 end
             end
         end

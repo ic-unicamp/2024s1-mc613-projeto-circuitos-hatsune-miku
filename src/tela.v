@@ -1,4 +1,4 @@
-module tela(
+module tela #(parameter SIZE_ENEMY=10)(
     input VGA_CLK,
     input CLOCK_50,
 	input reset, 
@@ -17,13 +17,16 @@ module tela(
 	output wire [9:0] largura_nave,  
 	output wire [9:0] altura_nave,    
     
-    input [9:0] x_inimigo,
-    input [9:0] y_inimigo, 
-    input inimigo_vivo,
+    // input [9:0] x_inimigo,
+    // input [9:0] y_inimigo, 
+    // input inimigo_vivo,
 
+    input [10*(SIZE_ENEMY) - 1 :0] x_inimigo,
+    input [10*(SIZE_ENEMY) - 1 :0] y_inimigo,
+    input [(SIZE_ENEMY-1):0] vidas_inimigo,
 
-    // input [9:0] largura_inimigo,
-    // input [9:0] altura_inimigo,
+    output wire [9:0] largura_inimigo,
+    output wire [9:0] altura_inimigo,
 
 	input [9:0] VGA_X,
 	input [9:0] VGA_Y,
@@ -33,8 +36,8 @@ module tela(
 	output [9:0] LEDR
 
 );
-    reg [9:0] largura_inimigo = 11;
-    reg [9:0] altura_inimigo = 8;
+    assign largura_inimigo = 11;
+    assign altura_inimigo = 8;
 
 	// bola aliada
     wire [32:0] delta_x_aliado;
@@ -89,30 +92,38 @@ module tela(
         .B_VGA(nave_b)
     );
 
+    wire [SIZE_ENEMY:0] inimigo_r;
+    wire [SIZE_ENEMY:0] inimigo_g;
+    wire [SIZE_ENEMY:0] inimigo_b;
+    reg [3:0] multiplicador_inimigo;
 
+    genvar j;
 
-        wire inimigo_r;
-        wire inimigo_g;
-        wire inimigo_b;
-        reg [3:0] multiplicador_inimigo;
+    generate
+        for (j =  1; j <= SIZE_ENEMY ; j = j + 1) begin: buffer_loop
+            // if (vidas_inimigo[j] == 0) begin
+                buffer buffer_inimigo (
+                    .CLK(VGA_CLK),
+                    .reset(reset),
+                    .X_VGA(VGA_X - 144),
+                    .Y_VGA(VGA_Y - 35),
+                    .X_OBJETO(x_inimigo[(j * 10) - 1 : (j - 1) * 10]),
+                    .Y_OBJETO(y_inimigo[(j * 10) - 1 : (j - 1) * 10]),
+                    .LARGURA_OBJETO(largura_inimigo),
+                    .ALTURA_OBJETO(altura_inimigo),
+                    .MULTPLICADOR(multiplicador_inimigo),
+                    .BUFFER_R(buffer_inimigo_R << 312),
+                    .BUFFER_G(buffer_inimigo_G << 312),
+                    .BUFFER_B(buffer_inimigo_R),
+                    .R_VGA(inimigo_r[j-1]),
+                    .G_VGA(inimigo_g[j-1]),
+                    .B_VGA(inimigo_b[j-1])
+                );
+            // end
+        end
+    endgenerate
         
-        buffer buffer_inimigo (
-            .CLK(VGA_CLK),
-            .reset(reset),
-            .X_VGA(VGA_X - 144),
-            .Y_VGA(VGA_Y - 35),
-            .X_OBJETO(x_inimigo),
-            .Y_OBJETO(y_inimigo),
-            .LARGURA_OBJETO(largura_inimigo),
-            .ALTURA_OBJETO(altura_inimigo),
-            .MULTPLICADOR(multiplicador_inimigo),
-            .BUFFER_R(buffer_inimigo_R << 312),
-            .BUFFER_G(buffer_inimigo_G << 312),
-            .BUFFER_B(buffer_inimigo_R << 312),
-            .R_VGA(inimigo_r),
-            .G_VGA(inimigo_g),
-            .B_VGA(inimigo_b)
-        );
+
 
     always @(posedge VGA_CLK or posedge reset) begin // implementar a lógica que será usada para "imprimir" na tela
         if (reset) begin
@@ -125,29 +136,34 @@ module tela(
             largura_nave_imagem = 9'd15;
             altura_nave_imagem = 9'd17;
         end else begin
+            integer k = 1;
             if (ativo && !perdeu) begin
+                for (k = 1;k <= SIZE_ENEMY ; k = k + 1) begin
+                    if ((x_inimigo[(k * 10) - 1 : (k - 1) * 10] + 144 <= VGA_X ) && (VGA_X <= 144 + x_inimigo[(k * 10) - 1 : (k - 1) * 10] + (largura_inimigo * multiplicador_inimigo)) && (y_inimigo[(k * 10) - 1 : (k - 1) * 10] + 35 <= VGA_Y) && (VGA_Y <= y_inimigo[(k * 10) - 1 : (k - 1) * 10] + 35 + altura_inimigo * multiplicador_inimigo)) begin // inimigo
+                        VGA_R = 255;
+                        VGA_G = 255;
+                        VGA_B = 255;
+                    end      
+                end
+
                 if (delta_x_aliado + delta_y_aliado < raioquadrado_aliado) begin // bola aliada
                     VGA_R = 255;
                     VGA_G = 255;
                     VGA_B = 255;
-				end else if (inimigo_vivo && (inimigo_r || inimigo_g || inimigo_b) && (x_inimigo + 144 <= VGA_X ) && (VGA_X <= 144 + x_inimigo + largura_inimigo * multiplicador_inimigo) && (y_inimigo + 35 <= VGA_Y) && (VGA_Y <= y_inimigo + 35 + altura_inimigo * multiplicador_inimigo)) begin // inimigo
-					VGA_R = inimigo_r * 255;
-					VGA_G = inimigo_g * 255;
-					VGA_B = inimigo_b * 255;
-				end else if ((nave_r || nave_g || nave_b) && (x_nave + 144 <= VGA_X ) && (VGA_X <= 144 + x_nave + largura_nave) && (y_nave + 35 <= VGA_Y) && (VGA_Y <= y_nave + 35 + altura_nave)) begin // nave
-					VGA_R = nave_r * 255;
-					VGA_G = nave_g * 255;
-					VGA_B = nave_b * 255;
+                end else if ((nave_r || nave_g || nave_b) && (x_nave + 144 <= VGA_X ) && (VGA_X <= 144 + x_nave + largura_nave) && (y_nave + 35 <= VGA_Y) && (VGA_Y <= y_nave + 35 + altura_nave)) begin // nave
+                    VGA_R = nave_r * 255;
+                    VGA_G = nave_g * 255;
+                    VGA_B = nave_b * 255;
                 end else begin
-                    VGA_R = 0; 
-                    VGA_G = 0;
-                    VGA_B = 0;
+                    VGA_R = 30; 
+                    VGA_G = 30;
+                    VGA_B = 30;
                 end
-				
+
             end else begin 
-                    VGA_R = 0;
-                    VGA_G = 0;
-                    VGA_B = 0;  
+                VGA_R = 0;
+                VGA_G = 0;
+                VGA_B = 0;  
             end
         end
     end
