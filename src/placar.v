@@ -18,7 +18,7 @@ module placar(
     reg [999:0] inimigosvida_anterior;
     reg [9:0] placarAtual;
 	reg [9:0] placarMaximo;
-	reg jaBateu;
+	//reg jaBateu;
     reg contador;
 
 	display7 display7Instancia(
