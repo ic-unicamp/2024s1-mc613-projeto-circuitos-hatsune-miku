@@ -4,7 +4,7 @@ module buffer(
     input [9:0] X_VGA, //recebe já com desconto de 144
     input [9:0] Y_VGA, //recebe já com desconto de 35
     input [9:0] X_OBJETO,
-    input [9:0] Y_OBJETO,  
+    input [9:0] Y_OBJETO,   
     input [9:0] LARGURA_OBJETO, // pior dos dados LARGURA_OBJETO = 40
     input [9:0] ALTURA_OBJETO, // pior dos dados ALTURA_OBJETO = 40 
     input [3:0] MULTPLICADOR, 

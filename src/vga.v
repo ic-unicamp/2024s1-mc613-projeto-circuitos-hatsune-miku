@@ -6,10 +6,10 @@ module vga(
   output VGA_VS, 
   output VGA_BLANK_N,
   output VGA_SYNC_N,
-  output reg [9:0] x,
+  output reg [9:0] x, 
   output reg [9:0] y,
-  output wire ativo
-);
+  output wire ativo    
+); 
 
 // Divisor de frequência para gerar o clock da VGA
 always @(posedge CLOCK_50) begin
