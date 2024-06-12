@@ -78,7 +78,7 @@ module fileira(
                 .pausa(pausa),
                 .reiniciarJogo(reiniciarJogo),
                 .xi(100 + j * 100),
-                .yi(50),
+                .yi(90),
                 .x(inimigo_x[j]),
                 .y(inimigo_y[j]),
                 .bola_nave_x(bola_nave_x),

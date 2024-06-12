@@ -8,17 +8,15 @@ module buffer(
     input [9:0] LARGURA_OBJETO, // pior dos dados LARGURA_OBJETO = 40
     input [9:0] ALTURA_OBJETO, // pior dos dados ALTURA_OBJETO = 40 
     input [3:0] MULTPLICADOR, 
-    input [0:400] BUFFER_R, // pior caso 1600 = 12'b 0110 0100 0000
-    input [0:400] BUFFER_G, // caso a imagem seja menor, não ha problema, ela será oculpado do 0 para o 11 digito
+    input [0:399] BUFFER_R, // pior caso 1600 = 12'b 0110 0100 0000
+    input [0:399] BUFFER_G, // caso a imagem seja menor, não ha problema, ela será oculpado do 0 para o 11 digito
     input [0:400] BUFFER_B,
     output R_VGA, // sempre irei retornar o 3 bit mais significativos do RGB
     output G_VGA,  
-    output B_VGA,
-	output [9:0] LEDR
+    output B_VGA
 );  
     reg [9:0] X_BUFFER;  
     reg [9:0] Y_BUFFER;
-    assign LEDR = X_BUFFER;
 
     wire [9:0] indice;
     assign indice = (Y_BUFFER / MULTPLICADOR) * LARGURA_OBJETO + X_BUFFER / MULTPLICADOR;

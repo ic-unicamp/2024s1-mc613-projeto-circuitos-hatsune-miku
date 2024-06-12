@@ -112,8 +112,8 @@ module projeto(
         .VGA_Y(VGA_Y),
         .VGA_R(VGA_R),
         .VGA_G(VGA_G),
-        .VGA_B(VGA_B)
-        // .LEDR(LEDR)
+        .VGA_B(VGA_B),
+        .LEDR(LEDR)
     );
 
 

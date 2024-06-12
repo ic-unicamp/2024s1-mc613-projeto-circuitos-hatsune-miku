@@ -24,10 +24,8 @@ module tela(
 	output reg [7:0] VGA_R,    
 	output reg [7:0] VGA_G, 
 	output reg [7:0] VGA_B,
-	output [9:0] LEDR
-
+    output [9:0] LEDR 
 );
-
 	// bola aliada
     wire [32:0] delta_x_aliado;
     wire [32:0] delta_y_aliado;
@@ -45,20 +43,20 @@ module tela(
     assign raioquadrado_inimigo = raio_bola_inimiga ** 2;
     
     //inimigo
-    wire inimigo1_r;
-    wire inimigo1_g;
-    wire inimigo1_b;
+    wire inimigos_r;
+    wire inimigos_g;
+    wire inimigos_b;
     reg [3:0] multiplicador_inimigo;
     reg [9:0] largura_inimigo_imagem;
     reg [9:0] altura_inimigo_imagem;
+    reg [0:87] BUFFER_R = 88'b0000000000000000000000000000000000001000100000000000000000000000000000000000000000000000;
+    reg [0:87] BUFFER_G = 88'b0010000010000010001000001111111000111111111011111111111101111111011010000010100011011000;
+    reg [0:87] BUFFER_B = 88'b0000000000000000000000000000000000001000100000000000000000000000000000000000000000000000;
 
-    reg [0:88] buffer_inimigo_R = 255'b0000000000000000000000000000000000001000100000000000000000000000000000000000000000000000;
-    reg [0:88] buffer_inimigo_G = 255'b0010000010000010001000001111111000111111111011111111111101111111011010000010100011011000;
-
-    //inimigo1
-    wire inimigo2_r;
-    wire inimigo2_g;
-    wire inimigo2_b;
+    // //inimigos
+    // wire inimigo2_r;
+    // wire inimigo2_g;
+    // wire inimigo2_b;
 
     // nave
     wire nave_r;
@@ -92,6 +90,98 @@ module tela(
     reg [0:399] buffer_fundo_g = 400'b0000000000000000000000110000000000100000001100000000011100000000000000000010000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000110000000000000000001100011000000000000000000110000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000100000000000000000011100000000000000000010000000000000000000000100000000000;
     reg [0:399] buffer_fundo_b = 400'b0000000000000000000000110000000000100000001100000000011100000000000000000010000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000110000000000000000001100011000000000000000000110000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000100000000000000000011100000000000000000010000000000000000000000100000000000;
 
+    wire r_0, g_0, b_0, r_1, g_1, b_1, r_2, g_2, b_2, r_3, g_3, b_3, r_4, g_4, b_4;
+
+    buffer buffer_0 (
+        .CLK(VGA_CLK),
+        .reset(reset),
+        .X_VGA(VGA_X - 144),
+        .Y_VGA(VGA_Y - 35),
+        .X_OBJETO(inimigo_x[9:0]),
+        .Y_OBJETO(inimigo_y[9:0]),
+        .LARGURA_OBJETO(largura_inimigo_imagem),
+        .ALTURA_OBJETO(altura_inimigo_imagem),
+        .MULTPLICADOR(multiplicador_inimigo),
+        .BUFFER_R({BUFFER_R, 312'b0}),
+        .BUFFER_G({BUFFER_G, 312'b0}),
+        .BUFFER_B({BUFFER_B, 312'b0}),
+        .R_VGA(r_0),
+        .G_VGA(g_0),
+        .B_VGA(b_0)
+    );
+
+    buffer buffer_1 (
+        .CLK(VGA_CLK),
+        .reset(reset),
+        .X_VGA(VGA_X - 144),
+        .Y_VGA(VGA_Y - 35),
+        .X_OBJETO(inimigo_x[19:10]),
+        .Y_OBJETO(inimigo_y[19:10]),
+        .LARGURA_OBJETO(largura_inimigo_imagem),
+        .ALTURA_OBJETO(altura_inimigo_imagem),
+        .MULTPLICADOR(multiplicador_inimigo),
+        .BUFFER_R({BUFFER_R, 312'b0}),
+        .BUFFER_G({BUFFER_B, 312'b0}),
+        .BUFFER_B({BUFFER_R, 312'b0}),
+        .R_VGA(r_1),
+        .G_VGA(g_1),
+        .B_VGA(b_1)
+    );
+
+    buffer buffer_2 (
+        .CLK(VGA_CLK),
+        .reset(reset),
+        .X_VGA(VGA_X - 144),
+        .Y_VGA(VGA_Y - 35),
+        .X_OBJETO(inimigo_x[29:20]),
+        .Y_OBJETO(inimigo_y[29:20]),
+        .LARGURA_OBJETO(largura_inimigo_imagem),
+        .ALTURA_OBJETO(altura_inimigo_imagem),
+        .MULTPLICADOR(multiplicador_inimigo),
+        .BUFFER_R({BUFFER_G, 312'b0}),
+        .BUFFER_G({BUFFER_G, 312'b0}),
+        .BUFFER_B({BUFFER_B, 312'b0}),
+        .R_VGA(r_2),
+        .G_VGA(g_2),
+        .B_VGA(b_2)
+    );
+
+    buffer buffer_3 (
+        .CLK(VGA_CLK),
+        .reset(reset),
+        .X_VGA(VGA_X - 144),
+        .Y_VGA(VGA_Y - 35),
+        .X_OBJETO(inimigo_x[39:30]),
+        .Y_OBJETO(inimigo_y[39:30]),
+        .LARGURA_OBJETO(largura_inimigo_imagem),
+        .ALTURA_OBJETO(altura_inimigo_imagem),
+        .MULTPLICADOR(multiplicador_inimigo),
+        .BUFFER_R({BUFFER_R, 312'b0}),
+        .BUFFER_G({BUFFER_G, 312'b0}),
+        .BUFFER_B({BUFFER_G, 312'b0}),
+        .R_VGA(r_3),
+        .G_VGA(g_3),
+        .B_VGA(b_3)
+    );
+
+    buffer buffer_4 (
+        .CLK(VGA_CLK),
+        .reset(reset),
+        .X_VGA(VGA_X - 144),
+        .Y_VGA(VGA_Y - 35),
+        .X_OBJETO(inimigo_x[49:40]),
+        .Y_OBJETO(inimigo_y[49:40]),
+        .LARGURA_OBJETO(largura_inimigo_imagem),
+        .ALTURA_OBJETO(altura_inimigo_imagem),
+        .MULTPLICADOR(multiplicador_inimigo),
+        .BUFFER_R({BUFFER_G, 312'b0}),
+        .BUFFER_G({BUFFER_R, 312'b0}),
+        .BUFFER_B({BUFFER_G, 312'b0}),
+        .R_VGA(r_4),
+        .G_VGA(g_4),
+        .B_VGA(b_4)
+    );
+
     buffer buffer_nave (
         .CLK(VGA_CLK),
         .reset(reset),
@@ -102,49 +192,48 @@ module tela(
         .LARGURA_OBJETO(largura_nave_imagem),
         .ALTURA_OBJETO(altura_nave_imagem),
         .MULTPLICADOR(multiplicador_nave),
-        .BUFFER_R(buffer_nave_R << 146),
-        .BUFFER_G(buffer_nave_G),
-        .BUFFER_B(buffer_nave_B << 146),
+        .BUFFER_R({buffer_nave_R, 146'b0}),
+        .BUFFER_G({buffer_nave_G, 146'b0}),
+        .BUFFER_B({buffer_nave_B, 146'b0}),
         .R_VGA(nave_r),
         .G_VGA(nave_g),
         .B_VGA(nave_b)
     );
 
-    buffer buffer_inimigo1 (
-        .CLK(VGA_CLK),
-        .reset(reset),
-        .X_VGA(VGA_X - 144),
-        .Y_VGA(VGA_Y - 35),
-        .X_OBJETO(inimigo_x[9:0]),
-        .Y_OBJETO(inimigo_y[9:0]),
-        .LARGURA_OBJETO(largura_inimigo_imagem),
-        .ALTURA_OBJETO(altura_inimigo_imagem),
-        .MULTPLICADOR(multiplicador_inimigo),
-        .BUFFER_R(buffer_inimigo_R << 312),
-        .BUFFER_G(buffer_inimigo_G << 312),
-        .BUFFER_B(buffer_inimigo_R),
-        .R_VGA(inimigo1_r),
-        .G_VGA(inimigo1_g),
-        .B_VGA(inimigo1_b)
-    );
+    // bufferFileira buffer_inimigos (
+    //     .CLK(VGA_CLK),
+    //     .reset(reset),
+    //     .X_VGA(VGA_X - 144),
+    //     .Y_VGA(VGA_Y - 35),
+    //     .X_OBJETO(inimigo_x),
+    //     .Y_OBJETO(inimigo_y),
+    //     .LARGURA_OBJETO(largura_inimigo_imagem),
+    //     .ALTURA_OBJETO(altura_inimigo_imagem),
+    //     .MULTPLICADOR(multiplicador_inimigo),
+    //     .R_VGA(inimigos_r),
+    //     .G_VGA(inimigos_g),
+    //     .B_VGA(inimigos_b),
+    //     .LEDR(LEDR)
 
-    buffer buffer_inimigo2 (
-        .CLK(VGA_CLK),
-        .reset(reset),
-        .X_VGA(VGA_X - 144),
-        .Y_VGA(VGA_Y - 35),
-        .X_OBJETO(inimigo_x[49:40]),
-        .Y_OBJETO(inimigo_y[49:40]),
-        .LARGURA_OBJETO(largura_inimigo_imagem),
-        .ALTURA_OBJETO(altura_inimigo_imagem),
-        .MULTPLICADOR(multiplicador_inimigo),
-        .BUFFER_R(buffer_inimigo_G << 312),
-        .BUFFER_G(buffer_inimigo_R << 312),
-        .BUFFER_B(buffer_inimigo_R),
-        .R_VGA(inimigo2_r),
-        .G_VGA(inimigo2_g),
-        .B_VGA(inimigo2_b)
-    );
+    // );
+
+    // buffer buffer_inimigo2 (
+    //     .CLK(VGA_CLK),
+    //     .reset(reset),
+    //     .X_VGA(VGA_X - 144),
+    //     .Y_VGA(VGA_Y - 35),
+    //     .X_OBJETO(inimigo_x[49:40]),
+    //     .Y_OBJETO(inimigo_y[49:40]),
+    //     .LARGURA_OBJETO(largura_inimigo_imagem),
+    //     .ALTURA_OBJETO(altura_inimigo_imagem),
+    //     .MULTPLICADOR(multiplicador_inimigo),
+    //     .BUFFER_R(buffer_inimigo_G << 312),
+    //     .BUFFER_G(buffer_inimigo_R << 312),
+    //     .BUFFER_B(buffer_inimigo_R),
+    //     .R_VGA(inimigo2_r),
+    //     .G_VGA(inimigo2_g),
+    //     .B_VGA(inimigo2_b)
+    // );
 
 
     buffer buffer_coracao (
@@ -157,9 +246,9 @@ module tela(
         .LARGURA_OBJETO(largura_coracao_imagem),
         .ALTURA_OBJETO(largura_coracao_imagem),
         .MULTPLICADOR(multiplicador_coracao),
-        .BUFFER_R(buffer_coracao_R << 300),
-        .BUFFER_G(buffer_coracao_G << 300),
-        .BUFFER_B(buffer_coracao_B),
+        .BUFFER_R({buffer_coracao_R, 300'b0}),
+        .BUFFER_G({buffer_coracao_G, 300'b0}),
+        .BUFFER_B({buffer_coracao_B, 300'b0}),
         .R_VGA(coracao_r),
         .G_VGA(coracao_g),
         .B_VGA(coracao_b)
@@ -204,39 +293,57 @@ module tela(
         end else begin
             if (ativo && !perdeu) begin
                 if (delta_x_aliado + delta_y_aliado < raioquadrado_aliado) begin // bola aliada
-                    VGA_R = 255;
-                    VGA_G = 255;
-                    VGA_B = 255;
-				end else if (inimigo_vivo_array[0] && (inimigo1_r || inimigo1_g || inimigo1_b)) begin // inimigo1
-					VGA_R = inimigo1_r * 255;
-					VGA_G = inimigo1_g * 255;
-					VGA_B = inimigo1_b * 255;
-				end else if (inimigo_vivo_array[4] && (inimigo2_r || inimigo2_g || inimigo2_b)) begin // inimigo1
-					VGA_R = inimigo2_r * 255;
-					VGA_G = inimigo2_g * 255;
-					VGA_B = inimigo2_b * 255;
-				end else if (nave_r || nave_g || nave_b) begin // nave
-					VGA_R = nave_r * 255;
-					VGA_G = nave_g * 255;
-					VGA_B = nave_b * 255;
+                    VGA_R <= 255;
+                    VGA_G <= 255;
+                    VGA_B <= 255;
+				end else if (inimigo_vivo_array[0] && (r_0 || g_0 || b_0)) begin // inimigos
+					VGA_R <= r_0 * 255;
+					VGA_G <= g_0 * 255;
+					VGA_B <= b_0 * 255;
+				end else if (inimigo_vivo_array[1] && (r_1 || g_1 || b_1)) begin // inimigos
+					VGA_R <= r_1 * 255;
+					VGA_G <= g_1 * 255;
+					VGA_B <= b_1 * 255;
+				end else if (inimigo_vivo_array[2] && (r_2 || g_2 || b_2)) begin // inimigos
+					VGA_R <= r_2 * 255;
+					VGA_G <= g_2 * 255;
+					VGA_B <= b_2 * 255;
+				end else if (inimigo_vivo_array[3] && (r_3 || g_3 || b_3)) begin // inimigos
+					VGA_R <= r_3 * 255;
+					VGA_G <= g_3 * 255;
+					VGA_B <= b_3 * 255;
+				end else if (inimigo_vivo_array[4] && (r_4 || g_4 || b_4)) begin // inimigos
+					VGA_R <= r_4 * 255;
+					VGA_G <= g_4 * 255;
+					VGA_B <= b_4 * 255;
+				end 
+                // else if (inimigo_vivo_array[2] && (inimigo2_r || inimigo2_g || inimigo2_b)) begin // inimigos
+				// 	VGA_R <= inimigo2_r * 255;
+				// 	VGA_G <= inimigo2_g * 255;
+				// 	VGA_B <= inimigo2_b * 255;
+				// end 
+                else if (nave_r || nave_g || nave_b) begin // nave
+					VGA_R <= nave_r * 255;
+					VGA_G <= nave_g * 255;
+					VGA_B <= nave_b * 255;
                 end else if (coracao_r || coracao_g || coracao_b) begin // nave
-					VGA_R = coracao_r * 255;
-					VGA_G = coracao_g * 255;
-					VGA_B = coracao_b * 255;
+					VGA_R <= coracao_r * 255;
+					VGA_G <= coracao_g * 255;
+					VGA_B <= coracao_b * 255;
                 end else if (fundo_r || fundo_g || fundo_b) begin
-                    VGA_R = fundo_r * 255; 
-                    VGA_G = fundo_g * 255;
-                    VGA_B = fundo_b * 255;
+                    VGA_R <= fundo_r * 255; 
+                    VGA_G <= fundo_g * 255;
+                    VGA_B <= fundo_b * 255;
                 end else begin 
-                    VGA_R = 30;
-                    VGA_G = 30;
-                    VGA_B = 30;  
+                    VGA_R <= 30;
+                    VGA_G <= 30;
+                    VGA_B <= 30;  
                 end
 				
             end else begin 
-                    VGA_R = 0;
-                    VGA_G = 0;
-                    VGA_B = 0;  
+                    VGA_R <= 0;
+                    VGA_G <= 0;
+                    VGA_B <= 0;  
             end
         end
     end
