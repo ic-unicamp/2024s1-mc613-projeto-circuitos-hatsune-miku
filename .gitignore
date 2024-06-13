@@ -15,7 +15,7 @@ teste.txt
 *.cdb
 *.tdf
 *.tdf
-db/*
-simulation/*
-incremental_db/*
+db/
+simulation/
+incremental_db/
 *.bak

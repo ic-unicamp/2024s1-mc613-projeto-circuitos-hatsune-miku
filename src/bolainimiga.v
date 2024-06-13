@@ -10,8 +10,8 @@ module bolainimiga(
     output reg [9:0] x,
     output reg [9:0] y,
     output reg bateunave,
-    input bola_morta,
-    output [9:0] LEDR
+    input bola_morta
+    // input [3:0] op
 );
     reg clk;
     reg movimentar;
@@ -21,23 +21,19 @@ module bolainimiga(
 
     reg comecar;
 
-
-
-    reg [3:0] op = 4'hf;
+    reg [3:0] opLocal = 4'hf;
 
     always@(posedge clka) begin
-		// if(rst) op <= 4'hf;
-        if (pausa == 0) begin
-		    op = {op[2:0],(op[3]^op[2])};
+        if (reset) begin
+            opLocal = 4'hf;
+        end else begin
+            if (pausa == 0) begin
+                opLocal = {opLocal[2:0],(opLocal[3]^opLocal[2])};
+            end
         end
     end
-    // lfsr lfsr1(
-    //     .clk(clka),
-    //     .rst(0),
-    //     .op(random)
-    // );
 
-    assign LEDR = op;
+    // assign LEDR = op;
 
     always @(posedge CLOCK_50) begin //divisor de clock
         contador = contador + 1;
@@ -57,8 +53,6 @@ module bolainimiga(
 
     always @(posedge clk or posedge reset) begin
         if (reset) begin
-            // x = xi;
-            // y = yi;
             x = 1000;
             y = 1000;
             bateunave = 0;
@@ -66,7 +60,8 @@ module bolainimiga(
         end else if (pausa == 0) begin
             if (!bola_morta) begin
 
-                if ((op%8 == 1 || op%8==3)  && !comecar) begin
+                if ((opLocal%8 == 1 || opLocal%8==3)  && !comecar) begin
+                // if (1) begin
                     x = xi;
                     y = yi;
                     comecar = 1;
@@ -74,8 +69,6 @@ module bolainimiga(
 
                 if (comecar) begin
                     if (y >= 480) begin // chegou na borda
-                        // x = xi;
-                        // y = yi + 35;
                         x = 1000;
                         y = 1000;
                         comecar = 0;

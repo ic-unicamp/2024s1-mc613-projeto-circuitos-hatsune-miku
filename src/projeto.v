@@ -32,18 +32,18 @@ module projeto(
     wire [9:0] y_bola_aliada;
     wire [9:0] raio_bola_aliada;
 
-    wire [9:0] x_bola_inimiga;
-    wire [9:0] y_bola_inimiga;
+    wire [49:0] x_bola_inimiga;
+    wire [49:0] y_bola_inimiga;
     wire [9:0] raio_bola_inimiga;
-    wire inimigo_vivo;
+    wire [0:4] inimigo_vivo_array;
 
     wire [9:0] x_nave;
     wire [9:0] y_nave;
     wire [9:0] largura_nave;
     wire [9:0] altura_nave;
 
-    wire [9:0] x_inimigo;
-    wire [9:0] y_inimigo;
+    wire [49:0] inimigo_x;
+    wire [49:0] inimigo_y;
 
     wire [9:0] largura_inimigo;
     wire [9:0] altura_inimigo;
@@ -62,10 +62,9 @@ module projeto(
         .raio_bola_inimiga(raio_bola_inimiga),
         .x_nave(x_nave),
         .y_nave(y_nave),
-        .x_inimigo(x_inimigo),
-        .y_inimigo(y_inimigo),
-        .inimigo_vivo(inimigo_vivo),
-        .LEDR(LEDR)
+        .inimigo_x(inimigo_x),
+        .inimigo_y(inimigo_y),
+        .inimigo_vivo_array(inimigo_vivo_array)
     );
 
     vga v(
@@ -105,9 +104,9 @@ module projeto(
         .x_nave(x_nave),
         .y_nave(y_nave),
 
-        .x_inimigo(x_inimigo),
-        .y_inimigo(y_inimigo),
-        .inimigo_vivo(inimigo_vivo),
+        .inimigo_x(inimigo_x),
+        .inimigo_y(inimigo_y),
+        .inimigo_vivo_array(inimigo_vivo_array),
 
         .VGA_X(VGA_X),
         .VGA_Y(VGA_Y),
