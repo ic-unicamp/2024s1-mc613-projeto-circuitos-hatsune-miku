@@ -11,15 +11,10 @@ module projeto(
 	output wire VGA_SYNC_N, 
 	output wire VGA_CLK,   
 	output [6:0] HEX0, // digito da direita 
-  	output [6:0] HEX1,
-  	output [6:0] HEX2, 
-  	output [6:0] HEX3,
-  	output [6:0] HEX4, 
-  	output [6:0] HEX5, // digito da esquerda 
 	output [9:0] LEDR
 );
     wire [3:0] keysout;
-    wire reset;
+    wire reset; 
     wire pausa;
     assign reset = SW[0];
     assign pausa = SW[1];
@@ -50,6 +45,22 @@ module projeto(
 
     wire perdeu;
     wire [1:0] vidas;
+
+    reg [3:0] pontos;
+    
+    always @(*) begin
+        if (reset) begin
+            pontos = 0;
+        end else begin
+            pontos = 5 - (inimigo_vivo_array[0] + inimigo_vivo_array[1] + inimigo_vivo_array[2] + inimigo_vivo_array[3] + inimigo_vivo_array[4]);
+        end
+    end
+
+    cb7s cb7_Instancia_1(
+        .clk(CLOCK_50),
+        .entrada(pontos),
+        .saida(HEX0)
+    ); 
 
     entities entitiesInstancia(
         .CLOCK_50(CLOCK_50),

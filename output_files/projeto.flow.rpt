@@ -1,5 +1,5 @@
 Flow report for projeto
-Fri Jun 14 14:16:02 2024
+Fri Jun 14 14:38:30 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Jun 14 14:16:02 2024       ;
+; Flow Status                     ; Successful - Fri Jun 14 14:38:30 2024       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; projeto                                     ;
 ; Top-level Entity Name           ; projeto                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 2,745 / 32,070 ( 9 % )                      ;
-; Total registers                 ; 1714                                        ;
-; Total pins                      ; 96 / 457 ( 21 % )                           ;
+; Logic utilization (in ALMs)     ; 2,776 / 32,070 ( 9 % )                      ;
+; Total registers                 ; 1742                                        ;
+; Total pins                      ; 61 / 457 ( 13 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 2,228,224 / 4,065,280 ( 55 % )              ;
 ; Total DSP Blocks                ; 53 / 87 ( 61 % )                            ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/14/2024 14:14:48 ;
+; Start date & time ; 06/14/2024 14:37:16 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; projeto             ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+-----------------------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                     ; Value                                               ; Default Value ; Entity Name ; Section Id       ;
 +-------------------------------------+-----------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 31239359189491.171838528716455                      ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID               ; 31239359189491.171838663638984                      ; --            ; --          ; --               ;
 ; ENABLE_SIGNALTAP                    ; On                                                  ; --            ; --          ; --               ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                  ; --            ; --          ; --               ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                   ; --            ; --          ; --               ;
@@ -125,10 +125,10 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 1465 MB             ; 00:00:37                           ;
-; Fitter               ; 00:00:44     ; 1.5                     ; 3344 MB             ; 00:03:29                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 1257 MB             ; 00:00:05                           ;
-; Total                ; 00:01:10     ; --                      ; --                  ; 00:04:11                           ;
+; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 1469 MB             ; 00:00:36                           ;
+; Fitter               ; 00:00:44     ; 1.5                     ; 3306 MB             ; 00:03:43                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 1260 MB             ; 00:00:05                           ;
+; Total                ; 00:01:10     ; --                      ; --                  ; 00:04:24                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

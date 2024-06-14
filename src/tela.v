@@ -8,12 +8,12 @@ module tela(
 
 	input [9:0] x_bola_aliada,  
 	input [9:0] y_bola_aliada, 
-	input [9:0] raio_bola_aliada,   
+	input [9:0] raio_bola_aliada,    
 	input [9:0] raio_bola_inimiga,      
    
-	input [9:0] x_nave,         
-	input [9:0] y_nave,               
-           
+	input [9:0] x_nave,          
+	input [9:0] y_nave,                
+             
     input [49:0] inimigo_x,  
     input [49:0] inimigo_y,  
     input [49:0] x_bola_inimiga, 
