@@ -126,6 +126,8 @@ module projeto(
         .inimigo_y(inimigo_y),
         .inimigo_vivo_array(inimigo_vivo_array),
 
+        .pontos(pontos),
+
 
         .VGA_X(VGA_X),
         .VGA_Y(VGA_Y),

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projeto
-Fri Jun 14 14:37:38 2024
+Fri Jun 14 14:42:32 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -93,7 +93,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Jun 14 14:37:38 2024       ;
+; Analysis & Synthesis Status     ; Successful - Fri Jun 14 14:42:31 2024       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; projeto                                     ;
 ; Top-level Entity Name           ; projeto                                     ;
@@ -213,7 +213,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
@@ -221,9 +221,7 @@ refer to the applicable agreement for further details.
 ;     Processor 7            ;   0.0%      ;
 ;     Processor 8            ;   0.0%      ;
 ;     Processor 9            ;   0.0%      ;
-;     Processor 10           ;   0.0%      ;
-;     Processor 11           ;   0.0%      ;
-;     Processor 12           ;   0.0%      ;
+;     Processors 10-12       ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -319,14 +317,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 2794           ;
+; Estimate of Logic utilization (ALMs needed) ; 2797           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 4702           ;
-;     -- 7 input functions                    ; 15             ;
-;     -- 6 input functions                    ; 685            ;
-;     -- 5 input functions                    ; 465            ;
-;     -- 4 input functions                    ; 565            ;
-;     -- <=3 input functions                  ; 2972           ;
+; Combinational ALUT usage for logic          ; 4705           ;
+;     -- 7 input functions                    ; 16             ;
+;     -- 6 input functions                    ; 687            ;
+;     -- 5 input functions                    ; 470            ;
+;     -- 4 input functions                    ; 562            ;
+;     -- <=3 input functions                  ; 2970           ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 1710           ;
 ;                                             ;                ;
@@ -338,7 +336,7 @@ refer to the applicable agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 1005           ;
-; Total fan-out                               ; 29896          ;
+; Total fan-out                               ; 29919          ;
 ; Average fan-out                             ; 4.35           ;
 +---------------------------------------------+----------------+
 
@@ -348,8 +346,8 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                 ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |projeto                                                                                                                                ; 4702 (1)            ; 1710 (0)                  ; 2228224           ; 53         ; 61   ; 0            ; |projeto                                                                                                                                                                                                                                                                                                                                            ; projeto                           ; work         ;
-;    |cb7s:cb7_Instancia_1|                                                                                                               ; 6 (6)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|cb7s:cb7_Instancia_1                                                                                                                                                                                                                                                                                                                       ; cb7s                              ; work         ;
+; |projeto                                                                                                                                ; 4705 (2)            ; 1710 (0)                  ; 2228224           ; 53         ; 61   ; 0            ; |projeto                                                                                                                                                                                                                                                                                                                                            ; projeto                           ; work         ;
+;    |cb7s:cb7_Instancia_1|                                                                                                               ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|cb7s:cb7_Instancia_1                                                                                                                                                                                                                                                                                                                       ; cb7s                              ; work         ;
 ;    |entities:entitiesInstancia|                                                                                                         ; 1052 (51)           ; 476 (34)                  ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia                                                                                                                                                                                                                                                                                                                 ; entities                          ; work         ;
 ;       |bola:bolaAliada|                                                                                                                 ; 48 (48)             ; 52 (52)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|bola:bolaAliada                                                                                                                                                                                                                                                                                                 ; bola                              ; work         ;
 ;       |fileira:controladorInimigosInstancia|                                                                                            ; 909 (93)            ; 380 (152)                 ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia                                                                                                                                                                                                                                                                            ; fileira                           ; work         ;
@@ -357,11 +355,11 @@ refer to the applicable agreement for further details.
 ;             |bolainimiga:bolainimigaInstancia|                                                                                          ; 175 (175)           ; 61 (61)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[0].inim|bolainimiga:bolainimigaInstancia                                                                                                                                                                                                                  ; bolainimiga                       ; work         ;
 ;          |inimigo:inimigos[1].inim|                                                                                                     ; 125 (29)            ; 37 (9)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[1].inim                                                                                                                                                                                                                                                   ; inimigo                           ; work         ;
 ;             |bolainimiga:bolainimigaInstancia|                                                                                          ; 96 (96)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[1].inim|bolainimiga:bolainimigaInstancia                                                                                                                                                                                                                  ; bolainimiga                       ; work         ;
-;          |inimigo:inimigos[2].inim|                                                                                                     ; 126 (30)            ; 37 (9)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[2].inim                                                                                                                                                                                                                                                   ; inimigo                           ; work         ;
+;          |inimigo:inimigos[2].inim|                                                                                                     ; 134 (38)            ; 37 (9)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[2].inim                                                                                                                                                                                                                                                   ; inimigo                           ; work         ;
 ;             |bolainimiga:bolainimigaInstancia|                                                                                          ; 96 (96)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[2].inim|bolainimiga:bolainimigaInstancia                                                                                                                                                                                                                  ; bolainimiga                       ; work         ;
 ;          |inimigo:inimigos[3].inim|                                                                                                     ; 125 (29)            ; 37 (9)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[3].inim                                                                                                                                                                                                                                                   ; inimigo                           ; work         ;
 ;             |bolainimiga:bolainimigaInstancia|                                                                                          ; 96 (96)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[3].inim|bolainimiga:bolainimigaInstancia                                                                                                                                                                                                                  ; bolainimiga                       ; work         ;
-;          |inimigo:inimigos[4].inim|                                                                                                     ; 221 (48)            ; 37 (9)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[4].inim                                                                                                                                                                                                                                                   ; inimigo                           ; work         ;
+;          |inimigo:inimigos[4].inim|                                                                                                     ; 213 (40)            ; 37 (9)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[4].inim                                                                                                                                                                                                                                                   ; inimigo                           ; work         ;
 ;             |bolainimiga:bolainimigaInstancia|                                                                                          ; 173 (173)           ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[4].inim|bolainimiga:bolainimigaInstancia                                                                                                                                                                                                                  ; bolainimiga                       ; work         ;
 ;       |nave:naveInstancia|                                                                                                              ; 44 (44)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|nave:naveInstancia                                                                                                                                                                                                                                                                                              ; nave                              ; work         ;
 ;    |keys:keysInstancia|                                                                                                                 ; 84 (84)             ; 68 (68)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|keys:keysInstancia                                                                                                                                                                                                                                                                                                                         ; keys                              ; work         ;
@@ -408,8 +406,8 @@ refer to the applicable agreement for further details.
 ;                |lpm_shiftreg:ram_data_shift_out|                                                                                        ; 68 (68)             ; 68 (68)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                               ; lpm_shiftreg                      ; work         ;
 ;                |lpm_shiftreg:status_data_shift_out|                                                                                     ; 1 (1)               ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                            ; lpm_shiftreg                      ; work         ;
 ;             |sld_rom_sr:crc_rom_sr|                                                                                                     ; 20 (20)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                          ; sld_rom_sr                        ; work         ;
-;    |tela:telaInstancia|                                                                                                                 ; 3096 (725)          ; 204 (24)                  ; 0                 ; 53         ; 0    ; 0            ; |projeto|tela:telaInstancia                                                                                                                                                                                                                                                                                                                         ; tela                              ; work         ;
-;       |buffer:buffer_nave|                                                                                                              ; 248 (86)            ; 20 (20)                   ; 0                 ; 3          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_nave                                                                                                                                                                                                                                                                                                      ; buffer                            ; work         ;
+;    |tela:telaInstancia|                                                                                                                 ; 3099 (722)          ; 204 (24)                  ; 0                 ; 53         ; 0    ; 0            ; |projeto|tela:telaInstancia                                                                                                                                                                                                                                                                                                                         ; tela                              ; work         ;
+;       |buffer:buffer_nave|                                                                                                              ; 253 (91)            ; 20 (20)                   ; 0                 ; 3          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_nave                                                                                                                                                                                                                                                                                                      ; buffer                            ; work         ;
 ;          |lpm_divide:Div0|                                                                                                              ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_nave|lpm_divide:Div0                                                                                                                                                                                                                                                                                      ; lpm_divide                        ; work         ;
 ;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_nave|lpm_divide:Div0|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                                        ; lpm_divide_ebm                    ; work         ;
 ;                |sign_div_unsign_klh:divider|                                                                                            ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_nave|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                                                                                                                                            ; sign_div_unsign_klh               ; work         ;
@@ -445,7 +443,7 @@ refer to the applicable agreement for further details.
 ;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers[2].inimigo_inst|lpm_divide:Div1|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                            ; lpm_divide_ebm                    ; work         ;
 ;                |sign_div_unsign_klh:divider|                                                                                            ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers[2].inimigo_inst|lpm_divide:Div1|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                                                                                                                                ; sign_div_unsign_klh               ; work         ;
 ;                   |alt_u_div_eve:divider|                                                                                               ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers[2].inimigo_inst|lpm_divide:Div1|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                                                                                                                                          ; alt_u_div_eve                     ; work         ;
-;       |buffer:buffers[3].inimigo_inst|                                                                                                  ; 242 (80)            ; 20 (20)                   ; 0                 ; 3          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers[3].inimigo_inst                                                                                                                                                                                                                                                                                          ; buffer                            ; work         ;
+;       |buffer:buffers[3].inimigo_inst|                                                                                                  ; 243 (81)            ; 20 (20)                   ; 0                 ; 3          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers[3].inimigo_inst                                                                                                                                                                                                                                                                                          ; buffer                            ; work         ;
 ;          |lpm_divide:Div0|                                                                                                              ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers[3].inimigo_inst|lpm_divide:Div0                                                                                                                                                                                                                                                                          ; lpm_divide                        ; work         ;
 ;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers[3].inimigo_inst|lpm_divide:Div0|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                            ; lpm_divide_ebm                    ; work         ;
 ;                |sign_div_unsign_klh:divider|                                                                                            ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers[3].inimigo_inst|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                                                                                                                                ; sign_div_unsign_klh               ; work         ;
@@ -463,7 +461,7 @@ refer to the applicable agreement for further details.
 ;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers[4].inimigo_inst|lpm_divide:Div1|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                            ; lpm_divide_ebm                    ; work         ;
 ;                |sign_div_unsign_klh:divider|                                                                                            ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers[4].inimigo_inst|lpm_divide:Div1|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                                                                                                                                ; sign_div_unsign_klh               ; work         ;
 ;                   |alt_u_div_eve:divider|                                                                                               ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers[4].inimigo_inst|lpm_divide:Div1|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                                                                                                                                          ; alt_u_div_eve                     ; work         ;
-;       |buffer:buffers_coracao[0].coracao_inst|                                                                                          ; 232 (70)            ; 20 (20)                   ; 0                 ; 3          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst                                                                                                                                                                                                                                                                                  ; buffer                            ; work         ;
+;       |buffer:buffers_coracao[0].coracao_inst|                                                                                          ; 233 (71)            ; 20 (20)                   ; 0                 ; 3          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst                                                                                                                                                                                                                                                                                  ; buffer                            ; work         ;
 ;          |lpm_divide:Div0|                                                                                                              ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|lpm_divide:Div0                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
 ;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|lpm_divide:Div0|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                    ; lpm_divide_ebm                    ; work         ;
 ;                |sign_div_unsign_klh:divider|                                                                                            ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                                                                                                                        ; sign_div_unsign_klh               ; work         ;
@@ -472,7 +470,7 @@ refer to the applicable agreement for further details.
 ;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|lpm_divide:Div1|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                    ; lpm_divide_ebm                    ; work         ;
 ;                |sign_div_unsign_klh:divider|                                                                                            ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|lpm_divide:Div1|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                                                                                                                        ; sign_div_unsign_klh               ; work         ;
 ;                   |alt_u_div_eve:divider|                                                                                               ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|lpm_divide:Div1|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                                                                                                                                  ; alt_u_div_eve                     ; work         ;
-;       |buffer:buffers_coracao[1].coracao_inst|                                                                                          ; 236 (74)            ; 20 (20)                   ; 0                 ; 3          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst                                                                                                                                                                                                                                                                                  ; buffer                            ; work         ;
+;       |buffer:buffers_coracao[1].coracao_inst|                                                                                          ; 235 (73)            ; 20 (20)                   ; 0                 ; 3          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst                                                                                                                                                                                                                                                                                  ; buffer                            ; work         ;
 ;          |lpm_divide:Div0|                                                                                                              ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|lpm_divide:Div0                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
 ;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|lpm_divide:Div0|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                    ; lpm_divide_ebm                    ; work         ;
 ;                |sign_div_unsign_klh:divider|                                                                                            ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                                                                                                                        ; sign_div_unsign_klh               ; work         ;
@@ -498,7 +496,7 @@ refer to the applicable agreement for further details.
 ;          |lpm_divide_jbm:auto_generated|                                                                                                ; 102 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|lpm_divide:Div1|lpm_divide_jbm:auto_generated                                                                                                                                                                                                                                                                           ; lpm_divide_jbm                    ; work         ;
 ;             |sign_div_unsign_plh:divider|                                                                                               ; 102 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|lpm_divide:Div1|lpm_divide_jbm:auto_generated|sign_div_unsign_plh:divider                                                                                                                                                                                                                                               ; sign_div_unsign_plh               ; work         ;
 ;                |alt_u_div_ove:divider|                                                                                                  ; 102 (102)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|lpm_divide:Div1|lpm_divide_jbm:auto_generated|sign_div_unsign_plh:divider|alt_u_div_ove:divider                                                                                                                                                                                                                         ; alt_u_div_ove                     ; work         ;
-;    |vga:v|                                                                                                                              ; 35 (35)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|vga:v                                                                                                                                                                                                                                                                                                                                      ; vga                               ; work         ;
+;    |vga:v|                                                                                                                              ; 33 (33)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|vga:v                                                                                                                                                                                                                                                                                                                                      ; vga                               ; work         ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -870,8 +868,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[2].inim|x[1]                                          ; Merged with entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[0].inim|x[1]                                          ;
 ; entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[3].inim|x[1]                                          ; Merged with entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[0].inim|x[1]                                          ;
 ; entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[4].inim|x[1]                                          ; Merged with entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[0].inim|x[1]                                          ;
-; entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[0].inim|bolainimiga:bolainimigaInstancia|contador[0]  ; Merged with entities:entitiesInstancia|bola:bolaAliada|contador[0]                                                                                 ;
 ; entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[0].inim|bolainimiga:bolainimigaInstancia|contador[1]  ; Merged with entities:entitiesInstancia|bola:bolaAliada|contador[1]                                                                                 ;
+; entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[0].inim|bolainimiga:bolainimigaInstancia|contador[0]  ; Merged with entities:entitiesInstancia|bola:bolaAliada|contador[0]                                                                                 ;
 ; entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[0].inim|bolainimiga:bolainimigaInstancia|contador[2]  ; Merged with entities:entitiesInstancia|bola:bolaAliada|contador[2]                                                                                 ;
 ; entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[0].inim|bolainimiga:bolainimigaInstancia|contador[3]  ; Merged with entities:entitiesInstancia|bola:bolaAliada|contador[3]                                                                                 ;
 ; entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[0].inim|bolainimiga:bolainimigaInstancia|contador[4]  ; Merged with entities:entitiesInstancia|bola:bolaAliada|contador[4]                                                                                 ;
@@ -1040,9 +1038,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[1].inim|bolainimiga:bolainimigaInstancia|y[3]       ; 5       ;
 ; entities:entitiesInstancia|bola:bolaAliada|y[8]                                                                                      ; 4       ;
 ; entities:entitiesInstancia|bola:bolaAliada|y[7]                                                                                      ; 4       ;
-; entities:entitiesInstancia|bola:bolaAliada|y[1]                                                                                      ; 3       ;
-; entities:entitiesInstancia|bola:bolaAliada|y[2]                                                                                      ; 4       ;
 ; entities:entitiesInstancia|bola:bolaAliada|y[3]                                                                                      ; 4       ;
+; entities:entitiesInstancia|bola:bolaAliada|y[2]                                                                                      ; 4       ;
+; entities:entitiesInstancia|bola:bolaAliada|y[1]                                                                                      ; 3       ;
 ; entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[4].inim|bolainimiga:bolainimigaInstancia|opLocal[3] ; 1       ;
 ; entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[4].inim|bolainimiga:bolainimigaInstancia|opLocal[1] ; 1       ;
 ; Total number of inverted registers = 126*                                                                                            ;         ;
@@ -1055,46 +1053,46 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffer_fundo|Y_BUFFER[0]                                                                             ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffer_fundo|X_BUFFER[0]                                                                             ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|Y_BUFFER[0]                                                          ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|X_BUFFER[3]                                                          ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|Y_BUFFER[9]                                                          ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|X_BUFFER[5]                                                          ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|Y_BUFFER[9]                                                          ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|X_BUFFER[8]                                                          ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffer_nave|Y_BUFFER[9]                                                                              ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffer_fundo|Y_BUFFER[2]                                                                             ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffer_fundo|X_BUFFER[9]                                                                             ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|Y_BUFFER[4]                                                          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|X_BUFFER[1]                                                          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|Y_BUFFER[2]                                                          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|X_BUFFER[2]                                                          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|Y_BUFFER[8]                                                          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|X_BUFFER[2]                                                          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffer_nave|Y_BUFFER[2]                                                                              ;
 ; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffer_nave|X_BUFFER[9]                                                                              ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers[4].inimigo_inst|Y_BUFFER[0]                                                                  ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers[4].inimigo_inst|X_BUFFER[7]                                                                  ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers[3].inimigo_inst|Y_BUFFER[2]                                                                  ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers[3].inimigo_inst|X_BUFFER[6]                                                                  ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers[2].inimigo_inst|Y_BUFFER[3]                                                                  ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers[2].inimigo_inst|X_BUFFER[6]                                                                  ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers[4].inimigo_inst|Y_BUFFER[2]                                                                  ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers[4].inimigo_inst|X_BUFFER[4]                                                                  ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers[3].inimigo_inst|Y_BUFFER[7]                                                                  ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers[3].inimigo_inst|X_BUFFER[3]                                                                  ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers[2].inimigo_inst|Y_BUFFER[9]                                                                  ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers[2].inimigo_inst|X_BUFFER[8]                                                                  ;
 ; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers[1].inimigo_inst|Y_BUFFER[0]                                                                  ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers[1].inimigo_inst|X_BUFFER[0]                                                                  ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers[0].inimigo_inst|Y_BUFFER[4]                                                                  ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers[0].inimigo_inst|X_BUFFER[9]                                                                  ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[4].inim|bolainimiga:bolainimigaInstancia|x[1] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[4].inim|bolainimiga:bolainimigaInstancia|y[4] ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[3].inim|bolainimiga:bolainimigaInstancia|x[2] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[3].inim|bolainimiga:bolainimigaInstancia|y[4] ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[2].inim|bolainimiga:bolainimigaInstancia|x[1] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[2].inim|bolainimiga:bolainimigaInstancia|y[2] ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[1].inim|bolainimiga:bolainimigaInstancia|x[1] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[1].inim|bolainimiga:bolainimigaInstancia|y[0] ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[0].inim|bolainimiga:bolainimigaInstancia|x[1] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[0].inim|bolainimiga:bolainimigaInstancia|y[2] ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[4].inim|bolainimiga:bolainimigaInstancia|x[3] ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[4].inim|bolainimiga:bolainimigaInstancia|y[9] ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[3].inim|bolainimiga:bolainimigaInstancia|x[8] ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers[1].inimigo_inst|X_BUFFER[3]                                                                  ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers[0].inimigo_inst|Y_BUFFER[0]                                                                  ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers[0].inimigo_inst|X_BUFFER[3]                                                                  ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[4].inim|bolainimiga:bolainimigaInstancia|x[4] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[4].inim|bolainimiga:bolainimigaInstancia|y[0] ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[3].inim|bolainimiga:bolainimigaInstancia|x[4] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[3].inim|bolainimiga:bolainimigaInstancia|y[1] ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[2].inim|bolainimiga:bolainimigaInstancia|x[2] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[2].inim|bolainimiga:bolainimigaInstancia|y[0] ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[1].inim|bolainimiga:bolainimigaInstancia|x[4] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[1].inim|bolainimiga:bolainimigaInstancia|y[4] ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[0].inim|bolainimiga:bolainimigaInstancia|x[4] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[0].inim|bolainimiga:bolainimigaInstancia|y[1] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[4].inim|bolainimiga:bolainimigaInstancia|x[9] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[4].inim|bolainimiga:bolainimigaInstancia|y[3] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[3].inim|bolainimiga:bolainimigaInstancia|x[3] ;
 ; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[3].inim|bolainimiga:bolainimigaInstancia|y[9] ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[2].inim|bolainimiga:bolainimigaInstancia|x[9] ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[2].inim|bolainimiga:bolainimigaInstancia|y[3] ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[1].inim|bolainimiga:bolainimigaInstancia|x[3] ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[1].inim|bolainimiga:bolainimigaInstancia|y[6] ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[0].inim|bolainimiga:bolainimigaInstancia|x[3] ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[0].inim|bolainimiga:bolainimigaInstancia|y[8] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[2].inim|bolainimiga:bolainimigaInstancia|x[6] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[2].inim|bolainimiga:bolainimigaInstancia|y[7] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[1].inim|bolainimiga:bolainimigaInstancia|x[5] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[1].inim|bolainimiga:bolainimigaInstancia|y[3] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[0].inim|bolainimiga:bolainimigaInstancia|x[7] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia|inimigo:inimigos[0].inim|bolainimiga:bolainimigaInstancia|y[9] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -2657,23 +2655,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 109                         ;
 ;     SLD               ; 5                           ;
 ;     plain             ; 163                         ;
-; arriav_lcell_comb     ; 4277                        ;
+; arriav_lcell_comb     ; 4280                        ;
 ;     arith             ; 2115                        ;
 ;         0 data inputs ; 221                         ;
 ;         1 data inputs ; 962                         ;
 ;         2 data inputs ; 434                         ;
 ;         3 data inputs ; 235                         ;
 ;         4 data inputs ; 263                         ;
-;     extend            ; 15                          ;
-;         7 data inputs ; 15                          ;
-;     normal            ; 1980                        ;
+;     extend            ; 16                          ;
+;         7 data inputs ; 16                          ;
+;     normal            ; 1982                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 132                         ;
-;         2 data inputs ; 496                         ;
-;         3 data inputs ; 140                         ;
-;         4 data inputs ; 258                         ;
-;         5 data inputs ; 400                         ;
-;         6 data inputs ; 552                         ;
+;         2 data inputs ; 498                         ;
+;         3 data inputs ; 136                         ;
+;         4 data inputs ; 255                         ;
+;         5 data inputs ; 405                         ;
+;         6 data inputs ; 554                         ;
 ;     shared            ; 167                         ;
 ;         0 data inputs ; 8                           ;
 ;         1 data inputs ; 9                           ;
@@ -2682,8 +2680,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; arriav_mac            ; 53                          ;
 ; boundary_port         ; 65                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 22.00                       ;
-; Average LUT depth     ; 9.26                        ;
+; Max LUT depth         ; 23.00                       ;
+; Average LUT depth     ; 9.41                        ;
 +-----------------------+-----------------------------+
 
 
@@ -2812,7 +2810,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Jun 14 14:37:16 2024
+    Info: Processing started: Fri Jun 14 14:42:09 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto -c projeto
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -2844,19 +2842,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file src/bol
     Info (12023): Found entity 1: bolainimiga File: /home/ec2022/ra260731/merge1/src/bolainimiga.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/bola.v
     Info (12023): Found entity 1: bola File: /home/ec2022/ra260731/merge1/src/bola.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at tela.v(144): created implicit net for "largura_coracao" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 144
-Warning (10236): Verilog HDL Implicit Net warning at tela.v(191): created implicit net for "buffer_fundo_R" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 191
-Warning (10236): Verilog HDL Implicit Net warning at tela.v(192): created implicit net for "buffer_fundo_G" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 192
-Warning (10236): Verilog HDL Implicit Net warning at tela.v(193): created implicit net for "buffer_fundo_B" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 193
+Warning (10236): Verilog HDL Implicit Net warning at tela.v(145): created implicit net for "largura_coracao" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 145
+Warning (10236): Verilog HDL Implicit Net warning at tela.v(192): created implicit net for "buffer_fundo_R" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 192
+Warning (10236): Verilog HDL Implicit Net warning at tela.v(193): created implicit net for "buffer_fundo_G" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 193
+Warning (10236): Verilog HDL Implicit Net warning at tela.v(194): created implicit net for "buffer_fundo_B" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 194
 Warning (10236): Verilog HDL Implicit Net warning at nave.v(14): created implicit net for "resetNave" File: /home/ec2022/ra260731/merge1/src/nave.v Line: 14
 Warning (10236): Verilog HDL Implicit Net warning at inimigo.v(28): created implicit net for "resetInimigo" File: /home/ec2022/ra260731/merge1/src/inimigo.v Line: 28
 Warning (10236): Verilog HDL Implicit Net warning at bufferFileira.v(30): created implicit net for "VGA_CLK" File: /home/ec2022/ra260731/merge1/src/bufferFileira.v Line: 30
 Warning (10236): Verilog HDL Implicit Net warning at bufferFileira.v(32): created implicit net for "VGA_X" File: /home/ec2022/ra260731/merge1/src/bufferFileira.v Line: 32
 Warning (10236): Verilog HDL Implicit Net warning at bufferFileira.v(33): created implicit net for "VGA_Y" File: /home/ec2022/ra260731/merge1/src/bufferFileira.v Line: 33
 Info (12127): Elaborating entity "projeto" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at projeto.v(60): truncated value with size 32 to match size of target (4) File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 60
-Info (12128): Elaborating entity "cb7s" for hierarchy "cb7s:cb7_Instancia_1" File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 68
-Info (12128): Elaborating entity "entities" for hierarchy "entities:entitiesInstancia" File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 120
+Warning (10230): Verilog HDL assignment warning at projeto.v(55): truncated value with size 32 to match size of target (4) File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 55
+Info (12128): Elaborating entity "cb7s" for hierarchy "cb7s:cb7_Instancia_1" File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 63
+Info (12128): Elaborating entity "entities" for hierarchy "entities:entitiesInstancia" File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 85
 Warning (10230): Verilog HDL assignment warning at entities.v(27): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/merge1/src/entities.v Line: 27
 Warning (10230): Verilog HDL assignment warning at entities.v(28): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/merge1/src/entities.v Line: 28
 Info (12128): Elaborating entity "nave" for hierarchy "entities:entitiesInstancia|nave:naveInstancia" File: /home/ec2022/ra260731/merge1/src/entities.v Line: 54
@@ -2927,136 +2925,136 @@ Warning (10230): Verilog HDL assignment warning at bolainimiga.v(88): truncated 
 Info (12128): Elaborating entity "bola" for hierarchy "entities:entitiesInstancia|bola:bolaAliada" File: /home/ec2022/ra260731/merge1/src/entities.v Line: 84
 Warning (10230): Verilog HDL assignment warning at bola.v(31): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/merge1/src/bola.v Line: 31
 Warning (10230): Verilog HDL assignment warning at bola.v(34): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/merge1/src/bola.v Line: 34
-Info (12128): Elaborating entity "vga" for hierarchy "vga:v" File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 133
+Info (12128): Elaborating entity "vga" for hierarchy "vga:v" File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 98
 Warning (10230): Verilog HDL assignment warning at vga.v(24): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/merge1/src/vga.v Line: 24
 Warning (10230): Verilog HDL assignment warning at vga.v(27): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260731/merge1/src/vga.v Line: 27
 Warning (10230): Verilog HDL assignment warning at vga.v(34): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/merge1/src/vga.v Line: 34
 Warning (10230): Verilog HDL assignment warning at vga.v(35): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/merge1/src/vga.v Line: 35
 Warning (10230): Verilog HDL assignment warning at vga.v(38): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/merge1/src/vga.v Line: 38
-Info (12128): Elaborating entity "keys" for hierarchy "keys:keysInstancia" File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 139
-Info (12128): Elaborating entity "tela" for hierarchy "tela:telaInstancia" File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 170
-Warning (10036): Verilog HDL or VHDL warning at tela.v(144): object "largura_coracao" assigned a value but never read File: /home/ec2022/ra260731/merge1/src/tela.v Line: 144
-Warning (10036): Verilog HDL or VHDL warning at tela.v(177): object "buffer_fundo_r" assigned a value but never read File: /home/ec2022/ra260731/merge1/src/tela.v Line: 177
-Warning (10036): Verilog HDL or VHDL warning at tela.v(178): object "buffer_fundo_g" assigned a value but never read File: /home/ec2022/ra260731/merge1/src/tela.v Line: 178
-Warning (10036): Verilog HDL or VHDL warning at tela.v(179): object "buffer_fundo_b" assigned a value but never read File: /home/ec2022/ra260731/merge1/src/tela.v Line: 179
-Warning (10230): Verilog HDL assignment warning at tela.v(144): truncated value with size 10 to match size of target (1) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 144
-Warning (10230): Verilog HDL assignment warning at tela.v(250): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 250
+Info (12128): Elaborating entity "keys" for hierarchy "keys:keysInstancia" File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 104
+Info (12128): Elaborating entity "tela" for hierarchy "tela:telaInstancia" File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 137
+Warning (10036): Verilog HDL or VHDL warning at tela.v(145): object "largura_coracao" assigned a value but never read File: /home/ec2022/ra260731/merge1/src/tela.v Line: 145
+Warning (10036): Verilog HDL or VHDL warning at tela.v(178): object "buffer_fundo_r" assigned a value but never read File: /home/ec2022/ra260731/merge1/src/tela.v Line: 178
+Warning (10036): Verilog HDL or VHDL warning at tela.v(179): object "buffer_fundo_g" assigned a value but never read File: /home/ec2022/ra260731/merge1/src/tela.v Line: 179
+Warning (10036): Verilog HDL or VHDL warning at tela.v(180): object "buffer_fundo_b" assigned a value but never read File: /home/ec2022/ra260731/merge1/src/tela.v Line: 180
+Warning (10230): Verilog HDL assignment warning at tela.v(145): truncated value with size 10 to match size of target (1) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 145
 Warning (10230): Verilog HDL assignment warning at tela.v(251): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 251
 Warning (10230): Verilog HDL assignment warning at tela.v(252): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 252
-Warning (10230): Verilog HDL assignment warning at tela.v(254): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 254
+Warning (10230): Verilog HDL assignment warning at tela.v(253): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 253
 Warning (10230): Verilog HDL assignment warning at tela.v(255): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 255
 Warning (10230): Verilog HDL assignment warning at tela.v(256): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 256
-Warning (10230): Verilog HDL assignment warning at tela.v(258): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 258
+Warning (10230): Verilog HDL assignment warning at tela.v(257): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 257
 Warning (10230): Verilog HDL assignment warning at tela.v(259): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 259
 Warning (10230): Verilog HDL assignment warning at tela.v(260): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 260
-Warning (10230): Verilog HDL assignment warning at tela.v(262): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 262
+Warning (10230): Verilog HDL assignment warning at tela.v(261): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
 Warning (10230): Verilog HDL assignment warning at tela.v(263): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 263
 Warning (10230): Verilog HDL assignment warning at tela.v(264): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 264
-Warning (10230): Verilog HDL assignment warning at tela.v(266): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 266
+Warning (10230): Verilog HDL assignment warning at tela.v(265): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 265
 Warning (10230): Verilog HDL assignment warning at tela.v(267): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 267
 Warning (10230): Verilog HDL assignment warning at tela.v(268): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 268
-Warning (10230): Verilog HDL assignment warning at tela.v(270): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 270
+Warning (10230): Verilog HDL assignment warning at tela.v(269): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 269
 Warning (10230): Verilog HDL assignment warning at tela.v(271): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 271
 Warning (10230): Verilog HDL assignment warning at tela.v(272): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 272
-Warning (10230): Verilog HDL assignment warning at tela.v(274): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 274
+Warning (10230): Verilog HDL assignment warning at tela.v(273): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 273
 Warning (10230): Verilog HDL assignment warning at tela.v(275): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 275
 Warning (10230): Verilog HDL assignment warning at tela.v(276): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 276
-Warning (10230): Verilog HDL assignment warning at tela.v(278): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 278
+Warning (10230): Verilog HDL assignment warning at tela.v(277): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
 Warning (10230): Verilog HDL assignment warning at tela.v(279): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 279
 Warning (10230): Verilog HDL assignment warning at tela.v(280): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 280
-Warning (10230): Verilog HDL assignment warning at tela.v(282): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 282
+Warning (10230): Verilog HDL assignment warning at tela.v(281): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 281
 Warning (10230): Verilog HDL assignment warning at tela.v(283): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 283
 Warning (10230): Verilog HDL assignment warning at tela.v(284): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 284
-Warning (10230): Verilog HDL assignment warning at tela.v(287): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 287
+Warning (10230): Verilog HDL assignment warning at tela.v(285): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 285
 Warning (10230): Verilog HDL assignment warning at tela.v(288): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 288
 Warning (10230): Verilog HDL assignment warning at tela.v(289): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 289
-Warning (10240): Verilog HDL Always Construct warning at tela.v(204): inferring latch(es) for variable "multiplicador_inimigo", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 204
-Warning (10240): Verilog HDL Always Construct warning at tela.v(204): inferring latch(es) for variable "largura_inimigo_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 204
-Warning (10240): Verilog HDL Always Construct warning at tela.v(204): inferring latch(es) for variable "altura_inimigo_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 204
-Warning (10240): Verilog HDL Always Construct warning at tela.v(204): inferring latch(es) for variable "multiplicador_nave", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 204
-Warning (10240): Verilog HDL Always Construct warning at tela.v(204): inferring latch(es) for variable "largura_nave_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 204
-Warning (10240): Verilog HDL Always Construct warning at tela.v(204): inferring latch(es) for variable "altura_nave_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 204
-Warning (10240): Verilog HDL Always Construct warning at tela.v(204): inferring latch(es) for variable "multiplicador_coracao", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 204
-Warning (10240): Verilog HDL Always Construct warning at tela.v(204): inferring latch(es) for variable "largura_coracao_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 204
-Warning (10240): Verilog HDL Always Construct warning at tela.v(204): inferring latch(es) for variable "largura_fundo_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 204
-Warning (10240): Verilog HDL Always Construct warning at tela.v(204): inferring latch(es) for variable "multiplicador_fundo", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 204
-Info (10041): Inferred latch for "multiplicador_fundo[0]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "multiplicador_fundo[1]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "multiplicador_fundo[2]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "multiplicador_fundo[3]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_fundo_imagem[0]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_fundo_imagem[1]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_fundo_imagem[2]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_fundo_imagem[3]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_fundo_imagem[4]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_fundo_imagem[5]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_fundo_imagem[6]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_fundo_imagem[7]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_fundo_imagem[8]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_fundo_imagem[9]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_coracao_imagem[0]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_coracao_imagem[1]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_coracao_imagem[2]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_coracao_imagem[3]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_coracao_imagem[4]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_coracao_imagem[5]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_coracao_imagem[6]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_coracao_imagem[7]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_coracao_imagem[8]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_coracao_imagem[9]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "multiplicador_coracao[0]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "multiplicador_coracao[1]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "multiplicador_coracao[2]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "multiplicador_coracao[3]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "altura_nave_imagem[0]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "altura_nave_imagem[1]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "altura_nave_imagem[2]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "altura_nave_imagem[3]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "altura_nave_imagem[4]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "altura_nave_imagem[5]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "altura_nave_imagem[6]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "altura_nave_imagem[7]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "altura_nave_imagem[8]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "altura_nave_imagem[9]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_nave_imagem[0]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_nave_imagem[1]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_nave_imagem[2]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_nave_imagem[3]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_nave_imagem[4]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_nave_imagem[5]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_nave_imagem[6]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_nave_imagem[7]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_nave_imagem[8]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_nave_imagem[9]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "multiplicador_nave[0]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "multiplicador_nave[1]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "multiplicador_nave[2]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "multiplicador_nave[3]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "altura_inimigo_imagem[0]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "altura_inimigo_imagem[1]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "altura_inimigo_imagem[2]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "altura_inimigo_imagem[3]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "altura_inimigo_imagem[4]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "altura_inimigo_imagem[5]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "altura_inimigo_imagem[6]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "altura_inimigo_imagem[7]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "altura_inimigo_imagem[8]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "altura_inimigo_imagem[9]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_inimigo_imagem[0]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_inimigo_imagem[1]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_inimigo_imagem[2]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_inimigo_imagem[3]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_inimigo_imagem[4]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_inimigo_imagem[5]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_inimigo_imagem[6]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_inimigo_imagem[7]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_inimigo_imagem[8]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "largura_inimigo_imagem[9]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "multiplicador_inimigo[0]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "multiplicador_inimigo[1]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "multiplicador_inimigo[2]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (10041): Inferred latch for "multiplicador_inimigo[3]" at tela.v(223) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 223
-Info (12128): Elaborating entity "buffer" for hierarchy "tela:telaInstancia|buffer:buffers[0].inimigo_inst" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 107
+Warning (10230): Verilog HDL assignment warning at tela.v(290): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 290
+Warning (10240): Verilog HDL Always Construct warning at tela.v(205): inferring latch(es) for variable "multiplicador_inimigo", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 205
+Warning (10240): Verilog HDL Always Construct warning at tela.v(205): inferring latch(es) for variable "largura_inimigo_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 205
+Warning (10240): Verilog HDL Always Construct warning at tela.v(205): inferring latch(es) for variable "altura_inimigo_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 205
+Warning (10240): Verilog HDL Always Construct warning at tela.v(205): inferring latch(es) for variable "multiplicador_nave", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 205
+Warning (10240): Verilog HDL Always Construct warning at tela.v(205): inferring latch(es) for variable "largura_nave_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 205
+Warning (10240): Verilog HDL Always Construct warning at tela.v(205): inferring latch(es) for variable "altura_nave_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 205
+Warning (10240): Verilog HDL Always Construct warning at tela.v(205): inferring latch(es) for variable "multiplicador_coracao", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 205
+Warning (10240): Verilog HDL Always Construct warning at tela.v(205): inferring latch(es) for variable "largura_coracao_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 205
+Warning (10240): Verilog HDL Always Construct warning at tela.v(205): inferring latch(es) for variable "largura_fundo_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 205
+Warning (10240): Verilog HDL Always Construct warning at tela.v(205): inferring latch(es) for variable "multiplicador_fundo", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 205
+Info (10041): Inferred latch for "multiplicador_fundo[0]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "multiplicador_fundo[1]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "multiplicador_fundo[2]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "multiplicador_fundo[3]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_fundo_imagem[0]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_fundo_imagem[1]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_fundo_imagem[2]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_fundo_imagem[3]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_fundo_imagem[4]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_fundo_imagem[5]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_fundo_imagem[6]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_fundo_imagem[7]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_fundo_imagem[8]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_fundo_imagem[9]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_coracao_imagem[0]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_coracao_imagem[1]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_coracao_imagem[2]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_coracao_imagem[3]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_coracao_imagem[4]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_coracao_imagem[5]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_coracao_imagem[6]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_coracao_imagem[7]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_coracao_imagem[8]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_coracao_imagem[9]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "multiplicador_coracao[0]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "multiplicador_coracao[1]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "multiplicador_coracao[2]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "multiplicador_coracao[3]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "altura_nave_imagem[0]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "altura_nave_imagem[1]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "altura_nave_imagem[2]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "altura_nave_imagem[3]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "altura_nave_imagem[4]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "altura_nave_imagem[5]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "altura_nave_imagem[6]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "altura_nave_imagem[7]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "altura_nave_imagem[8]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "altura_nave_imagem[9]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_nave_imagem[0]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_nave_imagem[1]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_nave_imagem[2]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_nave_imagem[3]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_nave_imagem[4]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_nave_imagem[5]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_nave_imagem[6]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_nave_imagem[7]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_nave_imagem[8]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_nave_imagem[9]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "multiplicador_nave[0]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "multiplicador_nave[1]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "multiplicador_nave[2]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "multiplicador_nave[3]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "altura_inimigo_imagem[0]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "altura_inimigo_imagem[1]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "altura_inimigo_imagem[2]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "altura_inimigo_imagem[3]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "altura_inimigo_imagem[4]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "altura_inimigo_imagem[5]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "altura_inimigo_imagem[6]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "altura_inimigo_imagem[7]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "altura_inimigo_imagem[8]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "altura_inimigo_imagem[9]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_inimigo_imagem[0]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_inimigo_imagem[1]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_inimigo_imagem[2]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_inimigo_imagem[3]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_inimigo_imagem[4]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_inimigo_imagem[5]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_inimigo_imagem[6]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_inimigo_imagem[7]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_inimigo_imagem[8]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "largura_inimigo_imagem[9]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "multiplicador_inimigo[0]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "multiplicador_inimigo[1]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "multiplicador_inimigo[2]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (10041): Inferred latch for "multiplicador_inimigo[3]" at tela.v(224) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 224
+Info (12128): Elaborating entity "buffer" for hierarchy "tela:telaInstancia|buffer:buffers[0].inimigo_inst" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 108
 Warning (10230): Verilog HDL assignment warning at buffer.v(27): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 27
 Warning (10230): Verilog HDL assignment warning at buffer.v(28): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 28
 Warning (10230): Verilog HDL assignment warning at buffer.v(29): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 29
@@ -3100,7 +3098,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: /home/ec2022/ra260731/merge1/db/cmpr_99c.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.06.14.14:37:24 Progress: Loading sld3172de05/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.06.14.14:42:17 Progress: Loading sld3172de05/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -3124,7 +3122,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: /home/ec2022/ra260731/merge1/db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Info (278001): Inferred 20 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|Div1" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 202
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|Div1" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 203
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|Div0" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|Div1" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|Div0" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
@@ -3143,9 +3141,9 @@ Info (278001): Inferred 20 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffers[1].inimigo_inst|Div1" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffers[0].inimigo_inst|Div0" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffers[0].inimigo_inst|Div1" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|Div0" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 202
-Info (12130): Elaborated megafunction instantiation "tela:telaInstancia|lpm_divide:Div1" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 202
-Info (12133): Instantiated megafunction "tela:telaInstancia|lpm_divide:Div1" with the following parameter: File: /home/ec2022/ra260731/merge1/src/tela.v Line: 202
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|Div0" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 203
+Info (12130): Elaborated megafunction instantiation "tela:telaInstancia|lpm_divide:Div1" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 203
+Info (12133): Instantiated megafunction "tela:telaInstancia|lpm_divide:Div1" with the following parameter: File: /home/ec2022/ra260731/merge1/src/tela.v Line: 203
     Info (12134): Parameter "LPM_WIDTHN" = "33"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -3168,8 +3166,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_klh File: /home/ec2022/ra260731/merge1/db/sign_div_unsign_klh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_eve.tdf
     Info (12023): Found entity 1: alt_u_div_eve File: /home/ec2022/ra260731/merge1/db/alt_u_div_eve.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "tela:telaInstancia|lpm_divide:Div0" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 202
-Info (12133): Instantiated megafunction "tela:telaInstancia|lpm_divide:Div0" with the following parameter: File: /home/ec2022/ra260731/merge1/src/tela.v Line: 202
+Info (12130): Elaborated megafunction instantiation "tela:telaInstancia|lpm_divide:Div0" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 203
+Info (12133): Instantiated megafunction "tela:telaInstancia|lpm_divide:Div0" with the following parameter: File: /home/ec2022/ra260731/merge1/src/tela.v Line: 203
     Info (12134): Parameter "LPM_WIDTHN" = "33"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -3191,14 +3189,14 @@ Warning (13004): Presettable and clearable registers converted to equivalent cir
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_BLANK_N" is stuck at VCC File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 10
     Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 11
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 20
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 20
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 20
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 20
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 20
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 20
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 20
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 20
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 15
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 15
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 15
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 15
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 15
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 15
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 15
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 15
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 20 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/ec2022/ra260731/merge1/output_files/projeto.map.smsg
@@ -3216,17 +3214,17 @@ Warning (21074): Design contains 10 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[9]" File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 3
     Warning (15610): No output dependent on input pin "KEY[2]" File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 4
     Warning (15610): No output dependent on input pin "KEY[3]" File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 4
-Info (21057): Implemented 6030 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 6034 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 47 output pins
-    Info (21061): Implemented 5639 logic cells
+    Info (21061): Implemented 5643 logic cells
     Info (21064): Implemented 272 RAM segments
     Info (21062): Implemented 53 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 134 warnings
-    Info: Peak virtual memory: 1474 megabytes
-    Info: Processing ended: Fri Jun 14 14:37:38 2024
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:38
+    Info: Peak virtual memory: 1470 megabytes
+    Info: Processing ended: Fri Jun 14 14:42:32 2024
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:39
 
 
 +------------------------------------------+

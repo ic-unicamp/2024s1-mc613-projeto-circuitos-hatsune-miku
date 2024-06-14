@@ -19,6 +19,7 @@ module tela(
     input [49:0] x_bola_inimiga, 
     input [49:0] y_bola_inimiga, 
     input [0:4] inimigo_vivo_array, 
+    input [3:0] pontos, 
 
 	input [9:0] VGA_X, 
 	input [9:0] VGA_Y, 
@@ -221,7 +222,7 @@ module tela(
             multiplicador_fundo = 4'd3;
         end else begin
             if (ativo) begin
-                if (!perdeu) begin
+                if (!perdeu && (pontos != 4'b0101)) begin
                     if (delta_x_aliado + delta_y_aliado < raioquadrado_aliado) begin // bola aliada
                         VGA_R <= 255;
                         VGA_G <= 255;
@@ -293,6 +294,10 @@ module tela(
                             VGA_B <= 0;  
                         end
                     end
+                end else if (pontos == 4'b0101) begin
+                        VGA_R = 0;    
+                        VGA_G = 255;
+                        VGA_B = 0;  
                 end else begin
                     if (buffer_game_over[indice] == 1) begin
                         VGA_R = 255;
