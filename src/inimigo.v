@@ -8,12 +8,12 @@ module inimigo(
     input [9:0] yi,
     output reg [9:0] x,    
     output reg [9:0] y, 
-    input [9:0] bola_nave_x, 
-    input [9:0] bola_nave_y, 
-    output reg vivo,
-    output decrementar_vida_nave,
     output [9:0] x_bola,
     output [9:0] y_bola,
+    output reg vivo,
+    input [9:0] bola_nave_x, 
+    input [9:0] bola_nave_y, 
+    output [1:0] n_batidas,
     input [9:0] x_nave,
     input [9:0] y_nave,
     input sentidoX
@@ -39,7 +39,7 @@ module inimigo(
         .y_nave(y_nave),
         .x(x_bola),
         .y(y_bola),
-        .bateunave(decrementar_vida_nave),
+        .n_batidas(n_batidas),
         .bola_morta(bola_morta)
         // .op(op)
     );

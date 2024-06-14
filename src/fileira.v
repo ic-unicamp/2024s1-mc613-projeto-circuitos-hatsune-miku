@@ -10,7 +10,10 @@ module fileira(
     output reg [49:0] reg_inimigo_y, // 5 * 10 bits
     output reg [49:0] reg_x_bola, // 5 * 10 bits
     output reg [49:0] reg_y_bola, // 5 * 10 bits
-    output reg [0:4] reg_vivo        // 5 bits
+    output reg [0:4] reg_vivo,        // 5 bits
+    output reg [1:0] reg_n_batidas,
+    input [9:0] x_nave,
+    input [9:0] y_nave
 );
     reg [4:0] i;
 
@@ -19,39 +22,46 @@ module fileira(
     wire [9:0] x_bola [0:4];
     wire [9:0] y_bola [0:4];
     wire vivo [0:4];
+    wire [1:0] n_batidas [0:4];
 
     // Atualização das saídas
-    always @(*) begin
-        reg_inimigo_x[9 : 0] = inimigo_x[0];
-        reg_inimigo_y[9 : 0] = inimigo_y[0];
-        reg_x_bola[9 : 0] = x_bola[0];
-        reg_y_bola[9 : 0] = y_bola[0];
-        reg_vivo[0] = vivo[0];
+    always @(posedge CLOCK_MV) begin
+        // if (reset) begin 
+        //     reg_decrementar_vida_nave = 0;
+        // end else begin
+            reg_inimigo_x[9 : 0] = inimigo_x[0];
+            reg_inimigo_y[9 : 0] = inimigo_y[0];
+            reg_x_bola[9 : 0] = x_bola[0];
+            reg_y_bola[9 : 0] = y_bola[0];
+            reg_vivo[0] = vivo[0];
 
-        reg_inimigo_x[19 : 10] = inimigo_x[1];
-        reg_inimigo_y[19 : 10] = inimigo_y[1];
-        reg_x_bola[19 : 10] = x_bola[1];
-        reg_y_bola[19 : 10] = y_bola[1];
-        reg_vivo[1] = vivo[1];
+            reg_inimigo_x[19 : 10] = inimigo_x[1];
+            reg_inimigo_y[19 : 10] = inimigo_y[1];
+            reg_x_bola[19 : 10] = x_bola[1];
+            reg_y_bola[19 : 10] = y_bola[1];
+            reg_vivo[1] = vivo[1];
 
-        reg_inimigo_x[29 : 20] = inimigo_x[2];
-        reg_inimigo_y[29 : 20] = inimigo_y[2];
-        reg_x_bola[29 : 20] = x_bola[2];
-        reg_y_bola[29 : 20] = y_bola[2];
-        reg_vivo[2] = vivo[2];
+            reg_inimigo_x[29 : 20] = inimigo_x[2];
+            reg_inimigo_y[29 : 20] = inimigo_y[2];
+            reg_x_bola[29 : 20] = x_bola[2];
+            reg_y_bola[29 : 20] = y_bola[2];
+            reg_vivo[2] = vivo[2];
 
 
-        reg_inimigo_x[39 : 30] = inimigo_x[3];
-        reg_inimigo_y[39 : 30] = inimigo_y[3];
-        reg_x_bola[39 : 30] = x_bola[3];
-        reg_y_bola[39 : 30] = y_bola[3];
-        reg_vivo[3] = vivo[3];        
-        
-        reg_inimigo_x[49 : 40] = inimigo_x[4];
-        reg_inimigo_y[49 : 40] = inimigo_y[4];
-        reg_x_bola[49 : 40] = x_bola[4];
-        reg_y_bola[49 : 40] = y_bola[4];
-        reg_vivo[4] = vivo[4];
+            reg_inimigo_x[39 : 30] = inimigo_x[3];
+            reg_inimigo_y[39 : 30] = inimigo_y[3];
+            reg_x_bola[39 : 30] = x_bola[3];
+            reg_y_bola[39 : 30] = y_bola[3];
+            reg_vivo[3] = vivo[3];        
+            
+            reg_inimigo_x[49 : 40] = inimigo_x[4];
+            reg_inimigo_y[49 : 40] = inimigo_y[4];
+            reg_x_bola[49 : 40] = x_bola[4];
+            reg_y_bola[49 : 40] = y_bola[4];
+            reg_vivo[4] = vivo[4];
+
+            reg_n_batidas = n_batidas[0] + n_batidas[1] + n_batidas[2] + n_batidas[3] + n_batidas[4]; 
+        // end
 
     end
 
@@ -92,10 +102,13 @@ module fileira(
                 .y(inimigo_y[j]),
                 .x_bola(x_bola[j]),
                 .y_bola(y_bola[j]),
+                .vivo(vivo[j]),
                 .bola_nave_x(bola_nave_x),
                 .bola_nave_y(bola_nave_y),
-                .sentidoX(sentidoX),
-                .vivo(vivo[j])
+                .n_batidas(n_batidas[j]),
+                .x_nave(x_nave),
+                .y_nave(y_nave),
+                .sentidoX(sentidoX)
                 // .op(4'b1111)
             );
         end

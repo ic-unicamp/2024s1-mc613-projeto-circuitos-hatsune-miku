@@ -48,6 +48,8 @@ module projeto(
     wire [9:0] largura_inimigo;
     wire [9:0] altura_inimigo;
 
+    wire perdeu;
+    wire [1:0] vidas;
 
     entities entitiesInstancia(
         .CLOCK_50(CLOCK_50),
@@ -64,7 +66,11 @@ module projeto(
         .y_nave(y_nave),
         .inimigo_x(inimigo_x),
         .inimigo_y(inimigo_y),
-        .inimigo_vivo_array(inimigo_vivo_array)
+        .inimigo_vivo_array(inimigo_vivo_array),
+        .vidas(vidas),
+        .perdeu(perdeu),
+        .LEDR(LEDR)
+
     );
 
     vga v(
@@ -91,7 +97,8 @@ module projeto(
         .CLOCK_50(CLOCK_50),
         .reset(reset),
         .ativo(ativoVGA),
-        .perdeu(0),
+        .perdeu(perdeu),
+        .vidas(vidas),
 
         .x_bola_aliada(x_bola_aliada),
         .y_bola_aliada(y_bola_aliada),
@@ -107,6 +114,7 @@ module projeto(
         .inimigo_x(inimigo_x),
         .inimigo_y(inimigo_y),
         .inimigo_vivo_array(inimigo_vivo_array),
+
 
         .VGA_X(VGA_X),
         .VGA_Y(VGA_Y),

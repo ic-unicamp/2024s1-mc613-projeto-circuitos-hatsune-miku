@@ -28,11 +28,7 @@ module bola(
             x = xi;
             y = yi;
         end else if (pausa == 0) begin
-            // if (sentidoY) begin
                 y = y - 1;
-            // end else begin
-            //     y = y + 1;
-            // end
             if (y >= 480) begin
                 x = xi;
                 y = yi - 35;
