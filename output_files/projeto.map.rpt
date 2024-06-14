@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projeto
-Fri Jun 14 13:26:53 2024
+Fri Jun 14 14:15:10 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -24,12 +24,12 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  16. Source assignments for sld_signaltap:auto_signaltap_0
  17. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
  18. Parameter Settings for Inferred Entity Instance: tela:telaInstancia|lpm_divide:Div1
- 19. Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffer_coracao_3|lpm_divide:Div0
- 20. Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffer_coracao_3|lpm_divide:Div1
- 21. Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffer_coracao_2|lpm_divide:Div0
- 22. Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffer_coracao_2|lpm_divide:Div1
- 23. Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffer_coracao_1|lpm_divide:Div0
- 24. Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffer_coracao_1|lpm_divide:Div1
+ 19. Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|lpm_divide:Div0
+ 20. Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|lpm_divide:Div1
+ 21. Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|lpm_divide:Div0
+ 22. Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|lpm_divide:Div1
+ 23. Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|lpm_divide:Div0
+ 24. Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|lpm_divide:Div1
  25. Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffer_nave|lpm_divide:Div0
  26. Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffer_nave|lpm_divide:Div1
  27. Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffers[4].inimigo_inst|lpm_divide:Div0
@@ -44,9 +44,9 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  36. Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffers[0].inimigo_inst|lpm_divide:Div1
  37. Parameter Settings for Inferred Entity Instance: tela:telaInstancia|lpm_divide:Div0
  38. Port Connectivity Checks: "tela:telaInstancia|buffer:buffer_fundo"
- 39. Port Connectivity Checks: "tela:telaInstancia|buffer:buffer_coracao_3"
- 40. Port Connectivity Checks: "tela:telaInstancia|buffer:buffer_coracao_2"
- 41. Port Connectivity Checks: "tela:telaInstancia|buffer:buffer_coracao_1"
+ 39. Port Connectivity Checks: "tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst"
+ 40. Port Connectivity Checks: "tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst"
+ 41. Port Connectivity Checks: "tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst"
  42. Port Connectivity Checks: "tela:telaInstancia|buffer:buffer_nave"
  43. Port Connectivity Checks: "tela:telaInstancia|buffer:buffers[4].inimigo_inst"
  44. Port Connectivity Checks: "tela:telaInstancia|buffer:buffers[3].inimigo_inst"
@@ -93,7 +93,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Jun 14 13:26:53 2024       ;
+; Analysis & Synthesis Status     ; Successful - Fri Jun 14 14:15:10 2024       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; projeto                                     ;
 ; Top-level Entity Name           ; projeto                                     ;
@@ -316,14 +316,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 2765           ;
+; Estimate of Logic utilization (ALMs needed) ; 2762           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 4653           ;
+; Combinational ALUT usage for logic          ; 4651           ;
 ;     -- 7 input functions                    ; 15             ;
-;     -- 6 input functions                    ; 676            ;
-;     -- 5 input functions                    ; 464            ;
-;     -- 4 input functions                    ; 549            ;
-;     -- <=3 input functions                  ; 2949           ;
+;     -- 6 input functions                    ; 672            ;
+;     -- 5 input functions                    ; 463            ;
+;     -- 4 input functions                    ; 555            ;
+;     -- <=3 input functions                  ; 2946           ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 1684           ;
 ;                                             ;                ;
@@ -335,7 +335,7 @@ refer to the applicable agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 997            ;
-; Total fan-out                               ; 29670          ;
+; Total fan-out                               ; 29658          ;
 ; Average fan-out                             ; 4.32           ;
 +---------------------------------------------+----------------+
 
@@ -345,7 +345,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                 ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |projeto                                                                                                                                ; 4653 (1)            ; 1684 (0)                  ; 2228224           ; 53         ; 96   ; 0            ; |projeto                                                                                                                                                                                                                                                                                                                                            ; projeto                           ; work         ;
+; |projeto                                                                                                                                ; 4651 (1)            ; 1684 (0)                  ; 2228224           ; 53         ; 96   ; 0            ; |projeto                                                                                                                                                                                                                                                                                                                                            ; projeto                           ; work         ;
 ;    |entities:entitiesInstancia|                                                                                                         ; 1017 (51)           ; 457 (34)                  ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia                                                                                                                                                                                                                                                                                                                 ; entities                          ; work         ;
 ;       |bola:bolaAliada|                                                                                                                 ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|bola:bolaAliada                                                                                                                                                                                                                                                                                                 ; bola                              ; work         ;
 ;       |fileira:controladorInimigosInstancia|                                                                                            ; 904 (93)            ; 413 (152)                 ; 0                 ; 0          ; 0    ; 0            ; |projeto|entities:entitiesInstancia|fileira:controladorInimigosInstancia                                                                                                                                                                                                                                                                            ; fileira                           ; work         ;
@@ -404,34 +404,7 @@ refer to the applicable agreement for further details.
 ;                |lpm_shiftreg:ram_data_shift_out|                                                                                        ; 68 (68)             ; 68 (68)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                               ; lpm_shiftreg                      ; work         ;
 ;                |lpm_shiftreg:status_data_shift_out|                                                                                     ; 1 (1)               ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                            ; lpm_shiftreg                      ; work         ;
 ;             |sld_rom_sr:crc_rom_sr|                                                                                                     ; 20 (20)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                          ; sld_rom_sr                        ; work         ;
-;    |tela:telaInstancia|                                                                                                                 ; 3088 (715)          ; 204 (24)                  ; 0                 ; 53         ; 0    ; 0            ; |projeto|tela:telaInstancia                                                                                                                                                                                                                                                                                                                         ; tela                              ; work         ;
-;       |buffer:buffer_coracao_1|                                                                                                         ; 233 (71)            ; 20 (20)                   ; 0                 ; 3          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_1                                                                                                                                                                                                                                                                                                 ; buffer                            ; work         ;
-;          |lpm_divide:Div0|                                                                                                              ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_1|lpm_divide:Div0                                                                                                                                                                                                                                                                                 ; lpm_divide                        ; work         ;
-;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_1|lpm_divide:Div0|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                                   ; lpm_divide_ebm                    ; work         ;
-;                |sign_div_unsign_klh:divider|                                                                                            ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_1|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                                                                                                                                       ; sign_div_unsign_klh               ; work         ;
-;                   |alt_u_div_eve:divider|                                                                                               ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_1|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                                                                                                                                                 ; alt_u_div_eve                     ; work         ;
-;          |lpm_divide:Div1|                                                                                                              ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_1|lpm_divide:Div1                                                                                                                                                                                                                                                                                 ; lpm_divide                        ; work         ;
-;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_1|lpm_divide:Div1|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                                   ; lpm_divide_ebm                    ; work         ;
-;                |sign_div_unsign_klh:divider|                                                                                            ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_1|lpm_divide:Div1|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                                                                                                                                       ; sign_div_unsign_klh               ; work         ;
-;                   |alt_u_div_eve:divider|                                                                                               ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_1|lpm_divide:Div1|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                                                                                                                                                 ; alt_u_div_eve                     ; work         ;
-;       |buffer:buffer_coracao_2|                                                                                                         ; 235 (73)            ; 20 (20)                   ; 0                 ; 3          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_2                                                                                                                                                                                                                                                                                                 ; buffer                            ; work         ;
-;          |lpm_divide:Div0|                                                                                                              ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_2|lpm_divide:Div0                                                                                                                                                                                                                                                                                 ; lpm_divide                        ; work         ;
-;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_2|lpm_divide:Div0|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                                   ; lpm_divide_ebm                    ; work         ;
-;                |sign_div_unsign_klh:divider|                                                                                            ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_2|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                                                                                                                                       ; sign_div_unsign_klh               ; work         ;
-;                   |alt_u_div_eve:divider|                                                                                               ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_2|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                                                                                                                                                 ; alt_u_div_eve                     ; work         ;
-;          |lpm_divide:Div1|                                                                                                              ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_2|lpm_divide:Div1                                                                                                                                                                                                                                                                                 ; lpm_divide                        ; work         ;
-;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_2|lpm_divide:Div1|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                                   ; lpm_divide_ebm                    ; work         ;
-;                |sign_div_unsign_klh:divider|                                                                                            ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_2|lpm_divide:Div1|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                                                                                                                                       ; sign_div_unsign_klh               ; work         ;
-;                   |alt_u_div_eve:divider|                                                                                               ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_2|lpm_divide:Div1|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                                                                                                                                                 ; alt_u_div_eve                     ; work         ;
-;       |buffer:buffer_coracao_3|                                                                                                         ; 236 (74)            ; 20 (20)                   ; 0                 ; 3          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_3                                                                                                                                                                                                                                                                                                 ; buffer                            ; work         ;
-;          |lpm_divide:Div0|                                                                                                              ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_3|lpm_divide:Div0                                                                                                                                                                                                                                                                                 ; lpm_divide                        ; work         ;
-;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_3|lpm_divide:Div0|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                                   ; lpm_divide_ebm                    ; work         ;
-;                |sign_div_unsign_klh:divider|                                                                                            ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_3|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                                                                                                                                       ; sign_div_unsign_klh               ; work         ;
-;                   |alt_u_div_eve:divider|                                                                                               ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_3|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                                                                                                                                                 ; alt_u_div_eve                     ; work         ;
-;          |lpm_divide:Div1|                                                                                                              ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_3|lpm_divide:Div1                                                                                                                                                                                                                                                                                 ; lpm_divide                        ; work         ;
-;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_3|lpm_divide:Div1|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                                   ; lpm_divide_ebm                    ; work         ;
-;                |sign_div_unsign_klh:divider|                                                                                            ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_3|lpm_divide:Div1|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                                                                                                                                       ; sign_div_unsign_klh               ; work         ;
-;                   |alt_u_div_eve:divider|                                                                                               ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_coracao_3|lpm_divide:Div1|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                                                                                                                                                 ; alt_u_div_eve                     ; work         ;
+;    |tela:telaInstancia|                                                                                                                 ; 3086 (715)          ; 204 (24)                  ; 0                 ; 53         ; 0    ; 0            ; |projeto|tela:telaInstancia                                                                                                                                                                                                                                                                                                                         ; tela                              ; work         ;
 ;       |buffer:buffer_nave|                                                                                                              ; 248 (86)            ; 20 (20)                   ; 0                 ; 3          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_nave                                                                                                                                                                                                                                                                                                      ; buffer                            ; work         ;
 ;          |lpm_divide:Div0|                                                                                                              ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_nave|lpm_divide:Div0                                                                                                                                                                                                                                                                                      ; lpm_divide                        ; work         ;
 ;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffer_nave|lpm_divide:Div0|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                                        ; lpm_divide_ebm                    ; work         ;
@@ -486,6 +459,33 @@ refer to the applicable agreement for further details.
 ;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers[4].inimigo_inst|lpm_divide:Div1|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                            ; lpm_divide_ebm                    ; work         ;
 ;                |sign_div_unsign_klh:divider|                                                                                            ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers[4].inimigo_inst|lpm_divide:Div1|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                                                                                                                                ; sign_div_unsign_klh               ; work         ;
 ;                   |alt_u_div_eve:divider|                                                                                               ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers[4].inimigo_inst|lpm_divide:Div1|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                                                                                                                                          ; alt_u_div_eve                     ; work         ;
+;       |buffer:buffers_coracao[0].coracao_inst|                                                                                          ; 232 (70)            ; 20 (20)                   ; 0                 ; 3          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst                                                                                                                                                                                                                                                                                  ; buffer                            ; work         ;
+;          |lpm_divide:Div0|                                                                                                              ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|lpm_divide:Div0                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
+;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|lpm_divide:Div0|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                    ; lpm_divide_ebm                    ; work         ;
+;                |sign_div_unsign_klh:divider|                                                                                            ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                                                                                                                        ; sign_div_unsign_klh               ; work         ;
+;                   |alt_u_div_eve:divider|                                                                                               ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                                                                                                                                  ; alt_u_div_eve                     ; work         ;
+;          |lpm_divide:Div1|                                                                                                              ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|lpm_divide:Div1                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
+;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|lpm_divide:Div1|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                    ; lpm_divide_ebm                    ; work         ;
+;                |sign_div_unsign_klh:divider|                                                                                            ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|lpm_divide:Div1|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                                                                                                                        ; sign_div_unsign_klh               ; work         ;
+;                   |alt_u_div_eve:divider|                                                                                               ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|lpm_divide:Div1|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                                                                                                                                  ; alt_u_div_eve                     ; work         ;
+;       |buffer:buffers_coracao[1].coracao_inst|                                                                                          ; 236 (74)            ; 20 (20)                   ; 0                 ; 3          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst                                                                                                                                                                                                                                                                                  ; buffer                            ; work         ;
+;          |lpm_divide:Div0|                                                                                                              ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|lpm_divide:Div0                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
+;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|lpm_divide:Div0|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                    ; lpm_divide_ebm                    ; work         ;
+;                |sign_div_unsign_klh:divider|                                                                                            ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                                                                                                                        ; sign_div_unsign_klh               ; work         ;
+;                   |alt_u_div_eve:divider|                                                                                               ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                                                                                                                                  ; alt_u_div_eve                     ; work         ;
+;          |lpm_divide:Div1|                                                                                                              ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|lpm_divide:Div1                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
+;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|lpm_divide:Div1|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                    ; lpm_divide_ebm                    ; work         ;
+;                |sign_div_unsign_klh:divider|                                                                                            ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|lpm_divide:Div1|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                                                                                                                        ; sign_div_unsign_klh               ; work         ;
+;                   |alt_u_div_eve:divider|                                                                                               ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|lpm_divide:Div1|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                                                                                                                                  ; alt_u_div_eve                     ; work         ;
+;       |buffer:buffers_coracao[2].coracao_inst|                                                                                          ; 234 (72)            ; 20 (20)                   ; 0                 ; 3          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst                                                                                                                                                                                                                                                                                  ; buffer                            ; work         ;
+;          |lpm_divide:Div0|                                                                                                              ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|lpm_divide:Div0                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
+;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|lpm_divide:Div0|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                    ; lpm_divide_ebm                    ; work         ;
+;                |sign_div_unsign_klh:divider|                                                                                            ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                                                                                                                        ; sign_div_unsign_klh               ; work         ;
+;                   |alt_u_div_eve:divider|                                                                                               ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                                                                                                                                  ; alt_u_div_eve                     ; work         ;
+;          |lpm_divide:Div1|                                                                                                              ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|lpm_divide:Div1                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
+;             |lpm_divide_ebm:auto_generated|                                                                                             ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|lpm_divide:Div1|lpm_divide_ebm:auto_generated                                                                                                                                                                                                                                    ; lpm_divide_ebm                    ; work         ;
+;                |sign_div_unsign_klh:divider|                                                                                            ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|lpm_divide:Div1|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                                                                                                                                        ; sign_div_unsign_klh               ; work         ;
+;                   |alt_u_div_eve:divider|                                                                                               ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|lpm_divide:Div1|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                                                                                                                                  ; alt_u_div_eve                     ; work         ;
 ;       |lpm_divide:Div0|                                                                                                                 ; 101 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|lpm_divide:Div0                                                                                                                                                                                                                                                                                                         ; lpm_divide                        ; work         ;
 ;          |lpm_divide_jbm:auto_generated|                                                                                                ; 101 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|lpm_divide:Div0|lpm_divide_jbm:auto_generated                                                                                                                                                                                                                                                                           ; lpm_divide_jbm                    ; work         ;
 ;             |sign_div_unsign_plh:divider|                                                                                               ; 101 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto|tela:telaInstancia|lpm_divide:Div0|lpm_divide_jbm:auto_generated|sign_div_unsign_plh:divider                                                                                                                                                                                                                                               ; sign_div_unsign_plh               ; work         ;
@@ -1036,12 +1036,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+
 ; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffer_fundo|Y_BUFFER[5]                                                                             ;
 ; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffer_fundo|X_BUFFER[3]                                                                             ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffer_coracao_3|Y_BUFFER[3]                                                                         ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffer_coracao_3|X_BUFFER[2]                                                                         ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffer_coracao_2|Y_BUFFER[8]                                                                         ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffer_coracao_2|X_BUFFER[6]                                                                         ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffer_coracao_1|Y_BUFFER[2]                                                                         ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffer_coracao_1|X_BUFFER[7]                                                                         ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|Y_BUFFER[3]                                                          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|X_BUFFER[2]                                                          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|Y_BUFFER[8]                                                          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|X_BUFFER[6]                                                          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|Y_BUFFER[2]                                                          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|X_BUFFER[7]                                                          ;
 ; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffer_nave|Y_BUFFER[7]                                                                              ;
 ; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffer_nave|X_BUFFER[3]                                                                              ;
 ; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |projeto|tela:telaInstancia|buffer:buffers[4].inimigo_inst|Y_BUFFER[9]                                                                  ;
@@ -1175,141 +1175,141 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffer_coracao_3|lpm_divide:Div0 ;
-+------------------------+----------------+-------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                              ;
-+------------------------+----------------+-------------------------------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                                           ;
-; LPM_WIDTHD             ; 4              ; Untyped                                                           ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                           ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                           ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                           ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                           ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                           ;
-; CBXI_PARAMETER         ; lpm_divide_ebm ; Untyped                                                           ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                           ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                           ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                        ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                      ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                      ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                    ;
-+------------------------+----------------+-------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|lpm_divide:Div0 ;
++------------------------+----------------+----------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                             ;
++------------------------+----------------+----------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                                          ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                          ;
+; CBXI_PARAMETER         ; lpm_divide_ebm ; Untyped                                                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                   ;
++------------------------+----------------+----------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffer_coracao_3|lpm_divide:Div1 ;
-+------------------------+----------------+-------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                              ;
-+------------------------+----------------+-------------------------------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                                           ;
-; LPM_WIDTHD             ; 4              ; Untyped                                                           ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                           ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                           ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                           ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                           ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                           ;
-; CBXI_PARAMETER         ; lpm_divide_ebm ; Untyped                                                           ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                           ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                           ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                        ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                      ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                      ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                    ;
-+------------------------+----------------+-------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|lpm_divide:Div1 ;
++------------------------+----------------+----------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                             ;
++------------------------+----------------+----------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                                          ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                          ;
+; CBXI_PARAMETER         ; lpm_divide_ebm ; Untyped                                                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                   ;
++------------------------+----------------+----------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffer_coracao_2|lpm_divide:Div0 ;
-+------------------------+----------------+-------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                              ;
-+------------------------+----------------+-------------------------------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                                           ;
-; LPM_WIDTHD             ; 4              ; Untyped                                                           ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                           ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                           ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                           ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                           ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                           ;
-; CBXI_PARAMETER         ; lpm_divide_ebm ; Untyped                                                           ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                           ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                           ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                        ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                      ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                      ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                    ;
-+------------------------+----------------+-------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|lpm_divide:Div0 ;
++------------------------+----------------+----------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                             ;
++------------------------+----------------+----------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                                          ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                          ;
+; CBXI_PARAMETER         ; lpm_divide_ebm ; Untyped                                                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                   ;
++------------------------+----------------+----------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffer_coracao_2|lpm_divide:Div1 ;
-+------------------------+----------------+-------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                              ;
-+------------------------+----------------+-------------------------------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                                           ;
-; LPM_WIDTHD             ; 4              ; Untyped                                                           ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                           ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                           ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                           ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                           ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                           ;
-; CBXI_PARAMETER         ; lpm_divide_ebm ; Untyped                                                           ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                           ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                           ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                        ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                      ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                      ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                    ;
-+------------------------+----------------+-------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|lpm_divide:Div1 ;
++------------------------+----------------+----------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                             ;
++------------------------+----------------+----------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                                          ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                          ;
+; CBXI_PARAMETER         ; lpm_divide_ebm ; Untyped                                                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                   ;
++------------------------+----------------+----------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffer_coracao_1|lpm_divide:Div0 ;
-+------------------------+----------------+-------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                              ;
-+------------------------+----------------+-------------------------------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                                           ;
-; LPM_WIDTHD             ; 4              ; Untyped                                                           ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                           ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                           ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                           ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                           ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                           ;
-; CBXI_PARAMETER         ; lpm_divide_ebm ; Untyped                                                           ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                           ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                           ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                        ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                      ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                      ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                    ;
-+------------------------+----------------+-------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|lpm_divide:Div0 ;
++------------------------+----------------+----------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                             ;
++------------------------+----------------+----------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                                          ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                          ;
+; CBXI_PARAMETER         ; lpm_divide_ebm ; Untyped                                                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                   ;
++------------------------+----------------+----------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffer_coracao_1|lpm_divide:Div1 ;
-+------------------------+----------------+-------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                              ;
-+------------------------+----------------+-------------------------------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                                           ;
-; LPM_WIDTHD             ; 4              ; Untyped                                                           ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                           ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                           ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                           ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                           ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                           ;
-; CBXI_PARAMETER         ; lpm_divide_ebm ; Untyped                                                           ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                           ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                           ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                        ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                      ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                      ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                    ;
-+------------------------+----------------+-------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|lpm_divide:Div1 ;
++------------------------+----------------+----------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                             ;
++------------------------+----------------+----------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                                          ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                          ;
+; CBXI_PARAMETER         ; lpm_divide_ebm ; Untyped                                                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                   ;
++------------------------+----------------+----------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1639,350 +1639,350 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------+
-; Port Connectivity Checks: "tela:telaInstancia|buffer:buffer_coracao_3" ;
-+----------------------+-------+----------+------------------------------+
-; Port                 ; Type  ; Severity ; Details                      ;
-+----------------------+-------+----------+------------------------------+
-; X_OBJETO[6..5]       ; Input ; Info     ; Stuck at VCC                 ;
-; X_OBJETO[3..1]       ; Input ; Info     ; Stuck at VCC                 ;
-; X_OBJETO[9..7]       ; Input ; Info     ; Stuck at GND                 ;
-; X_OBJETO[4]          ; Input ; Info     ; Stuck at GND                 ;
-; X_OBJETO[0]          ; Input ; Info     ; Stuck at GND                 ;
-; Y_OBJETO[9..3]       ; Input ; Info     ; Stuck at GND                 ;
-; Y_OBJETO[2]          ; Input ; Info     ; Stuck at VCC                 ;
-; Y_OBJETO[1]          ; Input ; Info     ; Stuck at GND                 ;
-; Y_OBJETO[0]          ; Input ; Info     ; Stuck at VCC                 ;
-; LARGURA_OBJETO[9..4] ; Input ; Info     ; Stuck at GND                 ;
-; LARGURA_OBJETO[3]    ; Input ; Info     ; Stuck at VCC                 ;
-; LARGURA_OBJETO[2]    ; Input ; Info     ; Stuck at GND                 ;
-; LARGURA_OBJETO[1]    ; Input ; Info     ; Stuck at VCC                 ;
-; LARGURA_OBJETO[0]    ; Input ; Info     ; Stuck at GND                 ;
-; ALTURA_OBJETO[9..4]  ; Input ; Info     ; Stuck at GND                 ;
-; ALTURA_OBJETO[3]     ; Input ; Info     ; Stuck at VCC                 ;
-; ALTURA_OBJETO[2]     ; Input ; Info     ; Stuck at GND                 ;
-; ALTURA_OBJETO[1]     ; Input ; Info     ; Stuck at VCC                 ;
-; ALTURA_OBJETO[0]     ; Input ; Info     ; Stuck at GND                 ;
-; MULTPLICADOR[1..0]   ; Input ; Info     ; Stuck at VCC                 ;
-; MULTPLICADOR[3..2]   ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[2..3]       ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[6..7]       ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[11..18]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[20..49]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[51..58]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[62..67]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[73..76]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[84..85]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[0..1]       ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[4..5]       ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[8..10]      ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[59..61]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[68..72]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[77..83]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[86..399]    ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[19]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[50]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[2..3]       ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[6..7]       ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[14..15]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[29..30]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[39..40]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[84..85]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[0..1]       ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[4..5]       ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[8..10]      ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[12..13]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[16..17]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[21..26]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[31..38]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[41..48]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[52..57]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[59..61]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[63..66]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[68..72]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[74..75]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[77..83]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[86..399]    ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[11]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[18]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[19]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[20]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[27]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[28]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[49]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[50]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[51]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[58]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[62]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[67]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[73]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[76]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[3..4]       ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[7..8]       ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[15..16]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[30..31]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[40..41]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[85..86]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[0..2]       ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[5..6]       ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[9..11]      ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[13..14]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[17..18]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[22..27]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[32..39]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[42..49]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[53..58]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[60..62]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[64..67]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[69..73]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[75..76]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[78..84]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[87..400]    ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[12]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[19]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[20]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[21]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[28]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[29]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[50]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[51]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[52]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[59]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[63]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[68]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[74]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[77]         ; Input ; Info     ; Stuck at VCC                 ;
-+----------------------+-------+----------+------------------------------+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst" ;
++----------------------+-------+----------+---------------------------------------------+
+; Port                 ; Type  ; Severity ; Details                                     ;
++----------------------+-------+----------+---------------------------------------------+
+; X_OBJETO[6..5]       ; Input ; Info     ; Stuck at VCC                                ;
+; X_OBJETO[9..7]       ; Input ; Info     ; Stuck at GND                                ;
+; X_OBJETO[4..3]       ; Input ; Info     ; Stuck at GND                                ;
+; X_OBJETO[1..0]       ; Input ; Info     ; Stuck at GND                                ;
+; X_OBJETO[2]          ; Input ; Info     ; Stuck at VCC                                ;
+; Y_OBJETO[9..3]       ; Input ; Info     ; Stuck at GND                                ;
+; Y_OBJETO[2]          ; Input ; Info     ; Stuck at VCC                                ;
+; Y_OBJETO[1]          ; Input ; Info     ; Stuck at GND                                ;
+; Y_OBJETO[0]          ; Input ; Info     ; Stuck at VCC                                ;
+; LARGURA_OBJETO[9..4] ; Input ; Info     ; Stuck at GND                                ;
+; LARGURA_OBJETO[3]    ; Input ; Info     ; Stuck at VCC                                ;
+; LARGURA_OBJETO[2]    ; Input ; Info     ; Stuck at GND                                ;
+; LARGURA_OBJETO[1]    ; Input ; Info     ; Stuck at VCC                                ;
+; LARGURA_OBJETO[0]    ; Input ; Info     ; Stuck at GND                                ;
+; ALTURA_OBJETO[9..4]  ; Input ; Info     ; Stuck at GND                                ;
+; ALTURA_OBJETO[3]     ; Input ; Info     ; Stuck at VCC                                ;
+; ALTURA_OBJETO[2]     ; Input ; Info     ; Stuck at GND                                ;
+; ALTURA_OBJETO[1]     ; Input ; Info     ; Stuck at VCC                                ;
+; ALTURA_OBJETO[0]     ; Input ; Info     ; Stuck at GND                                ;
+; MULTPLICADOR[1..0]   ; Input ; Info     ; Stuck at VCC                                ;
+; MULTPLICADOR[3..2]   ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[2..3]       ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[6..7]       ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[11..18]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[20..49]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[51..58]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[62..67]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[73..76]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[84..85]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[0..1]       ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[4..5]       ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[8..10]      ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[59..61]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[68..72]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[77..83]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[86..399]    ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[19]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[50]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[2..3]       ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[6..7]       ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[14..15]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[29..30]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[39..40]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[84..85]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[0..1]       ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[4..5]       ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[8..10]      ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[12..13]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[16..17]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[21..26]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[31..38]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[41..48]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[52..57]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[59..61]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[63..66]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[68..72]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[74..75]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[77..83]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[86..399]    ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[11]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[18]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[19]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[20]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[27]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[28]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[49]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[50]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[51]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[58]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[62]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[67]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[73]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[76]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[3..4]       ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[7..8]       ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[15..16]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[30..31]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[40..41]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[85..86]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[0..2]       ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[5..6]       ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[9..11]      ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[13..14]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[17..18]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[22..27]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[32..39]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[42..49]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[53..58]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[60..62]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[64..67]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[69..73]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[75..76]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[78..84]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[87..400]    ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[12]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[19]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[20]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[21]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[28]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[29]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[50]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[51]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[52]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[59]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[63]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[68]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[74]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[77]         ; Input ; Info     ; Stuck at VCC                                ;
++----------------------+-------+----------+---------------------------------------------+
 
 
-+------------------------------------------------------------------------+
-; Port Connectivity Checks: "tela:telaInstancia|buffer:buffer_coracao_2" ;
-+----------------------+-------+----------+------------------------------+
-; Port                 ; Type  ; Severity ; Details                      ;
-+----------------------+-------+----------+------------------------------+
-; X_OBJETO[5..2]       ; Input ; Info     ; Stuck at VCC                 ;
-; X_OBJETO[9..6]       ; Input ; Info     ; Stuck at GND                 ;
-; X_OBJETO[1..0]       ; Input ; Info     ; Stuck at GND                 ;
-; Y_OBJETO[9..3]       ; Input ; Info     ; Stuck at GND                 ;
-; Y_OBJETO[2]          ; Input ; Info     ; Stuck at VCC                 ;
-; Y_OBJETO[1]          ; Input ; Info     ; Stuck at GND                 ;
-; Y_OBJETO[0]          ; Input ; Info     ; Stuck at VCC                 ;
-; LARGURA_OBJETO[9..4] ; Input ; Info     ; Stuck at GND                 ;
-; LARGURA_OBJETO[3]    ; Input ; Info     ; Stuck at VCC                 ;
-; LARGURA_OBJETO[2]    ; Input ; Info     ; Stuck at GND                 ;
-; LARGURA_OBJETO[1]    ; Input ; Info     ; Stuck at VCC                 ;
-; LARGURA_OBJETO[0]    ; Input ; Info     ; Stuck at GND                 ;
-; ALTURA_OBJETO[9..4]  ; Input ; Info     ; Stuck at GND                 ;
-; ALTURA_OBJETO[3]     ; Input ; Info     ; Stuck at VCC                 ;
-; ALTURA_OBJETO[2]     ; Input ; Info     ; Stuck at GND                 ;
-; ALTURA_OBJETO[1]     ; Input ; Info     ; Stuck at VCC                 ;
-; ALTURA_OBJETO[0]     ; Input ; Info     ; Stuck at GND                 ;
-; MULTPLICADOR[1..0]   ; Input ; Info     ; Stuck at VCC                 ;
-; MULTPLICADOR[3..2]   ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[2..3]       ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[6..7]       ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[11..18]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[20..49]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[51..58]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[62..67]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[73..76]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[84..85]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[0..1]       ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[4..5]       ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[8..10]      ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[59..61]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[68..72]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[77..83]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[86..399]    ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[19]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[50]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[2..3]       ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[6..7]       ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[14..15]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[29..30]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[39..40]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[84..85]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[0..1]       ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[4..5]       ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[8..10]      ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[12..13]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[16..17]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[21..26]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[31..38]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[41..48]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[52..57]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[59..61]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[63..66]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[68..72]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[74..75]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[77..83]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[86..399]    ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[11]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[18]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[19]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[20]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[27]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[28]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[49]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[50]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[51]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[58]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[62]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[67]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[73]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[76]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[3..4]       ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[7..8]       ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[15..16]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[30..31]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[40..41]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[85..86]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[0..2]       ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[5..6]       ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[9..11]      ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[13..14]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[17..18]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[22..27]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[32..39]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[42..49]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[53..58]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[60..62]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[64..67]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[69..73]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[75..76]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[78..84]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[87..400]    ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[12]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[19]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[20]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[21]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[28]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[29]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[50]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[51]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[52]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[59]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[63]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[68]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[74]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[77]         ; Input ; Info     ; Stuck at VCC                 ;
-+----------------------+-------+----------+------------------------------+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst" ;
++----------------------+-------+----------+---------------------------------------------+
+; Port                 ; Type  ; Severity ; Details                                     ;
++----------------------+-------+----------+---------------------------------------------+
+; X_OBJETO[5..2]       ; Input ; Info     ; Stuck at VCC                                ;
+; X_OBJETO[9..6]       ; Input ; Info     ; Stuck at GND                                ;
+; X_OBJETO[1..0]       ; Input ; Info     ; Stuck at GND                                ;
+; Y_OBJETO[9..3]       ; Input ; Info     ; Stuck at GND                                ;
+; Y_OBJETO[2]          ; Input ; Info     ; Stuck at VCC                                ;
+; Y_OBJETO[1]          ; Input ; Info     ; Stuck at GND                                ;
+; Y_OBJETO[0]          ; Input ; Info     ; Stuck at VCC                                ;
+; LARGURA_OBJETO[9..4] ; Input ; Info     ; Stuck at GND                                ;
+; LARGURA_OBJETO[3]    ; Input ; Info     ; Stuck at VCC                                ;
+; LARGURA_OBJETO[2]    ; Input ; Info     ; Stuck at GND                                ;
+; LARGURA_OBJETO[1]    ; Input ; Info     ; Stuck at VCC                                ;
+; LARGURA_OBJETO[0]    ; Input ; Info     ; Stuck at GND                                ;
+; ALTURA_OBJETO[9..4]  ; Input ; Info     ; Stuck at GND                                ;
+; ALTURA_OBJETO[3]     ; Input ; Info     ; Stuck at VCC                                ;
+; ALTURA_OBJETO[2]     ; Input ; Info     ; Stuck at GND                                ;
+; ALTURA_OBJETO[1]     ; Input ; Info     ; Stuck at VCC                                ;
+; ALTURA_OBJETO[0]     ; Input ; Info     ; Stuck at GND                                ;
+; MULTPLICADOR[1..0]   ; Input ; Info     ; Stuck at VCC                                ;
+; MULTPLICADOR[3..2]   ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[2..3]       ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[6..7]       ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[11..18]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[20..49]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[51..58]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[62..67]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[73..76]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[84..85]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[0..1]       ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[4..5]       ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[8..10]      ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[59..61]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[68..72]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[77..83]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[86..399]    ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[19]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[50]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[2..3]       ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[6..7]       ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[14..15]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[29..30]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[39..40]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[84..85]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[0..1]       ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[4..5]       ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[8..10]      ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[12..13]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[16..17]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[21..26]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[31..38]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[41..48]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[52..57]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[59..61]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[63..66]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[68..72]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[74..75]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[77..83]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[86..399]    ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[11]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[18]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[19]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[20]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[27]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[28]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[49]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[50]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[51]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[58]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[62]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[67]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[73]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[76]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[3..4]       ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[7..8]       ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[15..16]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[30..31]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[40..41]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[85..86]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[0..2]       ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[5..6]       ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[9..11]      ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[13..14]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[17..18]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[22..27]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[32..39]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[42..49]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[53..58]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[60..62]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[64..67]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[69..73]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[75..76]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[78..84]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[87..400]    ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[12]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[19]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[20]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[21]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[28]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[29]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[50]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[51]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[52]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[59]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[63]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[68]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[74]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[77]         ; Input ; Info     ; Stuck at VCC                                ;
++----------------------+-------+----------+---------------------------------------------+
 
 
-+------------------------------------------------------------------------+
-; Port Connectivity Checks: "tela:telaInstancia|buffer:buffer_coracao_1" ;
-+----------------------+-------+----------+------------------------------+
-; Port                 ; Type  ; Severity ; Details                      ;
-+----------------------+-------+----------+------------------------------+
-; X_OBJETO[9..4]       ; Input ; Info     ; Stuck at GND                 ;
-; X_OBJETO[3]          ; Input ; Info     ; Stuck at VCC                 ;
-; X_OBJETO[2]          ; Input ; Info     ; Stuck at GND                 ;
-; X_OBJETO[1]          ; Input ; Info     ; Stuck at VCC                 ;
-; X_OBJETO[0]          ; Input ; Info     ; Stuck at GND                 ;
-; Y_OBJETO[9..3]       ; Input ; Info     ; Stuck at GND                 ;
-; Y_OBJETO[2]          ; Input ; Info     ; Stuck at VCC                 ;
-; Y_OBJETO[1]          ; Input ; Info     ; Stuck at GND                 ;
-; Y_OBJETO[0]          ; Input ; Info     ; Stuck at VCC                 ;
-; LARGURA_OBJETO[9..4] ; Input ; Info     ; Stuck at GND                 ;
-; LARGURA_OBJETO[3]    ; Input ; Info     ; Stuck at VCC                 ;
-; LARGURA_OBJETO[2]    ; Input ; Info     ; Stuck at GND                 ;
-; LARGURA_OBJETO[1]    ; Input ; Info     ; Stuck at VCC                 ;
-; LARGURA_OBJETO[0]    ; Input ; Info     ; Stuck at GND                 ;
-; ALTURA_OBJETO[9..4]  ; Input ; Info     ; Stuck at GND                 ;
-; ALTURA_OBJETO[3]     ; Input ; Info     ; Stuck at VCC                 ;
-; ALTURA_OBJETO[2]     ; Input ; Info     ; Stuck at GND                 ;
-; ALTURA_OBJETO[1]     ; Input ; Info     ; Stuck at VCC                 ;
-; ALTURA_OBJETO[0]     ; Input ; Info     ; Stuck at GND                 ;
-; MULTPLICADOR[1..0]   ; Input ; Info     ; Stuck at VCC                 ;
-; MULTPLICADOR[3..2]   ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[2..3]       ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[6..7]       ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[11..18]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[20..49]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[51..58]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[62..67]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[73..76]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[84..85]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_R[0..1]       ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[4..5]       ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[8..10]      ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[59..61]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[68..72]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[77..83]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[86..399]    ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[19]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_R[50]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[2..3]       ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[6..7]       ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[14..15]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[29..30]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[39..40]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[84..85]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[0..1]       ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[4..5]       ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[8..10]      ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[12..13]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[16..17]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[21..26]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[31..38]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[41..48]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[52..57]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[59..61]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[63..66]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[68..72]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[74..75]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[77..83]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[86..399]    ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[11]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[18]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[19]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[20]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[27]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[28]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[49]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[50]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_G[51]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[58]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[62]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[67]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[73]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_G[76]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[3..4]       ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[7..8]       ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[15..16]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[30..31]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[40..41]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[85..86]     ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[0..2]       ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[5..6]       ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[9..11]      ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[13..14]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[17..18]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[22..27]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[32..39]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[42..49]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[53..58]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[60..62]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[64..67]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[69..73]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[75..76]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[78..84]     ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[87..400]    ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[12]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[19]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[20]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[21]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[28]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[29]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[50]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[51]         ; Input ; Info     ; Stuck at GND                 ;
-; BUFFER_B[52]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[59]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[63]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[68]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[74]         ; Input ; Info     ; Stuck at VCC                 ;
-; BUFFER_B[77]         ; Input ; Info     ; Stuck at VCC                 ;
-+----------------------+-------+----------+------------------------------+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst" ;
++----------------------+-------+----------+---------------------------------------------+
+; Port                 ; Type  ; Severity ; Details                                     ;
++----------------------+-------+----------+---------------------------------------------+
+; X_OBJETO[9..5]       ; Input ; Info     ; Stuck at GND                                ;
+; X_OBJETO[1..0]       ; Input ; Info     ; Stuck at GND                                ;
+; X_OBJETO[4]          ; Input ; Info     ; Stuck at VCC                                ;
+; X_OBJETO[3]          ; Input ; Info     ; Stuck at GND                                ;
+; X_OBJETO[2]          ; Input ; Info     ; Stuck at VCC                                ;
+; Y_OBJETO[9..3]       ; Input ; Info     ; Stuck at GND                                ;
+; Y_OBJETO[2]          ; Input ; Info     ; Stuck at VCC                                ;
+; Y_OBJETO[1]          ; Input ; Info     ; Stuck at GND                                ;
+; Y_OBJETO[0]          ; Input ; Info     ; Stuck at VCC                                ;
+; LARGURA_OBJETO[9..4] ; Input ; Info     ; Stuck at GND                                ;
+; LARGURA_OBJETO[3]    ; Input ; Info     ; Stuck at VCC                                ;
+; LARGURA_OBJETO[2]    ; Input ; Info     ; Stuck at GND                                ;
+; LARGURA_OBJETO[1]    ; Input ; Info     ; Stuck at VCC                                ;
+; LARGURA_OBJETO[0]    ; Input ; Info     ; Stuck at GND                                ;
+; ALTURA_OBJETO[9..4]  ; Input ; Info     ; Stuck at GND                                ;
+; ALTURA_OBJETO[3]     ; Input ; Info     ; Stuck at VCC                                ;
+; ALTURA_OBJETO[2]     ; Input ; Info     ; Stuck at GND                                ;
+; ALTURA_OBJETO[1]     ; Input ; Info     ; Stuck at VCC                                ;
+; ALTURA_OBJETO[0]     ; Input ; Info     ; Stuck at GND                                ;
+; MULTPLICADOR[1..0]   ; Input ; Info     ; Stuck at VCC                                ;
+; MULTPLICADOR[3..2]   ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[2..3]       ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[6..7]       ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[11..18]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[20..49]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[51..58]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[62..67]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[73..76]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[84..85]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_R[0..1]       ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[4..5]       ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[8..10]      ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[59..61]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[68..72]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[77..83]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[86..399]    ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[19]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_R[50]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[2..3]       ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[6..7]       ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[14..15]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[29..30]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[39..40]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[84..85]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[0..1]       ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[4..5]       ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[8..10]      ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[12..13]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[16..17]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[21..26]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[31..38]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[41..48]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[52..57]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[59..61]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[63..66]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[68..72]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[74..75]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[77..83]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[86..399]    ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[11]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[18]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[19]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[20]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[27]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[28]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[49]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[50]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_G[51]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[58]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[62]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[67]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[73]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_G[76]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[3..4]       ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[7..8]       ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[15..16]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[30..31]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[40..41]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[85..86]     ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[0..2]       ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[5..6]       ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[9..11]      ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[13..14]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[17..18]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[22..27]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[32..39]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[42..49]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[53..58]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[60..62]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[64..67]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[69..73]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[75..76]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[78..84]     ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[87..400]    ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[12]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[19]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[20]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[21]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[28]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[29]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[50]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[51]         ; Input ; Info     ; Stuck at GND                                ;
+; BUFFER_B[52]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[59]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[63]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[68]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[74]         ; Input ; Info     ; Stuck at VCC                                ;
+; BUFFER_B[77]         ; Input ; Info     ; Stuck at VCC                                ;
++----------------------+-------+----------+---------------------------------------------+
 
 
 +-------------------------------------------------------------------+
@@ -2638,23 +2638,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 109                         ;
 ;     SLD               ; 5                           ;
 ;     plain             ; 157                         ;
-; arriav_lcell_comb     ; 4228                        ;
-;     arith             ; 2098                        ;
+; arriav_lcell_comb     ; 4226                        ;
+;     arith             ; 2095                        ;
 ;         0 data inputs ; 219                         ;
-;         1 data inputs ; 948                         ;
-;         2 data inputs ; 433                         ;
+;         1 data inputs ; 944                         ;
+;         2 data inputs ; 434                         ;
 ;         3 data inputs ; 235                         ;
 ;         4 data inputs ; 263                         ;
 ;     extend            ; 15                          ;
 ;         7 data inputs ; 15                          ;
-;     normal            ; 1948                        ;
+;     normal            ; 1949                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 130                         ;
-;         2 data inputs ; 482                         ;
-;         3 data inputs ; 150                         ;
-;         4 data inputs ; 242                         ;
-;         5 data inputs ; 399                         ;
-;         6 data inputs ; 543                         ;
+;         2 data inputs ; 483                         ;
+;         3 data inputs ; 149                         ;
+;         4 data inputs ; 248                         ;
+;         5 data inputs ; 398                         ;
+;         6 data inputs ; 539                         ;
 ;     shared            ; 167                         ;
 ;         0 data inputs ; 9                           ;
 ;         1 data inputs ; 18                          ;
@@ -2664,7 +2664,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 100                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 22.00                       ;
-; Average LUT depth     ; 9.35                        ;
+; Average LUT depth     ; 9.34                        ;
 +-----------------------+-----------------------------+
 
 
@@ -2793,7 +2793,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Jun 14 13:26:31 2024
+    Info: Processing started: Fri Jun 14 14:14:47 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto -c projeto
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -2823,10 +2823,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file src/bol
     Info (12023): Found entity 1: bolainimiga File: /home/ec2022/ra260731/merge1/src/bolainimiga.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/bola.v
     Info (12023): Found entity 1: bola File: /home/ec2022/ra260731/merge1/src/bola.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at tela.v(151): created implicit net for "largura_coracao" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 151
-Warning (10236): Verilog HDL Implicit Net warning at tela.v(229): created implicit net for "buffer_fundo_R" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 229
-Warning (10236): Verilog HDL Implicit Net warning at tela.v(230): created implicit net for "buffer_fundo_G" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 230
-Warning (10236): Verilog HDL Implicit Net warning at tela.v(231): created implicit net for "buffer_fundo_B" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 231
+Warning (10236): Verilog HDL Implicit Net warning at tela.v(144): created implicit net for "largura_coracao" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 144
+Warning (10236): Verilog HDL Implicit Net warning at tela.v(245): created implicit net for "buffer_fundo_R" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 245
+Warning (10236): Verilog HDL Implicit Net warning at tela.v(246): created implicit net for "buffer_fundo_G" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 246
+Warning (10236): Verilog HDL Implicit Net warning at tela.v(247): created implicit net for "buffer_fundo_B" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 247
 Warning (10236): Verilog HDL Implicit Net warning at nave.v(14): created implicit net for "resetNave" File: /home/ec2022/ra260731/merge1/src/nave.v Line: 14
 Warning (10236): Verilog HDL Implicit Net warning at inimigo.v(28): created implicit net for "resetInimigo" File: /home/ec2022/ra260731/merge1/src/inimigo.v Line: 28
 Warning (10236): Verilog HDL Implicit Net warning at bufferFileira.v(30): created implicit net for "VGA_CLK" File: /home/ec2022/ra260731/merge1/src/bufferFileira.v Line: 30
@@ -2918,23 +2918,11 @@ Warning (10230): Verilog HDL assignment warning at vga.v(35): truncated value wi
 Warning (10230): Verilog HDL assignment warning at vga.v(38): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/merge1/src/vga.v Line: 38
 Info (12128): Elaborating entity "keys" for hierarchy "keys:keysInstancia" File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 93
 Info (12128): Elaborating entity "tela" for hierarchy "tela:telaInstancia" File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 124
-Warning (10036): Verilog HDL or VHDL warning at tela.v(151): object "largura_coracao" assigned a value but never read File: /home/ec2022/ra260731/merge1/src/tela.v Line: 151
-Warning (10036): Verilog HDL or VHDL warning at tela.v(215): object "buffer_fundo_r" assigned a value but never read File: /home/ec2022/ra260731/merge1/src/tela.v Line: 215
-Warning (10036): Verilog HDL or VHDL warning at tela.v(216): object "buffer_fundo_g" assigned a value but never read File: /home/ec2022/ra260731/merge1/src/tela.v Line: 216
-Warning (10036): Verilog HDL or VHDL warning at tela.v(217): object "buffer_fundo_b" assigned a value but never read File: /home/ec2022/ra260731/merge1/src/tela.v Line: 217
-Warning (10230): Verilog HDL assignment warning at tela.v(151): truncated value with size 10 to match size of target (1) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 151
-Warning (10230): Verilog HDL assignment warning at tela.v(288): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 288
-Warning (10230): Verilog HDL assignment warning at tela.v(289): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 289
-Warning (10230): Verilog HDL assignment warning at tela.v(290): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 290
-Warning (10230): Verilog HDL assignment warning at tela.v(292): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 292
-Warning (10230): Verilog HDL assignment warning at tela.v(293): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 293
-Warning (10230): Verilog HDL assignment warning at tela.v(294): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 294
-Warning (10230): Verilog HDL assignment warning at tela.v(296): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 296
-Warning (10230): Verilog HDL assignment warning at tela.v(297): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 297
-Warning (10230): Verilog HDL assignment warning at tela.v(298): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 298
-Warning (10230): Verilog HDL assignment warning at tela.v(300): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 300
-Warning (10230): Verilog HDL assignment warning at tela.v(301): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 301
-Warning (10230): Verilog HDL assignment warning at tela.v(302): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 302
+Warning (10036): Verilog HDL or VHDL warning at tela.v(144): object "largura_coracao" assigned a value but never read File: /home/ec2022/ra260731/merge1/src/tela.v Line: 144
+Warning (10036): Verilog HDL or VHDL warning at tela.v(231): object "buffer_fundo_r" assigned a value but never read File: /home/ec2022/ra260731/merge1/src/tela.v Line: 231
+Warning (10036): Verilog HDL or VHDL warning at tela.v(232): object "buffer_fundo_g" assigned a value but never read File: /home/ec2022/ra260731/merge1/src/tela.v Line: 232
+Warning (10036): Verilog HDL or VHDL warning at tela.v(233): object "buffer_fundo_b" assigned a value but never read File: /home/ec2022/ra260731/merge1/src/tela.v Line: 233
+Warning (10230): Verilog HDL assignment warning at tela.v(144): truncated value with size 10 to match size of target (1) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 144
 Warning (10230): Verilog HDL assignment warning at tela.v(304): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 304
 Warning (10230): Verilog HDL assignment warning at tela.v(305): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 305
 Warning (10230): Verilog HDL assignment warning at tela.v(306): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 306
@@ -2950,96 +2938,108 @@ Warning (10230): Verilog HDL assignment warning at tela.v(318): truncated value 
 Warning (10230): Verilog HDL assignment warning at tela.v(320): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 320
 Warning (10230): Verilog HDL assignment warning at tela.v(321): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 321
 Warning (10230): Verilog HDL assignment warning at tela.v(322): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 322
+Warning (10230): Verilog HDL assignment warning at tela.v(324): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 324
 Warning (10230): Verilog HDL assignment warning at tela.v(325): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 325
 Warning (10230): Verilog HDL assignment warning at tela.v(326): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 326
-Warning (10230): Verilog HDL assignment warning at tela.v(327): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 327
-Warning (10240): Verilog HDL Always Construct warning at tela.v(242): inferring latch(es) for variable "multiplicador_inimigo", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 242
-Warning (10240): Verilog HDL Always Construct warning at tela.v(242): inferring latch(es) for variable "largura_inimigo_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 242
-Warning (10240): Verilog HDL Always Construct warning at tela.v(242): inferring latch(es) for variable "altura_inimigo_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 242
-Warning (10240): Verilog HDL Always Construct warning at tela.v(242): inferring latch(es) for variable "multiplicador_nave", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 242
-Warning (10240): Verilog HDL Always Construct warning at tela.v(242): inferring latch(es) for variable "largura_nave_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 242
-Warning (10240): Verilog HDL Always Construct warning at tela.v(242): inferring latch(es) for variable "altura_nave_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 242
-Warning (10240): Verilog HDL Always Construct warning at tela.v(242): inferring latch(es) for variable "multiplicador_coracao", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 242
-Warning (10240): Verilog HDL Always Construct warning at tela.v(242): inferring latch(es) for variable "largura_coracao_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 242
-Warning (10240): Verilog HDL Always Construct warning at tela.v(242): inferring latch(es) for variable "largura_fundo_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 242
-Warning (10240): Verilog HDL Always Construct warning at tela.v(242): inferring latch(es) for variable "multiplicador_fundo", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 242
-Info (10041): Inferred latch for "multiplicador_fundo[0]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "multiplicador_fundo[1]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "multiplicador_fundo[2]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "multiplicador_fundo[3]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_fundo_imagem[0]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_fundo_imagem[1]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_fundo_imagem[2]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_fundo_imagem[3]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_fundo_imagem[4]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_fundo_imagem[5]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_fundo_imagem[6]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_fundo_imagem[7]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_fundo_imagem[8]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_fundo_imagem[9]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_coracao_imagem[0]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_coracao_imagem[1]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_coracao_imagem[2]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_coracao_imagem[3]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_coracao_imagem[4]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_coracao_imagem[5]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_coracao_imagem[6]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_coracao_imagem[7]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_coracao_imagem[8]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_coracao_imagem[9]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "multiplicador_coracao[0]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "multiplicador_coracao[1]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "multiplicador_coracao[2]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "multiplicador_coracao[3]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "altura_nave_imagem[0]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "altura_nave_imagem[1]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "altura_nave_imagem[2]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "altura_nave_imagem[3]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "altura_nave_imagem[4]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "altura_nave_imagem[5]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "altura_nave_imagem[6]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "altura_nave_imagem[7]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "altura_nave_imagem[8]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "altura_nave_imagem[9]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_nave_imagem[0]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_nave_imagem[1]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_nave_imagem[2]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_nave_imagem[3]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_nave_imagem[4]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_nave_imagem[5]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_nave_imagem[6]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_nave_imagem[7]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_nave_imagem[8]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_nave_imagem[9]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "multiplicador_nave[0]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "multiplicador_nave[1]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "multiplicador_nave[2]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "multiplicador_nave[3]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "altura_inimigo_imagem[0]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "altura_inimigo_imagem[1]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "altura_inimigo_imagem[2]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "altura_inimigo_imagem[3]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "altura_inimigo_imagem[4]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "altura_inimigo_imagem[5]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "altura_inimigo_imagem[6]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "altura_inimigo_imagem[7]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "altura_inimigo_imagem[8]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "altura_inimigo_imagem[9]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_inimigo_imagem[0]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_inimigo_imagem[1]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_inimigo_imagem[2]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_inimigo_imagem[3]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_inimigo_imagem[4]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_inimigo_imagem[5]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_inimigo_imagem[6]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_inimigo_imagem[7]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_inimigo_imagem[8]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "largura_inimigo_imagem[9]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "multiplicador_inimigo[0]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "multiplicador_inimigo[1]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "multiplicador_inimigo[2]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (10041): Inferred latch for "multiplicador_inimigo[3]" at tela.v(261) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 261
-Info (12128): Elaborating entity "buffer" for hierarchy "tela:telaInstancia|buffer:buffers[0].inimigo_inst" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 110
+Warning (10230): Verilog HDL assignment warning at tela.v(328): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 328
+Warning (10230): Verilog HDL assignment warning at tela.v(329): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 329
+Warning (10230): Verilog HDL assignment warning at tela.v(330): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 330
+Warning (10230): Verilog HDL assignment warning at tela.v(332): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 332
+Warning (10230): Verilog HDL assignment warning at tela.v(333): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 333
+Warning (10230): Verilog HDL assignment warning at tela.v(334): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 334
+Warning (10230): Verilog HDL assignment warning at tela.v(336): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 336
+Warning (10230): Verilog HDL assignment warning at tela.v(337): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 337
+Warning (10230): Verilog HDL assignment warning at tela.v(338): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 338
+Warning (10230): Verilog HDL assignment warning at tela.v(341): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 341
+Warning (10230): Verilog HDL assignment warning at tela.v(342): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 342
+Warning (10230): Verilog HDL assignment warning at tela.v(343): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 343
+Warning (10240): Verilog HDL Always Construct warning at tela.v(258): inferring latch(es) for variable "multiplicador_inimigo", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 258
+Warning (10240): Verilog HDL Always Construct warning at tela.v(258): inferring latch(es) for variable "largura_inimigo_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 258
+Warning (10240): Verilog HDL Always Construct warning at tela.v(258): inferring latch(es) for variable "altura_inimigo_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 258
+Warning (10240): Verilog HDL Always Construct warning at tela.v(258): inferring latch(es) for variable "multiplicador_nave", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 258
+Warning (10240): Verilog HDL Always Construct warning at tela.v(258): inferring latch(es) for variable "largura_nave_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 258
+Warning (10240): Verilog HDL Always Construct warning at tela.v(258): inferring latch(es) for variable "altura_nave_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 258
+Warning (10240): Verilog HDL Always Construct warning at tela.v(258): inferring latch(es) for variable "multiplicador_coracao", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 258
+Warning (10240): Verilog HDL Always Construct warning at tela.v(258): inferring latch(es) for variable "largura_coracao_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 258
+Warning (10240): Verilog HDL Always Construct warning at tela.v(258): inferring latch(es) for variable "largura_fundo_imagem", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 258
+Warning (10240): Verilog HDL Always Construct warning at tela.v(258): inferring latch(es) for variable "multiplicador_fundo", which holds its previous value in one or more paths through the always construct File: /home/ec2022/ra260731/merge1/src/tela.v Line: 258
+Info (10041): Inferred latch for "multiplicador_fundo[0]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "multiplicador_fundo[1]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "multiplicador_fundo[2]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "multiplicador_fundo[3]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_fundo_imagem[0]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_fundo_imagem[1]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_fundo_imagem[2]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_fundo_imagem[3]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_fundo_imagem[4]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_fundo_imagem[5]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_fundo_imagem[6]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_fundo_imagem[7]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_fundo_imagem[8]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_fundo_imagem[9]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_coracao_imagem[0]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_coracao_imagem[1]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_coracao_imagem[2]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_coracao_imagem[3]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_coracao_imagem[4]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_coracao_imagem[5]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_coracao_imagem[6]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_coracao_imagem[7]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_coracao_imagem[8]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_coracao_imagem[9]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "multiplicador_coracao[0]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "multiplicador_coracao[1]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "multiplicador_coracao[2]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "multiplicador_coracao[3]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "altura_nave_imagem[0]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "altura_nave_imagem[1]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "altura_nave_imagem[2]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "altura_nave_imagem[3]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "altura_nave_imagem[4]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "altura_nave_imagem[5]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "altura_nave_imagem[6]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "altura_nave_imagem[7]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "altura_nave_imagem[8]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "altura_nave_imagem[9]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_nave_imagem[0]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_nave_imagem[1]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_nave_imagem[2]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_nave_imagem[3]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_nave_imagem[4]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_nave_imagem[5]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_nave_imagem[6]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_nave_imagem[7]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_nave_imagem[8]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_nave_imagem[9]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "multiplicador_nave[0]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "multiplicador_nave[1]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "multiplicador_nave[2]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "multiplicador_nave[3]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "altura_inimigo_imagem[0]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "altura_inimigo_imagem[1]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "altura_inimigo_imagem[2]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "altura_inimigo_imagem[3]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "altura_inimigo_imagem[4]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "altura_inimigo_imagem[5]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "altura_inimigo_imagem[6]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "altura_inimigo_imagem[7]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "altura_inimigo_imagem[8]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "altura_inimigo_imagem[9]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_inimigo_imagem[0]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_inimigo_imagem[1]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_inimigo_imagem[2]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_inimigo_imagem[3]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_inimigo_imagem[4]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_inimigo_imagem[5]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_inimigo_imagem[6]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_inimigo_imagem[7]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_inimigo_imagem[8]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "largura_inimigo_imagem[9]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "multiplicador_inimigo[0]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "multiplicador_inimigo[1]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "multiplicador_inimigo[2]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (10041): Inferred latch for "multiplicador_inimigo[3]" at tela.v(277) File: /home/ec2022/ra260731/merge1/src/tela.v Line: 277
+Info (12128): Elaborating entity "buffer" for hierarchy "tela:telaInstancia|buffer:buffers[0].inimigo_inst" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 107
 Warning (10230): Verilog HDL assignment warning at buffer.v(27): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 27
 Warning (10230): Verilog HDL assignment warning at buffer.v(28): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 28
 Warning (10230): Verilog HDL assignment warning at buffer.v(29): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 29
@@ -3083,7 +3083,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: /home/ec2022/ra260731/merge1/db/cmpr_99c.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.06.14.13:26:39 Progress: Loading sld3172de05/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.06.14.14:14:56 Progress: Loading sld3172de05/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -3107,13 +3107,13 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: /home/ec2022/ra260731/merge1/db/ip/sld3172de05/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Info (278001): Inferred 20 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|Div1" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 240
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffer_coracao_3|Div0" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffer_coracao_3|Div1" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffer_coracao_2|Div0" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffer_coracao_2|Div1" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffer_coracao_1|Div0" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffer_coracao_1|Div1" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|Div1" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 256
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|Div0" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|Div1" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|Div0" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst|Div1" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|Div0" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst|Div1" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffer_nave|Div0" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffer_nave|Div1" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffers[4].inimigo_inst|Div0" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
@@ -3126,9 +3126,9 @@ Info (278001): Inferred 20 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffers[1].inimigo_inst|Div1" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffers[0].inimigo_inst|Div0" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|buffer:buffers[0].inimigo_inst|Div1" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|Div0" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 240
-Info (12130): Elaborated megafunction instantiation "tela:telaInstancia|lpm_divide:Div1" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 240
-Info (12133): Instantiated megafunction "tela:telaInstancia|lpm_divide:Div1" with the following parameter: File: /home/ec2022/ra260731/merge1/src/tela.v Line: 240
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tela:telaInstancia|Div0" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 256
+Info (12130): Elaborated megafunction instantiation "tela:telaInstancia|lpm_divide:Div1" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 256
+Info (12133): Instantiated megafunction "tela:telaInstancia|lpm_divide:Div1" with the following parameter: File: /home/ec2022/ra260731/merge1/src/tela.v Line: 256
     Info (12134): Parameter "LPM_WIDTHN" = "33"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -3139,8 +3139,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_plh File: /home/ec2022/ra260731/merge1/db/sign_div_unsign_plh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ove.tdf
     Info (12023): Found entity 1: alt_u_div_ove File: /home/ec2022/ra260731/merge1/db/alt_u_div_ove.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "tela:telaInstancia|buffer:buffer_coracao_3|lpm_divide:Div0" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
-Info (12133): Instantiated megafunction "tela:telaInstancia|buffer:buffer_coracao_3|lpm_divide:Div0" with the following parameter: File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
+Info (12130): Elaborated megafunction instantiation "tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|lpm_divide:Div0" File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
+Info (12133): Instantiated megafunction "tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst|lpm_divide:Div0" with the following parameter: File: /home/ec2022/ra260731/merge1/src/buffer.v Line: 22
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -3151,8 +3151,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_klh File: /home/ec2022/ra260731/merge1/db/sign_div_unsign_klh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_eve.tdf
     Info (12023): Found entity 1: alt_u_div_eve File: /home/ec2022/ra260731/merge1/db/alt_u_div_eve.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "tela:telaInstancia|lpm_divide:Div0" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 240
-Info (12133): Instantiated megafunction "tela:telaInstancia|lpm_divide:Div0" with the following parameter: File: /home/ec2022/ra260731/merge1/src/tela.v Line: 240
+Info (12130): Elaborated megafunction instantiation "tela:telaInstancia|lpm_divide:Div0" File: /home/ec2022/ra260731/merge1/src/tela.v Line: 256
+Info (12133): Instantiated megafunction "tela:telaInstancia|lpm_divide:Div0" with the following parameter: File: /home/ec2022/ra260731/merge1/src/tela.v Line: 256
     Info (12134): Parameter "LPM_WIDTHN" = "33"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -3241,16 +3241,16 @@ Warning (21074): Design contains 10 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[9]" File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 3
     Warning (15610): No output dependent on input pin "KEY[2]" File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 4
     Warning (15610): No output dependent on input pin "KEY[3]" File: /home/ec2022/ra260731/merge1/src/projeto.v Line: 4
-Info (21057): Implemented 6014 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 6012 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 82 output pins
-    Info (21061): Implemented 5588 logic cells
+    Info (21061): Implemented 5586 logic cells
     Info (21064): Implemented 272 RAM segments
     Info (21062): Implemented 53 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 181 warnings
-    Info: Peak virtual memory: 1448 megabytes
-    Info: Processing ended: Fri Jun 14 13:26:53 2024
-    Info: Elapsed time: 00:00:22
+    Info: Peak virtual memory: 1471 megabytes
+    Info: Processing ended: Fri Jun 14 14:15:10 2024
+    Info: Elapsed time: 00:00:23
     Info: Total CPU time (on all processors): 00:00:39
 
 

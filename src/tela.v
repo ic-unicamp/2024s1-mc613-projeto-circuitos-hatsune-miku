@@ -10,18 +10,18 @@ module tela(
 	input [9:0] y_bola_aliada, 
 	input [9:0] raio_bola_aliada,   
 	input [9:0] raio_bola_inimiga,      
-  
+   
 	input [9:0] x_nave,         
 	input [9:0] y_nave,               
            
     input [49:0] inimigo_x,  
-    input [49:0] inimigo_y, 
+    input [49:0] inimigo_y,  
     input [49:0] x_bola_inimiga, 
     input [49:0] y_bola_inimiga, 
     input [0:4] inimigo_vivo_array, 
 
 	input [9:0] VGA_X, 
-	input [9:0] VGA_Y,
+	input [9:0] VGA_Y, 
 	output reg [7:0] VGA_R,    
 	output reg [7:0] VGA_G,   
 	output reg [7:0] VGA_B
@@ -63,9 +63,6 @@ module tela(
     
 
     //inimigo __________________________________________________________________________________
-    wire inimigos_r;
-    wire inimigos_g;
-    wire inimigos_b;
     reg [3:0] multiplicador_inimigo;
     reg [9:0] largura_inimigo_imagem;
     reg [9:0] altura_inimigo_imagem;
@@ -142,72 +139,37 @@ module tela(
     );
 
     // coracao _______________________________________________________________________________________________________________
-    wire coracao_r_1, coracao_r_2, coracao_r_3;
-    wire coracao_g_1, coracao_g_2, coracao_g_3;
-    wire coracao_b_1, coracao_b_2, coracao_b_3;
-
     reg [3:0] multiplicador_coracao;
     reg [9:0] largura_coracao_imagem;
     assign largura_coracao = largura_coracao_imagem * multiplicador_coracao;
     reg [0:99] buffer_coracao_R = 100'b0011001100011111111011111111111111111111111111111101111111100011111100000111100000001100000000000000;
     reg [0:99] buffer_coracao_G = 100'b0011001100010011001010000001011000000001100000000101000000100010000100000100100000001100000000000000;
     reg [0:99] buffer_coracao_B = 100'b0011001100010011001010000001011000000001100000000101000000100010000100000100100000001100000000000000;
+    wire [4:0] coracao_r, coracao_g, coracao_b;
+	 
+    genvar j;
+    generate
+        for (j = 0; j < 3; j = j + 1) begin: buffers_coracao
+            buffer coracao_inst (
+                .CLK(VGA_CLK),
+                .reset(reset),
+                .X_VGA(VGA_X - 144),
+                .Y_VGA(VGA_Y - 35) ,
+                .X_OBJETO(20 + j * 40),
+                .Y_OBJETO(5),
+                .LARGURA_OBJETO(largura_coracao_imagem),
+                .ALTURA_OBJETO(largura_coracao_imagem),
+                .MULTPLICADOR(multiplicador_coracao),
+                .BUFFER_R({buffer_coracao_R, 300'b0}),
+                .BUFFER_G({buffer_coracao_G, 300'b0}),
+                .BUFFER_B({buffer_coracao_B, 300'b0}),
+                .R_VGA(coracao_r[j]),
+                .G_VGA(coracao_g[j]),
+                .B_VGA(coracao_b[j])
+            );
+        end
+    endgenerate
 
-
-    buffer buffer_coracao_1 (
-        .CLK(VGA_CLK),
-        .reset(reset),
-        .X_VGA(VGA_X - 144),
-        .Y_VGA(VGA_Y - 35),
-        .X_OBJETO(10),
-        .Y_OBJETO(5),
-        .LARGURA_OBJETO(largura_coracao_imagem),
-        .ALTURA_OBJETO(largura_coracao_imagem),
-        .MULTPLICADOR(multiplicador_coracao),
-        .BUFFER_R({buffer_coracao_R, 300'b0}),
-        .BUFFER_G({buffer_coracao_G, 300'b0}),
-        .BUFFER_B({buffer_coracao_B, 300'b0}),
-        .R_VGA(coracao_r_1),
-        .G_VGA(coracao_g_1),
-        .B_VGA(coracao_b_1)
-    );
-
-    buffer buffer_coracao_2 (
-        .CLK(VGA_CLK),
-        .reset(reset),
-        .X_VGA(VGA_X - 144),
-        .Y_VGA(VGA_Y - 35),
-        .X_OBJETO(60),
-        .Y_OBJETO(5),
-        .LARGURA_OBJETO(largura_coracao_imagem),
-        .ALTURA_OBJETO(largura_coracao_imagem),
-        .MULTPLICADOR(multiplicador_coracao),
-        .BUFFER_R({buffer_coracao_R, 300'b0}),
-        .BUFFER_G({buffer_coracao_G, 300'b0}),
-        .BUFFER_B({buffer_coracao_B, 300'b0}),
-        .R_VGA(coracao_r_2),
-        .G_VGA(coracao_g_2),
-        .B_VGA(coracao_b_2)
-    );
-
-    buffer buffer_coracao_3 (
-        .CLK(VGA_CLK),
-        .reset(reset),
-        .X_VGA(VGA_X - 144),
-        .Y_VGA(VGA_Y - 35),
-        .X_OBJETO(110),
-        .Y_OBJETO(5),
-        .LARGURA_OBJETO(largura_coracao_imagem),
-        .ALTURA_OBJETO(largura_coracao_imagem),
-        .MULTPLICADOR(multiplicador_coracao),
-        .BUFFER_R({buffer_coracao_R, 300'b0}),
-        .BUFFER_G({buffer_coracao_G, 300'b0}),
-        .BUFFER_B({buffer_coracao_B, 300'b0}),
-        .R_VGA(coracao_r_3),
-        .G_VGA(coracao_g_3),
-        .B_VGA(coracao_b_3)
-    );
- 
     //fundo _______________________________________________________________________________________________________________
     wire fundo_r, fundo_g, fundo_b;
     reg [9:0] largura_fundo_imagem;
@@ -308,18 +270,18 @@ module tela(
                         VGA_R <= nave_r * 255;
                         VGA_G <= nave_g * 255;
                         VGA_B <= nave_b * 255;
-                    end else if ((vidas > 0) && coracao_r_1 || coracao_g_1 || coracao_b_1) begin // coracao
-                        VGA_R <= coracao_r_1 * 255;
-                        VGA_G <= coracao_g_1 * 255;
-                        VGA_B <= coracao_b_1 * 255;
-                    end else if ((vidas > 1) && coracao_r_2 || coracao_g_2 || coracao_b_2) begin // coracao
-                        VGA_R <= coracao_r_2 * 255;
-                        VGA_G <= coracao_g_2 * 255;
-                        VGA_B <= coracao_b_2 * 255;
-                    end else if ((vidas > 2) && (coracao_r_3 || coracao_g_3 || coracao_b_3)) begin // coracao
-                        VGA_R <= coracao_r_3 * 255;
-                        VGA_G <= coracao_g_3 * 255;
-                        VGA_B <= coracao_b_3 * 255;
+                    end else if ((vidas > 0) && coracao_r[0] || coracao_g[0] || coracao_b[0]) begin // coracao
+                        VGA_R <= coracao_r[0] * 255;
+                        VGA_G <= coracao_g[0] * 255;
+                        VGA_B <= coracao_b[0] * 255;
+                    end else if ((vidas > 1) && coracao_r[1] || coracao_g[1] || coracao_b[1]) begin // coracao
+                        VGA_R <= coracao_r[1] * 255;
+                        VGA_G <= coracao_g[1] * 255;
+                        VGA_B <= coracao_b[1] * 255;
+                    end else if ((vidas > 2) && (coracao_r[2] || coracao_g[2] || coracao_b[2])) begin // coracao
+                        VGA_R <= coracao_r[2] * 255;
+                        VGA_G <= coracao_g[2] * 255;
+                        VGA_B <= coracao_b[2] * 255;
                     end else begin
                         if (fundo_r || fundo_g || fundo_b) begin
                             VGA_R <= fundo_r * 255; 

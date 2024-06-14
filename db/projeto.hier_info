@@ -11998,7 +11998,7 @@ G_VGA <= G_VGA.DB_MAX_OUTPUT_PORT_TYPE
 B_VGA <= B_VGA.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|projeto|tela:telaInstancia|buffer:buffer_coracao_1
+|projeto|tela:telaInstancia|buffer:buffers_coracao[0].coracao_inst
 CLK => Y_BUFFER[0].CLK
 CLK => Y_BUFFER[1].CLK
 CLK => Y_BUFFER[2].CLK
@@ -13371,7 +13371,7 @@ G_VGA <= G_VGA.DB_MAX_OUTPUT_PORT_TYPE
 B_VGA <= B_VGA.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|projeto|tela:telaInstancia|buffer:buffer_coracao_2
+|projeto|tela:telaInstancia|buffer:buffers_coracao[1].coracao_inst
 CLK => Y_BUFFER[0].CLK
 CLK => Y_BUFFER[1].CLK
 CLK => Y_BUFFER[2].CLK
@@ -14744,7 +14744,7 @@ G_VGA <= G_VGA.DB_MAX_OUTPUT_PORT_TYPE
 B_VGA <= B_VGA.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|projeto|tela:telaInstancia|buffer:buffer_coracao_3
+|projeto|tela:telaInstancia|buffer:buffers_coracao[2].coracao_inst
 CLK => Y_BUFFER[0].CLK
 CLK => Y_BUFFER[1].CLK
 CLK => Y_BUFFER[2].CLK
