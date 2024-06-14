@@ -17,7 +17,7 @@ module tela(
     input [49:0] inimigo_x,  
     input [49:0] inimigo_y,  
     input [49:0] x_bola_inimiga, 
-    input [49:0] y_bola_inimiga, 
+    input [49:0] y_bola_inimiga,  
     input [0:4] inimigo_vivo_array, 
     input [3:0] pontos, 
 
@@ -28,6 +28,10 @@ module tela(
 	output reg [7:0] VGA_B
 
 );
+    wire resetBuffer;
+    assign resetBuffer = reset | (VGA_Y > 516) ;
+
+
 	// bola aliada
     wire [32:0] delta_x_aliado;
     wire [32:0] delta_y_aliado;
@@ -91,7 +95,7 @@ module tela(
         for (i = 0; i < 5; i = i + 1) begin: buffers
             buffer inimigo_inst (
                 .CLK(VGA_CLK),
-                .reset(reset),
+                .reset(resetBuffer),
                 .X_VGA(VGA_X - 144),
                 .Y_VGA(VGA_Y - 35),
                 .X_OBJETO(matrix_inimigo_x[i]),  // Extrai 10 bits começando do bit 10*i
@@ -123,7 +127,7 @@ module tela(
 
     buffer buffer_nave (
         .CLK(VGA_CLK),
-        .reset(reset),
+        .reset(resetBuffer),
         .X_VGA(VGA_X - 144),
         .Y_VGA(VGA_Y - 35),
         .X_OBJETO(x_nave),
@@ -153,7 +157,7 @@ module tela(
         for (j = 0; j < 3; j = j + 1) begin: buffers_coracao
             buffer coracao_inst (
                 .CLK(VGA_CLK),
-                .reset(reset),
+                .reset(resetBuffer),
                 .X_VGA(VGA_X - 144),
                 .Y_VGA(VGA_Y - 35) ,
                 .X_OBJETO(20 + j * 40),
@@ -181,7 +185,7 @@ module tela(
 
     buffer buffer_fundo (
         .CLK(VGA_CLK),
-        .reset(reset),
+        .reset(resetBuffer),
         .X_VGA(VGA_X - 144),
         .Y_VGA(VGA_Y - 35),
         .X_OBJETO(200),
