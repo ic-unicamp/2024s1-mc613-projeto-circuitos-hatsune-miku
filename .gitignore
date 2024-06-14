@@ -6,7 +6,7 @@ teste.txt
 *.rpt
 *.cdf
 *.done
-*.rpt
+*.asm.rpt
 *.smsg
 *.summary
 *.jdi

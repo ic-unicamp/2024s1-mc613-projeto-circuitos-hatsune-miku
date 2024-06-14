@@ -74,7 +74,7 @@ module entities(
     bola bolaAliada(
         .CLOCK_50(CLOCK_50),
         .reset(reset),
-        .pausa(0),
+        .pausa(1),
         .reiniciarJogo(0),
         .xi(xi_bola),
         .yi(yi_bola),
