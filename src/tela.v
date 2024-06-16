@@ -1,26 +1,26 @@
 module tela(
     input VGA_CLK, 
-    input CLOCK_50,
-	input reset, 
-	input ativo, 
-	input perdeu,  
-    input [1:0] vidas,
+    input CLOCK_50, 
+	input reset,  
+	input ativo,  
+	input perdeu,   
+    input [1:0] vidas,  
 
-	input [9:0] x_bola_aliada,  
-	input [9:0] y_bola_aliada, 
-	input [9:0] raio_bola_aliada,    
-	input [9:0] raio_bola_inimiga,      
-   
-	input [9:0] x_nave,          
-	input [9:0] y_nave,                
-             
-    input [49:0] inimigo_x,  
-    input [49:0] inimigo_y,  
-    input [49:0] x_bola_inimiga, 
-    input [49:0] y_bola_inimiga,  
-    input [0:4] inimigo_vivo_array, 
-    input [3:0] pontos, 
-
+	input [9:0] x_bola_aliada,    
+	input [9:0] y_bola_aliada,   
+	input [9:0] raio_bola_aliada,      
+	input [9:0] raio_bola_inimiga,       
+     
+	input [9:0] x_nave,            
+	input [9:0] y_nave,                 
+                 
+    input [199:0] inimigo_x,    
+    input [199:0] inimigo_y,    
+    input [199:0] x_bola_inimiga, 
+    input [199:0] y_bola_inimiga,     
+    input [0:19] inimigo_vivo_array,  
+    input [3:0] pontos,    
+ 
 	input [9:0] VGA_X, 
 	input [9:0] VGA_Y, 
 	output reg [7:0] VGA_R,    
@@ -74,25 +74,56 @@ module tela(
     reg [0:87] BUFFER_R = 88'b0000000000000000000000000000000000001000100000000000000000000000000000000000000000000000;
     reg [0:87] BUFFER_G = 88'b0010000010000010001000001111111000111111111011111111111101111111011010000010100011011000;
     reg [0:87] BUFFER_B = 88'b0000000000000000000000000000000000001000100000000000000000000000000000000000000000000000;
-    wire [4:0] r_inimigo, g_inimigo, b_inimigo;
-    wire [9:0] matrix_inimigo_x [0:4];
-    wire [9:0] matrix_inimigo_y [0:4];
+    wire [19:0] r_inimigo, g_inimigo, b_inimigo;
+    wire [9:0] matrix_inimigo_x [0:19];
+    wire [9:0] matrix_inimigo_y [0:19];
+
 
     assign matrix_inimigo_x[0] = inimigo_x[9:0];
     assign matrix_inimigo_x[1] = inimigo_x[19:10];
     assign matrix_inimigo_x[2] = inimigo_x[29:20];
     assign matrix_inimigo_x[3] = inimigo_x[39:30];
     assign matrix_inimigo_x[4] = inimigo_x[49:40];
+    assign matrix_inimigo_x[5] = inimigo_x[59:50];
+    assign matrix_inimigo_x[6] = inimigo_x[69:60];
+    assign matrix_inimigo_x[7] = inimigo_x[79:70];
+    assign matrix_inimigo_x[8] = inimigo_x[89:80];
+    assign matrix_inimigo_x[9] = inimigo_x[99:90];
+    assign matrix_inimigo_x[10] = inimigo_x[109:100];
+    assign matrix_inimigo_x[11] = inimigo_x[119:110];
+    assign matrix_inimigo_x[12] = inimigo_x[129:129];
+    assign matrix_inimigo_x[13] = inimigo_x[139:139];
+    assign matrix_inimigo_x[14] = inimigo_x[149:149];
+    // assign matrix_inimigo_x[15] = inimigo_x[159:159];
+    // assign matrix_inimigo_x[16] = inimigo_x[169:169];
+    // assign matrix_inimigo_x[17] = inimigo_x[179:179];
+    // assign matrix_inimigo_x[18] = inimigo_x[189:189];
+    // assign matrix_inimigo_x[19] = inimigo_x[199:199];
 
     assign matrix_inimigo_y[0] = inimigo_y[9:0];
     assign matrix_inimigo_y[1] = inimigo_y[19:10];
     assign matrix_inimigo_y[2] = inimigo_y[29:20];
     assign matrix_inimigo_y[3] = inimigo_y[39:30];
     assign matrix_inimigo_y[4] = inimigo_y[49:40];
+    assign matrix_inimigo_y[5] = inimigo_y[59:50];
+    assign matrix_inimigo_y[6] = inimigo_y[69:60];
+    assign matrix_inimigo_y[7] = inimigo_y[79:70];
+    assign matrix_inimigo_y[8] = inimigo_y[89:80];
+    assign matrix_inimigo_y[9] = inimigo_y[99:90];
+    assign matrix_inimigo_y[10] = inimigo_y[109:100];
+    assign matrix_inimigo_y[11] = inimigo_y[119:110];
+    assign matrix_inimigo_y[12] = inimigo_y[129:129];
+    assign matrix_inimigo_y[13] = inimigo_y[139:139];
+    assign matrix_inimigo_y[14] = inimigo_y[149:149];
+    // assign matrix_inimigo_y[15] = inimigo_y[159:159];
+    // assign matrix_inimigo_y[16] = inimigo_y[169:169];
+    // assign matrix_inimigo_y[17] = inimigo_y[179:179];
+    // assign matrix_inimigo_y[18] = inimigo_y[189:189];
+    // assign matrix_inimigo_y[19] = inimigo_y[199:199];
 
     genvar i;
     generate
-        for (i = 0; i < 5; i = i + 1) begin: buffers
+        for (i = 0; i < 10; i = i + 1) begin: buffers
             buffer inimigo_inst (
                 .CLK(VGA_CLK),
                 .reset(resetBuffer),
@@ -226,7 +257,8 @@ module tela(
             multiplicador_fundo = 4'd3;
         end else begin
             if (ativo) begin
-                if (!perdeu && (pontos != 4'b0101)) begin
+                // if (!perdeu && (pontos != 4'b0101)) begin
+                if (!perdeu) begin
                     if (delta_x_aliado + delta_y_aliado < raioquadrado_aliado) begin // bola aliada
                         VGA_R <= 255;
                         VGA_G <= 255;
@@ -271,7 +303,69 @@ module tela(
                         VGA_R <= r_inimigo[4] * 255;
                         VGA_G <= g_inimigo[4] * 255;
                         VGA_B <= b_inimigo[4] * 255;
-                    end else if (nave_r || nave_g || nave_b) begin // nave
+                    end else if (inimigo_vivo_array[5] && (r_inimigo[5] || g_inimigo[5] || b_inimigo[5])) begin // inimigos
+                        VGA_R <= r_inimigo[5] * 255;
+                        VGA_G <= g_inimigo[5] * 255;
+                        VGA_B <= b_inimigo[5] * 255;
+                    end else if (inimigo_vivo_array[6] && (r_inimigo[6] || g_inimigo[6] || b_inimigo[6])) begin // inimigos
+                        VGA_R <= r_inimigo[6] * 255;
+                        VGA_G <= g_inimigo[6] * 255;
+                        VGA_B <= b_inimigo[6] * 255;
+                    end else if (inimigo_vivo_array[7] && (r_inimigo[7] || g_inimigo[7] || b_inimigo[7])) begin // inimigos
+                        VGA_R <= r_inimigo[7] * 255;
+                        VGA_G <= g_inimigo[7] * 255;
+                        VGA_B <= b_inimigo[7] * 255;
+                    end else if (inimigo_vivo_array[8] && (r_inimigo[8] || g_inimigo[8] || b_inimigo[8])) begin // inimigos
+                        VGA_R <= r_inimigo[8] * 255;
+                        VGA_G <= g_inimigo[8] * 255;
+                        VGA_B <= b_inimigo[8] * 255;
+                    end else if (inimigo_vivo_array[9] && (r_inimigo[9] || g_inimigo[9] || b_inimigo[9])) begin // inimigos
+                        VGA_R <= r_inimigo[9] * 255;
+                        VGA_G <= g_inimigo[9] * 255;
+                        VGA_B <= b_inimigo[9] * 255;
+                    end 
+                    // else if (inimigo_vivo_array[10] && (r_inimigo[10] || g_inimigo[10] || b_inimigo[10])) begin // inimigos
+                    //     VGA_R <= r_inimigo[10] * 255;
+                    //     VGA_G <= g_inimigo[10] * 255;
+                    //     VGA_B <= b_inimigo[10] * 255;
+                    // end else if (inimigo_vivo_array[11] && (r_inimigo[11] || g_inimigo[11] || b_inimigo[11])) begin // inimigos
+                    //     VGA_R <= r_inimigo[11] * 255;
+                    //     VGA_G <= g_inimigo[11] * 255;
+                    //     VGA_B <= b_inimigo[11] * 255;
+                    // end else if (inimigo_vivo_array[12] && (r_inimigo[12] || g_inimigo[12] || b_inimigo[12])) begin // inimigos
+                    //     VGA_R <= r_inimigo[12] * 255;
+                    //     VGA_G <= g_inimigo[12] * 255;
+                    //     VGA_B <= b_inimigo[12] * 255;
+                    // end else if (inimigo_vivo_array[13] && (r_inimigo[13] || g_inimigo[13] || b_inimigo[13])) begin // inimigos
+                    //     VGA_R <= r_inimigo[13] * 255;
+                    //     VGA_G <= g_inimigo[13] * 255;
+                    //     VGA_B <= b_inimigo[13] * 255;
+                    // end else if (inimigo_vivo_array[14] && (r_inimigo[14] || g_inimigo[14] || b_inimigo[14])) begin // inimigos
+                    //     VGA_R <= r_inimigo[14] * 255;
+                    //     VGA_G <= g_inimigo[14] * 255;
+                    //     VGA_B <= b_inimigo[14] * 255;
+                    // end else if (inimigo_vivo_array[15] && (r_inimigo[15] || g_inimigo[15] || b_inimigo[15])) begin // inimigos
+                    //     VGA_R <= r_inimigo[15] * 255;
+                    //     VGA_G <= g_inimigo[15] * 255;
+                    //     VGA_B <= b_inimigo[15] * 255;
+                    // end else if (inimigo_vivo_array[16] && (r_inimigo[16] || g_inimigo[16] || b_inimigo[16])) begin // inimigos
+                    //     VGA_R <= r_inimigo[16] * 255;
+                    //     VGA_G <= g_inimigo[16] * 255;
+                    //     VGA_B <= b_inimigo[16] * 255;
+                    // end else if (inimigo_vivo_array[17] && (r_inimigo[17] || g_inimigo[17] || b_inimigo[17])) begin // inimigos
+                    //     VGA_R <= r_inimigo[17] * 255;
+                    //     VGA_G <= g_inimigo[17] * 255;
+                    //     VGA_B <= b_inimigo[17] * 255;
+                    // end else if (inimigo_vivo_array[18] && (r_inimigo[18] || g_inimigo[18] || b_inimigo[18])) begin // inimigos
+                    //     VGA_R <= r_inimigo[18] * 255;
+                    //     VGA_G <= g_inimigo[18] * 255;
+                    //     VGA_B <= b_inimigo[18] * 255;
+                    // end else if (inimigo_vivo_array[19] && (r_inimigo[19] || g_inimigo[19] || b_inimigo[19])) begin // inimigos
+                    //     VGA_R <= r_inimigo[19] * 255;
+                    //     VGA_G <= g_inimigo[19] * 255;
+                    //     VGA_B <= b_inimigo[19] * 255;
+                    // end 
+                    else if (nave_r || nave_g || nave_b) begin // nave
                         VGA_R <= nave_r * 255;
                         VGA_G <= nave_g * 255;
                         VGA_B <= nave_b * 255;
@@ -298,11 +392,13 @@ module tela(
                             VGA_B <= 0;  
                         end
                     end
-                end else if (pontos == 4'b0101) begin
-                        VGA_R = 0;    
-                        VGA_G = 255;
-                        VGA_B = 0;  
-                end else begin
+                end 
+                // else if (pontos == 4'b0101) begin
+                //         VGA_R = 0;    
+                //         VGA_G = 255;
+                //         VGA_B = 0;  
+                // end
+                 else begin
                     if (buffer_game_over[indice] == 1) begin
                         VGA_R = 255;
                         VGA_G = 255;

@@ -27,18 +27,18 @@ module projeto(
     wire [9:0] y_bola_aliada;
     wire [9:0] raio_bola_aliada;
 
-    wire [49:0] x_bola_inimiga;
-    wire [49:0] y_bola_inimiga;
+    wire [199:0] x_bola_inimiga;
+    wire [199:0] y_bola_inimiga;
     wire [9:0] raio_bola_inimiga;
-    wire [0:4] inimigo_vivo_array;
+    wire [0:19] inimigo_vivo_array;
 
     wire [9:0] x_nave;
     wire [9:0] y_nave;
     wire [9:0] largura_nave;
     wire [9:0] altura_nave;
 
-    wire [49:0] inimigo_x;
-    wire [49:0] inimigo_y;
+    wire [199:0] inimigo_x;
+    wire [199:0] inimigo_y;
 
     wire [9:0] largura_inimigo;
     wire [9:0] altura_inimigo;

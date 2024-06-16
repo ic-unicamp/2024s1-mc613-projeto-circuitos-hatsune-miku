@@ -6,15 +6,15 @@ module entities(
     output [9:0] x_bola_aliada,
     output [9:0] y_bola_aliada, 
     output [9:0] raio_bola_aliada, 
-    output [49:0] x_bola_inimiga,
-    output [49:0] y_bola_inimiga,
+    output [199:0] x_bola_inimiga,
+    output [199:0] y_bola_inimiga,
     output [9:0] raio_bola_inimiga,
     output [9:0] x_nave,
     output [9:0] y_nave,
 
-    output [49:0] inimigo_x,
-    output [49:0] inimigo_y,
-    output [0:4] inimigo_vivo_array,
+    output [199:0] inimigo_x,
+    output [199:0] inimigo_y,
+    output [0:19] inimigo_vivo_array,
     output perdeu,
     output [1:0] vidas,
     output [9:0] LEDR
@@ -53,7 +53,7 @@ module entities(
         .LEDR(LEDR)
     );
 
-    fileira controladorInimigosInstancia(
+    frota frota_instancia(
         .CLOCK_50(CLOCK_50),
         .CLOCK_MV(CLOCK_MV),
         .reset(reset),
@@ -70,7 +70,7 @@ module entities(
         .y_nave(y_nave),
         .reg_n_batidas(n_batidas)
     );
-
+    
     bola bolaAliada(
         .CLOCK_50(CLOCK_50),
         .reset(reset),

@@ -17,7 +17,6 @@ module inimigo(
     input [9:0] x_nave,
     input [9:0] y_nave,
     input sentidoX
-    // input [3:0] op
 );
     reg [32:0] divisorCLK;
     reg [9:0] largura;
@@ -55,25 +54,29 @@ module inimigo(
     end
 
     reg sentidoAtual;
-
-    always @(negedge CLOCK_MV or posedge resetInimigo) begin
+    reg desceu;
+    always @(posedge CLOCK_MV or posedge resetInimigo) begin
         if (resetInimigo) begin
             x = xi;
             y = yi;
             largura = 33;
             altura = 24;
             sentidoAtual = sentidoX;
+            desceu = 0;
         end else begin
             if (pausa == 0) begin
-                if (sentidoAtual != sentidoX) begin // abaixa
+                if (sentidoAtual != sentidoX && !desceu) begin // abaixa
                     y = y + 20;
                     sentidoAtual = sentidoX;
-                end
+                    desceu = 1;
+                end else begin
+                    desceu = 0;
+                end  
                 if(sentidoX) begin // direita
                     x = x + 2;
-                end else begin // esquerda
+                end else  begin // esquerda
                     x = x - 2;
-                end
+                end                  
             end
         end
     end
