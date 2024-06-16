@@ -28,6 +28,9 @@ module entities(
     assign yi_bola = y_nave + 10  - 45/2;
     wire bateu;
 
+    wire perdeuNave, naveMorta;
+    assign perdeu = perdeuNave | naveMorta;
+
     reg CLOCK_MV;
     reg [32:0] contador;
 
@@ -49,7 +52,7 @@ module entities(
         .y_nave(y_nave),
         .n_batidas(n_batidas),
         .vidas(vidas),
-        .perdeu(perdeu),
+        .perdeu(perdeuNave),
         .LEDR(LEDR)
     );
 
@@ -66,6 +69,7 @@ module entities(
         .reg_x_bola(x_bola_inimiga),
         .reg_y_bola(y_bola_inimiga),
         .reg_vivo(inimigo_vivo_array),
+        .reg_naveMorta(naveMorta),
         .x_nave(x_nave),
         .y_nave(y_nave),
         .reg_n_batidas(n_batidas)

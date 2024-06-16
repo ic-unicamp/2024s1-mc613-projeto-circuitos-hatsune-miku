@@ -31,7 +31,7 @@ module bola(
                 y = y - 1;
             if (y >= 480) begin
                 x = xi;
-                y = yi - 35;
+                y = yi - 15;
             end
         end
     end

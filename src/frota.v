@@ -11,6 +11,7 @@ module frota(
     output reg [199:0] reg_x_bola, // 5 * 10 bits 
     output reg [199:0] reg_y_bola, // 5 * 10 bits
     output reg [0:19] reg_vivo,        // 5 bits 
+    output reg reg_naveMorta,
     output reg [1:0] reg_n_batidas,
     input [9:0] x_nave, 
     input [9:0] y_nave 
@@ -19,10 +20,11 @@ module frota(
  
     wire [49:0] inimigo_x [0:3];
     wire [49:0] inimigo_y [0:3];
-    wire [49:0] x_bola [0:3];
+    wire [49:0] x_bola [0:3]; 
     wire [49:0] y_bola [0:3];
     wire [0:4] vivo [0:3];
     wire [1:0] n_batidas [0:3];
+    wire [0:1] naveMorta;
 
     // Atualização das saídas
     always @(posedge CLOCK_MV) begin
@@ -50,6 +52,7 @@ module frota(
             reg_vivo = {vivo[0], vivo[1], vivo[2], vivo[3]};        
 
             reg_n_batidas = n_batidas[0] + n_batidas[1] + n_batidas[2] + n_batidas[3]; 
+            reg_naveMorta = |naveMorta;
     end
 
     wire [9:0] inimigo_xi [0:3];
@@ -59,13 +62,13 @@ module frota(
     assign inimigo_xi [1] = 60;
     assign inimigo_xi [2] = 110;
     assign inimigo_xi [3] = 60;
-
+ 
     assign inimigo_yi [0] = 40;
     assign inimigo_yi [1] = 80;
     assign inimigo_yi [2] = 120;
-    assign inimigo_yi [3] = 160;
-
-    genvar r;
+    assign inimigo_yi [3] = 160;  
+   
+    genvar r; 
     generate
         for (r = 0; r < 2; r = r + 1) begin: fileira_inst
             fileira fileira_inst(
@@ -81,6 +84,7 @@ module frota(
                 .reg_x_bola(x_bola[r]),
                 .reg_y_bola(y_bola[r]),
                 .reg_vivo(vivo[r]),
+                .reg_naveMorta(naveMorta[r]),
                 .bola_nave_x(bola_nave_x),
                 .bola_nave_y(bola_nave_y),
                 .reg_n_batidas(n_batidas[r]),

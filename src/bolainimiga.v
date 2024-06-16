@@ -73,7 +73,6 @@ module bolainimiga(
                     end else begin // descer
                         y = y + 1;
                     end 
-                    
                 end
 
             end else begin

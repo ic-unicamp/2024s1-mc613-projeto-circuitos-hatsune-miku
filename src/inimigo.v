@@ -11,6 +11,7 @@ module inimigo(
     output [9:0] x_bola,
     output [9:0] y_bola,
     output reg vivo,
+    output reg naveMorta,
     input [9:0] bola_nave_x, 
     input [9:0] bola_nave_y, 
     output [1:0] n_batidas,
@@ -42,12 +43,16 @@ module inimigo(
         .bola_morta(bola_morta)
     );
 
-    always @(posedge CLOCK_50) begin
+    always @(posedge CLOCK_MV) begin
         if (reset) begin
             vivo = 1;
+            naveMorta = 0;
         end else begin
             if ((x < bola_nave_x) && (bola_nave_x < x + largura) && (y < bola_nave_y) && (bola_nave_y < y + altura)) begin
                 vivo = 0;
+            end
+            if (((x < x_nave) && (x_nave < x + 33) || (x_nave < x) && (x < x_nave + 45))  && (y < y_nave) && (y_nave < y + 24)) begin
+                naveMorta = 1;
             end
         end
     end

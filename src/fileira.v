@@ -13,6 +13,7 @@ module fileira(
     output reg [49:0] reg_x_bola, // 5 * 10 bits
     output reg [49:0] reg_y_bola, // 5 * 10 bits
     output reg [0:4] reg_vivo,        // 5 bits
+    output reg reg_naveMorta,
     output reg [1:0] reg_n_batidas,
     input [9:0] x_nave,
     input [9:0] y_nave,
@@ -27,6 +28,7 @@ module fileira(
     wire [9:0] y_bola [0:4];
     wire vivo [0:4];
     wire [1:0] n_batidas [0:4];
+    wire [0:4] naveMorta;
 
     // Atualização das saídas
     always @(posedge CLOCK_MV) begin
@@ -62,6 +64,7 @@ module fileira(
             reg_vivo[4] = vivo[4];
 
             reg_n_batidas = n_batidas[0] + n_batidas[1] + n_batidas[2] + n_batidas[3] + n_batidas[4]; 
+            reg_naveMorta = |naveMorta;
     end
 
     always @(negedge CLOCK_MV) begin
@@ -98,6 +101,7 @@ module fileira(
                 .x_bola(x_bola[k]),
                 .y_bola(y_bola[k]),
                 .vivo(vivo[k]),
+                .naveMorta(naveMorta[k]),
                 .bola_nave_x(bola_nave_x),
                 .bola_nave_y(bola_nave_y),
                 .n_batidas(n_batidas[k]),
