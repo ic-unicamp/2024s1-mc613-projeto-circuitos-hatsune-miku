@@ -52,7 +52,7 @@ module projeto(
         if (reset) begin
             pontos = 0;
         end else begin
-            pontos = 5 - (inimigo_vivo_array[0] + inimigo_vivo_array[1] + inimigo_vivo_array[2] + inimigo_vivo_array[3] + inimigo_vivo_array[4]);
+            pontos = 10 - (inimigo_vivo_array[0] + inimigo_vivo_array[1] + inimigo_vivo_array[2] + inimigo_vivo_array[3] + inimigo_vivo_array[4] + inimigo_vivo_array[5] + inimigo_vivo_array[6] + inimigo_vivo_array[7] + inimigo_vivo_array[8] + inimigo_vivo_array[9]);
         end
     end
 

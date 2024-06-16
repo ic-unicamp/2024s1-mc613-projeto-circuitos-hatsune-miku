@@ -3,7 +3,7 @@ module frota(
     input CLOCK_MV, 
     input reset, 
     input pausa,
-    input reiniciarJogo, 
+    input reiniciarJogo,  
     input [9:0] bola_nave_x,
     input [9:0] bola_nave_y,
     output reg [199:0] reg_inimigo_x, // 5 * 10 bit s
@@ -13,10 +13,10 @@ module frota(
     output reg [0:19] reg_vivo,        // 5 bits 
     output reg [1:0] reg_n_batidas,
     input [9:0] x_nave, 
-    input [9:0] y_nave
+    input [9:0] y_nave 
 );
-    reg [4:0] i;
-
+    reg [4:0] i; 
+ 
     wire [49:0] inimigo_x [0:3];
     wire [49:0] inimigo_y [0:3];
     wire [49:0] x_bola [0:3];
@@ -67,7 +67,7 @@ module frota(
 
     genvar r;
     generate
-        for (r = 0; r < 4; r = r + 1) begin: fileira_inst
+        for (r = 0; r < 2; r = r + 1) begin: fileira_inst
             fileira fileira_inst(
                 .CLOCK_50(CLOCK_50),
                 .CLOCK_MV(CLOCK_MV),

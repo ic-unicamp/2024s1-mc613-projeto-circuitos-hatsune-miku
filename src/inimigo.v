@@ -40,7 +40,6 @@ module inimigo(
         .y(y_bola),
         .n_batidas(n_batidas),
         .bola_morta(bola_morta)
-        // .op(op)
     );
 
     always @(posedge CLOCK_50) begin

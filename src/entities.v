@@ -70,7 +70,7 @@ module entities(
         .y_nave(y_nave),
         .reg_n_batidas(n_batidas)
     );
-    
+
     bola bolaAliada(
         .CLOCK_50(CLOCK_50),
         .reset(reset),
