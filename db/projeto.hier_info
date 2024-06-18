@@ -146,7 +146,7 @@ saida[6] <= saida[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 |projeto|entities:entitiesInstancia
 CLOCK_50 => CLOCK_50.IN3
 reset => reset.IN3
-pausa => pausa.IN2
+pausa => pausa.IN3
 keysout[0] => keysout[0].IN1
 keysout[1] => keysout[1].IN1
 keysout[2] => keysout[2].IN1
